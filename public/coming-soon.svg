@@ -1,0 +1,17 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#6b7280"/>
+  <text 
+    x="400" 
+    y="225" 
+    font-family="system-ui, -apple-system, sans-serif" 
+    font-size="56" 
+    font-weight="600" 
+    fill="#ffffff" 
+    text-anchor="middle" 
+    dominant-baseline="middle"
+    letter-spacing="0.05em"
+  >
+    Coming Soon!
+  </text>
+</svg>
+
