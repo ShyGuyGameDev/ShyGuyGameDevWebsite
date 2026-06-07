@@ -3,6 +3,8 @@ Header and Footer
     Contacts
 Empty Console
     Bios relating to shyguy
+    make shyguy bigger
+    get rid of other contacts?
     Projects?
 Home
     Name
