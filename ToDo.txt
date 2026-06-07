@@ -1,0 +1,27 @@
+Header and Footer
+    Icon
+    Contacts
+Empty Console
+    Bios relating to shyguy
+    Projects?
+Home
+    Name
+    Intro
+    Short Past
+    Song Quote of the Day
+    Animation like EC?
+Posts & Media Mentions
+    Own section
+    Others section
+    Hyperlinks
+Projects
+    Empty Console section
+    Non-Empty Console section
+    Current section
+    Hyperlinks
+Colors
+    Background
+    Header
+    Footer
+    Text
+    Hyperlinks

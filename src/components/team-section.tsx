@@ -88,10 +88,19 @@ export function TeamSection() {
       <div className="max-w-[1100px] mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-4">
-            Who Is Empty Console
+            Empty Console
           </h2>
-          <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Meet the talented individuals behind our innovative projects
+          <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-4xl mx-auto">
+            Empty Console is my startup that I cofounded with two other classmates. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about vibe coding and of the world's future. We started with games, though are now competing in hackathons and building real apps. The Empty Console website is available at{" "}
+            <a
+              href="https://www.emptyconsole.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline hover:no-underline"
+            >
+              www.emptyconsole.com
+            </a>
+            .
           </p>
         </div>
 

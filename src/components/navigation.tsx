@@ -9,8 +9,9 @@ import Image from "next/image"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/team", label: "Who Is Empty Console" },
+  { href: "/team", label: "Empty Console" },
   { href: "/projects", label: "Projects" },
+  { href: "/posts", label: "Posts & Media Mentions" },
 ]
 
 export function Navigation() {

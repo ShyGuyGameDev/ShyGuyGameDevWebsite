@@ -1,4 +1,7 @@
 {
   "/api/videos/route": "app/api/videos/route.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/posts/page": "app/posts/page.js",
+  "/projects/page": "app/projects/page.js",
+  "/team/page": "app/team/page.js"
 }
