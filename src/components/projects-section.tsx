@@ -162,8 +162,14 @@ export function ProjectsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-[100px] pt-[172px] bg-background">
-      <div className="max-w-[1100px] mx-auto px-6">
+    <section ref={sectionRef} className="relative overflow-hidden py-[100px] pt-[172px] bg-background">
+      {/* Abstract gradient background overlay */}
+      <div className="absolute inset-0" style={{ zIndex: 1 }}>
+        <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-accent-light/20 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/5 blur-3xl" />
+      </div>
+      <div className="relative z-10 max-w-[1100px] mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-4">
             Our Projects

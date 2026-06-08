@@ -11,7 +11,8 @@ const teamMembers = [
     // Hidden logo image before HF_ang's picture
     image: "/HF_ang PFP.png",
     // image: "/BetterEmptyConsoleLogo.png",
-    bio: "HF_ang discovered coding through video games and has since developed a passion for problem-solving, creating digital art, and experimenting with physics in code. Adding his video game skills of code and art, he brings easy to read UI and user engagement to the team’s creations. He also constantly experiments with new concepts in his work.",
+    // bio: "HF_ang discovered coding through video games and has since developed a passion for problem-solving, creating digital art, and experimenting with physics in code. Adding his video game skills of code and art, he brings easy to read UI and user engagement to the team’s creations. He also constantly experiments with new concepts in his work.",
+    bio: "HF_ang originally discovered his passion for programming and problem solving through his love for video games. After starting to work with ShyGuy and Emey in 2024, his video game development skills have started to be applied to other projects, with him focusing on UI/UX design and user engagement.",
     hobbies: [
       { icon: "🎾", label: "Tennis" },
       { icon: "🏓", label: "Ping-pong" },
@@ -48,10 +49,10 @@ const teamMembers = [
 export function TeamSection() {
   const sectionRef = useRef<HTMLElement>(null)
 
-  // Preload BetterEmptyConsoleLogo.png before HF_ang's picture
+  // Preload BetterShyGuyGameDevLogo.png before HF_ang's picture
   useEffect(() => {
     const img = new window.Image()
-    img.src = "/BetterEmptyConsoleLogo.png"
+    img.src = "/BetterShyGuyGameDevLogo.png"
   }, [])
 
   useEffect(() => {
@@ -73,11 +74,17 @@ export function TeamSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-[100px] pt-[172px] bg-card">
+    <section ref={sectionRef} className="relative overflow-hidden py-[100px] pt-[172px] bg-background">
+      {/* Abstract gradient background overlay */}
+      <div className="absolute inset-0" style={{ zIndex: 1 }}>
+        <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-accent-light/20 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/5 blur-3xl" />
+      </div>
       {/* Hidden logo image before HF_ang's picture - with proper dimensions for crawlers */}
       <div className="absolute left-[-9999px] w-[1200px] h-[630px] opacity-0 pointer-events-none">
         <Image
-          src="/BetterEmptyConsoleLogo.png"
+          src="/BetterShyGuyGameDevLogo.png"
           alt="Empty Console Logo"
           width={1200}
           height={630}
@@ -85,13 +92,13 @@ export function TeamSection() {
           unoptimized
         />
       </div>
-      <div className="max-w-[1100px] mx-auto px-6">
+      <div className="relative z-10 max-w-[1100px] mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-4">
             Empty Console
           </h2>
           <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-4xl mx-auto">
-            Empty Console is my startup that I cofounded with two other classmates. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about vibe coding and of the world's future. We started with games, though are now competing in hackathons and building real apps. The Empty Console website is available at{" "}
+            Empty Console is a startup team cofounded by ShyGuy, HF_ang, and Emey. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about vibe coding and of the world's future. We started with games, though are now competing in hackathons and building real apps. The Empty Console website is available at{" "}
             <a
               href="https://www.emptyconsole.com"
               target="_blank"

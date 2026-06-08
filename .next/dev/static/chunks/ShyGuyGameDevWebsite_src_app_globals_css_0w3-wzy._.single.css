@@ -2573,12 +2573,6 @@
   }
 
   @media (hover: hover) {
-    .group-hover\:text-accent:is(:where(.group):hover *) {
-      color: var(--accent);
-    }
-  }
-
-  @media (hover: hover) {
     .group-hover\:opacity-100:is(:where(.group):hover *) {
       opacity: 1;
     }

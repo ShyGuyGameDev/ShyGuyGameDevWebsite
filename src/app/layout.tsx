@@ -12,13 +12,13 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Empty Console",
+  title: "ShyGuy",
   description:
     "Empty Console is a team of students who came together due to their love of programming. Explore our projects, meet the team, and see what we've built.",
   icons: {
-    icon: "/BetterEmptyConsoleLogo.png",
-    shortcut: "/BetterEmptyConsoleLogo.png",
-    apple: "/BetterEmptyConsoleLogo.png",
+    icon: "/BetterShyGuyGameDevLogo.png",
+    shortcut: "/BetterShyGuyGameDevLogo.png",
+    apple: "/BetterShyGuyGameDevLogo.png",
   },
 }
 

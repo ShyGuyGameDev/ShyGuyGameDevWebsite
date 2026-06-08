@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <div className="absolute left-[-9999px] w-[1200px] h-[630px] opacity-0 pointer-events-none">
         <Image
-          src="/BetterEmptyConsoleLogo.png"
+          src="/BetterShyGuyGameDevLogo.png"
           alt="Empty Console Logo"
           width={1200}
           height={630}

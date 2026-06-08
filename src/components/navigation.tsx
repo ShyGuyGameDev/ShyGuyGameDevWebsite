@@ -46,14 +46,14 @@ export function Navigation() {
             className="flex items-center gap-2 text-xl font-semibold text-primary hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-md px-3 -mx-3 -my-4 py-4 h-full"
           >
             <Image
-              src="/BetterEmptyConsoleLogo.png"
+              src="/BetterShyGuyGameDevLogo.png"
               alt="Empty Console Logo"
               width={32}
               height={32}
               className="object-contain"
               unoptimized
             />
-            Empty Console
+            ShyGuy
           </Link>
 
           {/* Desktop Navigation */}

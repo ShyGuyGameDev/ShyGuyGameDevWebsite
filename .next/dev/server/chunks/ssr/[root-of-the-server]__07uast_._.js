@@ -88,7 +88,7 @@ function Footer() {
                         className: "flex items-center gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                src: "/BetterEmptyConsoleLogo.png",
+                                src: "/BetterShyGuyGameDevLogo.png",
                                 alt: "Empty Console Logo",
                                 width: 24,
                                 height: 24,
@@ -101,7 +101,7 @@ function Footer() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm",
-                                children: "Empty Console"
+                                children: "ShyGuy"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
                                 lineNumber: 19,
@@ -117,7 +117,7 @@ function Footer() {
                         className: "flex flex-col sm:flex-row items-center gap-4 sm:gap-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "mailto:consoleempty@gmail.com",
+                                href: "mailto:shyguygamedev@gmail.com",
                                 className: "flex items-center gap-2 text-sm hover:text-accent-light transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-light rounded-sm px-1",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
@@ -129,7 +129,7 @@ function Footer() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: "consoleempty@gmail.com"
+                                        children: "shyguygamedev@gmail.com"
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
                                         lineNumber: 28,
@@ -162,7 +162,7 @@ function Footer() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        children: "emptyconsolegamedev"
+                                        children: "shyguygamedev"
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
                                         lineNumber: 35,
@@ -219,12 +219,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$
 ;
 ;
 const metadata = {
-    title: "Empty Console",
+    title: "ShyGuy",
     description: "Empty Console is a team of students who came together due to their love of programming. Explore our projects, meet the team, and see what we've built.",
     icons: {
-        icon: "/BetterEmptyConsoleLogo.png",
-        shortcut: "/BetterEmptyConsoleLogo.png",
-        apple: "/BetterEmptyConsoleLogo.png"
+        icon: "/BetterShyGuyGameDevLogo.png",
+        shortcut: "/BetterShyGuyGameDevLogo.png",
+        apple: "/BetterShyGuyGameDevLogo.png"
     }
 };
 function RootLayout({ children }) {
