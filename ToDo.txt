@@ -16,7 +16,7 @@ Home
         robotics
         debate
         mun
-        sports
+        sports/teaching?
     Song Quote of the Day
     Animation like EC?
 Posts & Media Mentions
@@ -24,9 +24,7 @@ Posts & Media Mentions
     Others section
     Hyperlinks
 Projects
-    Empty Console section
-    Non-Empty Console section
-    Current section
+    Empty Console section, Non-Empty Console section, Current section / different section for each subject
     Hyperlinks
 Colors
     Background

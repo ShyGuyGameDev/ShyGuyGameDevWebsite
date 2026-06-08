@@ -12,37 +12,25 @@ const teamMembers = [
     image: "/HF_ang PFP.png",
     // image: "/BetterEmptyConsoleLogo.png",
     // bio: "HF_ang discovered coding through video games and has since developed a passion for problem-solving, creating digital art, and experimenting with physics in code. Adding his video game skills of code and art, he brings easy to read UI and user engagement to the team’s creations. He also constantly experiments with new concepts in his work.",
-    bio: "HF_ang originally discovered his passion for programming and problem solving through his love for video games. After starting to work with ShyGuy and Emey in 2024, his video game development skills have started to be applied to other projects, with him focusing on UI/UX design and user engagement.",
-    hobbies: [
-      { icon: "🎾", label: "Tennis" },
-      { icon: "🏓", label: "Ping-pong" },
-      { icon: "⛵", label: "Sailing" },
-    ],
+    bio: "HF_ang found his passion for programming through video games. Since teaming up with ShyGuy and Emey in 2024, he's focused on UI/UX design and user engagement.",
     discord: "hfanggamedev",
+    tilt: "left" as const,
   },
   {
     name: "ShyGuy",
     role: "CEO & Co-Founder",
     image: "/images (1).jpeg",
-    bio: "ShyGuy oversees marketing, communications, and product positioning, while also contributing to development. He discovered technology at a young age and has developed strong skills in leadership and strategy. He plays a central role in shaping product vision, aligning the team, and communicating complex ideas clearly.",
-    hobbies: [
-      { icon: "🎾", label: "Tennis" },
-      { icon: "⛳", label: "Golf" },
-      { icon: "⛵", label: "Sailing" },
-      { icon: "🎹", label: "Piano" },
-    ],
+    bio: "ShyGuy leads marketing, communications, and product positioning while contributing to development. With a knack for leadership and strategy, he shapes product vision and keeps the team aligned.",
     discord: "shyguygamedev",
+    featured: true,
   },
   {
     name: "Emey",
     role: "Chief Creative Officer & Co-Founder",
     image: "/pixilart-1766028338678.png",
-    bio: "Emey is the music composer and an artist on the team. He began coding later than the other members but learned extremely quickly. He enjoys exploring the intersection of music, art, and programming, bringing a unique audio-visual perspective to the team's projects. Through his view of everything, he consistently enhances user experience.",
-    hobbies: [
-      { icon: "🎾", label: "Tennis" },
-      { icon: "🎹", label: "Piano" },
-    ],
+    bio: "Emey is the team's composer and lead artist, bringing a unique creative perspective to every project. He picked up coding after meeting ShyGuy and HF_ang and quickly mastered key software skills.",
     discord: "qorachniuphorbia",
+    tilt: "right" as const,
   },
 ]
 
@@ -111,11 +99,13 @@ export function TeamSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className={`animate-on-scroll opacity-0 animate-delay-${(index + 1) * 100} flex`}
+              className={`animate-on-scroll opacity-0 animate-delay-${(index + 1) * 100} ${
+                member.featured ? "relative z-10 lg:scale-[1.15]" : ""
+              }`}
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
             >
               <TeamMemberCard {...member} />
