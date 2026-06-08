@@ -10,6 +10,13 @@ Home
     Name
     Intro
     Short Past
+    short intros to each topic
+        games
+        apps
+        robotics
+        debate
+        mun
+        sports
     Song Quote of the Day
     Animation like EC?
 Posts & Media Mentions
