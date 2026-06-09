@@ -16,7 +16,7 @@ function shuffleArray<T>(array: T[]): T[] {
 
 type TypewriterElement = ElementType
 
-const HERO_TITLE = "Welcome to Empty Console"
+const HERO_TITLE = "Who is ShyGuy?"
 const HERO_PARAGRAPH =
   "Empty Console is a team of students who came together due to their love of programming. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about video coding and of the world's future."
 const HERO_BUTTON_TEXT = "Meet the Team"
@@ -93,42 +93,42 @@ export function HeroSection() {
   const [scrollProgress, setScrollProgress] = useState(0)
   const router = useRouter()
   // Fetch video list from API (automatically detects all videos in /public/Clips)
-  useEffect(() => {
-    const fetchVideos = async () => {
-      try {
-        const response = await fetch("/api/videos")
-        if (!response.ok) {
-          throw new Error("Failed to fetch videos")
-        }
-        const data = await response.json()
-        if (data.videos && data.videos.length > 0) {
-          const shuffled = shuffleArray(data.videos as string[])
-          setVideoList(shuffled)
-          console.log("Videos loaded:", shuffled)
-        } else {
-          console.warn("No videos found in API response")
-          useFallbackVideos()
-        }
-      } catch (error) {
-        console.error("Error fetching videos:", error)
-        useFallbackVideos()
-      }
-    }
-
-    const useFallbackVideos = () => {
-      const fallbackVideos = [
-        "/Clips/OpenStage.mp4",
-        "/Clips/SpaceLooper.mp4",
-        "/Clips/BuggedOut.mp4",
-        "/Clips/MaliceAndMercy.mp4",
-      ]
-      const shuffled = shuffleArray(fallbackVideos)
-      setVideoList(shuffled)
-      console.log("Using fallback videos:", shuffled)
-    }
-
-    fetchVideos()
-  }, [])
+  // useEffect(() => {
+  //   const fetchVideos = async () => {
+  //     try {
+  //       const response = await fetch("/api/videos")
+  //       if (!response.ok) {
+  //         throw new Error("Failed to fetch videos")
+  //       }
+  //       const data = await response.json()
+  //       if (data.videos && data.videos.length > 0) {
+  //         const shuffled = shuffleArray(data.videos as string[])
+  //         setVideoList(shuffled)
+  //         console.log("Videos loaded:", shuffled)
+  //       } else {
+  //         console.warn("No videos found in API response")
+  //         useFallbackVideos()
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching videos:", error)
+  //       useFallbackVideos()
+  //     }
+  //   }
+  //
+  //   const useFallbackVideos = () => {
+  //     const fallbackVideos = [
+  //       "/Clips/OpenStage.mp4",
+  //       "/Clips/SpaceLooper.mp4",
+  //       "/Clips/BuggedOut.mp4",
+  //       "/Clips/MaliceAndMercy.mp4",
+  //     ]
+  //     const shuffled = shuffleArray(fallbackVideos)
+  //     setVideoList(shuffled)
+  //     console.log("Using fallback videos:", shuffled)
+  //   }
+  //
+  //   fetchVideos()
+  // }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -205,15 +205,6 @@ export function HeroSection() {
       <style dangerouslySetInnerHTML={{__html: `
         .hero-text {
           color: black;
-        }
-        .hero-text-h1 {
-          text-shadow: -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white, -4px 0 0 white, 4px 0 0 white, 0 -4px 0 white, 0 4px 0 white, -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white, -3px 0 0 white, 3px 0 0 white, 0 -3px 0 white, 0 3px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, -2px 0 0 white, 2px 0 0 white, 0 -2px 0 white, 0 2px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, -1px 0 0 white, 1px 0 0 white, 0 -1px 0 white, 0 1px 0 white;
-        }
-        .hero-text-p {
-          text-shadow: -2.5px -2.5px 0 white, 2.5px -2.5px 0 white, -2.5px 2.5px 0 white, 2.5px 2.5px 0 white, -2.5px 0 0 white, 2.5px 0 0 white, 0 -2.5px 0 white, 0 2.5px 0 white, -1.5px -1.5px 0 white, 1.5px -1.5px 0 white, -1.5px 1.5px 0 white, 1.5px 1.5px 0 white, -1.5px 0 0 white, 1.5px 0 0 white, 0 -1.5px 0 white, 0 1.5px 0 white, -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white, -0.5px 0 0 white, 0.5px 0 0 white, 0 -0.5px 0 white, 0 0.5px 0 white;
-        }
-        .hero-text-p2 {
-          text-shadow: -1.5px -1.5px 0 white, 1.5px -1.5px 0 white, -1.5px 1.5px 0 white, 1.5px 1.5px 0 white, -1.5px 0 0 white, 1.5px 0 0 white, 0 -1.5px 0 white, 0 1.5px 0 white, -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white, -0.5px 0 0 white, 0.5px 0 0 white, 0 -0.5px 0 white, 0 0.5px 0 white;
         }
         .typewriter-caret {
           display: inline-block;
@@ -349,7 +340,7 @@ export function HeroSection() {
         </div>
 
         {/* Video boxes container */}
-        <div className="absolute inset-0 hidden md:block" style={{ zIndex: 2 }}>
+        {/* <div className="absolute inset-0 hidden md:block" style={{ zIndex: 2 }}>
           <div className="video-container h-full">
             <div className="videos-orbit">
               {videoList.map((video, index) => (
@@ -377,7 +368,7 @@ export function HeroSection() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="max-w-[1100px] mx-auto px-6 text-center" style={{ position: 'relative', zIndex: 10 }}>
           <Typewriter

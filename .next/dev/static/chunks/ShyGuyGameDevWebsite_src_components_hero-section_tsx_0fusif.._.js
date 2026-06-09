@@ -30,7 +30,7 @@ function shuffleArray(array) {
     }
     return shuffled;
 }
-const HERO_TITLE = "Welcome to Empty Console";
+const HERO_TITLE = "Who is ShyGuy?";
 const HERO_PARAGRAPH = "Empty Console is a team of students who came together due to their love of programming. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about video coding and of the world's future.";
 const HERO_BUTTON_TEXT = "Meet the Team";
 const HERO_TITLE_SPEED = 55;
@@ -112,46 +112,42 @@ function HeroSection() {
     const [scrollProgress, setScrollProgress] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     // Fetch video list from API (automatically detects all videos in /public/Clips)
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "HeroSection.useEffect": ()=>{
-            const fetchVideos = {
-                "HeroSection.useEffect.fetchVideos": async ()=>{
-                    try {
-                        const response = await fetch("/api/videos");
-                        if (!response.ok) {
-                            throw new Error("Failed to fetch videos");
-                        }
-                        const data = await response.json();
-                        if (data.videos && data.videos.length > 0) {
-                            const shuffled = shuffleArray(data.videos);
-                            setVideoList(shuffled);
-                            console.log("Videos loaded:", shuffled);
-                        } else {
-                            console.warn("No videos found in API response");
-                            useFallbackVideos();
-                        }
-                    } catch (error) {
-                        console.error("Error fetching videos:", error);
-                        useFallbackVideos();
-                    }
-                }
-            }["HeroSection.useEffect.fetchVideos"];
-            const useFallbackVideos = {
-                "HeroSection.useEffect.useFallbackVideos": ()=>{
-                    const fallbackVideos = [
-                        "/Clips/OpenStage.mp4",
-                        "/Clips/SpaceLooper.mp4",
-                        "/Clips/BuggedOut.mp4",
-                        "/Clips/MaliceAndMercy.mp4"
-                    ];
-                    const shuffled = shuffleArray(fallbackVideos);
-                    setVideoList(shuffled);
-                    console.log("Using fallback videos:", shuffled);
-                }
-            }["HeroSection.useEffect.useFallbackVideos"];
-            fetchVideos();
-        }
-    }["HeroSection.useEffect"], []);
+    // useEffect(() => {
+    //   const fetchVideos = async () => {
+    //     try {
+    //       const response = await fetch("/api/videos")
+    //       if (!response.ok) {
+    //         throw new Error("Failed to fetch videos")
+    //       }
+    //       const data = await response.json()
+    //       if (data.videos && data.videos.length > 0) {
+    //         const shuffled = shuffleArray(data.videos as string[])
+    //         setVideoList(shuffled)
+    //         console.log("Videos loaded:", shuffled)
+    //       } else {
+    //         console.warn("No videos found in API response")
+    //         useFallbackVideos()
+    //       }
+    //     } catch (error) {
+    //       console.error("Error fetching videos:", error)
+    //       useFallbackVideos()
+    //     }
+    //   }
+    //
+    //   const useFallbackVideos = () => {
+    //     const fallbackVideos = [
+    //       "/Clips/OpenStage.mp4",
+    //       "/Clips/SpaceLooper.mp4",
+    //       "/Clips/BuggedOut.mp4",
+    //       "/Clips/MaliceAndMercy.mp4",
+    //     ]
+    //     const shuffled = shuffleArray(fallbackVideos)
+    //     setVideoList(shuffled)
+    //     console.log("Using fallback videos:", shuffled)
+    //   }
+    //
+    //   fetchVideos()
+    // }, [])
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "HeroSection.useEffect": ()=>{
             const handleScroll = {
@@ -242,15 +238,6 @@ function HeroSection() {
                     __html: `
         .hero-text {
           color: black;
-        }
-        .hero-text-h1 {
-          text-shadow: -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white, -4px 0 0 white, 4px 0 0 white, 0 -4px 0 white, 0 4px 0 white, -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white, -3px 0 0 white, 3px 0 0 white, 0 -3px 0 white, 0 3px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white, -2px 0 0 white, 2px 0 0 white, 0 -2px 0 white, 0 2px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white, -1px 0 0 white, 1px 0 0 white, 0 -1px 0 white, 0 1px 0 white;
-        }
-        .hero-text-p {
-          text-shadow: -2.5px -2.5px 0 white, 2.5px -2.5px 0 white, -2.5px 2.5px 0 white, 2.5px 2.5px 0 white, -2.5px 0 0 white, 2.5px 0 0 white, 0 -2.5px 0 white, 0 2.5px 0 white, -1.5px -1.5px 0 white, 1.5px -1.5px 0 white, -1.5px 1.5px 0 white, 1.5px 1.5px 0 white, -1.5px 0 0 white, 1.5px 0 0 white, 0 -1.5px 0 white, 0 1.5px 0 white, -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white, -0.5px 0 0 white, 0.5px 0 0 white, 0 -0.5px 0 white, 0 0.5px 0 white;
-        }
-        .hero-text-p2 {
-          text-shadow: -1.5px -1.5px 0 white, 1.5px -1.5px 0 white, -1.5px 1.5px 0 white, 1.5px 1.5px 0 white, -1.5px 0 0 white, 1.5px 0 0 white, 0 -1.5px 0 white, 0 1.5px 0 white, -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white, -0.5px 0 0 white, 0.5px 0 0 white, 0 -0.5px 0 white, 0 0.5px 0 white;
         }
         .typewriter-caret {
           display: inline-block;
@@ -396,78 +383,27 @@ function HeroSection() {
                                 className: "absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-accent/10 blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 346,
+                                lineNumber: 337,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-accent-light/20 blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 347,
+                                lineNumber: 338,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/5 blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 348,
+                                lineNumber: 339,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                        lineNumber: 345,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 hidden md:block",
-                        style: {
-                            zIndex: 2
-                        },
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "video-container h-full",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "videos-orbit",
-                                children: videoList.map((video, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "video-box",
-                                        onMouseEnter: (e)=>handleVideoHover(e, true),
-                                        onMouseLeave: (e)=>handleVideoHover(e, false),
-                                        onClick: handleVideoClick,
-                                        style: {
-                                            '--spread-offset': `${scrollProgress * 250}px`,
-                                            '--vertical-offset': `${scrollProgress * 150}px`,
-                                            '--scale': `${1 + scrollProgress * 0.25}`
-                                        },
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
-                                            src: video,
-                                            autoPlay: true,
-                                            muted: true,
-                                            loop: true,
-                                            playsInline: true,
-                                            preload: "auto"
-                                        }, void 0, false, {
-                                            fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                            lineNumber: 368,
-                                            columnNumber: 19
-                                        }, this)
-                                    }, `${video}-${index}`, false, {
-                                        fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                        lineNumber: 356,
-                                        columnNumber: 17
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 354,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                            lineNumber: 353,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                        lineNumber: 352,
+                        lineNumber: 336,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -488,7 +424,7 @@ function HeroSection() {
                                 startDelay: HERO_TITLE_DELAY
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 383,
+                                lineNumber: 374,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -499,7 +435,7 @@ function HeroSection() {
                                 children: HERO_PARAGRAPH
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 392,
+                                lineNumber: 383,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -513,7 +449,7 @@ function HeroSection() {
                                             children: HERO_BUTTON_TEXT
                                         }, void 0, false, {
                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                            lineNumber: 401,
+                                            lineNumber: 392,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -529,49 +465,49 @@ function HeroSection() {
                                                     d: "M12 2v18"
                                                 }, void 0, false, {
                                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                                    lineNumber: 403,
+                                                    lineNumber: 394,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                     d: "M6 14l6 6 6-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                                    lineNumber: 404,
+                                                    lineNumber: 395,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                            lineNumber: 402,
+                                            lineNumber: 393,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                    lineNumber: 397,
+                                    lineNumber: 388,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 396,
+                                lineNumber: 387,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                        lineNumber: 382,
+                        lineNumber: 373,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                lineNumber: 338,
+                lineNumber: 329,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s2(HeroSection, "Qam6VkWXSuSEeiTyX+dV9MxoN88=", false, function() {
+_s2(HeroSection, "PaA/h/YaAlqOEk8IXiqjOf/Bu44=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

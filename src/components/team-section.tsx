@@ -6,14 +6,11 @@ import { TeamMemberCard } from "@/components/team-member-card"
 
 const teamMembers = [
   {
-    name: "HF_ang",
-    role: "CTO & Co-Founder",
-    // Hidden logo image before HF_ang's picture
-    image: "/HF_ang PFP.png",
-    // image: "/BetterEmptyConsoleLogo.png",
-    // bio: "HF_ang discovered coding through video games and has since developed a passion for problem-solving, creating digital art, and experimenting with physics in code. Adding his video game skills of code and art, he brings easy to read UI and user engagement to the team’s creations. He also constantly experiments with new concepts in his work.",
-    bio: "HF_ang found his passion for programming through video games. Since teaming up with ShyGuy and Emey in 2024, he's focused on UI/UX design and user engagement.",
-    discord: "hfanggamedev",
+    name: "Emey",
+    role: "Chief Creative Officer & Co-Founder",
+    image: "/pixilart-1766028338678.png",
+    bio: "Emey is the team's composer and lead artist, bringing a unique creative perspective to every project. He picked up coding after meeting ShyGuy and HF_ang and quickly mastered key software skills.",
+    discord: "qorachniuphorbia",
     tilt: "left" as const,
   },
   {
@@ -25,11 +22,14 @@ const teamMembers = [
     featured: true,
   },
   {
-    name: "Emey",
-    role: "Chief Creative Officer & Co-Founder",
-    image: "/pixilart-1766028338678.png",
-    bio: "Emey is the team's composer and lead artist, bringing a unique creative perspective to every project. He picked up coding after meeting ShyGuy and HF_ang and quickly mastered key software skills.",
-    discord: "qorachniuphorbia",
+    name: "HF_ang",
+    role: "CTO & Co-Founder",
+    // Hidden logo image before HF_ang's picture
+    image: "/HF_ang PFP.png",
+    // image: "/BetterEmptyConsoleLogo.png",
+    // bio: "HF_ang discovered coding through video games and has since developed a passion for problem-solving, creating digital art, and experimenting with physics in code. Adding his video game skills of code and art, he brings easy to read UI and user engagement to the team’s creations. He also constantly experiments with new concepts in his work.",
+    bio: "HF_ang found his passion for programming through video games. Since teaming up with ShyGuy and Emey in 2024, he's focused on UI/UX design and user engagement.",
+    discord: "hfanggamedev",
     tilt: "right" as const,
   },
 ]
@@ -82,20 +82,19 @@ export function TeamSection() {
       </div>
       <div className="relative z-10 max-w-[1100px] mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-4">
+          <h2 className="animate-on-scroll opacity-0 flex items-center justify-center gap-3 text-4xl md:text-[32px] font-semibold text-primary mb-4">
+            <Image
+              src="/BetterEmptyConsoleLogo.png"
+              alt="Empty Console Logo"
+              width={64}
+              height={64}
+              className="h-[1em] w-auto"
+              unoptimized
+            />
             Empty Console
           </h2>
           <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-4xl mx-auto">
-            Empty Console is a startup team cofounded by ShyGuy, HF_ang, and Emey. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about vibe coding and of the world's future. We started with games, though are now competing in hackathons and building real apps. The Empty Console website is available at{" "}
-            <a
-              href="https://www.emptyconsole.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline hover:no-underline"
-            >
-              www.emptyconsole.com
-            </a>
-            .
+            Empty Console is a startup team cofounded by ShyGuy, HF_ang, and Emey. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about vibe coding and of the world's future. We started with games, though are now competing in hackathons and building real apps.
           </p>
         </div>
 
