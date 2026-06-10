@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { HeroSection } from "@/components/hero-section"
+import { TopicSwitcher } from "@/components/topic-switcher"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         />
       </div>
       <HeroSection />
+      <TopicSwitcher />
     </>
   )
 }

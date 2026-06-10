@@ -31,8 +31,8 @@ function shuffleArray(array) {
     return shuffled;
 }
 const HERO_TITLE = "Who is ShyGuy?";
-const HERO_PARAGRAPH = "Empty Console is a team of students who came together due to their love of programming. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about video coding and of the world's future.";
-const HERO_BUTTON_TEXT = "Meet the Team";
+const HERO_PARAGRAPH = "Ever since he was old enough to hold an iPad, ShyGuy has always loved video games. Soon, this led to his fascination and passion for programming and other technologies, such as robotics and AI. As he grew older, he has also built valubable skills in leadership, teamwork, speaking, and impromptu debate, which he has been able to apply to his other skills in technology. Putting his many skills and experiences together, he has continued to expand the reach and impact of everything he does, whether it be building his startup, creating an app, or being a delegate in a model United Nations conference.";
+const HERO_BUTTON_TEXT = "See his work";
 const HERO_TITLE_SPEED = 55;
 const HERO_TITLE_DELAY = 250;
 function useTypewriter(text, speed = 16, startDelay = 0) {
@@ -89,13 +89,13 @@ function Typewriter({ text, speed, startDelay, className, as, showCursor = true,
                 "aria-hidden": true
             }, void 0, false, {
                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                lineNumber: 81,
+                lineNumber: 82,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-        lineNumber: 78,
+        lineNumber: 79,
         columnNumber: 5
     }, this);
 }
@@ -218,8 +218,8 @@ function HeroSection() {
             })["HeroSection.useEffect"];
         }
     }["HeroSection.useEffect"], []);
-    const handleScrollToTeam = ()=>{
-        router.push("/team");
+    const handleScrollToProjects = ()=>{
+        router.push("/projects");
     };
     const handleVideoHover = (e, isHovering)=>{
         if (isHovering) {
@@ -362,7 +362,7 @@ function HeroSection() {
                 }
             }, void 0, false, {
                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                lineNumber: 205,
+                lineNumber: 206,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -383,27 +383,27 @@ function HeroSection() {
                                 className: "absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-accent/10 blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 337,
+                                lineNumber: 338,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] rounded-full bg-accent-light/20 blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 338,
+                                lineNumber: 339,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/5 blur-3xl"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 339,
+                                lineNumber: 340,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                        lineNumber: 336,
+                        lineNumber: 337,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -424,7 +424,7 @@ function HeroSection() {
                                 startDelay: HERO_TITLE_DELAY
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 374,
+                                lineNumber: 375,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -435,73 +435,42 @@ function HeroSection() {
                                 children: HERO_PARAGRAPH
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 383,
+                                lineNumber: 384,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "animate-on-scroll animate-delay-300",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                    onClick: handleScrollToTeam,
+                                    onClick: handleScrollToProjects,
                                     className: "bg-accent hover:bg-accent/95 active:bg-accent/92 text-accent-foreground font-medium uppercase tracking-wide px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-2xl active:shadow-md transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 transform",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "mr-3 inline-block",
-                                            children: HERO_BUTTON_TEXT
-                                        }, void 0, false, {
-                                            fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                            lineNumber: 392,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                            className: "h-10 w-10",
-                                            viewBox: "0 0 24 24",
-                                            fill: "none",
-                                            stroke: "currentColor",
-                                            strokeWidth: "2",
-                                            strokeLinecap: "round",
-                                            strokeLinejoin: "round",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    d: "M12 2v18"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                                    lineNumber: 394,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    d: "M6 14l6 6 6-6"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                                    lineNumber: 395,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                            lineNumber: 393,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "inline-block",
+                                        children: HERO_BUTTON_TEXT
+                                    }, void 0, false, {
+                                        fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
+                                        lineNumber: 393,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                    lineNumber: 388,
+                                    lineNumber: 389,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                                lineNumber: 387,
+                                lineNumber: 388,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                        lineNumber: 373,
+                        lineNumber: 374,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/hero-section.tsx",
-                lineNumber: 329,
+                lineNumber: 330,
                 columnNumber: 7
             }, this)
         ]

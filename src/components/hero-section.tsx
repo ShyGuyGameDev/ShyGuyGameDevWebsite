@@ -18,8 +18,9 @@ type TypewriterElement = ElementType
 
 const HERO_TITLE = "Who is ShyGuy?"
 const HERO_PARAGRAPH =
-  "Empty Console is a team of students who came together due to their love of programming. From a shared passion, the team has evolved into a collaborative space where each member can pursue their unique talents, contribute meaningfully to projects, and develop skills while learning from each other. Everyone on the team brings a unique perspective, balancing technical expertise, creativity, and teamwork to produce innovative projects and products, all while learning more about video coding and of the world's future."
-const HERO_BUTTON_TEXT = "Meet the Team"
+  "Ever since he was old enough to hold an iPad, ShyGuy has always loved video games. Soon, this led to his fascination and passion for programming and other technologies, such as robotics and AI. As he grew older, he has also built valubable skills in leadership, teamwork, speaking, and impromptu debate, which he has been able to apply to his other skills in technology. Putting his many skills and experiences together, he has continued to expand the reach and impact of everything he does, whether it be building his startup, creating an app, or being a delegate in a model United Nations conference."
+
+const HERO_BUTTON_TEXT = "See his work"
 
 const HERO_TITLE_SPEED = 55
 const HERO_TITLE_DELAY = 250
@@ -184,8 +185,8 @@ export function HeroSection() {
     return () => observer.disconnect()
   }, [])
 
-  const handleScrollToTeam = () => {
-    router.push("/team")
+  const handleScrollToProjects = () => {
+    router.push("/projects")
   }
 
   const handleVideoHover = (e: React.MouseEvent<HTMLDivElement>, isHovering: boolean) => {
@@ -329,7 +330,7 @@ export function HeroSection() {
       <section
         id="home"
         ref={sectionRef}
-        className="relative min-h-screen flex items-center justify-center py-[100px] pt-[72px] overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center pt-[144px] pb-[72px] overflow-hidden"
         style={{ background: 'transparent' }}
       >
         {/* Abstract gradient background overlay */}
@@ -386,14 +387,10 @@ export function HeroSection() {
 
           <div className="animate-on-scroll animate-delay-300">
             <Button
-              onClick={handleScrollToTeam}
+              onClick={handleScrollToProjects}
               className="bg-accent hover:bg-accent/95 active:bg-accent/92 text-accent-foreground font-medium uppercase tracking-wide px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-2xl active:shadow-md transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 transform"
             >
-              <span className="mr-3 inline-block">{HERO_BUTTON_TEXT}</span>
-              <svg className="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2v18" />
-                <path d="M6 14l6 6 6-6" />
-              </svg>
+              <span className="inline-block">{HERO_BUTTON_TEXT}</span>
             </Button>
           </div>
         </div>
