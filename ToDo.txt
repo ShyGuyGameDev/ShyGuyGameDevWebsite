@@ -9,7 +9,6 @@ Empty Console
 Home
     Name
     Intro
-    Short Past
     short intros to each topic
         games
         apps

@@ -4,6 +4,24 @@ import { ElementType, useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 
+function ArrowDown({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <path d="M12 3v18" />
+      <path d="m19 14-7 7-7-7" />
+    </svg>
+  )
+}
+
 // Shuffle array function
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array]
@@ -20,7 +38,7 @@ const HERO_TITLE = "Who is ShyGuy?"
 const HERO_PARAGRAPH =
   "Ever since he was old enough to hold an iPad, ShyGuy has always loved video games. Soon, this led to his fascination and passion for programming and other technologies, such as robotics and AI. As he grew older, he has also built valubable skills in leadership, teamwork, speaking, and impromptu debate, which he has been able to apply to his other skills in technology. Putting his many skills and experiences together, he has continued to expand the reach and impact of everything he does, whether it be building his startup, creating an app, or being a delegate in a model United Nations conference."
 
-const HERO_BUTTON_TEXT = "See his work"
+const HERO_BUTTON_TEXT = "SEE MORE"
 
 const HERO_TITLE_SPEED = 55
 const HERO_TITLE_DELAY = 250
@@ -186,7 +204,15 @@ export function HeroSection() {
   }, [])
 
   const handleScrollToProjects = () => {
-    router.push("/projects")
+    const divider = document.getElementById("hero-divider")
+    if (!divider) return
+
+    const header = document.querySelector("header")
+    const headerHeight = header?.getBoundingClientRect().height ?? 0
+    const dividerTop = divider.getBoundingClientRect().top + window.scrollY
+    const target = dividerTop - headerHeight
+
+    window.scrollTo({ top: target, behavior: "smooth" })
   }
 
   const handleVideoHover = (e: React.MouseEvent<HTMLDivElement>, isHovering: boolean) => {
@@ -388,9 +414,11 @@ export function HeroSection() {
           <div className="animate-on-scroll animate-delay-300">
             <Button
               onClick={handleScrollToProjects}
-              className="bg-accent hover:bg-accent/95 active:bg-accent/92 text-accent-foreground font-medium uppercase tracking-wide px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-2xl active:shadow-md transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 transform"
+              className="bg-accent hover:bg-accent/95 active:bg-accent/92 text-accent-foreground font-medium uppercase tracking-wide px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-2xl active:shadow-md transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 transform inline-flex items-center gap-3"
             >
+              <ArrowDown className="size-5 shrink-0" />
               <span className="inline-block">{HERO_BUTTON_TEXT}</span>
+              <ArrowDown className="size-5 shrink-0" />
             </Button>
           </div>
         </div>
