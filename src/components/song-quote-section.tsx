@@ -473,7 +473,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "The Offspring",
   },
   {
-    quote: "I've got fire for a heart, I'm not scared of the dark. You've never seen it look so easy.",
+    quote: "I've got fire for a heart. I'm not scared of the dark. You've never seen it look so easy.",
     song: "Drag Me Down",
     artists: "One Direction",
   },

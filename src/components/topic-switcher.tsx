@@ -10,11 +10,11 @@ const TOPICS = ["Games", "Apps", "Robotics", "MUN", "Debate", "Teaching"]
 const TOPIC_CONTENT: Record<string, string[]> = {
   Games: [
     "Video games are where it all began. Ever since he was old enough to hold an iPad, ShyGuy has been hooked, and that early love quickly grew into a fascination with how games are actually made.",
-    "He taught himself the fundamentals of game design from the ground up, learning how mechanics, art, sound, and story come together to create something a player can lose themselves in. Every project pushed him to pick up new tools and rethink ideas that looked great on paper but fell flat in practice.",
+    "He taught himself game design from the ground up, learning how mechanics, art, sound, and story come together to create something a player can lose themselves in. Every project pushed him to pick up new tools and rethink ideas that looked good on paper.",
     "Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened along the way. More than anything, games taught him how to finish what he starts.",
   ],
   Apps: [
-    "What started as curiosity about the software on his devices turned into a passion for building it himself. ShyGuy wanted to understand how the apps he used every day actually worked, and that question became a habit of building his own.",
+    "What started as curiosity about the software on his devices turned into a passion for building it himself. ShyGuy wanted to understand how the apps he used every day actually worked, and that question became a habit of making his own.",
     "He develops apps that are practical, polished, and genuinely useful, focusing on the small details that make a tool feel effortless to use. From the first sketch of an interface to the final round of testing, he cares about how each screen feels in someone's hands.",
     "From idea to interface to deployment, he enjoys owning the whole process and turning everyday problems into clean, intuitive tools that people actually want to use.",
   ],
@@ -42,7 +42,7 @@ const TOPIC_CONTENT: Record<string, string[]> = {
 
 function ImagePlaceholder() {
   return (
-    <div className="aspect-[4/3] w-[260px] rounded-xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm">
+    <div className="aspect-[4/3] w-[230px] rounded-xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm">
       Image
     </div>
   )
@@ -62,8 +62,8 @@ export function TopicSwitcher() {
   const paragraphs = TOPIC_CONTENT[topic] ?? []
 
   return (
-    <section className="flex flex-col items-center px-6 pt-18 pb-20">
-      <div className="max-w-[1100px] mx-auto flex items-center justify-center gap-6 mb-12">
+    <section className="flex flex-col items-center px-6 pt-12 pb-14">
+      <div className="max-w-[1100px] mx-auto flex items-center justify-center gap-6 mb-8">
         <Button
           variant="ghost"
           size="icon-lg"
@@ -89,24 +89,24 @@ export function TopicSwitcher() {
         </Button>
       </div>
 
-      <div className="flex items-start justify-center gap-10 max-w-[1200px] w-full">
-        <div className="flex flex-col gap-8">
+      <div className="flex items-stretch justify-center gap-10 max-w-[1200px] w-full">
+        <div className="flex flex-col gap-6">
           <ImagePlaceholder />
           <ImagePlaceholder />
         </div>
 
-        <div className="flex-1 max-w-[560px] text-left">
+        <div className="flex-1 max-w-[560px] text-left flex flex-col justify-between">
           {paragraphs.map((paragraph, i) => (
             <p
               key={i}
-              className="hero-text text-base md:text-lg leading-relaxed text-pretty mb-4 last:mb-0"
+              className="hero-text text-base md:text-lg leading-relaxed text-pretty"
             >
               {paragraph}
             </p>
           ))}
         </div>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-6">
           <ImagePlaceholder />
           <ImagePlaceholder />
         </div>

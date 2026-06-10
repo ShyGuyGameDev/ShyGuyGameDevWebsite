@@ -1278,6 +1278,10 @@
     width: 200px;
   }
 
+  .w-\[230px\] {
+    width: 230px;
+  }
+
   .w-\[260px\] {
     width: 260px;
   }
@@ -2266,6 +2270,10 @@
     padding-top: calc(var(--spacing) * 4);
   }
 
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
+
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
   }
@@ -2328,6 +2336,10 @@
 
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
+  }
+
+  .pb-14 {
+    padding-bottom: calc(var(--spacing) * 14);
   }
 
   .pb-16 {
