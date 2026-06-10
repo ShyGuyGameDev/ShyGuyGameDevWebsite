@@ -9,6 +9,11 @@ Empty Console
 Home
     Name
     Intro
+    Song Quote of the Day
+
+
+
+
     short intros to each topic
         games
         apps
@@ -16,8 +21,8 @@ Home
         debate
         mun
         sports/teaching?
-    Song Quote of the Day
-    Animation like EC?
+    Animation like EC
+        6 symbols around text, each representing a topic?
 Posts & Media Mentions
     Own section
     Others section
