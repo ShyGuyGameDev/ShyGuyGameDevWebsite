@@ -249,7 +249,7 @@ const SONG_QUOTES: SongQuote[] = [
   },
   {
     quote: "Wake me up inside. Call my name and save me from the dark. Bid my blood to run, before I come undone. Save me from the nothin' I've become.",
-    song: "Bring me to life",
+    song: "Bring Me To Life",
     artists: "Evanescence",
   },
   {
@@ -269,7 +269,7 @@ const SONG_QUOTES: SongQuote[] = [
   },
   {
     quote: "Tonight, we are young, so let's set the world on fire. We can burn brighter than the sun.",
-    song: "We are Young",
+    song: "We Are Young",
     artists: "Fun, Janelle Monáe",
   },
   {
@@ -284,7 +284,7 @@ const SONG_QUOTES: SongQuote[] = [
   },
   {
     quote: "I walk a lonely road. The only one that I have ever known. Don't know where it goes, but it's home to me and I walk alone.",
-    song: "Boulevard of Broken Dreams",
+    song: "Boulevard Of Broken Dreams",
     artists: "Green Day",
   },
   {

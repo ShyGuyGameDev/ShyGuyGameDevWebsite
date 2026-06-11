@@ -1,8 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+const IMAGE_SLOTS = 4
 
 // const TOPICS = ["Robotics", "Apps", "MUN", "Debate", "Games", "Teaching"]
 const TOPICS = ["Games", "Apps", "Robotics", "MUN", "Debate", "Teaching"]
@@ -47,19 +50,27 @@ const TOPIC_CONTENT: Record<string, string[]> = {
   ],
 }
 
-function ImagePlaceholder({ tilt }: { tilt?: "left" | "right" }) {
-  const tiltClass = tilt === "left" ? "-rotate-12" : tilt === "right" ? "rotate-12" : ""
+function ImageSlot({ src, alt }: { src?: string; alt: string }) {
+  if (!src) {
+    return (
+      <div className="aspect-[4/3] w-[230px] rounded-xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm">
+        Image
+      </div>
+    )
+  }
 
   return (
-    <div
-      className={`aspect-[4/3] w-[230px] rounded-xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm ${tiltClass}`}
-    >
-      Image
+    <div className="relative aspect-[4/3] w-[230px] overflow-hidden rounded-xl border border-border">
+      <Image src={src} alt={alt} fill sizes="230px" className="object-cover" />
     </div>
   )
 }
 
-export function TopicSwitcher() {
+export function TopicSwitcher({
+  topicImages = {},
+}: {
+  topicImages?: Record<string, string[]>
+}) {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -71,6 +82,8 @@ export function TopicSwitcher() {
 
   const topic = TOPICS[index]
   const paragraphs = TOPIC_CONTENT[topic] ?? []
+  const images = topicImages[topic] ?? []
+  const slots = Array.from({ length: IMAGE_SLOTS }, (_, i) => images[i])
 
   return (
     <section className="flex flex-col items-center px-6 pt-12 pb-14">
@@ -102,8 +115,8 @@ export function TopicSwitcher() {
 
       <div className="flex items-stretch justify-center gap-10 max-w-[1200px] w-full">
         <div className="flex flex-col gap-6">
-          <ImagePlaceholder tilt="left" />
-          <ImagePlaceholder tilt="left" />
+          <ImageSlot src={slots[0]} alt={`${topic} image 1`} />
+          <ImageSlot src={slots[1]} alt={`${topic} image 2`} />
         </div>
 
         <div className="flex-1 max-w-[560px] text-center flex flex-col justify-start gap-3">
@@ -118,8 +131,8 @@ export function TopicSwitcher() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <ImagePlaceholder tilt="right" />
-          <ImagePlaceholder tilt="right" />
+          <ImageSlot src={slots[2]} alt={`${topic} image 3`} />
+          <ImageSlot src={slots[3]} alt={`${topic} image 4`} />
         </div>
       </div>
     </section>
