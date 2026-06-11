@@ -248,6 +248,33 @@ export function HeroSection() {
           50% { opacity: 0; }
         }
 
+        .hero-placeholders {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+        }
+
+        .hero-placeholder {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 110px;
+          height: 110px;
+          border-radius: 18px;
+          background: rgba(0, 0, 0, 0.04);
+          border: 2px dashed rgba(0, 0, 0, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: rgba(0, 0, 0, 0.35);
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          transform-origin: center center;
+        }
+
         .video-container {
           position: relative;
           width: 100%;
@@ -396,6 +423,22 @@ export function HeroSection() {
             </div>
           </div>
         </div> */}
+
+        {/* Image placeholders framing the hero content (arc pattern, 3 per side) */}
+        <div className="hero-placeholders hidden lg:block" style={{ zIndex: 5 }}>
+          {[
+            { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(-6deg)", label: "Image 1" },
+            { transform: "translate(calc(-50% - min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(-6deg)", label: "Image 2" },
+            { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% + 250px)) rotate(-6deg)", label: "Image 3" },
+            { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(6deg)", label: "Image 4" },
+            { transform: "translate(calc(-50% + min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(6deg)", label: "Image 5" },
+            { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% + 250px)) rotate(6deg)", label: "Image 6" },
+          ].map((item) => (
+            <div key={item.label} className="hero-placeholder" style={{ transform: item.transform }}>
+              {item.label}
+            </div>
+          ))}
+        </div>
 
         <div className="max-w-[1100px] mx-auto px-6 text-center" style={{ position: 'relative', zIndex: 10 }}>
           <Typewriter
