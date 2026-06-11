@@ -63,7 +63,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Aerosmith",
   },
   {
-    quote: "Won't you help me sober up?",
+    quote: "Won't you help me sober up? Growing up, it made me numb, and I wanna feel something again.",
     song: "Sober Up",
     artists: "AJR",
   },
