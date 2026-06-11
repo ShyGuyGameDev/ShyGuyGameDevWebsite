@@ -158,7 +158,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Eagles",
   },
   {
-    quote: "And if you're talking money, then my conversation's shiftin. My dreams are bigger than just bein' on the rich list. Might be insanity, but people call it \"Gifted.\" My face is going numb from the sh*t this stuff is mixed with.",
+    quote: "And if you're talking money, then my conversation's shiftin. My dreams are bigger than just bein' on the rich list. Might be insanity, but people call it \"Gifted\". My face is going numb from the sh*t this stuff is mixed with.",
     song: "Remember the Name",
     artists: "Ed Sheeran, 50 Cent, Eminem",
   },
