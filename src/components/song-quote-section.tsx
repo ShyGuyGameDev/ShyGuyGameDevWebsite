@@ -578,6 +578,11 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "The Weeknd, Kendrick Lamar",
   },
   {
+    quote: "Who gon' pray for me? Take my pain for me? Save my soul for me? 'Cause I'm alone, you see. If I'm gon' die for you, if I'm gon' kill for you, then I'll spill this blood for you.",
+    song: "Pray For Me",
+    artists: "The Weeknd, Kendrick Lamar",
+  },
+  {
     quote: "I'm always ready for a war again, go down that road again. It's all the same. I'm always ready to take a life again, you know I'll read again. It's all the same.",
     song: "Pray For Me",
     artists: "The Weeknd, Kendrick Lamar",

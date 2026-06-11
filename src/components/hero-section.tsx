@@ -273,6 +273,16 @@ export function HeroSection() {
           text-transform: uppercase;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
           transform-origin: center center;
+          filter: grayscale(100%);
+        }
+
+        .hero-placeholder-image {
+          background: transparent;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          width: 150px;
+          height: 150px;
         }
 
         .video-container {
@@ -427,15 +437,30 @@ export function HeroSection() {
         {/* Image placeholders framing the hero content (arc pattern, 3 per side) */}
         <div className="hero-placeholders hidden lg:block" style={{ zIndex: 5 }}>
           {[
-            { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(-6deg)", label: "Image 1" },
-            { transform: "translate(calc(-50% - min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(-6deg)", label: "Image 2" },
-            { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% + 250px)) rotate(-6deg)", label: "Image 3" },
-            { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(6deg)", label: "Image 4" },
-            { transform: "translate(calc(-50% + min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(6deg)", label: "Image 5" },
-            { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% + 250px)) rotate(6deg)", label: "Image 6" },
+            { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(-6deg)", label: "Image 1", src: "/HomeIcons/Gaming.png" },
+            { transform: "translate(calc(-50% - min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(-6deg)", label: "Image 2", src: "/HomeIcons/Robot-removebg-preview.png" },
+            { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% + 250px)) rotate(-6deg)", label: "Image 3", src: "/HomeIcons/debate.png" },
+            { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(6deg)", label: "Image 4", src: "/HomeIcons/Apps-removebg-preview.png", size: 160 },
+            { transform: "translate(calc(-50% + min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(6deg)", label: "Image 5", src: "/HomeIcons/UnitedNations.png", size: 207 },
+            { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% + 250px)) rotate(6deg)", label: "Image 6", src: "/HomeIcons/teaching.png" },
           ].map((item) => (
-            <div key={item.label} className="hero-placeholder" style={{ transform: item.transform }}>
-              {item.label}
+            <div
+              key={item.label}
+              className={item.src ? "hero-placeholder hero-placeholder-image" : "hero-placeholder"}
+              style={{
+                transform: item.transform,
+                ...(item.size ? { width: item.size, height: item.size } : {}),
+              }}
+            >
+              {item.src ? (
+                <img
+                  src={item.src}
+                  alt={item.label}
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                item.label
+              )}
             </div>
           ))}
         </div>

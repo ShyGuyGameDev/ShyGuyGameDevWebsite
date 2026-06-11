@@ -1851,3 +1851,79 @@
 {"timestamp":"29:15:44.595","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
 {"timestamp":"29:15:49.837","source":"Server","level":"LOG","message":"✓ Compiled in 80ms"}
 {"timestamp":"29:15:54.609","source":"Server","level":"LOG","message":"✓ Compiled in 305ms"}
+{"timestamp":"39:54:28.762","source":"Server","level":"LOG","message":"✓ Compiled in 1304ms"}
+{"timestamp":"39:55:13.832","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"39:55:13.947","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"39:55:13.952","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"39:55:13.954","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"39:55:13.958","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"39:55:13.958","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"39:55:13.958","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781200540061} /_vercel/insights/view"}
+{"timestamp":"39:55:17.409","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"39:55:17.482","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"39:55:17.483","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"39:55:17.483","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"39:55:17.488","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"39:55:17.488","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"39:55:17.488","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781200543590} /_vercel/insights/view"}
+{"timestamp":"39:55:37.174","source":"Server","level":"LOG","message":"✓ Compiled in 108ms"}
+{"timestamp":"39:55:41.201","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"39:55:54.471","source":"Server","level":"LOG","message":"✓ Compiled in 68ms"}
+{"timestamp":"39:56:44.468","source":"Server","level":"LOG","message":"✓ Compiled in 299ms"}
+{"timestamp":"39:57:00.152","source":"Server","level":"LOG","message":"✓ Compiled in 199ms"}
+{"timestamp":"39:57:25.493","source":"Server","level":"LOG","message":"✓ Compiled in 152ms"}
+{"timestamp":"39:57:48.315","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"39:57:57.502","source":"Server","level":"LOG","message":"✓ Compiled in 78ms"}
+{"timestamp":"39:58:05.188","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
+{"timestamp":"39:58:33.254","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
+{"timestamp":"39:58:47.267","source":"Server","level":"LOG","message":"✓ Compiled in 44ms"}
+{"timestamp":"39:58:57.334","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
+{"timestamp":"40:01:26.081","source":"Server","level":"LOG","message":"✓ Compiled in 239ms"}
+{"timestamp":"40:02:21.822","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"40:02:21.913","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"40:02:21.919","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"40:02:21.920","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"40:02:21.928","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"40:02:21.928","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"40:02:21.928","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781200968028} /_vercel/insights/view"}
+{"timestamp":"40:02:22.302","source":"Server","level":"LOG","message":"✓ Compiled in 256ms"}
+{"timestamp":"40:03:15.738","source":"Server","level":"LOG","message":"✓ Compiled in 160ms"}
+{"timestamp":"40:03:16.167","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"40:03:28.864","source":"Server","level":"LOG","message":"✓ Compiled in 106ms"}
+{"timestamp":"40:03:40.020","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"40:03:40.246","source":"Server","level":"LOG","message":"✓ Compiled in 37ms"}
+{"timestamp":"40:03:50.436","source":"Server","level":"LOG","message":"✓ Compiled in 44ms"}
+{"timestamp":"40:07:11.454","source":"Server","level":"LOG","message":"✓ Compiled in 145ms"}
+{"timestamp":"40:08:04.379","source":"Server","level":"LOG","message":"✓ Compiled in 152ms"}
+{"timestamp":"40:09:28.304","source":"Server","level":"LOG","message":"✓ Compiled in 195ms"}
+{"timestamp":"40:20:18.900","source":"Server","level":"LOG","message":"✓ Compiled in 318ms"}
+{"timestamp":"40:21:25.334","source":"Server","level":"LOG","message":"✓ Compiled in 197ms"}
+{"timestamp":"40:21:33.278","source":"Server","level":"LOG","message":"✓ Compiled in 132ms"}
+{"timestamp":"40:21:42.333","source":"Server","level":"LOG","message":"✓ Compiled in 198ms"}
+{"timestamp":"40:22:10.076","source":"Server","level":"LOG","message":"✓ Compiled in 124ms"}
+{"timestamp":"40:22:16.341","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"40:22:21.135","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
+{"timestamp":"40:22:26.977","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
+{"timestamp":"40:22:53.365","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"40:24:20.041","source":"Server","level":"LOG","message":"✓ Compiled in 170ms"}
+{"timestamp":"40:24:35.579","source":"Server","level":"LOG","message":"✓ Compiled in 87ms"}
+{"timestamp":"40:24:38.504","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"40:25:58.782","source":"Server","level":"LOG","message":"✓ Compiled in 1113ms"}
+{"timestamp":"40:26:20.258","source":"Server","level":"LOG","message":"✓ Compiled in 325ms"}
+{"timestamp":"40:26:28.464","source":"Server","level":"LOG","message":"✓ Compiled in 206ms"}
+{"timestamp":"40:26:32.066","source":"Server","level":"LOG","message":"✓ Compiled in 926ms"}
+{"timestamp":"40:26:34.433","source":"Server","level":"LOG","message":"✓ Compiled in 173ms"}
+{"timestamp":"40:30:03.192","source":"Server","level":"LOG","message":"✓ Compiled in 429ms"}
+{"timestamp":"40:30:14.153","source":"Server","level":"LOG","message":"✓ Compiled in 95ms"}
+{"timestamp":"40:32:24.865","source":"Server","level":"LOG","message":"✓ Compiled in 167ms"}
+{"timestamp":"40:33:11.725","source":"Server","level":"LOG","message":"✓ Compiled in 159ms"}
+{"timestamp":"40:33:16.960","source":"Server","level":"LOG","message":"✓ Compiled in 108ms"}
+{"timestamp":"40:33:36.976","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
+{"timestamp":"40:33:38.683","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"40:34:08.324","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"40:34:49.816","source":"Server","level":"LOG","message":"✓ Compiled in 123ms"}
+{"timestamp":"40:34:54.168","source":"Server","level":"LOG","message":"✓ Compiled in 54ms"}
+{"timestamp":"40:35:01.623","source":"Server","level":"LOG","message":"✓ Compiled in 157ms"}
+{"timestamp":"40:35:04.461","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
+{"timestamp":"40:35:41.100","source":"Server","level":"LOG","message":"✓ Compiled in 337ms"}
+{"timestamp":"40:36:07.966","source":"Server","level":"LOG","message":"✓ Compiled in 152ms"}
