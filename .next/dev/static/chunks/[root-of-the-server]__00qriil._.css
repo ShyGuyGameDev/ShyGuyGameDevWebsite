@@ -1510,12 +1510,28 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
+  .-rotate-6 {
+    rotate: -6deg;
+  }
+
+  .-rotate-12 {
+    rotate: -12deg;
+  }
+
   .-rotate-45 {
     rotate: -45deg;
   }
 
   .-rotate-\[135deg\] {
     rotate: -135deg;
+  }
+
+  .rotate-6 {
+    rotate: 6deg;
+  }
+
+  .rotate-12 {
+    rotate: 12deg;
   }
 
   .rotate-45 {

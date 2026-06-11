@@ -49,7 +49,7 @@ const SONG_QUOTES: SongQuote[] = [
   },
   {
     quote: "If I can't do it, homie. It can't be done.",
-    song: "If I Can't.",
+    song: "If I Can't",
     artists: "50 Cent",
   },
   {
@@ -58,7 +58,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "AC/DC",
   },
   {
-    quote: "Oh, sing with me, this mournful dub. Sing with me, sing for a year. Sing for the laughter, sing for the tear. Sing with me, if it's just for today. Maybe tomorrow, the good Lord will take you away. Dream on.",
+    quote: "Sing with me, sing for a year. Sing for the laughter, sing for the tear. Sing with me, if it's just for today. Maybe tomorrow, the good Lord will take you away. Dream on.",
     song: "Dream On",
     artists: "Aerosmith",
   },
@@ -98,7 +98,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "The Chainsmokers, Daya",
   },
   {
-    quote: "I've been reading books of old. The legends and the myths: Achilles and his gold, Hercules and his gifts, Spider Man's control, and batman with his fists. And clearly I don't see myself upon that list.",
+    quote: "I've been reading books of old. The legends and the myths: Achilles and his gold, Hercules and his gifts, Spider-Man's control, and Batman with his fists. And clearly I don't see myself upon that list.",
     song: "Something Just Like This",
     artists: "The Chainsmokers, Coldplay",
   },
@@ -128,7 +128,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Coldplay",
   },
   {
-    quote: "Am I part of the cure? Or am I part of the disease?",
+    quote: "Am I a part of the cure? Or am I part of the disease?",
     song: "Clocks",
     artists: "Coldplay",
   },
@@ -145,7 +145,7 @@ const SONG_QUOTES: SongQuote[] = [
   {
     quote: "Tell me, why are we so blind to see, that the ones we hurt are you and me?",
     song: "Living In A Gangsta's Paradise",
-    artists: "Coolio, DJ Rehan, JW Velly",
+    artists: "Coolio, L.V.",
   },
   {
     quote: "Tryna keep it peaceful is a struggle for me.",
@@ -158,7 +158,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Eagles",
   },
   {
-    quote: "And if you're talking monehy, then my conversation's shiftin. My dreams are bigger than just bein' on the rich list. Might be insantiy, but people call it \"Gifted.\" My face is going numb from the sh*t this stuff is mixed with.",
+    quote: "And if you're talking money, then my conversation's shiftin. My dreams are bigger than just bein' on the rich list. Might be insanity, but people call it \"Gifted.\" My face is going numb from the sh*t this stuff is mixed with.",
     song: "Remember the Name",
     artists: "Ed Sheeran, 50 Cent, Eminem",
   },
@@ -183,12 +183,12 @@ const SONG_QUOTES: SongQuote[] = [
   //     artists: "Eminem, Obie Trice, DMX",
   //   },
   {
-    quote: "You better lose youself in the music. The moment, you own it, you better never let it go. You only get one shot, do not miss your chance to blow. This opportunity comes once in a liftime, yo.",
+    quote: "You better lose yourself in the music. The moment, you own it, you better never let it go. You only get one shot, do not miss your chance to blow. This opportunity comes once in a lifetime, yo.",
     song: "Lose Yourself",
     artists: "Eminem",
   },
   {
-    quote: "No more games, I'mma change what you call rage, tear this m*th*rf*ck*ng roof off like two dogs caged. I was playin' in the beggining, the mood all changed. I've been chewed up, and spit out, and booed off stage, but I kept rhymin' and stepped right in the next cypher.",
+    quote: "No more games, I'mma change what you call rage, tear this m*th*rf*ck*ng roof off like two dogs caged. I was playin' in the beginning, the mood all changed. I've been chewed up, and spit out, and booed off stage, but I kept rhymin' and stepped right in the next cypher.",
     song: "Lose Yourself",
     artists: "Eminem",
   },
@@ -233,7 +233,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Eminem",
   },
   {
-    quote: "I've been a liar, been a thief. Been a lover, been a cheat. ALl my sins need holy water, feel it washin' over me.",
+    quote: "I've been a liar, been a thief. Been a lover, been a cheat. All my sins need holy water, feel it washin' over me.",
     song: "River",
     artists: "Eminem, Ed Sheeran",
   },
@@ -248,7 +248,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Eurythmics",
   },
   {
-    quote: "Wake me up inside. Call my name and save me from the dark. Bid my blood to run, before I come undone. Save me from the nothin I've become.",
+    quote: "Wake me up inside. Call my name and save me from the dark. Bid my blood to run, before I come undone. Save me from the nothin' I've become.",
     song: "Bring me to life",
     artists: "Evanescence",
   },
@@ -313,7 +313,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Imagine Dragons, JID",
   },
   {
-    quote: "I will follow you down wherever you may go. I'll follow you way down to your deepest low. I'll always be around whever life takes you. You know I'll follow you.",
+    quote: "I will follow you down wherever you may go. I'll follow you way down to your deepest low. I'll always be around wherever life takes you. You know I'll follow you.",
     song: "Follow You",
     artists: "Imagine Dragons",
   },
@@ -333,12 +333,12 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Imagine Dragons",
   },
   {
-    quote: "So this is where you feel, and I am left to sell. The path to heaven runs through miles of clouded hell.",
+    quote: "So this is where you fell, and I am left to sell. The path to heaven runs through miles of clouded hell.",
     song: "It's Time",
     artists: "Imagine Dragons",
   },
   {
-    quote: "I wanna hide the truth, I wanna shelter you, but with the beast inside, there's nowhere we can hide. No matter what we breed, we are still made of greed. This my kingdom come, this is my kingdom come.",
+    quote: "I wanna hide the truth, I wanna shelter you, but with the beast inside, there's nowhere we can hide. No matter what we breed, we are still made of greed. This is my kingdom come, this is my kingdom come.",
     song: "Demons",
     artists: "Imagine Dragons",
   },
@@ -353,12 +353,12 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Imagine Dragons",
   },
   {
-    quote: "In youth, you'd lay awake at night and scheme, of all the things that you woudl change, but it was just a dream.",
+    quote: "In youth, you'd lay awake at night and scheme, of all the things that you would change, but it was just a dream.",
     song: "Warriors",
     artists: "Imagine Dragons",
   },
   {
-    quote: "Are you, are you, coming to the tree? They sturng up a man, they say who murdered three. Strange things did happen here, no stranger would it be, if we met at midnight in the hanging tree.",
+    quote: "Are you, are you, coming to the tree? They strung up a man, they say who murdered three. Strange things did happen here, no stranger would it be, if we met at midnight in the hanging tree.",
     song: "The Hanging Tree",
     artists: "Suzanne Collins, James Newton Howard, Wesley Schultz, Jeremiah Fraites",
   },
@@ -393,7 +393,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "KALEO",
   },
   {
-    quote: "Don't ever say it's over if I'm breathin'. Racin' to the moonlight and I'm speedin'. I'm headed to the stars, read to go far. I'm star walkin'",
+    quote: "Don't ever say it's over if I'm breathin'. Racin' to the moonlight and I'm speedin'. I'm headed to the stars, ready to go far. I'm star walkin'",
     song: "Star Walkin'",
     artists: "Lil Nas X",
   },
@@ -403,7 +403,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Lil Wayne, Ty Dolla $ign, XXXTentacion",
   },
   {
-    quote: "I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never terrifid, I aint never petrified. You know I see dead people, I just tell them, \"Get a life.\"",
+    quote: "I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never terrified, I ain't never petrified. You know I see dead people, I just tell them, \"Get a life.\"",
     song: "Scared Of The Dark",
     artists: "Lil Wayne, Ty Dolla $ign, XXXTentacion",
   },
@@ -433,7 +433,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Marino",
   },
   {
-    quote: "Here's to the ones that we got. Cheers to the wish you were here, but you're not, cuase the drinks bring back all the memories of everything we've been through.",
+    quote: "Here's to the ones that we got. Cheers to the wish you were here, but you're not, 'cause the drinks bring back all the memories of everything we've been through.",
     song: "Memories",
     artists: "Maroon 5",
   },
@@ -448,7 +448,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "mgk, X Ambassadors, Bebe Rexha",
   },
   {
-    quote: "Voices in the air. I hear 'em loud and clear telling me to listen. Whispers in my ear. Nothing can compre, I just wanna listen. Telling me, I'm invincible.",
+    quote: "Voices in the air. I hear 'em loud and clear telling me to listen. Whispers in my ear. Nothing can compare, I just wanna listen. Telling me, I'm invincible.",
     song: "Invincible",
     artists: "mgk, Ester Dean",
   },
@@ -458,7 +458,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "NF",
   },
   {
-    quote: "What's my defintion of success? Listening to what your heart says. Standing up for what you know is right, while everybody else is tucking their tail between their legs. What's my definiton of sucess? Crafting something no one else can. Being brave enough enough to dream big.",
+    quote: "What's my definition of success? Listening to what your heart says. Standing up for what you know is right, while everybody else is tucking their tail between their legs. What's my definition of success? Crafting something no one else can. Being brave enough to dream big.",
     song: "HOPE",
     artists: "NF",
   },
@@ -480,12 +480,12 @@ const SONG_QUOTES: SongQuote[] = [
   {
     quote: "Mental wounds not healing, life's a bitter shame. I'm going off the rails on a crazy train.",
     song: "Crazy Train",
-    artists: "Ozzy Osborne",
+    artists: "Ozzy Osbourne",
   },
   {
     quote: "I close my eyes and wait to hear the sound of someone screaming here. No more tears.",
     song: "No More Tears",
-    artists: "Ozzy Osborne",
+    artists: "Ozzy Osbourne",
   },
   {
     quote: "Had to have high, high hopes for a living. Didn't know how, but I always had a feeling. I was gonna be that one in a million.",
@@ -538,7 +538,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "The Score",
   },
   {
-    quote: "This is not another story. This is not another drill. I refuse to be another number now, never staying down. This is someting real. I'm a name that you'll remember. I am more than just a thrill. I am gonna be the greatest ever now, watch out, I'm a force that you will feel.",
+    quote: "This is not another story. This is not another drill. I refuse to be another number now, never staying down. This is something real. I'm a name that you'll remember. I am more than just a thrill. I am gonna be the greatest ever now, watch out, I'm a force that you will feel.",
     song: "Glory",
     artists: "The Score",
   },
@@ -568,7 +568,7 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Twenty One Pilots",
   },
   {
-    quote: "All my friends are heatens, take it slow. Wait for them to ask you who you know. Please don't make any sudden moves, you don't know half of the abuse.",
+    quote: "All my friends are heathens, take it slow. Wait for them to ask you who you know. Please don't make any sudden moves, you don't know half of the abuse.",
     song: "Heathens",
     artists: "Twenty One Pilots",
   },

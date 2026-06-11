@@ -8,41 +8,52 @@ import { Button } from "@/components/ui/button"
 const TOPICS = ["Games", "Apps", "Robotics", "MUN", "Debate", "Teaching"]
 
 const TOPIC_CONTENT: Record<string, string[]> = {
+  // Games: [
+  //   "Video games are where it all began. Ever since he was old enough to hold an iPad, ShyGuy has been hooked, and that early love quickly grew into a fascination with how games are actually made.",
+  //   "He taught himself game design from the ground up, learning how mechanics, art, sound, and story come together to create something a player can lose themselves in. Every project pushed him to pick up new tools and rethink ideas that looked good on paper.",
+  //   "Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened along the way. More than anything, games taught him how to finish what he starts.",
+  //  ],
   Games: [
-    "Video games are where it all began. Ever since he was old enough to hold an iPad, ShyGuy has been hooked, and that early love quickly grew into a fascination with how games are actually made.",
-    "He taught himself game design from the ground up, learning how mechanics, art, sound, and story come together to create something a player can lose themselves in. Every project pushed him to pick up new tools and rethink ideas that looked good on paper.",
-    "Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened along the way. More than anything, games taught him how to finish what he starts.",
+    "Video games hold a special place in ShyGuy's heart, as they started ShyGuy on his technical journey. Hooked on games ever since he could understand them, they propelled his curiosity into how technology works, operates, and evolves.",
+    "As he grew older, he started to learn how to design and build his own games, working in Scratch, Python and Pygame, p5.js, Unity, Godot, and more. Along his video game development journey, he met HF_ang and Emey, which led to the founding of their startup, Empty Console.",
+    "Even today, ShyGuy shows his love and appreciation for games through his name, which is a reference to the world famous Mario character, Shy Guy."
   ],
+  // Apps: [
+  //   "What started as curiosity about the software on his devices turned into a passion for building it himself. ShyGuy wanted to understand how the apps he used every day actually worked, and that question became a habit of making his own.",
+  //   "He develops apps that are practical, polished, and genuinely useful, focusing on the small details that make a tool feel effortless to use. From the first sketch of an interface to the final round of testing, he cares about how each screen feels in someone's hands.",
+  //   "From idea to interface to deployment, he enjoys owning the whole process and turning everyday problems into clean, intuitive tools that people actually want to use.",
+  // ],
   Apps: [
-    "What started as curiosity about the software on his devices turned into a passion for building it himself. ShyGuy wanted to understand how the apps he used every day actually worked, and that question became a habit of making his own.",
-    "He develops apps that are practical, polished, and genuinely useful, focusing on the small details that make a tool feel effortless to use. From the first sketch of an interface to the final round of testing, he cares about how each screen feels in someone's hands.",
-    "From idea to interface to deployment, he enjoys owning the whole process and turning everyday problems into clean, intuitive tools that people actually want to use.",
+    "Since 2025, ShyGuy has started to transition to building apps with real use cases instead of games. Planning to work both individually and with his startup called Empty Console, ShyGuy wants to help those around him with new innovative solutions.",
+    "ShyGuy's first exposure to building real products was in 2025, with the Congressional App Challenge, which he managed to score 3rd place in with Empty Console. Their submission was called Open Stage, an app directly inspired by the story of his school's music teacher and how hard it is for him to manage and grow his local band. Though this app won't be deployed as a real product, it taught ShyGuy a lot about how to build real solutions by learning from those around him.",
+    // "See the future. Build the future. Become the future."
   ],
   Robotics: [
-    "Robotics is where ShyGuy's love of hardware and software meet. Designing, building, and programming robots lets him bring code into the physical world, where an idea is only as good as the machine that carries it out.",
-    "Through competitions and personal projects, he has developed a hands-on understanding of engineering, electronics, and the mechanics that make machines move. He has spent countless hours rewriting control logic until a stubborn prototype finally behaves.",
-    "The work is rarely smooth, and that is exactly what draws him to it. Robotics has also been one of his greatest lessons in teamwork and communicating clearly under pressure.",
+    "Designing, building, and programming robots lets ShyGuy bring code into the physical world, a dream he's had ever since seeing Tony Stark's creations in Iron Man.",
+    "ShyGuy's robotic interest started with the First Tech Challenge, where he led a team of 15 students from his school. Leading this team helped him learn how to deal with many opinions, low team engagement, and even failure in a competitive setting.",
+    "Nowadays, ShyGuy spends most of his time in robotics learning about computer vision and spatial intelligence, which is AI's next frontier. With computer vision, AI will be able to understand the world around it, and science fiction creations like the Terminator finally become a possibility."
   ],
   MUN: [
-    "In Model United Nations, ShyGuy steps into the role of a delegate, researching global issues and representing nations in fast-paced debate. Each conference asks him to understand a country's interests well enough to argue on its behalf.",
-    "Preparing for a committee means hours of research, drafting position papers, and anticipating the arguments of dozens of other delegates. By the time he enters the room, he has thought through the many ways a debate might unfold.",
-    "MUN has grown his skills in diplomacy, public speaking, and collaboration, teaching him to find common ground and stay composed when conversations shift unexpectedly.",
+    "Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he has been able to hone throughout his Model United Nations career.",
+    "ShyGuy has attended many conferences around Silicon Valley, though his most notable conference was actually NHSMUN, or National High School Model United Nations, in New York. This is notable as NHSMUN is the most prestigious pre-collegiate MUN conference in the world, and ShyGuy learned so much attending it. During this conference, ShyGuy the delegate for China in the High-Level Advisory Body on Aritifical Intelligence, a committee tied to his other work in technology.",
   ],
   Debate: [
-    "Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to challenges in real time, treating every round as a puzzle to solve under the clock.",
-    "He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The discipline of defending a position forces him to understand both sides of an issue.",
-    "The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, habits that show up everywhere from group projects to everyday conversations.",
+    "Parliamentary debate has shaped the way ShyGuy thinks and constructs arguments. In this format, ShyGuy and his debate partner, ZeedleDee, get the round's topic and their side 20 minutes before the round, leaving very little time for full preparation. Through this, ShyGuy's impromptu speaking skills have grown tremendously.",
+    "Even though he started this format in 2026, ShyGuy quickly improved, winning his first novice tournament, the Georginia Hays Tournament, after only a few months. Now, ShyGuy is competing in the open devision, having moved past novice.",
   ],
   Teaching: [
-    "ShyGuy believes the best way to understand something is to teach it. Explaining an idea to someone else exposes the gaps in his own knowledge and pushes him to learn each topic more deeply than he otherwise would.",
-    "He shares what he knows with others, breaking down complex ideas into approachable lessons that meet people where they are. He pays attention to how someone learns best and adjusts until the concept finally clicks for them.",
-    "Whether it is technology, leadership, or teamwork, he finds purpose in helping others grow, and teaching continually shapes how he communicates, mentors, and leads in every part of his life.",
+    "Throughout ShyGuy's life, he has learned to appreciate the mentors he has, as they are the only way he has been able to become who he is. Wanting to fill that space for others like him, ShyGuy has started teaching whenever possible, always doing his best to support other curious students.",
+    "ShyGuy's first experience teaching was in 2026, where he was asked to speak at a session of Cumberland Elementary's after-school robotics program. Here, he spoke about his experience experimenting with the idea of a robotic dog paired with computer vision during a recent project, the best way to tackle new problems, and how to communicate complex robotic ideas to non-technical audiences."
   ],
 }
 
-function ImagePlaceholder() {
+function ImagePlaceholder({ tilt }: { tilt?: "left" | "right" }) {
+  const tiltClass = tilt === "left" ? "-rotate-12" : tilt === "right" ? "rotate-12" : ""
+
   return (
-    <div className="aspect-[4/3] w-[230px] rounded-xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm">
+    <div
+      className={`aspect-[4/3] w-[230px] rounded-xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm ${tiltClass}`}
+    >
       Image
     </div>
   )
@@ -91,11 +102,11 @@ export function TopicSwitcher() {
 
       <div className="flex items-stretch justify-center gap-10 max-w-[1200px] w-full">
         <div className="flex flex-col gap-6">
-          <ImagePlaceholder />
-          <ImagePlaceholder />
+          <ImagePlaceholder tilt="left" />
+          <ImagePlaceholder tilt="left" />
         </div>
 
-        <div className="flex-1 max-w-[560px] text-left flex flex-col justify-between">
+        <div className="flex-1 max-w-[560px] text-center flex flex-col justify-start gap-3">
           {paragraphs.map((paragraph, i) => (
             <p
               key={i}
@@ -107,8 +118,8 @@ export function TopicSwitcher() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <ImagePlaceholder />
-          <ImagePlaceholder />
+          <ImagePlaceholder tilt="right" />
+          <ImagePlaceholder tilt="right" />
         </div>
       </div>
     </section>

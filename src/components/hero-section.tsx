@@ -38,7 +38,7 @@ const HERO_TITLE = "Who is ShyGuy?"
 const HERO_PARAGRAPH =
   "Ever since he was old enough to hold an iPad, ShyGuy has always loved video games. Soon, this led to his fascination and passion for programming and other technologies, such as robotics and AI. As he grew older, he has also built valubable skills in leadership, teamwork, speaking, and impromptu debate, which he has been able to apply to his other skills in technology. Putting his many skills and experiences together, he has continued to expand the reach and impact of everything he does, whether it be building his startup, creating an app, or being a delegate in a model United Nations conference."
 
-const HERO_BUTTON_TEXT = "SEE MORE"
+const HERO_BUTTON_TEXT = "LEARN MORE"
 
 const HERO_TITLE_SPEED = 55
 const HERO_TITLE_DELAY = 250

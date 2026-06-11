@@ -1384,3 +1384,428 @@
 {"timestamp":"06:01:08.384","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
 {"timestamp":"06:01:08.384","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
 {"timestamp":"06:01:08.384","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781078494562} /_vercel/insights/view"}
+{"timestamp":"24:29:34.728","source":"Server","level":"LOG","message":"✓ Compiled in 635ms"}
+{"timestamp":"25:44:30.258","source":"Browser","level":"WARN","message":"Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior"}
+{"timestamp":"25:44:30.261","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3000/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781149496319} /_vercel/insights/view"}
+{"timestamp":"25:44:30.302","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\\\"smooth\\\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\\u001b[39m\""}
+{"timestamp":"25:44:30.324","source":"Browser","level":"WARN","message":"\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\u001b[39m"}
+{"timestamp":"25:44:35.541","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781149501618} /_vercel/insights/view"}
+{"timestamp":"25:45:04.043","source":"Server","level":"LOG","message":"✓ Compiled in 743ms"}
+{"timestamp":"25:45:13.410","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"25:45:13.580","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"25:45:13.583","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"25:45:13.585","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"25:45:13.638","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"25:45:13.638","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"25:45:13.638","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781149539736} /_vercel/insights/view"}
+{"timestamp":"25:47:03.022","source":"Server","level":"LOG","message":"✓ Compiled in 170ms"}
+{"timestamp":"25:47:11.496","source":"Server","level":"LOG","message":"✓ Compiled in 266ms"}
+{"timestamp":"25:47:26.448","source":"Server","level":"LOG","message":"✓ Compiled in 73ms"}
+{"timestamp":"25:47:32.499","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"25:47:43.455","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"25:47:45.555","source":"Server","level":"LOG","message":"✓ Compiled in 103ms"}
+{"timestamp":"25:47:58.689","source":"Server","level":"LOG","message":"✓ Compiled in 82ms"}
+{"timestamp":"25:48:13.247","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"25:48:18.449","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"25:51:06.178","source":"Server","level":"LOG","message":"✓ Compiled in 144ms"}
+{"timestamp":"25:51:07.278","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"25:51:19.261","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"25:51:29.875","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"25:51:45.850","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"25:51:51.192","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"25:52:08.829","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"25:52:24.045","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"25:52:26.163","source":"Server","level":"LOG","message":"✓ Compiled in 50ms"}
+{"timestamp":"25:53:34.070","source":"Server","level":"LOG","message":"✓ Compiled in 381ms"}
+{"timestamp":"25:54:02.489","source":"Server","level":"LOG","message":"✓ Compiled in 357ms"}
+{"timestamp":"25:54:02.794","source":"Server","level":"LOG","message":"✓ Compiled in 78ms"}
+{"timestamp":"25:54:02.905","source":"Server","level":"LOG","message":"✓ Compiled in 42ms"}
+{"timestamp":"25:54:03.103","source":"Server","level":"LOG","message":"✓ Compiled in 27ms"}
+{"timestamp":"25:54:03.601","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"25:54:03.856","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
+{"timestamp":"25:54:03.999","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
+{"timestamp":"25:54:04.153","source":"Server","level":"LOG","message":"✓ Compiled in 26ms"}
+{"timestamp":"25:54:04.383","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
+{"timestamp":"25:54:19.213","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"25:54:19.264","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"25:54:19.265","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"25:54:19.266","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"25:54:19.275","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"25:54:19.275","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"25:54:19.275","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781150085380} /_vercel/insights/view"}
+{"timestamp":"25:55:35.520","source":"Browser","level":"WARN","message":"Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior"}
+{"timestamp":"25:55:35.521","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3000/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781150161627} /_vercel/insights/view"}
+{"timestamp":"25:55:35.522","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\\\"smooth\\\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\\u001b[39m\""}
+{"timestamp":"25:55:35.522","source":"Browser","level":"WARN","message":"\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\u001b[39m"}
+{"timestamp":"25:55:38.103","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781150164200} /_vercel/insights/view"}
+{"timestamp":"25:57:18.621","source":"Server","level":"LOG","message":"✓ Compiled in 266ms"}
+{"timestamp":"25:57:23.835","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"25:57:26.605","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"25:58:20.345","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"25:58:20.405","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"25:58:20.405","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"25:58:20.407","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"25:58:20.469","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"25:58:20.469","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"25:58:20.469","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781150326577} /_vercel/insights/view"}
+{"timestamp":"25:58:31.225","source":"Server","level":"LOG","message":"✓ Compiled in 306ms"}
+{"timestamp":"25:59:19.028","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"25:59:19.131","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"25:59:19.138","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"25:59:19.141","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"25:59:19.143","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"25:59:19.143","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"25:59:19.143","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781150385245} /_vercel/insights/view"}
+{"timestamp":"26:08:23.438","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:16:8\nExpected ',', got ':'\n  14 |     \"Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened ...\n  15 |   // ],\n> 16 |   Games: [\n     |        ^\n  17 |     \"Video games are where it all began. Ever since he was old enough to hold an iPad, ShyGuy has been hooked, and that earl...\n  18 |     \"He taught himself game design from the ground up, learning how mechanics, art, sound, and story come together to create...\n  19 |     \"Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened ...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"26:08:23.561","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:16:8\\nExpected ',', got ':'\\n  14 |     \\\"Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened ...\\n  15 |   // ],\\n> 16 |   Games: [\\n     |        ^\\n  17 |     \\\"Video games are where it all began. Ever since he was old enough to hold an iPad, ShyGuy has been hooked, and that earl...\\n  18 |     \\\"He taught himself game design from the ground up, learning how mechanics, art, sound, and story come together to create...\\n  19 |     \\\"Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened ...\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"26:08:23.579","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:16:8\nExpected ',', got ':'\n  14 |     \"Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened ...\n  15 |   // ],\n> 16 |   Games: [\n     |        ^\n  17 |     \"Video games are where it all began. Ever since he was old enough to hold an iPad, ShyGuy has been hooked, and that earl...\n  18 |     \"He taught himself game design from the ground up, learning how mechanics, art, sound, and story come together to create...\n  19 |     \"Today he designs and builds his own games, blending creative storytelling with the programming skills he has sharpened ...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"26:08:24.482","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
+{"timestamp":"26:08:26.228","source":"Server","level":"LOG","message":"✓ Compiled in 88ms"}
+{"timestamp":"26:08:49.989","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"26:08:59.076","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"26:09:21.944","source":"Server","level":"LOG","message":"✓ Compiled in 125ms"}
+{"timestamp":"26:09:28.242","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"26:09:30.911","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
+{"timestamp":"26:09:35.833","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"26:09:53.312","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"26:09:55.729","source":"Server","level":"LOG","message":"✓ Compiled in 39ms"}
+{"timestamp":"26:09:59.099","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"26:10:02.966","source":"Server","level":"LOG","message":"✓ Compiled in 56ms"}
+{"timestamp":"26:10:05.921","source":"Server","level":"LOG","message":"✓ Compiled in 35ms"}
+{"timestamp":"26:10:14.068","source":"Server","level":"LOG","message":"✓ Compiled in 54ms"}
+{"timestamp":"26:10:17.903","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
+{"timestamp":"26:10:21.405","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"26:10:28.641","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"26:10:34.432","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"26:10:42.877","source":"Server","level":"LOG","message":"✓ Compiled in 42ms"}
+{"timestamp":"26:10:53.595","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"26:10:59.843","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"26:11:04.671","source":"Server","level":"LOG","message":"✓ Compiled in 41ms"}
+{"timestamp":"26:11:07.057","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"26:11:18.024","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"26:11:20.828","source":"Server","level":"LOG","message":"✓ Compiled in 34ms"}
+{"timestamp":"26:11:27.481","source":"Server","level":"LOG","message":"✓ Compiled in 42ms"}
+{"timestamp":"26:20:03.985","source":"Server","level":"LOG","message":"✓ Compiled in 911ms"}
+{"timestamp":"26:20:30.763","source":"Server","level":"LOG","message":"✓ Compiled in 143ms"}
+{"timestamp":"26:20:42.113","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"26:22:13.309","source":"Server","level":"LOG","message":"✓ Compiled in 116ms"}
+{"timestamp":"26:22:23.863","source":"Server","level":"LOG","message":"✓ Compiled in 324ms"}
+{"timestamp":"26:22:34.314","source":"Server","level":"LOG","message":"✓ Compiled in 142ms"}
+{"timestamp":"26:23:02.845","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"26:23:05.663","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"26:23:10.039","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
+{"timestamp":"26:23:13.338","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"26:23:14.938","source":"Server","level":"LOG","message":"✓ Compiled in 73ms"}
+{"timestamp":"26:23:17.353","source":"Server","level":"LOG","message":"✓ Compiled in 80ms"}
+{"timestamp":"26:23:22.617","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"26:23:23.858","source":"Server","level":"LOG","message":"✓ Compiled in 43ms"}
+{"timestamp":"26:23:26.626","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"26:23:28.645","source":"Server","level":"LOG","message":"✓ Compiled in 34ms"}
+{"timestamp":"26:23:35.448","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"26:23:49.372","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"26:23:57.358","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"26:24:01.827","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"26:24:08.030","source":"Server","level":"LOG","message":"✓ Compiled in 43ms"}
+{"timestamp":"26:24:09.183","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"26:24:10.903","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"26:24:17.238","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
+{"timestamp":"26:24:20.466","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
+{"timestamp":"26:24:22.460","source":"Server","level":"LOG","message":"✓ Compiled in 42ms"}
+{"timestamp":"26:24:30.164","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"26:24:35.775","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
+{"timestamp":"26:24:38.819","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
+{"timestamp":"26:24:47.308","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"26:24:51.183","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
+{"timestamp":"26:24:55.105","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
+{"timestamp":"26:25:03.036","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"26:25:04.175","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"26:25:06.103","source":"Server","level":"LOG","message":"✓ Compiled in 36ms"}
+{"timestamp":"26:25:17.202","source":"Server","level":"LOG","message":"✓ Compiled in 50ms"}
+{"timestamp":"26:39:25.444","source":"Server","level":"LOG","message":"✓ Compiled in 594ms"}
+{"timestamp":"26:39:31.802","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
+{"timestamp":"26:39:34.935","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
+{"timestamp":"26:39:36.268","source":"Server","level":"LOG","message":"✓ Compiled in 37ms"}
+{"timestamp":"26:51:30.515","source":"Server","level":"LOG","message":"✓ Compiled in 220ms"}
+{"timestamp":"26:51:32.007","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"26:51:37.616","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"26:51:40.881","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"26:51:42.247","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"26:52:14.428","source":"Server","level":"LOG","message":"✓ Compiled in 89ms"}
+{"timestamp":"26:52:18.522","source":"Server","level":"LOG","message":"✓ Compiled in 50ms"}
+{"timestamp":"26:52:20.049","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"26:52:26.848","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:28:11\nExpected ',', got ':'\n  26 |   Apps: [\n  27 |     \n> 28 |   Robotics: [\n     |           ^\n  29 |     \"Robotics is where ShyGuy's love of hardware and software meet. Designing, building, and programming robots lets him bring code into the...\n  30 |     \"Through competitions and personal projects, he has developed a hands-on understanding of engineering, electronics, and the mechanics th...\n  31 |     \"The work is rarely smooth, and that is exactly what draws him to it. Robotics has also been one of his greatest lessons in teamwork and...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"26:52:26.882","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:28:11\\nExpected ',', got ':'\\n  26 |   Apps: [\\n  27 |     \\n> 28 |   Robotics: [\\n     |           ^\\n  29 |     \\\"Robotics is where ShyGuy's love of hardware and software meet. Designing, building, and programming robots lets him bring code into the...\\n  30 |     \\\"Through competitions and personal projects, he has developed a hands-on understanding of engineering, electronics, and the mechanics th...\\n  31 |     \\\"The work is rarely smooth, and that is exactly what draws him to it. Robotics has also been one of his greatest lessons in teamwork and...\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"26:52:26.904","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:28:11\nExpected ',', got ':'\n  26 |   Apps: [\n  27 |     \n> 28 |   Robotics: [\n     |           ^\n  29 |     \"Robotics is where ShyGuy's love of hardware and software meet. Designing, building, and programming robots lets him bring code into the...\n  30 |     \"Through competitions and personal projects, he has developed a hands-on understanding of engineering, electronics, and the mechanics th...\n  31 |     \"The work is rarely smooth, and that is exactly what draws him to it. Robotics has also been one of his greatest lessons in teamwork and...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"26:52:27.181","source":"Server","level":"LOG","message":"✓ Compiled in 47ms"}
+{"timestamp":"26:52:29.986","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
+{"timestamp":"26:52:33.827","source":"Server","level":"LOG","message":"✓ Compiled in 35ms"}
+{"timestamp":"26:52:35.599","source":"Server","level":"LOG","message":"✓ Compiled in 50ms"}
+{"timestamp":"26:57:58.995","source":"Server","level":"LOG","message":"✓ Compiled in 555ms"}
+{"timestamp":"26:58:00.823","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"26:58:03.737","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"26:58:08.285","source":"Server","level":"LOG","message":"✓ Compiled in 88ms"}
+{"timestamp":"26:58:09.419","source":"Server","level":"LOG","message":"✓ Compiled in 82ms"}
+{"timestamp":"26:58:19.295","source":"Server","level":"LOG","message":"✓ Compiled in 79ms"}
+{"timestamp":"26:58:23.852","source":"Server","level":"LOG","message":"✓ Compiled in 105ms"}
+{"timestamp":"26:58:36.459","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"26:58:40.194","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"26:58:46.798","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"26:58:51.867","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"26:58:57.569","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"26:59:05.899","source":"Server","level":"LOG","message":"✓ Compiled in 44ms"}
+{"timestamp":"26:59:14.502","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"26:59:39.331","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"26:59:45.347","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
+{"timestamp":"26:59:48.657","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"27:00:03.266","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"27:00:08.602","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"27:00:21.841","source":"Browser","level":"WARN","message":"Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior"}
+{"timestamp":"27:00:21.842","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3000/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781154047935} /_vercel/insights/view"}
+{"timestamp":"27:00:21.857","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\\\"smooth\\\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\\u001b[39m\""}
+{"timestamp":"27:00:21.864","source":"Browser","level":"WARN","message":"\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\u001b[39m"}
+{"timestamp":"27:01:19.570","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781154105663} /_vercel/insights/view"}
+{"timestamp":"27:01:57.426","source":"Server","level":"LOG","message":"✓ Compiled in 153ms"}
+{"timestamp":"27:02:04.537","source":"Server","level":"LOG","message":"✓ Compiled in 144ms"}
+{"timestamp":"27:02:12.209","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
+{"timestamp":"27:02:24.328","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
+{"timestamp":"27:02:25.644","source":"Server","level":"LOG","message":"✓ Compiled in 168ms"}
+{"timestamp":"27:02:33.741","source":"Server","level":"LOG","message":"✓ Compiled in 79ms"}
+{"timestamp":"27:02:52.998","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
+{"timestamp":"27:03:03.192","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"27:03:10.471","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"27:03:17.927","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"27:03:24.459","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
+{"timestamp":"27:03:28.639","source":"Server","level":"LOG","message":"✓ Compiled in 50ms"}
+{"timestamp":"27:03:34.105","source":"Server","level":"LOG","message":"✓ Compiled in 85ms"}
+{"timestamp":"27:03:36.820","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"27:03:40.955","source":"Server","level":"LOG","message":"✓ Compiled in 98ms"}
+{"timestamp":"27:03:48.396","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"27:03:57.040","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"27:04:02.909","source":"Server","level":"LOG","message":"✓ Compiled in 44ms"}
+{"timestamp":"27:04:18.058","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
+{"timestamp":"27:04:24.361","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
+{"timestamp":"27:04:32.310","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"27:04:39.752","source":"Server","level":"LOG","message":"✓ Compiled in 36ms"}
+{"timestamp":"27:05:43.047","source":"Server","level":"LOG","message":"✓ Compiled in 101ms"}
+{"timestamp":"27:05:47.647","source":"Server","level":"LOG","message":"✓ Compiled in 89ms"}
+{"timestamp":"27:11:11.070","source":"Server","level":"LOG","message":"✓ Compiled in 242ms"}
+{"timestamp":"27:11:18.395","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"27:11:24.668","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
+{"timestamp":"27:11:31.205","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"27:11:51.275","source":"Server","level":"LOG","message":"✓ Compiled in 102ms"}
+{"timestamp":"27:11:54.833","source":"Server","level":"LOG","message":"✓ Compiled in 372ms"}
+{"timestamp":"27:11:55.012","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:33:7\\nExpected ',', got 'ident'\\n  31 |   Robotics: [\\n  32 |     \\\"Robotics is where ShyGuy's love of hardware and software meet. Designing, building, and programming robots lets him bring code into the...\\n> 33 |     \\\"\\\"Specifically, ShyGuy's robot\\\"\\\"\\n     |       ^^^^^^^^^^^^\\n  34 |   ],\\n  35 |   MUN: [\\n  36 |     \\\"In Model United Nations, ShyGuy steps into the role of a delegate, researching global issues and representing nations in fast-paced deb...\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:11:55.028","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:33:7\nExpected ',', got 'ident'\n  31 |   Robotics: [\n  32 |     \"Robotics is where ShyGuy's love of hardware and software meet. Designing, building, and programming robots lets him bring code into the...\n> 33 |     \"\"Specifically, ShyGuy's robot\"\"\n     |       ^^^^^^^^^^^^\n  34 |   ],\n  35 |   MUN: [\n  36 |     \"In Model United Nations, ShyGuy steps into the role of a delegate, researching global issues and representing nations in fast-paced deb...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:11:55.038","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:33:7\nExpected ',', got 'ident'\n  31 |   Robotics: [\n  32 |     \"Robotics is where ShyGuy's love of hardware and software meet. Designing, building, and programming robots lets him bring code into the...\n> 33 |     \"\"Specifically, ShyGuy's robot\"\"\n     |       ^^^^^^^^^^^^\n  34 |   ],\n  35 |   MUN: [\n  36 |     \"In Model United Nations, ShyGuy steps into the role of a delegate, researching global issues and representing nations in fast-paced deb...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:11:59.253","source":"Server","level":"LOG","message":"✓ Compiled in 114ms"}
+{"timestamp":"27:12:04.071","source":"Server","level":"LOG","message":"✓ Compiled in 84ms"}
+{"timestamp":"27:12:08.502","source":"Server","level":"LOG","message":"✓ Compiled in 125ms"}
+{"timestamp":"27:12:13.258","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"27:12:23.013","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"27:12:32.774","source":"Server","level":"LOG","message":"✓ Compiled in 155ms"}
+{"timestamp":"27:12:46.723","source":"Server","level":"LOG","message":"✓ Compiled in 124ms"}
+{"timestamp":"27:12:49.806","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
+{"timestamp":"27:13:01.984","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"27:13:08.683","source":"Server","level":"LOG","message":"✓ Compiled in 68ms"}
+{"timestamp":"27:13:11.497","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"27:13:22.739","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"27:13:27.576","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
+{"timestamp":"27:13:34.551","source":"Server","level":"LOG","message":"✓ Compiled in 89ms"}
+{"timestamp":"27:13:41.103","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"27:13:47.948","source":"Server","level":"LOG","message":"✓ Compiled in 54ms"}
+{"timestamp":"27:14:09.085","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"27:14:17.874","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"27:14:25.593","source":"Server","level":"LOG","message":"✓ Compiled in 246ms"}
+{"timestamp":"27:14:51.532","source":"Server","level":"LOG","message":"✓ Compiled in 87ms"}
+{"timestamp":"27:15:00.269","source":"Server","level":"LOG","message":"✓ Compiled in 235ms"}
+{"timestamp":"27:15:29.330","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"27:15:29.458","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"27:15:29.459","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"27:15:29.460","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"27:15:29.495","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"27:15:29.495","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"27:15:29.495","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781154955608} /_vercel/insights/view"}
+{"timestamp":"27:16:29.632","source":"Server","level":"LOG","message":"✓ Compiled in 1052ms"}
+{"timestamp":"27:16:29.695","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\nExpected ',', got 'ident'\n  404 |   },\n  405 |   {\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\n      |                   ^\n  407 |     song: \"Scared Of The Dark\",\n  408 |     artists: \"Lil Wayne, Ty Dolla $ign, XXXTentacion\",\n  409 |   },\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:16:29.696","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\\nExpected ',', got 'ident'\\n  404 |   },\\n  405 |   {\\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\\n      |                   ^\\n  407 |     song: \\\"Scared Of The Dark\\\",\\n  408 |     artists: \\\"Lil Wayne, Ty Dolla $ign, XXXTentacion\\\",\\n  409 |   },\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:16:29.697","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\nExpected ',', got 'ident'\n  404 |   },\n  405 |   {\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\n      |                   ^\n  407 |     song: \"Scared Of The Dark\",\n  408 |     artists: \"Lil Wayne, Ty Dolla $ign, XXXTentacion\",\n  409 |   },\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:16:33.578","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\\nExpected ',', got 'ident'\\n  404 |   },\\n  405 |   {\\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\\n      |                   ^\\n  407 |     song: \\\"Scared Of The Dark\\\",\\n  408 |     artists: \\\"Lil Wayne, Ty Dolla $ign, XXXTentacion\\\",\\n  409 |   },\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:16:33.579","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\nExpected ',', got 'ident'\n  404 |   },\n  405 |   {\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\n      |                   ^\n  407 |     song: \"Scared Of The Dark\",\n  408 |     artists: \"Lil Wayne, Ty Dolla $ign, XXXTentacion\",\n  409 |   },\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:16:33.580","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\nExpected ',', got 'ident'\n  404 |   },\n  405 |   {\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\n      |                   ^\n  407 |     song: \"Scared Of The Dark\",\n  408 |     artists: \"Lil Wayne, Ty Dolla $ign, XXXTentacion\",\n  409 |   },\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:16:37.770","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\nExpected ',', got 'ident'\n  404 |   },\n  405 |   {\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\n      |                   ^\n  407 |     song: \"Scared Of The Dark\",\n  408 |     artists: \"Lil Wayne, Ty Dolla $ign, XXXTentacion\",\n  409 |   },\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:16:37.831","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\\nExpected ',', got 'ident'\\n  404 |   },\\n  405 |   {\\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\\n      |                   ^\\n  407 |     song: \\\"Scared Of The Dark\\\",\\n  408 |     artists: \\\"Lil Wayne, Ty Dolla $ign, XXXTentacion\\\",\\n  409 |   },\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:16:37.832","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\nExpected ',', got 'ident'\n  404 |   },\n  405 |   {\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\n      |                   ^\n  407 |     song: \"Scared Of The Dark\",\n  408 |     artists: \"Lil Wayne, Ty Dolla $ign, XXXTentacion\",\n  409 |   },\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:16:39.264","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\\nExpected ',', got 'ident'\\n  404 |   },\\n  405 |   {\\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\\n      |                   ^\\n  407 |     song: \\\"Scared Of The Dark\\\",\\n  408 |     artists: \\\"Lil Wayne, Ty Dolla $ign, XXXTentacion\\\",\\n  409 |   },\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:16:39.264","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\nExpected ',', got 'ident'\n  404 |   },\n  405 |   {\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\n      |                   ^\n  407 |     song: \"Scared Of The Dark\",\n  408 |     artists: \"Lil Wayne, Ty Dolla $ign, XXXTentacion\",\n  409 |   },\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:16:39.264","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx:406:19\nExpected ',', got 'ident'\n  404 |   },\n  405 |   {\n> 406 |     quote: 'I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never t...\n      |                   ^\n  407 |     song: \"Scared Of The Dark\",\n  408 |     artists: \"Lil Wayne, Ty Dolla $ign, XXXTentacion\",\n  409 |   },\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/song-quote-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:16:46.195","source":"Server","level":"LOG","message":"✓ Compiled in 82ms"}
+{"timestamp":"27:21:19.913","source":"Server","level":"LOG","message":"✓ Compiled in 283ms"}
+{"timestamp":"27:21:27.342","source":"Server","level":"LOG","message":"✓ Compiled in 73ms"}
+{"timestamp":"27:21:31.622","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"27:21:34.352","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"27:21:37.146","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"27:21:43.449","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"27:21:45.277","source":"Server","level":"LOG","message":"✓ Compiled in 96ms"}
+{"timestamp":"27:21:46.295","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"27:21:58.923","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"27:22:35.855","source":"Server","level":"LOG","message":"✓ Compiled in 159ms"}
+{"timestamp":"27:22:38.414","source":"Server","level":"LOG","message":"✓ Compiled in 78ms"}
+{"timestamp":"27:22:49.079","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"27:23:01.508","source":"Server","level":"LOG","message":"✓ Compiled in 89ms"}
+{"timestamp":"27:23:09.981","source":"Server","level":"LOG","message":"✓ Compiled in 56ms"}
+{"timestamp":"27:41:20.964","source":"Server","level":"LOG","message":"✓ Compiled in 397ms"}
+{"timestamp":"27:41:22.873","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"27:41:29.244","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:38:5\nUnterminated string constant\n  36 | ...\n  37 | ...uy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he has been able to hone throughout h...\n> 38 | ...uy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he has been able to hone throughout h...\n     |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  39 | ...\n  40 | ...\n  41 | ...y thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to challenges in real time, treating ever...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:41:29.268","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:38:5\\nUnterminated string constant\\n  36 | ...\\n  37 | ...uy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he has been able to hone throughout h...\\n> 38 | ...uy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he has been able to hone throughout h...\\n     |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  39 | ...\\n  40 | ...\\n  41 | ...y thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to challenges in real time, treating ever...\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:41:29.284","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:38:5\nUnterminated string constant\n  36 | ...\n  37 | ...uy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he has been able to hone throughout h...\n> 38 | ...uy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he has been able to hone throughout h...\n     |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  39 | ...\n  40 | ...\n  41 | ...y thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to challenges in real time, treating ever...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:41:35.136","source":"Server","level":"LOG","message":"✓ Compiled in 79ms"}
+{"timestamp":"27:41:51.112","source":"Server","level":"LOG","message":"✓ Compiled in 402ms"}
+{"timestamp":"27:41:51.192","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:38:5\nUnterminated string constant\n  36 |   MUN: [\n  37 |     \"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\n> 38 |     \"\n     |     ^\n  39 |   Debate: [\n  40 |     \"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\n  41 |     \"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:41:51.198","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:38:5\\nUnterminated string constant\\n  36 |   MUN: [\\n  37 |     \\\"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\\n> 38 |     \\\"\\n     |     ^\\n  39 |   Debate: [\\n  40 |     \\\"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\\n  41 |     \\\"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:41:51.202","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:38:5\nUnterminated string constant\n  36 |   MUN: [\n  37 |     \"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\n> 38 |     \"\n     |     ^\n  39 |   Debate: [\n  40 |     \"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\n  41 |     \"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:41:52.868","source":"Server","level":"LOG","message":"✓ Compiled in 122ms"}
+{"timestamp":"27:41:52.888","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:39:3\nExpected ',', got 'ident'\n  37 |     \"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\n  38 |     \"\"\n> 39 |   Debate: [\n     |   ^^^^^^\n  40 |     \"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\n  41 |     \"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\n  42 |     \"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:41:52.889","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:39:3\\nExpected ',', got 'ident'\\n  37 |     \\\"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\\n  38 |     \\\"\\\"\\n> 39 |   Debate: [\\n     |   ^^^^^^\\n  40 |     \\\"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\\n  41 |     \\\"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\\n  42 |     \\\"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:41:52.890","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:39:3\nExpected ',', got 'ident'\n  37 |     \"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\n  38 |     \"\"\n> 39 |   Debate: [\n     |   ^^^^^^\n  40 |     \"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\n  41 |     \"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\n  42 |     \"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:42:06.400","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:39:3\\nExpected ',', got 'ident'\\n  37 |     \\\"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\\n  38 |     \\\"abc\\\"\\n> 39 |   Debate: [\\n     |   ^^^^^^\\n  40 |     \\\"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\\n  41 |     \\\"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\\n  42 |     \\\"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:42:06.404","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:39:3\nExpected ',', got 'ident'\n  37 |     \"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\n  38 |     \"abc\"\n> 39 |   Debate: [\n     |   ^^^^^^\n  40 |     \"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\n  41 |     \"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\n  42 |     \"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:42:06.404","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:39:3\nExpected ',', got 'ident'\n  37 |     \"Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he h...\n  38 |     \"abc\"\n> 39 |   Debate: [\n     |   ^^^^^^\n  40 |     \"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\n  41 |     \"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\n  42 |     \"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:42:16.047","source":"Server","level":"LOG","message":"✓ Compiled in 129ms"}
+{"timestamp":"27:42:49.750","source":"Server","level":"LOG","message":"✓ Compiled in 135ms"}
+{"timestamp":"27:42:54.832","source":"Server","level":"LOG","message":"✓ Compiled in 99ms"}
+{"timestamp":"27:43:02.372","source":"Server","level":"LOG","message":"✓ Compiled in 91ms"}
+{"timestamp":"27:43:04.402","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"27:43:10.192","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"27:43:14.544","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"27:43:16.492","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
+{"timestamp":"27:43:17.565","source":"Server","level":"LOG","message":"✓ Compiled in 31ms"}
+{"timestamp":"27:43:23.582","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"27:43:27.210","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"27:44:03.977","source":"Server","level":"LOG","message":"✓ Compiled in 149ms"}
+{"timestamp":"27:44:07.653","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
+{"timestamp":"27:44:08.827","source":"Server","level":"LOG","message":"✓ Compiled in 36ms"}
+{"timestamp":"27:44:12.250","source":"Server","level":"LOG","message":"✓ Compiled in 118ms"}
+{"timestamp":"27:44:15.672","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"27:44:25.472","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"27:44:31.899","source":"Server","level":"LOG","message":"✓ Compiled in 115ms"}
+{"timestamp":"27:44:36.105","source":"Server","level":"LOG","message":"✓ Compiled in 93ms"}
+{"timestamp":"27:44:41.152","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"27:44:43.011","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"27:44:48.455","source":"Server","level":"LOG","message":"✓ Compiled in 54ms"}
+{"timestamp":"27:44:53.843","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"27:45:06.435","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"27:45:07.772","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
+{"timestamp":"27:45:17.843","source":"Server","level":"LOG","message":"✓ Compiled in 96ms"}
+{"timestamp":"27:45:42.783","source":"Server","level":"LOG","message":"✓ Compiled in 156ms"}
+{"timestamp":"27:45:49.717","source":"Server","level":"LOG","message":"✓ Compiled in 101ms"}
+{"timestamp":"27:45:53.293","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
+{"timestamp":"27:45:58.733","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
+{"timestamp":"27:46:09.126","source":"Server","level":"LOG","message":"✓ Compiled in 54ms"}
+{"timestamp":"27:46:15.409","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"27:46:17.623","source":"Server","level":"LOG","message":"✓ Compiled in 32ms"}
+{"timestamp":"27:46:26.137","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"27:46:32.369","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:40:3\nExpected ',', got 'ident'\n  38 |     \"ShyGuy has attended many conferences around Silicon Valley, though his most notable conference was actually NHSMUN, or National High Sc...\n  39 |   ]\n> 40 |   Debate: [\n     |   ^^^^^^\n  41 |     \"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\n  42 |     \"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\n  43 |     \"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx"}
+{"timestamp":"27:46:32.402","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:40:3\\nExpected ',', got 'ident'\\n  38 |     \\\"ShyGuy has attended many conferences around Silicon Valley, though his most notable conference was actually NHSMUN, or National High Sc...\\n  39 |   ]\\n> 40 |   Debate: [\\n     |   ^^^^^^\\n  41 |     \\\"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\\n  42 |     \\\"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\\n  43 |     \\\"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\\n    ./ShyGuyGameDevWebsite/src/app/page.tsx\" \"\""}
+{"timestamp":"27:46:32.410","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx:40:3\nExpected ',', got 'ident'\n  38 |     \"ShyGuy has attended many conferences around Silicon Valley, though his most notable conference was actually NHSMUN, or National High Sc...\n  39 |   ]\n> 40 |   Debate: [\n     |   ^^^^^^\n  41 |     \"Debate has shaped the way ShyGuy thinks and speaks. He thrives on constructing arguments, thinking on his feet, and responding to chall...\n  42 |     \"He has learned to break down complex topics quickly, weigh competing perspectives, and build a case that holds up to scrutiny. The disc...\n  43 |     \"The impromptu format especially has built his confidence, quick reasoning, and ability to communicate clearly under any circumstance, h...\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/topic-switcher.tsx\n    ./ShyGuyGameDevWebsite/src/app/page.tsx \"\""}
+{"timestamp":"27:46:32.510","source":"Server","level":"LOG","message":"✓ Compiled in 183ms"}
+{"timestamp":"27:46:40.480","source":"Server","level":"LOG","message":"✓ Compiled in 44ms"}
+{"timestamp":"27:46:42.060","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"27:46:49.566","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
+{"timestamp":"27:47:14.809","source":"Server","level":"LOG","message":"✓ Compiled in 274ms"}
+{"timestamp":"27:47:28.071","source":"Server","level":"LOG","message":"✓ Compiled in 93ms"}
+{"timestamp":"27:47:30.422","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"27:48:02.099","source":"Server","level":"LOG","message":"✓ Compiled in 92ms"}
+{"timestamp":"28:04:01.130","source":"Server","level":"LOG","message":"✓ Compiled in 331ms"}
+{"timestamp":"28:08:42.610","source":"Server","level":"LOG","message":"✓ Compiled in 310ms"}
+{"timestamp":"28:08:45.121","source":"Server","level":"LOG","message":"✓ Compiled in 110ms"}
+{"timestamp":"28:08:47.608","source":"Server","level":"LOG","message":"✓ Compiled in 96ms"}
+{"timestamp":"28:08:50.931","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"28:08:52.953","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
+{"timestamp":"28:09:05.821","source":"Server","level":"LOG","message":"✓ Compiled in 107ms"}
+{"timestamp":"28:09:12.225","source":"Server","level":"LOG","message":"✓ Compiled in 74ms"}
+{"timestamp":"28:09:16.251","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
+{"timestamp":"28:09:28.908","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"28:09:35.118","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"28:09:41.097","source":"Server","level":"LOG","message":"✓ Compiled in 115ms"}
+{"timestamp":"28:09:45.364","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"28:09:55.595","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"28:10:00.796","source":"Server","level":"LOG","message":"✓ Compiled in 54ms"}
+{"timestamp":"28:10:07.329","source":"Server","level":"LOG","message":"✓ Compiled in 68ms"}
+{"timestamp":"28:10:09.257","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"28:10:16.196","source":"Server","level":"LOG","message":"✓ Compiled in 80ms"}
+{"timestamp":"28:10:34.243","source":"Server","level":"LOG","message":"✓ Compiled in 106ms"}
+{"timestamp":"28:10:45.254","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"28:10:48.443","source":"Server","level":"LOG","message":"✓ Compiled in 82ms"}
+{"timestamp":"28:10:57.122","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"28:11:14.864","source":"Server","level":"LOG","message":"✓ Compiled in 87ms"}
+{"timestamp":"28:11:23.358","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
+{"timestamp":"28:11:30.014","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"28:11:36.588","source":"Server","level":"LOG","message":"✓ Compiled in 95ms"}
+{"timestamp":"28:11:56.555","source":"Server","level":"LOG","message":"✓ Compiled in 137ms"}
+{"timestamp":"28:11:58.467","source":"Server","level":"LOG","message":"✓ Compiled in 107ms"}
+{"timestamp":"28:12:07.925","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
+{"timestamp":"28:12:10.217","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"28:12:17.774","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"28:12:22.879","source":"Server","level":"LOG","message":"✓ Compiled in 106ms"}
+{"timestamp":"28:12:24.970","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
+{"timestamp":"28:12:31.598","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"28:12:32.701","source":"Server","level":"LOG","message":"✓ Compiled in 56ms"}
+{"timestamp":"28:12:36.642","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"28:12:46.412","source":"Server","level":"LOG","message":"✓ Compiled in 73ms"}
+{"timestamp":"28:12:52.184","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"28:13:05.938","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"28:13:10.253","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"28:13:15.733","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
+{"timestamp":"28:13:28.368","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"28:17:10.934","source":"Server","level":"LOG","message":"✓ Compiled in 143ms"}
+{"timestamp":"28:17:35.461","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
+{"timestamp":"28:17:42.055","source":"Server","level":"LOG","message":"✓ Compiled in 101ms"}
+{"timestamp":"28:17:47.544","source":"Server","level":"LOG","message":"✓ Compiled in 102ms"}
+{"timestamp":"28:17:53.792","source":"Server","level":"LOG","message":"✓ Compiled in 322ms"}
+{"timestamp":"28:17:57.392","source":"Server","level":"LOG","message":"✓ Compiled in 106ms"}
+{"timestamp":"28:18:00.488","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
+{"timestamp":"28:18:08.224","source":"Server","level":"LOG","message":"✓ Compiled in 108ms"}
+{"timestamp":"28:18:10.447","source":"Server","level":"LOG","message":"✓ Compiled in 114ms"}
+{"timestamp":"28:18:14.121","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
+{"timestamp":"28:18:21.438","source":"Server","level":"LOG","message":"✓ Compiled in 73ms"}
+{"timestamp":"28:18:26.565","source":"Server","level":"LOG","message":"✓ Compiled in 126ms"}
+{"timestamp":"28:18:39.652","source":"Server","level":"LOG","message":"✓ Compiled in 91ms"}
+{"timestamp":"28:18:41.749","source":"Server","level":"LOG","message":"✓ Compiled in 74ms"}
+{"timestamp":"28:18:55.432","source":"Server","level":"LOG","message":"✓ Compiled in 85ms"}
+{"timestamp":"28:18:59.103","source":"Server","level":"LOG","message":"✓ Compiled in 96ms"}
+{"timestamp":"28:19:01.947","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
+{"timestamp":"28:19:11.618","source":"Server","level":"LOG","message":"✓ Compiled in 82ms"}
+{"timestamp":"28:19:17.052","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"28:19:24.883","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"28:19:27.225","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"28:19:30.833","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"28:19:39.279","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"28:19:44.769","source":"Server","level":"LOG","message":"✓ Compiled in 39ms"}
+{"timestamp":"28:19:55.523","source":"Server","level":"LOG","message":"✓ Compiled in 85ms"}
+{"timestamp":"28:19:58.012","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"28:20:04.517","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"28:20:31.321","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"28:20:32.592","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
+{"timestamp":"28:20:38.686","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"28:20:48.263","source":"Server","level":"LOG","message":"✓ Compiled in 70ms"}
+{"timestamp":"28:20:50.256","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"28:21:03.927","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"28:21:11.410","source":"Server","level":"LOG","message":"✓ Compiled in 75ms"}
+{"timestamp":"28:21:21.264","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
+{"timestamp":"28:21:35.140","source":"Server","level":"LOG","message":"✓ Compiled in 50ms"}
+{"timestamp":"28:21:38.725","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"28:21:46.065","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"28:21:50.189","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
+{"timestamp":"28:21:54.263","source":"Server","level":"LOG","message":"✓ Compiled in 145ms"}
+{"timestamp":"28:21:57.114","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
+{"timestamp":"28:22:06.107","source":"Server","level":"LOG","message":"✓ Compiled in 54ms"}
+{"timestamp":"28:22:10.006","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"28:22:16.491","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"28:22:19.062","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"28:22:23.276","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"28:22:32.807","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"28:22:41.652","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"28:22:43.351","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"28:22:47.393","source":"Server","level":"LOG","message":"✓ Compiled in 68ms"}
+{"timestamp":"28:22:49.823","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"28:23:09.618","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
