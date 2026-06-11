@@ -578,6 +578,11 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "The Weeknd, Kendrick Lamar",
   },
   {
+    quote: "I'm always ready for a war again, go down that road again. It's all the same. I'm always ready to take a life again, you know I'll read again. It's all the same.",
+    song: "Pray For Me",
+    artists: "The Weeknd, Kendrick Lamar",
+  },
+  {
     quote: "Look what you've done. I'm a m*th*rf*ck*ng starboy.",
     song: "Starboy",
     artists: "The Weeknd, Daft Punk",
