@@ -230,9 +230,6 @@ export function HeroSection() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
-        .hero-text {
-          color: black;
-        }
         .typewriter-caret {
           display: inline-block;
           width: 0.18em;

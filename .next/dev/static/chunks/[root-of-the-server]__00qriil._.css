@@ -5964,6 +5964,10 @@
   animation-delay: .3s;
 }
 
+.hero-text {
+  color: #000;
+}
+
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;

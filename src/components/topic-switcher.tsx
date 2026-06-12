@@ -42,7 +42,7 @@ const TOPIC_CONTENT: Record<string, string[]> = {
   ],
   Debate: [
     "Parliamentary debate has shaped the way ShyGuy thinks and constructs arguments. In this format, ShyGuy and his debate partner, ZeedleDee, get the round's topic and their side 20 minutes before the round, leaving very little time for full preparation. Through this, ShyGuy's impromptu speaking skills have grown tremendously.",
-    "Even though he started this format in 2026, ShyGuy quickly improved, winning his first novice tournament, the Georginia Hays Tournament, after only a few months. Now, ShyGuy is competing in the open devision, having moved past novice.",
+    "Even though he started this format in 2026, ShyGuy quickly improved, winning his first novice tournament, the Georginia Hays Tournament, after only a few months. Now that he has moved past novice, ShyGuy is competing in the open division, and will continue to improve his speaking and debating skills throughout high school.",
   ],
   Teaching: [
     "Throughout ShyGuy's life, he has learned to appreciate the mentors he has, as they are the only way he has been able to become who he is. Wanting to fill that space for others like him, ShyGuy has started teaching whenever possible, always doing his best to support other curious students.",

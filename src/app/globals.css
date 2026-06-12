@@ -153,3 +153,7 @@
 .animate-delay-300 {
   animation-delay: 300ms;
 }
+
+.hero-text {
+  color: black;
+}
