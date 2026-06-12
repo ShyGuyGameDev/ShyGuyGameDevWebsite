@@ -37,7 +37,7 @@ const TOPIC_CONTENT: Record<string, string[]> = {
     "Nowadays, ShyGuy spends most of his time in robotics learning about computer vision and spatial intelligence, which is AI's next frontier. With computer vision, AI will be able to understand the world around it, and science fiction creations like the Terminator finally become a possibility."
   ],
   MUN: [
-    "Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident and aggressive speaker, a skill he has been able to hone throughout his Model United Nations career.",
+    "Even with a name like his, ShyGuy is the opposite of shy. He has always been a naturally confident speaker and leader, skills that he has been able to hone throughout his Model United Nations journey.",
     "ShyGuy has attended many conferences around Silicon Valley, though his most notable conference was actually NHSMUN, or National High School Model United Nations, in New York. This is notable as NHSMUN is the most prestigious pre-collegiate MUN conference in the world, and ShyGuy learned so much attending it. During this conference, ShyGuy the delegate for China in the High-Level Advisory Body on Aritifical Intelligence, a committee tied to his other work in technology.",
   ],
   Debate: [
