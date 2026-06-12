@@ -43,9 +43,29 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "24kGoldn, Kane Brown, G Herbo",
   },
   {
+    quote: "This one goes out to the ones that feel like an underdog. Used to write me off, now they changing up the dialogue.",
+    song: "My City",
+    artists: "24kGoldn, Kane Brown, G Herbo",
+  },
+  {
     quote: "I never feared death or dyin'. I only fear never tryin'. I am whatever I am. Only God can judge me now.",
     song: "We Own It",
     artists: "2 Chainz, Wiz Khalifa",
+  },
+  {
+    quote: "Money's the motivation, money's the conversation.",
+    song: "We Own It",
+    artists: "2 Chainz, Wiz Khalifa",
+  },
+  {
+    quote: "Couldn't slow down so we had to crash it.",
+    song: "We Own It",
+    artists: "2 Chainz, Wiz Khalifa",
+  },
+  {
+    quote: "Defeat is not my destiny. Release me to the streets, and keep whatever's left of me.",
+    song: "2 Of Amerikaz Most Wanted",
+    artists: "2Pac, Snoop Dogg",
   },
   {
     quote: "If I can't do it, homie. It can't be done.",
@@ -68,6 +88,16 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "AJR",
   },
   {
+    quote: "Should I keep it light? Stay out of the fight?",
+    song: "Burn The House Down",
+    artists: "AJR",
+  },
+  {
+    quote: "Would you go running if you saw the real me? Maybe you'd love 'em, yeah, maybe you'd feel me. But I'll never ask you, no that's super scary.",
+    song: "3 O'Clock Things",
+    artists: "AJR",
+  },
+  {
     quote: "Are you gonna drop the bomb or not? Let us die young or let us live forever. We don't have the power but we never say never.",
     song: "Forever Young",
     artists: "Alphaville",
@@ -81,6 +111,11 @@ const SONG_QUOTES: SongQuote[] = [
     quote: "They say I'm caught up in a dream. Well, life will pass me by if I don't open up my eyes. Well, that's fine by me.",
     song: "Wake Me Up",
     artists: "Avicii",
+  },
+  {
+    quote: "Sweet but a psycho, a little bit psycho.",
+    song: "Sweet But Psycho",
+    artists: "Ava Max",
   },
   {
     quote: "Can we pretend that airplanes in the night sky are like shootin' stars? I could really use a wish right now, wish right now, wish right now. Yeah, I could use a dream or a genie or a wish.",
@@ -286,6 +321,16 @@ const SONG_QUOTES: SongQuote[] = [
     quote: "I walk a lonely road. The only one that I have ever known. Don't know where it goes, but it's home to me and I walk alone.",
     song: "Boulevard Of Broken Dreams",
     artists: "Green Day",
+  },
+  {
+    quote: "Welcome to the jungle, we got fun and games. We got everything you want, we know the names. We are the people that can find whatever you may need, if you got the money, honey, we got your disease.",
+    song: "Welcome To The Jungle",
+    artists: "Guns N' Roses",
+  },
+  {
+    quote: "Take me down to the paradise city, where the grass is green and the girls are pretty.",
+    song: "Paradise City",
+    artists: "Guns N' Roses",
   },
   {
     quote: "Take me to church. I'll worship like a dog at the shrine of your lies. I'll tell you my sins and you can sharpen your knife. Offer me that deathless death.",
