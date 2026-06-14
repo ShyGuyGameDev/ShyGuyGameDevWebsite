@@ -2,8 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import type React from "react"
-import { ArrowUpRight, Newspaper } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { PostCard } from "@/components/post-card"
 
 interface MediaMention {
   title: string
@@ -12,21 +11,54 @@ interface MediaMention {
   url: string
   description: string | React.ReactNode
   tag?: string
+  image?: string
+  video?: string
 }
 
 const mediaMentions: MediaMention[] = [
   {
-    title: "p5Play Game Jam 2025 Results",
-    source: "q5.js by Quinton Ashley",
-    date: "June 2025",
-    url: "https://q5js.substack.com/p/p5play-game-jam-2025-results",
-    tag: "Article",
+    title: "Bugged Out",
+    source: "itch.io",
+    date: "September 2025",
+    url: "https://emptyconsole.itch.io/bugged-out",
+    tag: "Game Jam",
+    image: "/buggedout.png",
+    video: "/Clips/BuggedOut.mp4",
     description: (
       <>
-        Empty Console&apos;s platformer{" "}
-        <span className="font-medium text-primary">Malice and Mercy</span> earned an Honorable
-        Mention in the p5Play Game Jam 2025 and was featured in the official results write-up by
-        Quinton Ashley, the creator of{" "}
+        Created for the{" "}
+        <a
+          href="https://itch.io/jam/patch-notes-v-1-0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Patch Notes Game Jam
+        </a>{" "}
+        with the theme &apos;The Error is the Feature&apos; in a 3-day jam, placing 17th out of 474 entries. This platformer intentionally uses glitches as core gameplay mechanics, requiring players to use logic, memory, and reflexes to navigate levels.
+      </>
+    ),
+  },
+  {
+    title: "Malice and Mercy",
+    source: "github.io",
+    date: "June 2025",
+    url: "https://emptyconsole.github.io/Malice-and-Mercy/",
+    tag: "Game Jam",
+    image: "/malice_and_mercy-Picsart-AiImageEnhancer.png",
+    video: "/Clips/MaliceAndMercy.mp4",
+    description: (
+      <>
+        A{" "}
+        <a
+          href="https://p5js.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          p5.js
+        </a>{" "}
+        platformer created for the{" "}
         <a
           href="https://p5play.org/"
           target="_blank"
@@ -34,12 +66,73 @@ const mediaMentions: MediaMention[] = [
           className="text-accent hover:underline"
         >
           p5Play
-        </a>
-        .
+        </a>{" "}
+        game jam that earned Honorable Mention. The game explores ethical decision-making in fast-paced platforming. Players choose to save or kill characters while balancing points and time using three throwable abilities. Features a fully custom physics engine, tilemap system, collision detection, particles, and a level editor coded from scratch. You can read about it in an{" "}
+        <a
+          href="https://q5js.substack.com/p/p5play-game-jam-2025-results"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          article
+        </a>{" "}
+        written by the creator of p5Play, Quinton Ashley.
+      </>
+    ),
+  },
+  {
+    title: "Space Looper",
+    source: "itch.io",
+    date: "August 2025",
+    url: "https://emptyconsole.itch.io/space-looper",
+    tag: "Game Jam",
+    image: "/Untitled_presentation_1-Picsart-AiImageEnhancer.png",
+    video: "/Clips/SpaceLooper.mp4",
+    description: (
+      <>
+        A{" "}
+        <a
+          href="https://itch.io/jam/gmtk-2025"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          GMTK Game Jam
+        </a>{" "}
+        strategy game created in a 4-day jam with 9,574 submissions. Players circle meteors with limited rope and energy, managing resources across 20 research centers. The game challenges players with precise movement mechanics and strategic resource allocation.
+      </>
+    ),
+  },
+  {
+    title: "Open Stage",
+    source: "vercel.app",
+    date: "October 2025",
+    url: "https://open-stage.vercel.app/signin",
+    tag: "App Challenge",
+    image: "/openstage.png",
+    video: "/Clips/OpenStage.mp4",
+    description: (
+      <>
+        A{" "}
+        <a
+          href="https://www.congressionalappchallenge.us/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Congressional App Challenge
+        </a>{" "}
+        project designed to help musicians earn more revenue via reduced upfront costs and real-time tipping. Empty Console collaborated with local SF Bay Area bands to develop a user-friendly UX and sustainable revenue model. The project placed third in district CA-15, one of the hardest and most competitive districts in the nation.
       </>
     ),
   },
 ]
+
+// Sort newest first so the most recent post is top-left and the
+// earliest ends up farthest down and farthest to the right.
+const sortedMediaMentions = [...mediaMentions].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+)
 
 export function PostsSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -63,7 +156,7 @@ export function PostsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden py-[100px] pt-[172px] bg-background">
+    <section ref={sectionRef} className="relative overflow-hidden min-h-screen py-[100px] pt-[172px] bg-background">
       {/* Abstract gradient background overlay */}
       <div className="absolute inset-0" style={{ zIndex: 1 }}>
         <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-accent/10 blur-3xl" />
@@ -81,47 +174,15 @@ export function PostsSection() {
           </p>
         </div>
 
-        {mediaMentions.length > 0 ? (
+        {sortedMediaMentions.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {mediaMentions.map((mention, index) => (
+            {sortedMediaMentions.map((mention, index) => (
               <div
                 key={mention.title}
                 className="animate-on-scroll opacity-0"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
-                <Card className="group bg-card rounded-2xl shadow-[0_4px_8px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
-                  <CardContent className="px-6 py-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Newspaper className="h-4 w-4" aria-hidden="true" />
-                        <span>{mention.source}</span>
-                      </div>
-                      {mention.tag && (
-                        <span className="px-3 py-1 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300 text-xs font-medium rounded-full">
-                          {mention.tag}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-2">{mention.date}</p>
-                    <h3 className="text-xl font-semibold text-primary mb-3">
-                      <a
-                        href={mention.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-start gap-1.5 text-primary hover:text-accent transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-md"
-                      >
-                        <span>{mention.title}</span>
-                        <ArrowUpRight
-                          className="h-5 w-5 shrink-0 mt-0.5"
-                          aria-hidden="true"
-                        />
-                      </a>
-                    </h3>
-                    <p className="text-base text-secondary leading-relaxed">
-                      {mention.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                <PostCard {...mention} />
               </div>
             ))}
           </div>

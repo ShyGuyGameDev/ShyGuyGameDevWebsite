@@ -12,40 +12,9 @@ type SongQuote = {
 // Placeholder quotes - edit this list freely.
 const SONG_QUOTES: SongQuote[] = [
   {
-    quote: "Look me in the eyes, tell me what you see. Perfect paradise, tearing at the seams?",
-    song: "Bad Liar",
-    artists: "Imagine Dragons",
-  },
-  {
-    quote: "My love, my life, my drive, it came from PAIN!",
-    song: "Believer",
-    artists: "Imagine Dragons",
-  },
-  {
-    quote:
-      "I see who you are, you are my enemy. My enemy, you are my enemy.",
-    song: "Enemy",
-    artists: "Tommee Profitt, Beacon Light, Sam Tinnesz",
-  },
-  {
-    quote: "Like what's up danger? Like what's up danger? Don't be a stranger! What's up danger?",
-    song: "What's Up Danger",
-    artists: "Blackway, Black Caviar",
-  },
-  {
-    quote: "Wish we could turn back time to the good old days.",
-    song: "Stressed Out",
-    artists: "Twenty One Pilots",
-  },
-  {
-    quote: "Sometimes family and friends, that's the same thing.",
-    song: "My City",
-    artists: "24kGoldn, Kane Brown, G Herbo",
-  },
-  {
-    quote: "This one goes out to the ones that feel like an underdog. Used to write me off, now they changing up the dialogue.",
-    song: "My City",
-    artists: "24kGoldn, Kane Brown, G Herbo",
+    quote: "Couldn't slow down so we had to crash it.",
+    song: "We Own It",
+    artists: "2 Chainz, Wiz Khalifa",
   },
   {
     quote: "I never feared death or dyin'. I only fear never tryin'. I am whatever I am. Only God can judge me now.",
@@ -58,9 +27,14 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "2 Chainz, Wiz Khalifa",
   },
   {
-    quote: "Couldn't slow down so we had to crash it.",
-    song: "We Own It",
-    artists: "2 Chainz, Wiz Khalifa",
+    quote: "Sometimes family and friends, that's the same thing.",
+    song: "My City",
+    artists: "24kGoldn, Kane Brown, G Herbo",
+  },
+  {
+    quote: "This one goes out to the ones that feel like an underdog. Used to write me off, now they changing up the dialogue.",
+    song: "My City",
+    artists: "24kGoldn, Kane Brown, G Herbo",
   },
   {
     quote: "Defeat is not my destiny. Release me to the streets, and keep whatever's left of me.",
@@ -83,8 +57,8 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Aerosmith",
   },
   {
-    quote: "Won't you help me sober up? Growing up, it made me numb, and I wanna feel something again.",
-    song: "Sober Up",
+    quote: "Would you go running if you saw the real me? Maybe you'd love 'em, yeah, maybe you'd feel me. But I'll never ask you, no that's super scary.",
+    song: "3 O'Clock Things",
     artists: "AJR",
   },
   {
@@ -93,14 +67,24 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "AJR",
   },
   {
-    quote: "Would you go running if you saw the real me? Maybe you'd love 'em, yeah, maybe you'd feel me. But I'll never ask you, no that's super scary.",
-    song: "3 O'Clock Things",
+    quote: "Won't you help me sober up? Growing up, it made me numb, and I wanna feel something again.",
+    song: "Sober Up",
     artists: "AJR",
   },
   {
     quote: "Are you gonna drop the bomb or not? Let us die young or let us live forever. We don't have the power but we never say never.",
     song: "Forever Young",
     artists: "Alphaville",
+  },
+  {
+    quote: "We'll stand together, we'll stand the pressure. Wave your flags up in the sky, let fate decide. So we say, \"Hey, we're not gonna break, yeah, we're standing here today 'cause it's more than just a game, it's our DNA.\" Yeah, we're shooting for the stars, got fire in our hearts. This is more than just a game, it's our DNA.",
+    song: "DNA",
+    artists: "Andrea Bocelli, David Guetta, EJAE, Megan Thee Stallion",
+  },
+  {
+    quote: "Sweet but a psycho, a little bit psycho.",
+    song: "Sweet But Psycho",
+    artists: "Ava Max",
   },
   {
     quote: "He said, \"One day you'll leave this world behind, so live a life you will remember.\" My father told me when I was just a child, \"These are the nights that never die\"",
@@ -113,14 +97,14 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Avicii",
   },
   {
-    quote: "Sweet but a psycho, a little bit psycho.",
-    song: "Sweet But Psycho",
-    artists: "Ava Max",
-  },
-  {
     quote: "Can we pretend that airplanes in the night sky are like shootin' stars? I could really use a wish right now, wish right now, wish right now. Yeah, I could use a dream or a genie or a wish.",
     song: "Airplanes",
     artists: "B.o.B, Hayley Williams",
+  },
+  {
+    quote: "Like what's up danger? Like what's up danger? Don't be a stranger! What's up danger?",
+    song: "What's Up Danger",
+    artists: "Blackway, Black Caviar",
   },
   {
     quote: "Whoa, we're halfway there. Whoa oh, livin' on a prayer.",
@@ -133,14 +117,14 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "The Chainsmokers, Daya",
   },
   {
-    quote: "I've been reading books of old. The legends and the myths: Achilles and his gold, Hercules and his gifts, Spider-Man's control, and Batman with his fists. And clearly I don't see myself upon that list.",
-    song: "Something Just Like This",
-    artists: "The Chainsmokers, Coldplay",
-  },
-  {
     quote: "If we go down, then we go down together. They'll say you could do anything. They'll say that I was clever.",
     song: "Paris",
     artists: "The Chainsmokers",
+  },
+  {
+    quote: "I've been reading books of old. The legends and the myths: Achilles and his gold, Hercules and his gifts, Spider-Man's control, and Batman with his fists. And clearly I don't see myself upon that list.",
+    song: "Something Just Like This",
+    artists: "The Chainsmokers, Coldplay",
   },
   {
     quote: "I'd let the world burn, let the world burn for you.",
@@ -153,6 +137,11 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "The Clash",
   },
   {
+    quote: "Am I a part of the cure? Or am I part of the disease?",
+    song: "Clocks",
+    artists: "Coldplay",
+  },
+  {
     quote: "Got me feeling drunk and high.",
     song: "Hymn For The Weekend",
     artists: "Coldplay",
@@ -163,9 +152,9 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Coldplay",
   },
   {
-    quote: "Am I a part of the cure? Or am I part of the disease?",
-    song: "Clocks",
-    artists: "Coldplay",
+    quote: "Tell me, why are we so blind to see, that the ones we hurt are you and me?",
+    song: "Living In A Gangsta's Paradise",
+    artists: "Coolio, L.V.",
   },
   {
     quote: "Hidin' all our sins from the daylight. From the daylight, runnin' from the daylight. From the daylight, runnin' from the daylight. Oh, I love it and I hate it at the same time.",
@@ -178,11 +167,6 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Diddy, Faith Evans",
   },
   {
-    quote: "Tell me, why are we so blind to see, that the ones we hurt are you and me?",
-    song: "Living In A Gangsta's Paradise",
-    artists: "Coolio, L.V.",
-  },
-  {
     quote: "Tryna keep it peaceful is a struggle for me.",
     song: "God's Plan",
     artists: "Drake",
@@ -191,6 +175,11 @@ const SONG_QUOTES: SongQuote[] = [
     quote: "Welcome to the Hotel California! Such a lovely place, such a lovely face.",
     song: "Hotel California",
     artists: "Eagles",
+  },
+  {
+    quote: "My bad habits lead to late nights endin' alone, conversations with a stranger I barely know. Swearin' this will be the last, but it probably won't. I got nothing left to lose, or use, or do.",
+    song: "Bad Habits",
+    artists: "Ed Sheeran",
   },
   {
     quote: "And if you're talking money, then my conversation's shiftin. My dreams are bigger than just bein' on the rich list. Might be insanity, but people call it \"Gifted\". My face is going numb from the sh*t this stuff is mixed with.",
@@ -203,11 +192,6 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Ed Sheeran, 50 Cent, Eminem",
   },
   {
-    quote: "My bad habits lead to late nights endin' alone, conversations with a stranger I barely know. Swearin' this will be the last, but it probably won't. I got nothing left to lose, or use, or do.",
-    song: "Bad Habits",
-    artists: "Ed Sheeran",
-  },
-  {
     quote: "Do you ever get a little bit tired of life? Like you're not really happy but you don't wanna die?",
     song: "Numb Little Bug",
     artists: "Em Beihold",
@@ -218,8 +202,8 @@ const SONG_QUOTES: SongQuote[] = [
   //     artists: "Eminem, Obie Trice, DMX",
   //   },
   {
-    quote: "You better lose yourself in the music. The moment, you own it, you better never let it go. You only get one shot, do not miss your chance to blow. This opportunity comes once in a lifetime, yo.",
-    song: "Lose Yourself",
+    quote: "You get in my way, I'mma feed you to the monster. I'm normal during the day, but at night, turn to a monster.",
+    song: "Godzilla",
     artists: "Eminem",
   },
   {
@@ -233,23 +217,8 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Eminem",
   },
   {
-    quote: "Now, this looks like a job for me. So, everybody, just follow me, cause we need a little controversy, cause it feels so empty without me.",
-    song: "Without Me",
-    artists: "Eminem",
-  },
-  {
-    quote: "Till I collapse, I'm spillin' these raps long as you feel 'em. Till the day that I drop, you'll never say that I'm not killin' em.",
-    song: "Till I Collapse",
-    artists: "Eminem, Nate Dogg",
-  },
-  {
-    quote: "I'm Slim Shady, yes, I'm the real Shady. All you other Slim Shadys are just imitating.",
-    song: "The Real Slim Shady",
-    artists: "Eminem",
-  },
-  {
-    quote: "Don't be a r*t*rd, be a king? Think not, why be a king when you can be a god?",
-    song: "Rap God",
+    quote: "You better lose yourself in the music. The moment, you own it, you better never let it go. You only get one shot, do not miss your chance to blow. This opportunity comes once in a lifetime, yo.",
+    song: "Lose Yourself",
     artists: "Eminem",
   },
   {
@@ -258,13 +227,18 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Eminem, Rihanna",
   },
   {
-    quote: "You get in my way, I'mma feed you to the monster. I'm normal during the day, but at night, turn to a monster.",
-    song: "Godzilla",
+    quote: "I'm not afraid to take a stand.",
+    song: "Not Afraid",
     artists: "Eminem",
   },
   {
-    quote: "I'm not afraid to take a stand.",
-    song: "Not Afraid",
+    quote: "Don't be a r*t*rd, be a king? Think not, why be a king when you can be a god?",
+    song: "Rap God",
+    artists: "Eminem",
+  },
+  {
+    quote: "I'm Slim Shady, yes, I'm the real Shady. All you other Slim Shadys are just imitating.",
+    song: "The Real Slim Shady",
     artists: "Eminem",
   },
   {
@@ -273,8 +247,18 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Eminem, Ed Sheeran",
   },
   {
+    quote: "Till I collapse, I'm spillin' these raps long as you feel 'em. Till the day that I drop, you'll never say that I'm not killin' em.",
+    song: "Till I Collapse",
+    artists: "Eminem, Nate Dogg",
+  },
+  {
     quote: "Venom adrenaline momentum, and I'm not knowin' when I'm ever gonna slow up and I'm ready to snap any moment, I'm thinkin' it's time to go get 'em. They ain't gonna know what hit 'em.",
     song: "Venom",
+    artists: "Eminem",
+  },
+  {
+    quote: "Now, this looks like a job for me. So, everybody, just follow me, cause we need a little controversy, cause it feels so empty without me.",
+    song: "Without Me",
     artists: "Eminem",
   },
   {
@@ -323,13 +307,13 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Green Day",
   },
   {
-    quote: "Welcome to the jungle, we got fun and games. We got everything you want, we know the names. We are the people that can find whatever you may need, if you got the money, honey, we got your disease.",
-    song: "Welcome To The Jungle",
+    quote: "Take me down to the paradise city, where the grass is green and the girls are pretty.",
+    song: "Paradise City",
     artists: "Guns N' Roses",
   },
   {
-    quote: "Take me down to the paradise city, where the grass is green and the girls are pretty.",
-    song: "Paradise City",
+    quote: "Welcome to the jungle, we got fun and games. We got everything you want, we know the names. We are the people that can find whatever you may need, if you got the money, honey, we got your disease.",
+    song: "Welcome To The Jungle",
     artists: "Guns N' Roses",
   },
   {
@@ -338,18 +322,33 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Hozier",
   },
   {
+    quote: "They can say, they can say it all sounds crazy. They can say, they say I've lost my mind. I don't care, I don't care, so call me crazy. We can live in a world that we design.",
+    song: "A Million Dreams",
+    artists: "Hugh Jackman, Michelle Williams, Ziv Zaifman",
+  },
+  {
     quote: "If it's crazy, live a little crazy. You can play it sensible, a king of conventional, or you can risk it all and see.",
     song: "The Other Side",
     artists: "Hugh Jackman, Zac Efron",
   },
   {
-    quote: "Cause I love the adrenaline in my veins, I do whatever it takes.",
-    song: "Whatever It Takes",
+    quote: "Look me in the eyes, tell me what you see. Perfect paradise, tearing at the seams?",
+    song: "Bad Liar",
     artists: "Imagine Dragons",
   },
   {
-    quote: "Just a young gun with a quick fuse, I was uptight, wanna let loose. I was dreaming of bigger things and wanna leave my own life behind. Not a \"Yes, sir,\" not a follower.",
-    song: "Thunder",
+    quote: "My love, my life, my drive, it came from PAIN!",
+    song: "Believer",
+    artists: "Imagine Dragons",
+  },
+  {
+    quote: "Our patience is waning, is this entertaining? I got this feeling, yeah, you know, where I'm losing all control, cause there's magic in my bones.",
+    song: "Bones",
+    artists: "Imagine Dragons",
+  },
+  {
+    quote: "I wanna hide the truth, I wanna shelter you, but with the beast inside, there's nowhere we can hide. No matter what we breed, we are still made of greed. This is my kingdom come, this is my kingdom come.",
+    song: "Demons",
     artists: "Imagine Dragons",
   },
   {
@@ -363,33 +362,8 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Imagine Dragons",
   },
   {
-    quote: "Our patience is waning, is this entertaining? I got this feeling, yeah, you know, where I'm losing all control, cause there's magic in my bones.",
-    song: "Bones",
-    artists: "Imagine Dragons",
-  },
-  {
-    quote: "You think you're better than them, you think they're really your friends, but when it comes to the end, you're just the same as them.",
-    song: "Sharks",
-    artists: "Imagine Dragons",
-  },
-  {
-    quote: "I'm waking up, I feel it in my bones, enough to make my system blow. Welcome to the new age, to the new age.",
-    song: "Radioactive",
-    artists: "Imagine Dragons",
-  },
-  {
     quote: "So this is where you fell, and I am left to sell. The path to heaven runs through miles of clouded hell.",
     song: "It's Time",
-    artists: "Imagine Dragons",
-  },
-  {
-    quote: "I wanna hide the truth, I wanna shelter you, but with the beast inside, there's nowhere we can hide. No matter what we breed, we are still made of greed. This is my kingdom come, this is my kingdom come.",
-    song: "Demons",
-    artists: "Imagine Dragons",
-  },
-  {
-    quote: "I'm on top of the world.",
-    song: "On Top Of The World",
     artists: "Imagine Dragons",
   },
   {
@@ -398,24 +372,44 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Imagine Dragons",
   },
   {
+    quote: "I'm on top of the world.",
+    song: "On Top Of The World",
+    artists: "Imagine Dragons",
+  },
+  {
+    quote: "I'm waking up, I feel it in my bones, enough to make my system blow. Welcome to the new age, to the new age.",
+    song: "Radioactive",
+    artists: "Imagine Dragons",
+  },
+  {
+    quote: "You think you're better than them, you think they're really your friends, but when it comes to the end, you're just the same as them.",
+    song: "Sharks",
+    artists: "Imagine Dragons",
+  },
+  {
+    quote: "Just a young gun with a quick fuse, I was uptight, wanna let loose. I was dreaming of bigger things and wanna leave my own life behind. Not a \"Yes, sir,\" not a follower.",
+    song: "Thunder",
+    artists: "Imagine Dragons",
+  },
+  {
     quote: "In youth, you'd lay awake at night and scheme, of all the things that you would change, but it was just a dream.",
     song: "Warriors",
     artists: "Imagine Dragons",
   },
   {
-    quote: "Are you, are you, coming to the tree? They strung up a man, they say who murdered three. Strange things did happen here, no stranger would it be, if we met at midnight in the hanging tree.",
-    song: "The Hanging Tree",
-    artists: "Suzanne Collins, James Newton Howard, Wesley Schultz, Jeremiah Fraites",
-  },
-  {
-    quote: "Life's a game, but it's not fair. I break the rules so I don't care, so I keep doin' my own thing.",
-    song: "Run This Town",
-    artists: "JAŸ-Z, Rihanna, Kanye West",
+    quote: "Cause I love the adrenaline in my veins, I do whatever it takes.",
+    song: "Whatever It Takes",
+    artists: "Imagine Dragons",
   },
   {
     quote: "Can I get an encore? Do you want more? I've become so numb, so for one last time I need y'all to roar. One last time I need y'all to roar.",
     song: "Numb / Encore",
     artists: "JAŸ-Z, Linkin Park",
+  },
+  {
+    quote: "Life's a game, but it's not fair. I break the rules so I don't care, so I keep doin' my own thing.",
+    song: "Run This Town",
+    artists: "JAŸ-Z, Rihanna, Kanye West",
   },
   {
     quote: "Imagine all the people, livin' life in peace.",
@@ -443,12 +437,12 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Lil Nas X",
   },
   {
-    quote: "I'm not scared of the dark. I'm not running, running, running. No, I'm not afraid of the fall. Why would a star, a star ever be afraid of the dark?",
+    quote: "I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never terrified, I ain't never petrified. You know I see dead people, I just tell them, \"Get a life.\"",
     song: "Scared Of The Dark",
     artists: "Lil Wayne, Ty Dolla $ign, XXXTentacion",
   },
   {
-    quote: "I ain't never scared and I ain't never horrified. I just look down at my Rolex, it said it's the darkest times. I ain't never terrified, I ain't never petrified. You know I see dead people, I just tell them, \"Get a life.\"",
+    quote: "I'm not scared of the dark. I'm not running, running, running. No, I'm not afraid of the fall. Why would a star, a star ever be afraid of the dark?",
     song: "Scared Of The Dark",
     artists: "Lil Wayne, Ty Dolla $ign, XXXTentacion",
   },
@@ -463,14 +457,14 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Linkin Park",
   },
   {
-    quote: "I heard you die twice, once when they bury you in the grave and the second time is the last time that somebody mentions your name.",
-    song: "Glorious",
-    artists: "Macklemore, Skylar Grey",
-  },
-  {
     quote: "Tonight is the night, we'll fight till it's over, so we put our hands up like the ceiling can't hold us.",
     song: "Can't Hold Us",
     artists: "Macklemore, Ryan Lewis",
+  },
+  {
+    quote: "I heard you die twice, once when they bury you in the grave and the second time is the last time that somebody mentions your name.",
+    song: "Glorious",
+    artists: "Macklemore, Skylar Grey",
   },
   {
     quote: "She said, \"You think the devil has horns? Well, so did I, but I was wrong. His hair is combed and wears a suit and tie. He's nice, polite, he'll catch you by surprise. A smile so bright, you'd never bat an eye.\"",
@@ -573,6 +567,11 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "Sam Tinnesz",
   },
   {
+    quote: "This is not another story. This is not another drill. I refuse to be another number now, never staying down. This is something real. I'm a name that you'll remember. I am more than just a thrill. I am gonna be the greatest ever now, watch out, I'm a force that you will feel.",
+    song: "Glory",
+    artists: "The Score",
+  },
+  {
     quote: "Won't stop till we're legend. Blood, sweat, I'll break my bones till all my scars bleed golden. My name's forever known.",
     song: "Legends",
     artists: "The Score",
@@ -583,14 +582,14 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "The Score",
   },
   {
-    quote: "This is not another story. This is not another drill. I refuse to be another number now, never staying down. This is something real. I'm a name that you'll remember. I am more than just a thrill. I am gonna be the greatest ever now, watch out, I'm a force that you will feel.",
-    song: "Glory",
-    artists: "The Score",
-  },
-  {
     quote: "Yeah, you can be the greatest, you can be the best. You can be the King Kong bangin' on your chest. You can beat the world, you can win the war. You can talk to God, go banging on his door.",
     song: "Hall of Fame",
     artists: "The Script, Will.I.Am",
+  },
+  {
+    quote: "Are you, are you, coming to the tree? They strung up a man, they say who murdered three. Strange things did happen here, no stranger would it be, if we met at midnight in the hanging tree.",
+    song: "The Hanging Tree",
+    artists: "Suzanne Collins, James Newton Howard, Wesley Schultz, Jeremiah Fraites",
   },
   {
     quote: "Something's got a hold of me lately. No, I don't know myself anymore. Feels like the walls are all closin' in, and the devil's knockin' at my door.",
@@ -608,14 +607,29 @@ const SONG_QUOTES: SongQuote[] = [
     artists: "TheFatRat",
   },
   {
-    quote: "I've been thinkin' too much, help me.",
-    song: "Ride",
-    artists: "Twenty One Pilots",
+    quote: "I see who you are, you are my enemy. My enemy, you are my enemy.",
+    song: "Enemy",
+    artists: "Tommee Profitt, Beacon Light, Sam Tinnesz",
   },
   {
     quote: "All my friends are heathens, take it slow. Wait for them to ask you who you know. Please don't make any sudden moves, you don't know half of the abuse.",
     song: "Heathens",
     artists: "Twenty One Pilots",
+  },
+  {
+    quote: "I've been thinkin' too much, help me.",
+    song: "Ride",
+    artists: "Twenty One Pilots",
+  },
+  {
+    quote: "Wish we could turn back time to the good old days.",
+    song: "Stressed Out",
+    artists: "Twenty One Pilots",
+  },
+  {
+    quote: "I'm always ready for a war again, go down that road again. It's all the same. I'm always ready to take a life again, you know I'll read again. It's all the same.",
+    song: "Pray For Me",
+    artists: "The Weeknd, Kendrick Lamar",
   },
   {
     quote: "Tell me who's gon' save me from myself, when this life is all I know.",
@@ -624,11 +638,6 @@ const SONG_QUOTES: SongQuote[] = [
   },
   {
     quote: "Who gon' pray for me? Take my pain for me? Save my soul for me? 'Cause I'm alone, you see. If I'm gon' die for you, if I'm gon' kill for you, then I'll spill this blood for you.",
-    song: "Pray For Me",
-    artists: "The Weeknd, Kendrick Lamar",
-  },
-  {
-    quote: "I'm always ready for a war again, go down that road again. It's all the same. I'm always ready to take a life again, you know I'll read again. It's all the same.",
     song: "Pray For Me",
     artists: "The Weeknd, Kendrick Lamar",
   },
@@ -642,11 +651,7 @@ const SONG_QUOTES: SongQuote[] = [
     song: "Seven Nation Army",
     artists: "The White Stripes",
   },
-  {
-    quote: "They can say, they can say it all sounds crazy. They can say, they say I've lost my mind. I don't care, I don't care, so call me crazy. We can live in a world that we design.",
-    song: "A Million Dreams",
-    artists: "Hugh Jackman, Michelle Williams, Ziv Zaifman",
-  },
+
 ]
 
 export function SongQuoteSection() {
