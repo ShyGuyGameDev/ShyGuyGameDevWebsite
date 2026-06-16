@@ -55,8 +55,17 @@ const mediaMentions: MediaMention[] = [
           className="text-accent hover:underline"
         >
           Malice and Mercy
+        </a>
+        , an{" "}
+        <a
+          href="https://www.emptyconsole.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Empty Console
         </a>{" "}
-        earned an &quot;honorable mention&quot; in the 2025{" "}
+        game, earned an &quot;honorable mention&quot; in the 2025{" "}
         <a
           href="https://q5play.org/jam/"
           target="_blank"
@@ -146,24 +155,33 @@ const mediaMentions: MediaMention[] = [
     ),
   },
   {
-    title: "Open Stage",
-    date: "October 2025",
-    url: "https://open-stage.vercel.app/signin",
-    tag: "App Challenge",
-    themes: ["Music industry support", "Social impact", "Sustainable revenue"],
-    image: "/openstage.png",
+    title: "Game Jam Tips",
+    date: "June 2025",
+    url: "https://shyguygamedev.substack.com/p/five-strategies-to-win-a-game-jam",
+    tag: "Post",
+    themes: ["Game Design", "Game Jam", "Strategies"],
+    image: "/JamPost.png",
     description: (
       <>
-        A{" "}
+        Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy summarizes the top 5 lessons he learned from his experience competing in the 2025{" "}
         <a
-          href="https://www.congressionalappchallenge.us/"
+          href="https://q5play.org/jam/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:underline"
         >
-          Congressional App Challenge
+          p5play game jam
         </a>{" "}
-        project designed to help musicians earn more revenue via reduced upfront costs and real-time tipping. Empty Console collaborated with local SF Bay Area bands to develop a user-friendly UX and sustainable revenue model. The project placed third in district CA-15, one of the hardest and most competitive districts in the nation.
+        with{" "}
+        <a
+          href="https://www.emptyconsole.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Empty Console
+        </a>
+        . Each of these strategies are broad enough to be applied to any game jam, but are specific enough to be actually useful in creating a better game and placing higher in the competition.
       </>
     ),
   },
