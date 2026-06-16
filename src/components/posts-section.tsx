@@ -1,8 +1,10 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { PostCard } from "@/components/post-card"
+import { SearchBar } from "@/components/search-bar"
+import { getNodeText, matchesSearch } from "@/lib/utils"
 
 interface MediaMention {
   title: string
@@ -11,6 +13,7 @@ interface MediaMention {
   url: string
   description: string | React.ReactNode
   tag?: string
+  themes?: string[]
   image?: string
   video?: string
 }
@@ -22,6 +25,7 @@ const mediaMentions: MediaMention[] = [
     date: "September 2025",
     url: "https://emptyconsole.itch.io/bugged-out",
     tag: "Game Jam",
+    themes: ["Glitches as mechanics", "Logic and memory", "Reflex-based platforming"],
     image: "/buggedout.png",
     video: "/Clips/BuggedOut.mp4",
     description: (
@@ -45,6 +49,7 @@ const mediaMentions: MediaMention[] = [
     date: "June 2025",
     url: "https://emptyconsole.github.io/Malice-and-Mercy/",
     tag: "Game Jam",
+    themes: ["Ethical decision-making", "Risk and reward", "Custom physics engine"],
     image: "/malice_and_mercy-Picsart-AiImageEnhancer.png",
     video: "/Clips/MaliceAndMercy.mp4",
     description: (
@@ -86,6 +91,7 @@ const mediaMentions: MediaMention[] = [
     date: "August 2025",
     url: "https://emptyconsole.itch.io/space-looper",
     tag: "Game Jam",
+    themes: ["Resource management", "Strategic planning", "Precision movement"],
     image: "/Untitled_presentation_1-Picsart-AiImageEnhancer.png",
     video: "/Clips/SpaceLooper.mp4",
     description: (
@@ -109,6 +115,7 @@ const mediaMentions: MediaMention[] = [
     date: "October 2025",
     url: "https://open-stage.vercel.app/signin",
     tag: "App Challenge",
+    themes: ["Music industry support", "Social impact", "Sustainable revenue"],
     image: "/openstage.png",
     video: "/Clips/OpenStage.mp4",
     description: (
@@ -136,6 +143,21 @@ const sortedMediaMentions = [...mediaMentions].sort(
 
 export function PostsSection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+
+  const filteredMediaMentions = useMemo(() => {
+    return sortedMediaMentions.filter((mention) => {
+      const haystack = [
+        mention.title,
+        mention.source,
+        mention.date,
+        mention.tag ?? "",
+        ...(mention.themes ?? []),
+        getNodeText(mention.description),
+      ].join(" ")
+      return matchesSearch(haystack, searchQuery)
+    })
+  }, [searchQuery])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -153,7 +175,7 @@ export function PostsSection() {
     elements?.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
-  }, [])
+  }, [filteredMediaMentions])
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden min-h-screen py-[100px] pt-[172px] bg-background">
@@ -168,15 +190,22 @@ export function PostsSection() {
           <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-4">
             Posts &amp; Media Mentions
           </h2>
-          <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Articles, features, and write-ups where Empty Console and our projects have been
             mentioned
           </p>
+          <div className="animate-on-scroll opacity-0 animate-delay-200">
+            <SearchBar
+              value={searchQuery}
+              onChange={setSearchQuery}
+              placeholder="Search posts & media mentions..."
+            />
+          </div>
         </div>
 
-        {sortedMediaMentions.length > 0 ? (
+        {filteredMediaMentions.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {sortedMediaMentions.map((mention, index) => (
+            {filteredMediaMentions.map((mention, index) => (
               <div
                 key={mention.title}
                 className="animate-on-scroll opacity-0"
@@ -188,7 +217,9 @@ export function PostsSection() {
           </div>
         ) : (
           <p className="text-center text-muted-foreground">
-            No media mentions yet. Check back soon!
+            {searchQuery.trim()
+              ? `No posts or media mentions match "${searchQuery.trim()}".`
+              : "No media mentions yet. Check back soon!"}
           </p>
         )}
       </div>

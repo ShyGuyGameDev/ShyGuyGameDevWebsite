@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { ArrowUpRight, Newspaper } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import type React from "react"
 import { useState, useRef, useEffect } from "react"
@@ -13,11 +13,12 @@ interface PostCardProps {
   url: string
   description: string | React.ReactNode
   tag?: string
+  themes?: string[]
   image?: string
   video?: string
 }
 
-export function PostCard({ title, source, date, url, description, tag, image, video }: PostCardProps) {
+export function PostCard({ title, date, url, description, tag, themes, image, video }: PostCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [isDesktop, setIsDesktop] = useState(false)
   const [isInView, setIsInView] = useState(false)
@@ -214,18 +215,14 @@ export function PostCard({ title, source, date, url, description, tag, image, vi
         </div>
       )}
       <CardContent className={`${hasMedia ? "pt-3" : "pt-6"} px-6 pb-6`}>
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Newspaper className="h-4 w-4" aria-hidden="true" />
-            <span>{source}</span>
-          </div>
+        <div className="flex items-center justify-between gap-3 mb-2">
+          <p className="text-sm text-muted-foreground">{date}</p>
           {tag && (
-            <span className="px-3 py-1 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300 text-xs font-medium rounded-full">
+            <span className="shrink-0 px-3 py-1 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300 text-xs font-medium rounded-full">
               {tag}
             </span>
           )}
         </div>
-        <p className="text-sm text-muted-foreground mb-2">{date}</p>
         <h4 className="text-xl font-semibold text-primary mb-3">
           <a
             href={url}
@@ -238,6 +235,19 @@ export function PostCard({ title, source, date, url, description, tag, image, vi
           </a>
         </h4>
         <p className="text-base text-secondary leading-relaxed">{description}</p>
+
+        {themes && themes.length > 0 && (
+          <div className="mt-4">
+            <p className="text-sm font-medium text-muted-foreground mb-2">Themes</p>
+            <ul className="list-disc list-inside space-y-1">
+              {themes.map((theme) => (
+                <li key={theme} className="text-sm text-secondary">
+                  {theme}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </CardContent>
     </Card>
   )

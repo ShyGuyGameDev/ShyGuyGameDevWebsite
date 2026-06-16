@@ -9,14 +9,14 @@ interface ProjectCardProps {
   title: string
   description: string | React.ReactNode
   learnings: string[]
-  technologies: string[]
   image?: string
   video?: string
   url?: string
   date?: string
+  tag?: string
 }
 
-export function ProjectCard({ title, description, learnings, technologies, image, video, url, date }: ProjectCardProps) {
+export function ProjectCard({ title, description, learnings, image, video, url, date, tag }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [isDesktop, setIsDesktop] = useState(false)
   const [isInView, setIsInView] = useState(false)
@@ -209,10 +209,15 @@ export function ProjectCard({ title, description, learnings, technologies, image
         )}
       </div>
       <CardContent className="pt-3 px-6 pb-6">
-        {date && (
-          <p className="text-sm text-muted-foreground mb-3">
-            {date}
-          </p>
+        {(date || tag) && (
+          <div className="flex items-center justify-between gap-3 mb-3">
+            <p className="text-sm text-muted-foreground">{date}</p>
+            {tag && (
+              <span className="shrink-0 px-3 py-1 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300 text-xs font-medium rounded-full">
+                {tag}
+              </span>
+            )}
+          </div>
         )}
         <h4 className="text-xl font-semibold text-primary mb-3">
           {url ? (
@@ -230,7 +235,7 @@ export function ProjectCard({ title, description, learnings, technologies, image
         </h4>
         <p className="text-base text-secondary leading-relaxed mb-4">{description}</p>
 
-        <div className="mb-4">
+        <div>
           <p className="text-sm font-medium text-muted-foreground mb-2">Key Learnings</p>
           <ul className="list-disc list-inside space-y-1">
             {learnings.map((learning) => (
@@ -239,28 +244,6 @@ export function ProjectCard({ title, description, learnings, technologies, image
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          {technologies.map((tech) => {
-            const isP5js = tech === "p5.js"
-            return (
-              <span key={tech} className="px-3 py-1 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300 text-xs font-medium rounded-full">
-                {isP5js ? (
-                  <a
-                    href="https://p5js.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-yellow-700 dark:text-yellow-300 hover:underline"
-                  >
-                    {tech}
-                  </a>
-                ) : (
-                  tech
-                )}
-              </span>
-            )
-          })}
         </div>
       </CardContent>
     </Card>

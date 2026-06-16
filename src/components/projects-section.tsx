@@ -1,14 +1,17 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { ProjectCard } from "@/components/project-card"
+import { SearchBar } from "@/components/search-bar"
+import { getNodeText, matchesSearch } from "@/lib/utils"
 
 const completedProjects = [
   {
     title: "Malice and Mercy",
     url: "https://emptyconsole.github.io/Malice-and-Mercy/",
     date: "June 2025",
+    tag: "Game Jam",
     description: (
       <>
         A{" "}
@@ -48,7 +51,6 @@ const completedProjects = [
       "Teamwork under time pressure",
       "Managing deadlines and collaborating on art and music",
     ],
-    technologies: ["p5.js", "JavaScript", "Custom Physics Engine"],
     image: "/malice_and_mercy-Picsart-AiImageEnhancer.png",
     video: "/Clips/MaliceAndMercy.mp4",
   },
@@ -56,6 +58,7 @@ const completedProjects = [
     title: "Space Looper",
     url: "https://emptyconsole.itch.io/space-looper",
     date: "August 2025",
+    tag: "Game Jam",
     description: (
       <>
         A{" "}
@@ -77,7 +80,6 @@ const completedProjects = [
       "Debugging complex interactions",
       "Iterative design and precise gameplay mechanics",
     ],
-    technologies: ["Game Development", "Resource Management Systems"],
     image: "/Untitled_presentation_1-Picsart-AiImageEnhancer.png",
     video: "/Clips/SpaceLooper.mp4",
   },
@@ -85,6 +87,7 @@ const completedProjects = [
     title: "Bugged Out",
     url: "https://emptyconsole.itch.io/bugged-out",
     date: "September 2025",
+    tag: "Game Jam",
     description: (
       <>
         Created for the{" "}
@@ -105,7 +108,6 @@ const completedProjects = [
       "Playtesting and incorporating user feedback",
       "Improving teamwork coordination",
     ],
-    technologies: ["Platformer Mechanics", "Creative Game Design"],
     image: "/buggedout.png",
     video: "/Clips/BuggedOut.mp4",
   },
@@ -113,6 +115,7 @@ const completedProjects = [
     title: "Open Stage",
     url: "https://open-stage.vercel.app/signin",
     date: "October 2025",
+    tag: "App Challenge",
     description: (
       <>
         A{" "}
@@ -134,14 +137,33 @@ const completedProjects = [
       "Presenting solutions to judges",
       "Creating socially impactful technology",
     ],
-    technologies: ["Full-Stack Development", "UX Design", "Business Modeling"],
     image: "/openstage.png",
     video: "/Clips/OpenStage.mp4",
   },
 ]
 
+// Sort newest first so the most recent project is top-left and the
+// earliest ends up farthest down and farthest to the right.
+const sortedProjects = [...completedProjects].sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+)
+
 export function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+
+  const filteredProjects = useMemo(() => {
+    return sortedProjects.filter((project) => {
+      const haystack = [
+        project.title,
+        project.date,
+        project.tag ?? "",
+        ...project.learnings,
+        getNodeText(project.description),
+      ].join(" ")
+      return matchesSearch(haystack, searchQuery)
+    })
+  }, [searchQuery])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -159,7 +181,7 @@ export function ProjectsSection() {
     elements?.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
-  }, [])
+  }, [filteredProjects])
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden py-[100px] pt-[172px] bg-background">
@@ -174,9 +196,16 @@ export function ProjectsSection() {
           <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-4">
             Our Projects
           </h2>
-          <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             Explore the innovative projects we&apos;ve built and are currently working on
           </p>
+          <div className="animate-on-scroll opacity-0 animate-delay-200">
+            <SearchBar
+              value={searchQuery}
+              onChange={setSearchQuery}
+              placeholder="Search projects..."
+            />
+          </div>
         </div>
 
         {/* Completed Projects */}
@@ -185,17 +214,25 @@ export function ProjectsSection() {
             <span className="w-3 h-3 rounded-full bg-green-500" aria-hidden="true" />
             Completed Projects
           </h3> */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {completedProjects.map((project, index) => (
-              <div
-                key={project.title}
-                className="animate-on-scroll opacity-0"
-                style={{ animationDelay: `${(index + 1) * 100}ms` }}
-              >
-                <ProjectCard {...project} />
-              </div>
-            ))}
-          </div>
+          {filteredProjects.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {filteredProjects.map((project, index) => (
+                <div
+                  key={project.title}
+                  className="animate-on-scroll opacity-0"
+                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                >
+                  <ProjectCard {...project} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-muted-foreground">
+              {searchQuery.trim()
+                ? `No projects match "${searchQuery.trim()}".`
+                : "No projects yet. Check back soon!"}
+            </p>
+          )}
         </div>
       </div>
     </section>
