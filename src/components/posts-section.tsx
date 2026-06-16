@@ -8,53 +8,73 @@ import { getNodeText, matchesSearch } from "@/lib/utils"
 
 interface MediaMention {
   title: string
-  source: string
   date: string
   url: string
   description: string | React.ReactNode
   tag?: string
   themes?: string[]
   image?: string
-  video?: string
 }
 
 const mediaMentions: MediaMention[] = [
   {
-    title: "Bugged Out",
-    source: "itch.io",
-    date: "September 2025",
-    url: "https://emptyconsole.itch.io/bugged-out",
-    tag: "Game Jam",
-    themes: ["Glitches as mechanics", "Logic and memory", "Reflex-based platforming"],
-    image: "/buggedout.png",
-    video: "/Clips/BuggedOut.mp4",
+    title: "Competitive Robotics Strategies",
+    date: "February 2025",
+    url: "https://shyguygamedev.substack.com/p/strategies-for-competitive-robotics",
+    tag: "Post",
+    themes: ["Robotics", "Stategies", "Teamwork"],
+    image: "/FTCPosts.jpg",
     description: (
       <>
-        Created for the{" "}
+        Working as a team throughout a competitive robotics season is hard, but there a few strategies to make it much easier. In this post, ShyGuy draws on his experience from working in his school&apos;s{" "}
         <a
-          href="https://itch.io/jam/patch-notes-v-1-0"
+          href="https://www.firstinspires.org/programs/ftc/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:underline"
         >
-          Patch Notes Game Jam
+          FTC(First Tech Challenge)
         </a>{" "}
-        with the theme &apos;The Error is the Feature&apos; in a 3-day jam, placing 17th out of 474 entries. This platformer intentionally uses glitches as core gameplay mechanics, requiring players to use logic, memory, and reflexes to navigate levels.
+        team, breaks it down, and shares what worked for him and his team. From what to do when creating the team, to how to handle yourself at the actual competition, this post has strategies that apply to the entire season.
       </>
     ),
   },
   {
-    title: "Malice and Mercy",
-    source: "github.io",
+    title: "P5Play Game Jam Results",
     date: "June 2025",
-    url: "https://emptyconsole.github.io/Malice-and-Mercy/",
-    tag: "Game Jam",
-    themes: ["Ethical decision-making", "Risk and reward", "Custom physics engine"],
+    url: "https://q5js.substack.com/p/p5play-game-jam-2025-results",
+    tag: "Media Mention",
+    themes: ["Game design", "Puzzle", "Game Review"],
     image: "/malice_and_mercy-Picsart-AiImageEnhancer.png",
-    video: "/Clips/MaliceAndMercy.mp4",
     description: (
       <>
-        A{" "}
+        <a
+          href="https://emptyconsole.github.io/Malice-and-Mercy/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Malice and Mercy
+        </a>{" "}
+        earned an &quot;honorable mention&quot; in the 2025{" "}
+        <a
+          href="https://q5play.org/jam/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          p5play game jam
+        </a>
+        , which is equivalent to winning 2nd place in the competition.{" "}
+        <a
+          href="https://www.linkedin.com/in/quinton-ashley/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Quinton Ashley
+        </a>{" "}
+        was the game jam judge, and is also the original designer and developer of{" "}
         <a
           href="https://p5js.org/"
           target="_blank"
@@ -62,62 +82,76 @@ const mediaMentions: MediaMention[] = [
           className="text-accent hover:underline"
         >
           p5.js
-        </a>{" "}
-        platformer created for the{" "}
+        </a>
+        ,{" "}
         <a
           href="https://p5play.org/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:underline"
         >
-          p5Play
-        </a>{" "}
-        game jam that earned Honorable Mention. The game explores ethical decision-making in fast-paced platforming. Players choose to save or kill characters while balancing points and time using three throwable abilities. Features a fully custom physics engine, tilemap system, collision detection, particles, and a level editor coded from scratch. You can read about it in an{" "}
+          p5play
+        </a>
+        ,{" "}
         <a
-          href="https://q5js.substack.com/p/p5play-game-jam-2025-results"
+          href="https://q5js.org/home/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:underline"
         >
-          article
-        </a>{" "}
-        written by the creator of p5Play, Quinton Ashley.
+          q5.js
+        </a>
+        , and{" "}
+        <a
+          href="https://q5play.org/home/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          q5play
+        </a>
+        . After the competition, he posted his review of{" "}
+        <a
+          href="https://emptyconsole.github.io/Malice-and-Mercy/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Malice and Mercy
+        </a>
+        , where he highlighted the game&apos;s physics and functionality.
       </>
     ),
   },
   {
-    title: "Space Looper",
-    source: "itch.io",
-    date: "August 2025",
-    url: "https://emptyconsole.itch.io/space-looper",
-    tag: "Game Jam",
-    themes: ["Resource management", "Strategic planning", "Precision movement"],
-    image: "/Untitled_presentation_1-Picsart-AiImageEnhancer.png",
-    video: "/Clips/SpaceLooper.mp4",
+    title: "Engagement in Beginner Games",
+    date: "March 2025",
+    url: "https://shyguygamedev.substack.com/p/game-design-for-beginners",
+    tag: "Post",
+    themes: ["Game Design", "Strategies", "Engagement", "Beginner", "User Psychology"],
+    image: "/EngagementPost2.png",
     description: (
       <>
-        A{" "}
+        Every good game has one goal: Keep the player engaged. However, that&apos;s a lot easier said than done. In this post, ShyGuy shares his top 7 strategies for beginner game designers to use, all of which use the player&apos;s own psychology to their advantage. ShyGuy explains each of these strategies through providing details from one of his own first games,{" "}
         <a
-          href="https://itch.io/jam/gmtk-2025"
+          href="https://shyguygamedev.github.io/Dimensional-Rifter/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent hover:underline"
         >
-          GMTK Game Jam
-        </a>{" "}
-        strategy game created in a 4-day jam with 9,574 submissions. Players circle meteors with limited rope and energy, managing resources across 20 research centers. The game challenges players with precise movement mechanics and strategic resource allocation.
+          Dimensional Rifter
+        </a>
+        .
       </>
     ),
   },
   {
     title: "Open Stage",
-    source: "vercel.app",
     date: "October 2025",
     url: "https://open-stage.vercel.app/signin",
     tag: "App Challenge",
     themes: ["Music industry support", "Social impact", "Sustainable revenue"],
     image: "/openstage.png",
-    video: "/Clips/OpenStage.mp4",
     description: (
       <>
         A{" "}
@@ -149,7 +183,6 @@ export function PostsSection() {
     return sortedMediaMentions.filter((mention) => {
       const haystack = [
         mention.title,
-        mention.source,
         mention.date,
         mention.tag ?? "",
         ...(mention.themes ?? []),

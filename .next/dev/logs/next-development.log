@@ -60,3 +60,162 @@
 {"timestamp":"00:18:59.507","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582935143} /_vercel/insights/view"}
 {"timestamp":"00:19:43.335","source":"Server","level":"LOG","message":"✓ Compiled in 1047ms"}
 {"timestamp":"01:24:58.619","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781586894260} /_vercel/insights/view"}
+{"timestamp":"13:45:29.873","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781631325479} /_vercel/insights/view"}
+{"timestamp":"13:45:30.876","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781631326506} /_vercel/insights/view"}
+{"timestamp":"14:02:22.011","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781632337104} /_vercel/insights/view"}
+{"timestamp":"14:02:27.195","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781632342817} /_vercel/insights/view"}
+{"timestamp":"14:03:03.268","source":"Server","level":"LOG","message":"✓ Compiled in 947ms"}
+{"timestamp":"14:03:11.906","source":"Server","level":"LOG","message":"✓ Compiled in 114ms"}
+{"timestamp":"14:03:43.167","source":"Server","level":"LOG","message":"✓ Compiled in 155ms"}
+{"timestamp":"14:03:49.613","source":"Server","level":"LOG","message":"✓ Compiled in 182ms"}
+{"timestamp":"14:04:21.522","source":"Server","level":"LOG","message":"✓ Compiled in 169ms"}
+{"timestamp":"14:04:25.976","source":"Server","level":"LOG","message":"✓ Compiled in 110ms"}
+{"timestamp":"14:04:28.034","source":"Server","level":"LOG","message":"✓ Compiled in 83ms"}
+{"timestamp":"14:04:32.651","source":"Server","level":"LOG","message":"✓ Compiled in 135ms"}
+{"timestamp":"14:05:18.827","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781632514428} /_vercel/insights/view"}
+{"timestamp":"14:05:25.210","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781632520843} /_vercel/insights/view"}
+{"timestamp":"14:05:43.285","source":"Server","level":"LOG","message":"✓ Compiled in 329ms"}
+{"timestamp":"14:05:43.455","source":"Server","level":"LOG","message":"✓ Compiled in 100ms"}
+{"timestamp":"14:05:45.054","source":"Server","level":"LOG","message":"✓ Compiled in 169ms"}
+{"timestamp":"14:05:45.416","source":"Server","level":"LOG","message":"✓ Compiled in 169ms"}
+{"timestamp":"14:05:45.709","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
+{"timestamp":"14:09:24.452","source":"Server","level":"LOG","message":"✓ Compiled in 412ms"}
+{"timestamp":"14:09:27.362","source":"Server","level":"LOG","message":"✓ Compiled in 214ms"}
+{"timestamp":"14:09:32.576","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"14:09:49.938","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
+{"timestamp":"14:12:46.188","source":"Server","level":"LOG","message":"✓ Compiled in 550ms"}
+{"timestamp":"14:13:28.106","source":"Server","level":"LOG","message":"✓ Compiled in 192ms"}
+{"timestamp":"14:13:31.485","source":"Server","level":"LOG","message":"✓ Compiled in 88ms"}
+{"timestamp":"14:13:34.084","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
+{"timestamp":"14:13:40.851","source":"Server","level":"LOG","message":"✓ Compiled in 80ms"}
+{"timestamp":"14:13:43.046","source":"Server","level":"LOG","message":"✓ Compiled in 109ms"}
+{"timestamp":"14:13:48.265","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
+{"timestamp":"14:13:57.464","source":"Server","level":"LOG","message":"✓ Compiled in 186ms"}
+{"timestamp":"14:18:00.596","source":"Server","level":"LOG","message":"✓ Compiled in 1000ms"}
+{"timestamp":"14:18:14.610","source":"Server","level":"LOG","message":"✓ Compiled in 226ms"}
+{"timestamp":"14:18:16.883","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"14:19:07.584","source":"Server","level":"LOG","message":"✓ Compiled in 1291ms"}
+{"timestamp":"14:19:08.092","source":"Server","level":"LOG","message":"✓ Compiled in 441ms"}
+{"timestamp":"14:19:10.831","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"14:19:12.811","source":"Server","level":"LOG","message":"✓ Compiled in 88ms"}
+{"timestamp":"14:20:17.902","source":"Server","level":"LOG","message":"✓ Compiled in 199ms"}
+{"timestamp":"14:20:21.820","source":"Server","level":"LOG","message":"✓ Compiled in 233ms"}
+{"timestamp":"14:20:58.663","source":"Server","level":"LOG","message":"✓ Compiled in 201ms"}
+{"timestamp":"14:20:59.916","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"14:21:18.415","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633474030} /_vercel/insights/view"}
+{"timestamp":"14:22:27.968","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633543594} /_vercel/insights/view"}
+{"timestamp":"14:22:45.152","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3000/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633560776} /_vercel/insights/view"}
+{"timestamp":"14:22:46.679","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633562299} /_vercel/insights/view"}
+{"timestamp":"14:22:56.581","source":"Server","level":"LOG","message":"✓ Compiled in 1210ms"}
+{"timestamp":"14:22:56.598","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
+{"timestamp":"14:22:56.646","source":"Server","level":"LOG","message":"✓ Compiled in 7ms"}
+{"timestamp":"14:22:57.452","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"14:22:57.651","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"14:22:57.651","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/posts\",\"route\":\"/posts\"}"}
+{"timestamp":"14:22:57.651","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633573216} /_vercel/insights/view"}
+{"timestamp":"14:32:20.088","source":"Server","level":"LOG","message":"✓ Compiled in 562ms"}
+{"timestamp":"14:32:41.719","source":"Server","level":"LOG","message":"✓ Compiled in 166ms"}
+{"timestamp":"14:32:41.915","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
+{"timestamp":"14:32:42.712","source":"Server","level":"LOG","message":"✓ Compiled in 152ms"}
+{"timestamp":"14:32:43.504","source":"Server","level":"LOG","message":"✓ Compiled in 148ms"}
+{"timestamp":"14:32:43.964","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
+{"timestamp":"14:32:44.785","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"14:32:45.029","source":"Server","level":"LOG","message":"✓ Compiled in 31ms"}
+{"timestamp":"14:33:17.527","source":"Server","level":"LOG","message":"✓ Compiled in 356ms"}
+{"timestamp":"14:33:44.588","source":"Server","level":"LOG","message":"✓ Compiled in 283ms"}
+{"timestamp":"14:33:54.304","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"14:33:56.212","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
+{"timestamp":"14:33:58.072","source":"Server","level":"LOG","message":"✓ Compiled in 492ms"}
+{"timestamp":"14:34:38.648","source":"Server","level":"LOG","message":"✓ Compiled in 190ms"}
+{"timestamp":"14:35:01.522","source":"Server","level":"LOG","message":"✓ Compiled in 190ms"}
+{"timestamp":"14:35:13.989","source":"Server","level":"LOG","message":"✓ Compiled in 143ms"}
+{"timestamp":"14:38:05.623","source":"Server","level":"LOG","message":"✓ Compiled in 252ms"}
+{"timestamp":"14:38:28.577","source":"Server","level":"LOG","message":"✓ Compiled in 190ms"}
+{"timestamp":"14:38:50.636","source":"Server","level":"LOG","message":"✓ Compiled in 111ms"}
+{"timestamp":"14:39:06.048","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"14:39:29.886","source":"Server","level":"LOG","message":"✓ Compiled in 142ms"}
+{"timestamp":"14:39:44.465","source":"Server","level":"LOG","message":"✓ Compiled in 84ms"}
+{"timestamp":"14:39:53.075","source":"Server","level":"LOG","message":"✓ Compiled in 147ms"}
+{"timestamp":"14:39:55.685","source":"Server","level":"LOG","message":"✓ Compiled in 359ms"}
+{"timestamp":"14:40:03.748","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"14:40:08.005","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
+{"timestamp":"14:40:15.644","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"14:40:25.690","source":"Server","level":"LOG","message":"✓ Compiled in 102ms"}
+{"timestamp":"14:40:27.518","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
+{"timestamp":"14:40:30.558","source":"Server","level":"LOG","message":"✓ Compiled in 56ms"}
+{"timestamp":"14:40:46.287","source":"Server","level":"LOG","message":"✓ Compiled in 101ms"}
+{"timestamp":"14:41:28.470","source":"Server","level":"LOG","message":"✓ Compiled in 203ms"}
+{"timestamp":"14:41:29.938","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
+{"timestamp":"14:41:58.872","source":"Server","level":"LOG","message":"✓ Compiled in 318ms"}
+{"timestamp":"14:42:01.119","source":"Server","level":"LOG","message":"✓ Compiled in 50ms"}
+{"timestamp":"14:42:06.738","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"14:42:14.825","source":"Server","level":"LOG","message":"✓ Compiled in 96ms"}
+{"timestamp":"14:42:17.616","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"14:42:20.593","source":"Server","level":"LOG","message":"✓ Compiled in 106ms"}
+{"timestamp":"14:42:33.528","source":"Server","level":"LOG","message":"✓ Compiled in 176ms"}
+{"timestamp":"14:42:52.054","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
+{"timestamp":"14:42:59.043","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
+{"timestamp":"14:43:22.742","source":"Server","level":"LOG","message":"✓ Compiled in 114ms"}
+{"timestamp":"14:43:29.970","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
+{"timestamp":"14:43:39.540","source":"Server","level":"LOG","message":"✓ Compiled in 95ms"}
+{"timestamp":"14:43:42.473","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"14:43:50.780","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
+{"timestamp":"14:43:53.642","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"14:43:58.035","source":"Server","level":"LOG","message":"✓ Compiled in 91ms"}
+{"timestamp":"14:44:03.880","source":"Server","level":"LOG","message":"✓ Compiled in 80ms"}
+{"timestamp":"14:44:39.694","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"14:44:39.921","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"14:44:39.921","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/posts\",\"route\":\"/posts\"}"}
+{"timestamp":"14:44:39.921","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781634875437} /_vercel/insights/view"}
+{"timestamp":"14:45:10.111","source":"Server","level":"LOG","message":"✓ Compiled in 355ms"}
+{"timestamp":"14:52:20.821","source":"Server","level":"LOG","message":"✓ Compiled in 441ms"}
+{"timestamp":"14:52:22.979","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"14:52:24.875","source":"Server","level":"LOG","message":"✓ Compiled in 87ms"}
+{"timestamp":"14:52:30.307","source":"Server","level":"LOG","message":"✓ Compiled in 100ms"}
+{"timestamp":"14:52:34.961","source":"Server","level":"LOG","message":"✓ Compiled in 104ms"}
+{"timestamp":"14:53:11.190","source":"Server","level":"LOG","message":"✓ Compiled in 237ms"}
+{"timestamp":"14:54:47.277","source":"Server","level":"LOG","message":"✓ Compiled in 211ms"}
+{"timestamp":"14:54:50.595","source":"Server","level":"LOG","message":"○ Compiling /_not-found/page ..."}
+{"timestamp":"14:54:56.710","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
+{"timestamp":"14:55:06.416","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
+{"timestamp":"14:55:14.180","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"14:55:21.473","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
+{"timestamp":"14:55:23.441","source":"Server","level":"LOG","message":"✓ Compiled in 93ms"}
+{"timestamp":"14:55:25.561","source":"Server","level":"LOG","message":"✓ Compiled in 83ms"}
+{"timestamp":"14:55:28.956","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
+{"timestamp":"14:55:36.255","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
+{"timestamp":"14:55:48.254","source":"Server","level":"LOG","message":"✓ Compiled in 128ms"}
+{"timestamp":"14:55:54.692","source":"Server","level":"LOG","message":"✓ Compiled in 107ms"}
+{"timestamp":"14:57:45.637","source":"Server","level":"LOG","message":"✓ Compiled in 641ms"}
+{"timestamp":"14:58:20.896","source":"Server","level":"LOG","message":"✓ Compiled in 228ms"}
+{"timestamp":"14:58:42.124","source":"Server","level":"LOG","message":"✓ Compiled in 164ms"}
+{"timestamp":"14:58:55.615","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"14:58:58.265","source":"Server","level":"LOG","message":"✓ Compiled in 106ms"}
+{"timestamp":"14:59:08.686","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
+{"timestamp":"14:59:13.988","source":"Server","level":"LOG","message":"✓ Compiled in 85ms"}
+{"timestamp":"14:59:21.737","source":"Server","level":"LOG","message":"✓ Compiled in 131ms"}
+{"timestamp":"14:59:24.348","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
+{"timestamp":"14:59:27.535","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"14:59:32.309","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
+{"timestamp":"14:59:36.218","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"14:59:38.124","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
+{"timestamp":"14:59:40.260","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
+{"timestamp":"14:59:43.372","source":"Server","level":"LOG","message":"✓ Compiled in 68ms"}
+{"timestamp":"14:59:49.894","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
+{"timestamp":"15:00:02.595","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
+{"timestamp":"15:00:04.963","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
+{"timestamp":"15:00:20.795","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
+{"timestamp":"15:00:29.830","source":"Server","level":"LOG","message":"✓ Compiled in 123ms"}
+{"timestamp":"15:00:32.900","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
+{"timestamp":"15:00:37.173","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
+{"timestamp":"15:00:39.840","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
+{"timestamp":"15:01:16.286","source":"Server","level":"LOG","message":"✓ Compiled in 150ms"}
+{"timestamp":"15:01:22.392","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
+{"timestamp":"15:01:24.842","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
+{"timestamp":"15:01:30.271","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
+{"timestamp":"15:01:32.568","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
+{"timestamp":"15:01:35.505","source":"Server","level":"LOG","message":"✓ Compiled in 47ms"}
+{"timestamp":"15:01:47.656","source":"Server","level":"LOG","message":"✓ Compiled in 98ms"}
+{"timestamp":"15:02:07.190","source":"Server","level":"LOG","message":"✓ Compiled in 152ms"}
+{"timestamp":"15:02:38.856","source":"Server","level":"LOG","message":"✓ Compiled in 209ms"}
+{"timestamp":"15:09:44.940","source":"Server","level":"LOG","message":"✓ Compiled in 721ms"}
