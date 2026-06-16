@@ -242,8 +242,16 @@ export function PostsSection() {
             Posts &amp; Media Mentions
           </h2>
           <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Articles, features, and write-ups where Empty Console and our projects have been
-            mentioned
+            Subscribe to{" "}
+            <a
+              href="https://shyguygamedev.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              ShyGuy&apos;s Substack
+            </a>
+            !
           </p>
           <div className="animate-on-scroll opacity-0 animate-delay-200">
             <SearchBar

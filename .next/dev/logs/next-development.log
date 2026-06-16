@@ -1,274 +1,59 @@
-{"timestamp":"00:00:02.195","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:05.052","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"00:00:05.155","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
-{"timestamp":"00:00:05.184","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3000/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
-{"timestamp":"00:00:05.184","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3000/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
-{"timestamp":"00:00:05.200","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
-{"timestamp":"00:00:05.200","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
-{"timestamp":"00:00:05.200","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3000/\",\"r\":\"\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781581800859} /_vercel/insights/view"}
-{"timestamp":"00:00:06.855","source":"Browser","level":"WARN","message":"Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior"}
-{"timestamp":"00:00:06.855","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781581802437} /_vercel/insights/view"}
-{"timestamp":"00:00:06.864","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\\\"smooth\\\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\\u001b[39m\""}
-{"timestamp":"00:00:06.866","source":"Browser","level":"WARN","message":"\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\u001b[39m"}
-{"timestamp":"00:00:28.630","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781581824291} /_vercel/insights/view"}
-{"timestamp":"00:00:30.172","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781581825837} /_vercel/insights/view"}
-{"timestamp":"00:03:37.834","source":"Server","level":"LOG","message":"✓ Compiled in 2.5s"}
-{"timestamp":"00:03:43.509","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
-{"timestamp":"00:07:47.489","source":"Server","level":"LOG","message":"✓ Compiled in 252ms"}
-{"timestamp":"00:07:54.250","source":"Server","level":"LOG","message":"✓ Compiled in 2.2s"}
-{"timestamp":"00:07:56.440","source":"Server","level":"LOG","message":"✓ Compiled in 41ms"}
-{"timestamp":"00:08:01.468","source":"Server","level":"LOG","message":"✓ Compiled in 230ms"}
-{"timestamp":"00:08:05.393","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582281040} /_vercel/insights/view"}
-{"timestamp":"00:08:06.254","source":"Server","level":"LOG","message":"✓ Compiled in 116ms"}
-{"timestamp":"00:08:07.206","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582282863} /_vercel/insights/view"}
-{"timestamp":"00:08:10.406","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
-{"timestamp":"00:08:14.172","source":"Server","level":"LOG","message":"✓ Compiled in 123ms"}
-{"timestamp":"00:09:53.082","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582388727} /_vercel/insights/view"}
-{"timestamp":"00:10:02.469","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582398132} /_vercel/insights/view"}
-{"timestamp":"00:10:11.781","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582407443} /_vercel/insights/view"}
-{"timestamp":"00:11:41.746","source":"Server","level":"LOG","message":"✓ Compiled in 544ms"}
-{"timestamp":"00:11:45.819","source":"Server","level":"LOG","message":"✓ Compiled in 301ms"}
-{"timestamp":"00:11:50.376","source":"Server","level":"LOG","message":"✓ Compiled in 768ms"}
-{"timestamp":"00:11:54.085","source":"Server","level":"LOG","message":"✓ Compiled in 110ms"}
-{"timestamp":"00:11:58.330","source":"Server","level":"LOG","message":"✓ Compiled in 85ms"}
-{"timestamp":"00:12:02.677","source":"Server","level":"LOG","message":"✓ Compiled in 86ms"}
-{"timestamp":"00:12:06.612","source":"Server","level":"LOG","message":"✓ Compiled in 104ms"}
-{"timestamp":"00:12:11.050","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582526699} /_vercel/insights/view"}
-{"timestamp":"00:12:12.215","source":"Server","level":"LOG","message":"✓ Compiled in 169ms"}
-{"timestamp":"00:12:19.309","source":"Server","level":"LOG","message":"✓ Compiled in 97ms"}
-{"timestamp":"00:12:25.824","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
-{"timestamp":"00:12:29.908","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
-{"timestamp":"00:12:34.073","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
-{"timestamp":"00:12:37.950","source":"Server","level":"LOG","message":"✓ Compiled in 32ms"}
-{"timestamp":"00:13:40.142","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582615803} /_vercel/insights/view"}
-{"timestamp":"00:13:41.151","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582616815} /_vercel/insights/view"}
-{"timestamp":"00:14:47.396","source":"Server","level":"LOG","message":"✓ Compiled in 3.4s"}
-{"timestamp":"00:14:51.275","source":"Server","level":"LOG","message":"✓ Compiled in 732ms"}
-{"timestamp":"00:14:56.262","source":"Server","level":"LOG","message":"✓ Compiled in 1316ms"}
-{"timestamp":"00:15:02.093","source":"Server","level":"LOG","message":"✓ Compiled in 1813ms"}
-{"timestamp":"00:15:18.528","source":"Server","level":"LOG","message":"✓ Compiled in 376ms"}
-{"timestamp":"00:15:18.780","source":"Browser","level":"ERROR","message":"The final argument passed to %s changed size between renders. The order and size of this array must remain constant.\n\nPrevious: %s\nIncoming: %s useEffect [] [[object Object],[object Object],[object Object],[object Object]]"}
-{"timestamp":"00:15:19.870","source":"Server","level":"ERROR","message":"[browser] \"The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.\\n\\nPrevious: []\\nIncoming: [[object Object],[object Object],[object Object],[object Object]]\" \"\\n\\u001b[31m    at PostsSection (src/components/posts-section.tsx:162:12)\\n    at Set.forEach (<anonymous>)\\u001b[39m\\n  \\u001b[90m160 |\\u001b[0m   }, [searchQuery])\\n  \\u001b[90m161 |\\u001b[0m\\n\\u001b[31m\\u001b[1m>\\u001b[0m \\u001b[90m162 |\\u001b[0m   useEffect(() => {\\n  \\u001b[90m    |\\u001b[0m            \\u001b[31m\\u001b[1m^\\u001b[0m\\n  \\u001b[90m163 |\\u001b[0m     \\u001b[36mconst\\u001b[0m observer = \\u001b[36mnew\\u001b[0m \\u001b[33mIntersectionObserver\\u001b[0m(\\n  \\u001b[90m164 |\\u001b[0m       (entries) => {\\n  \\u001b[90m165 |\\u001b[0m         entries.forEach((entry) => {\" \"\\u001b[2m(src/components/posts-section.tsx:162:12)\\u001b[22m\""}
-{"timestamp":"00:15:19.871","source":"Browser","level":"ERROR","message":"The final argument passed to useEffect changed size between renders. The order and size of this array must remain constant.\n\nPrevious: []\nIncoming: [[object Object],[object Object],[object Object],[object Object]] \"\\n\\u001b[31m    at PostsSection (src/components/posts-section.tsx:162:12)\\n    at Set.forEach (<anonymous>)\\u001b[39m\\n  \\u001b[90m160 |\\u001b[0m   }, [searchQuery])\\n  \\u001b[90m161 |\\u001b[0m\\n\\u001b[31m\\u001b[1m>\\u001b[0m \\u001b[90m162 |\\u001b[0m   useEffect(() => {\\n  \\u001b[90m    |\\u001b[0m            \\u001b[31m\\u001b[1m^\\u001b[0m\\n  \\u001b[90m163 |\\u001b[0m     \\u001b[36mconst\\u001b[0m observer = \\u001b[36mnew\\u001b[0m \\u001b[33mIntersectionObserver\\u001b[0m(\\n  \\u001b[90m164 |\\u001b[0m       (entries) => {\\n  \\u001b[90m165 |\\u001b[0m         entries.forEach((entry) => {\" \"\\u001b[2m(src/components/posts-section.tsx:162:12)\\u001b[22m\""}
-{"timestamp":"00:15:34.433","source":"Server","level":"LOG","message":"✓ Compiled in 1015ms"}
-{"timestamp":"00:15:38.502","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
-{"timestamp":"00:15:44.950","source":"Server","level":"LOG","message":"✓ Compiled in 774ms"}
-{"timestamp":"00:15:48.265","source":"Server","level":"LOG","message":"✓ Compiled in 140ms"}
-{"timestamp":"00:15:59.948","source":"Server","level":"LOG","message":"✓ Compiled in 1427ms"}
-{"timestamp":"00:18:38.528","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582914188} /_vercel/insights/view"}
-{"timestamp":"00:18:53.590","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582929235} /_vercel/insights/view"}
-{"timestamp":"00:18:59.507","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781582935143} /_vercel/insights/view"}
-{"timestamp":"00:19:43.335","source":"Server","level":"LOG","message":"✓ Compiled in 1047ms"}
-{"timestamp":"01:24:58.619","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781586894260} /_vercel/insights/view"}
-{"timestamp":"13:45:29.873","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781631325479} /_vercel/insights/view"}
-{"timestamp":"13:45:30.876","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781631326506} /_vercel/insights/view"}
-{"timestamp":"14:02:22.011","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781632337104} /_vercel/insights/view"}
-{"timestamp":"14:02:27.195","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781632342817} /_vercel/insights/view"}
-{"timestamp":"14:03:03.268","source":"Server","level":"LOG","message":"✓ Compiled in 947ms"}
-{"timestamp":"14:03:11.906","source":"Server","level":"LOG","message":"✓ Compiled in 114ms"}
-{"timestamp":"14:03:43.167","source":"Server","level":"LOG","message":"✓ Compiled in 155ms"}
-{"timestamp":"14:03:49.613","source":"Server","level":"LOG","message":"✓ Compiled in 182ms"}
-{"timestamp":"14:04:21.522","source":"Server","level":"LOG","message":"✓ Compiled in 169ms"}
-{"timestamp":"14:04:25.976","source":"Server","level":"LOG","message":"✓ Compiled in 110ms"}
-{"timestamp":"14:04:28.034","source":"Server","level":"LOG","message":"✓ Compiled in 83ms"}
-{"timestamp":"14:04:32.651","source":"Server","level":"LOG","message":"✓ Compiled in 135ms"}
-{"timestamp":"14:05:18.827","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781632514428} /_vercel/insights/view"}
-{"timestamp":"14:05:25.210","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781632520843} /_vercel/insights/view"}
-{"timestamp":"14:05:43.285","source":"Server","level":"LOG","message":"✓ Compiled in 329ms"}
-{"timestamp":"14:05:43.455","source":"Server","level":"LOG","message":"✓ Compiled in 100ms"}
-{"timestamp":"14:05:45.054","source":"Server","level":"LOG","message":"✓ Compiled in 169ms"}
-{"timestamp":"14:05:45.416","source":"Server","level":"LOG","message":"✓ Compiled in 169ms"}
-{"timestamp":"14:05:45.709","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
-{"timestamp":"14:09:24.452","source":"Server","level":"LOG","message":"✓ Compiled in 412ms"}
-{"timestamp":"14:09:27.362","source":"Server","level":"LOG","message":"✓ Compiled in 214ms"}
-{"timestamp":"14:09:32.576","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
-{"timestamp":"14:09:49.938","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
-{"timestamp":"14:12:46.188","source":"Server","level":"LOG","message":"✓ Compiled in 550ms"}
-{"timestamp":"14:13:28.106","source":"Server","level":"LOG","message":"✓ Compiled in 192ms"}
-{"timestamp":"14:13:31.485","source":"Server","level":"LOG","message":"✓ Compiled in 88ms"}
-{"timestamp":"14:13:34.084","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
-{"timestamp":"14:13:40.851","source":"Server","level":"LOG","message":"✓ Compiled in 80ms"}
-{"timestamp":"14:13:43.046","source":"Server","level":"LOG","message":"✓ Compiled in 109ms"}
-{"timestamp":"14:13:48.265","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
-{"timestamp":"14:13:57.464","source":"Server","level":"LOG","message":"✓ Compiled in 186ms"}
-{"timestamp":"14:18:00.596","source":"Server","level":"LOG","message":"✓ Compiled in 1000ms"}
-{"timestamp":"14:18:14.610","source":"Server","level":"LOG","message":"✓ Compiled in 226ms"}
-{"timestamp":"14:18:16.883","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
-{"timestamp":"14:19:07.584","source":"Server","level":"LOG","message":"✓ Compiled in 1291ms"}
-{"timestamp":"14:19:08.092","source":"Server","level":"LOG","message":"✓ Compiled in 441ms"}
-{"timestamp":"14:19:10.831","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
-{"timestamp":"14:19:12.811","source":"Server","level":"LOG","message":"✓ Compiled in 88ms"}
-{"timestamp":"14:20:17.902","source":"Server","level":"LOG","message":"✓ Compiled in 199ms"}
-{"timestamp":"14:20:21.820","source":"Server","level":"LOG","message":"✓ Compiled in 233ms"}
-{"timestamp":"14:20:58.663","source":"Server","level":"LOG","message":"✓ Compiled in 201ms"}
-{"timestamp":"14:20:59.916","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
-{"timestamp":"14:21:18.415","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3000/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633474030} /_vercel/insights/view"}
-{"timestamp":"14:22:27.968","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633543594} /_vercel/insights/view"}
-{"timestamp":"14:22:45.152","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3000/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633560776} /_vercel/insights/view"}
-{"timestamp":"14:22:46.679","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633562299} /_vercel/insights/view"}
-{"timestamp":"14:22:56.581","source":"Server","level":"LOG","message":"✓ Compiled in 1210ms"}
-{"timestamp":"14:22:56.598","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"14:22:56.646","source":"Server","level":"LOG","message":"✓ Compiled in 7ms"}
-{"timestamp":"14:22:57.452","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"14:22:57.651","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
-{"timestamp":"14:22:57.651","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/posts\",\"route\":\"/posts\"}"}
-{"timestamp":"14:22:57.651","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781633573216} /_vercel/insights/view"}
-{"timestamp":"14:32:20.088","source":"Server","level":"LOG","message":"✓ Compiled in 562ms"}
-{"timestamp":"14:32:41.719","source":"Server","level":"LOG","message":"✓ Compiled in 166ms"}
-{"timestamp":"14:32:41.915","source":"Server","level":"LOG","message":"✓ Compiled in 61ms"}
-{"timestamp":"14:32:42.712","source":"Server","level":"LOG","message":"✓ Compiled in 152ms"}
-{"timestamp":"14:32:43.504","source":"Server","level":"LOG","message":"✓ Compiled in 148ms"}
-{"timestamp":"14:32:43.964","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
-{"timestamp":"14:32:44.785","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
-{"timestamp":"14:32:45.029","source":"Server","level":"LOG","message":"✓ Compiled in 31ms"}
-{"timestamp":"14:33:17.527","source":"Server","level":"LOG","message":"✓ Compiled in 356ms"}
-{"timestamp":"14:33:44.588","source":"Server","level":"LOG","message":"✓ Compiled in 283ms"}
-{"timestamp":"14:33:54.304","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
-{"timestamp":"14:33:56.212","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
-{"timestamp":"14:33:58.072","source":"Server","level":"LOG","message":"✓ Compiled in 492ms"}
-{"timestamp":"14:34:38.648","source":"Server","level":"LOG","message":"✓ Compiled in 190ms"}
-{"timestamp":"14:35:01.522","source":"Server","level":"LOG","message":"✓ Compiled in 190ms"}
-{"timestamp":"14:35:13.989","source":"Server","level":"LOG","message":"✓ Compiled in 143ms"}
-{"timestamp":"14:38:05.623","source":"Server","level":"LOG","message":"✓ Compiled in 252ms"}
-{"timestamp":"14:38:28.577","source":"Server","level":"LOG","message":"✓ Compiled in 190ms"}
-{"timestamp":"14:38:50.636","source":"Server","level":"LOG","message":"✓ Compiled in 111ms"}
-{"timestamp":"14:39:06.048","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
-{"timestamp":"14:39:29.886","source":"Server","level":"LOG","message":"✓ Compiled in 142ms"}
-{"timestamp":"14:39:44.465","source":"Server","level":"LOG","message":"✓ Compiled in 84ms"}
-{"timestamp":"14:39:53.075","source":"Server","level":"LOG","message":"✓ Compiled in 147ms"}
-{"timestamp":"14:39:55.685","source":"Server","level":"LOG","message":"✓ Compiled in 359ms"}
-{"timestamp":"14:40:03.748","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
-{"timestamp":"14:40:08.005","source":"Server","level":"LOG","message":"✓ Compiled in 55ms"}
-{"timestamp":"14:40:15.644","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
-{"timestamp":"14:40:25.690","source":"Server","level":"LOG","message":"✓ Compiled in 102ms"}
-{"timestamp":"14:40:27.518","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
-{"timestamp":"14:40:30.558","source":"Server","level":"LOG","message":"✓ Compiled in 56ms"}
-{"timestamp":"14:40:46.287","source":"Server","level":"LOG","message":"✓ Compiled in 101ms"}
-{"timestamp":"14:41:28.470","source":"Server","level":"LOG","message":"✓ Compiled in 203ms"}
-{"timestamp":"14:41:29.938","source":"Server","level":"LOG","message":"✓ Compiled in 48ms"}
-{"timestamp":"14:41:58.872","source":"Server","level":"LOG","message":"✓ Compiled in 318ms"}
-{"timestamp":"14:42:01.119","source":"Server","level":"LOG","message":"✓ Compiled in 50ms"}
-{"timestamp":"14:42:06.738","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
-{"timestamp":"14:42:14.825","source":"Server","level":"LOG","message":"✓ Compiled in 96ms"}
-{"timestamp":"14:42:17.616","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
-{"timestamp":"14:42:20.593","source":"Server","level":"LOG","message":"✓ Compiled in 106ms"}
-{"timestamp":"14:42:33.528","source":"Server","level":"LOG","message":"✓ Compiled in 176ms"}
-{"timestamp":"14:42:52.054","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
-{"timestamp":"14:42:59.043","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
-{"timestamp":"14:43:22.742","source":"Server","level":"LOG","message":"✓ Compiled in 114ms"}
-{"timestamp":"14:43:29.970","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
-{"timestamp":"14:43:39.540","source":"Server","level":"LOG","message":"✓ Compiled in 95ms"}
-{"timestamp":"14:43:42.473","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
-{"timestamp":"14:43:50.780","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
-{"timestamp":"14:43:53.642","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
-{"timestamp":"14:43:58.035","source":"Server","level":"LOG","message":"✓ Compiled in 91ms"}
-{"timestamp":"14:44:03.880","source":"Server","level":"LOG","message":"✓ Compiled in 80ms"}
-{"timestamp":"14:44:39.694","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
-{"timestamp":"14:44:39.921","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
-{"timestamp":"14:44:39.921","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/posts\",\"route\":\"/posts\"}"}
-{"timestamp":"14:44:39.921","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3000/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3000/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781634875437} /_vercel/insights/view"}
-{"timestamp":"14:45:10.111","source":"Server","level":"LOG","message":"✓ Compiled in 355ms"}
-{"timestamp":"14:52:20.821","source":"Server","level":"LOG","message":"✓ Compiled in 441ms"}
-{"timestamp":"14:52:22.979","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
-{"timestamp":"14:52:24.875","source":"Server","level":"LOG","message":"✓ Compiled in 87ms"}
-{"timestamp":"14:52:30.307","source":"Server","level":"LOG","message":"✓ Compiled in 100ms"}
-{"timestamp":"14:52:34.961","source":"Server","level":"LOG","message":"✓ Compiled in 104ms"}
-{"timestamp":"14:53:11.190","source":"Server","level":"LOG","message":"✓ Compiled in 237ms"}
-{"timestamp":"14:54:47.277","source":"Server","level":"LOG","message":"✓ Compiled in 211ms"}
-{"timestamp":"14:54:50.595","source":"Server","level":"LOG","message":"○ Compiling /_not-found/page ..."}
-{"timestamp":"14:54:56.710","source":"Server","level":"LOG","message":"✓ Compiled in 76ms"}
-{"timestamp":"14:55:06.416","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
-{"timestamp":"14:55:14.180","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
-{"timestamp":"14:55:21.473","source":"Server","level":"LOG","message":"✓ Compiled in 69ms"}
-{"timestamp":"14:55:23.441","source":"Server","level":"LOG","message":"✓ Compiled in 93ms"}
-{"timestamp":"14:55:25.561","source":"Server","level":"LOG","message":"✓ Compiled in 83ms"}
-{"timestamp":"14:55:28.956","source":"Server","level":"LOG","message":"✓ Compiled in 67ms"}
-{"timestamp":"14:55:36.255","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
-{"timestamp":"14:55:48.254","source":"Server","level":"LOG","message":"✓ Compiled in 128ms"}
-{"timestamp":"14:55:54.692","source":"Server","level":"LOG","message":"✓ Compiled in 107ms"}
-{"timestamp":"14:57:45.637","source":"Server","level":"LOG","message":"✓ Compiled in 641ms"}
-{"timestamp":"14:58:20.896","source":"Server","level":"LOG","message":"✓ Compiled in 228ms"}
-{"timestamp":"14:58:42.124","source":"Server","level":"LOG","message":"✓ Compiled in 164ms"}
-{"timestamp":"14:58:55.615","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
-{"timestamp":"14:58:58.265","source":"Server","level":"LOG","message":"✓ Compiled in 106ms"}
-{"timestamp":"14:59:08.686","source":"Server","level":"LOG","message":"✓ Compiled in 71ms"}
-{"timestamp":"14:59:13.988","source":"Server","level":"LOG","message":"✓ Compiled in 85ms"}
-{"timestamp":"14:59:21.737","source":"Server","level":"LOG","message":"✓ Compiled in 131ms"}
-{"timestamp":"14:59:24.348","source":"Server","level":"LOG","message":"✓ Compiled in 66ms"}
-{"timestamp":"14:59:27.535","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
-{"timestamp":"14:59:32.309","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
-{"timestamp":"14:59:36.218","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
-{"timestamp":"14:59:38.124","source":"Server","level":"LOG","message":"✓ Compiled in 65ms"}
-{"timestamp":"14:59:40.260","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
-{"timestamp":"14:59:43.372","source":"Server","level":"LOG","message":"✓ Compiled in 68ms"}
-{"timestamp":"14:59:49.894","source":"Server","level":"LOG","message":"✓ Compiled in 81ms"}
-{"timestamp":"15:00:02.595","source":"Server","level":"LOG","message":"✓ Compiled in 60ms"}
-{"timestamp":"15:00:04.963","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
-{"timestamp":"15:00:20.795","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
-{"timestamp":"15:00:29.830","source":"Server","level":"LOG","message":"✓ Compiled in 123ms"}
-{"timestamp":"15:00:32.900","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
-{"timestamp":"15:00:37.173","source":"Server","level":"LOG","message":"✓ Compiled in 63ms"}
-{"timestamp":"15:00:39.840","source":"Server","level":"LOG","message":"✓ Compiled in 62ms"}
-{"timestamp":"15:01:16.286","source":"Server","level":"LOG","message":"✓ Compiled in 150ms"}
-{"timestamp":"15:01:22.392","source":"Server","level":"LOG","message":"✓ Compiled in 46ms"}
-{"timestamp":"15:01:24.842","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
-{"timestamp":"15:01:30.271","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
-{"timestamp":"15:01:32.568","source":"Server","level":"LOG","message":"✓ Compiled in 49ms"}
-{"timestamp":"15:01:35.505","source":"Server","level":"LOG","message":"✓ Compiled in 47ms"}
-{"timestamp":"15:01:47.656","source":"Server","level":"LOG","message":"✓ Compiled in 98ms"}
-{"timestamp":"15:02:07.190","source":"Server","level":"LOG","message":"✓ Compiled in 152ms"}
-{"timestamp":"15:02:38.856","source":"Server","level":"LOG","message":"✓ Compiled in 209ms"}
-{"timestamp":"15:09:44.940","source":"Server","level":"LOG","message":"✓ Compiled in 721ms"}
-{"timestamp":"15:53:56.839","source":"Server","level":"LOG","message":"✓ Compiled in 562ms"}
-{"timestamp":"15:54:01.493","source":"Server","level":"LOG","message":"✓ Compiled in 162ms"}
-{"timestamp":"15:54:31.216","source":"Server","level":"LOG","message":"✓ Compiled in 155ms"}
-{"timestamp":"15:55:20.219","source":"Server","level":"LOG","message":"✓ Compiled in 322ms"}
-{"timestamp":"15:55:24.576","source":"Server","level":"LOG","message":"✓ Compiled in 210ms"}
-{"timestamp":"15:55:29.054","source":"Server","level":"LOG","message":"✓ Compiled in 295ms"}
-{"timestamp":"15:55:31.192","source":"Server","level":"LOG","message":"✓ Compiled in 124ms"}
-{"timestamp":"15:55:34.872","source":"Server","level":"LOG","message":"✓ Compiled in 77ms"}
-{"timestamp":"15:55:44.801","source":"Server","level":"LOG","message":"✓ Compiled in 64ms"}
-{"timestamp":"15:55:56.141","source":"Server","level":"LOG","message":"✓ Compiled in 126ms"}
-{"timestamp":"15:56:13.889","source":"Server","level":"LOG","message":"✓ Compiled in 128ms"}
-{"timestamp":"15:56:15.620","source":"Server","level":"LOG","message":"✓ Compiled in 143ms"}
-{"timestamp":"15:56:40.686","source":"Server","level":"LOG","message":"✓ Compiled in 624ms"}
-{"timestamp":"15:56:44.569","source":"Server","level":"LOG","message":"✓ Compiled in 96ms"}
-{"timestamp":"15:56:46.450","source":"Server","level":"LOG","message":"✓ Compiled in 128ms"}
-{"timestamp":"15:56:53.217","source":"Server","level":"LOG","message":"✓ Compiled in 159ms"}
-{"timestamp":"15:57:01.466","source":"Server","level":"LOG","message":"✓ Compiled in 53ms"}
-{"timestamp":"15:57:24.537","source":"Server","level":"LOG","message":"✓ Compiled in 146ms"}
-{"timestamp":"15:57:30.504","source":"Server","level":"LOG","message":"✓ Compiled in 108ms"}
-{"timestamp":"15:57:36.461","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
-{"timestamp":"15:57:43.414","source":"Server","level":"LOG","message":"✓ Compiled in 97ms"}
-{"timestamp":"15:57:54.503","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\n  163 | // earliest ends up farthest down and farthest to the right.\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\n      |           ^\n  166 | )\n  167 |\n  168 | export function PostsSection() {\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx"}
-{"timestamp":"15:57:54.504","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\n  158 |     ),\n> 159 |   },\n      |   ^\n  160 | ]\n  161 |\n  162 | // Sort newest first so the most recent post is top-left and the\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx"}
-{"timestamp":"15:57:54.804","source":"Server","level":"LOG","message":"✓ Compiled in 122ms"}
-{"timestamp":"15:57:55.504","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\n  163 | // earliest ends up farthest down and farthest to the right.\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\n      |           ^\n  166 | )\n  167 |\n  168 | export function PostsSection() {\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx"}
-{"timestamp":"15:57:55.505","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\n  158 |     ),\n> 159 |   },\n      |   ^\n  160 | ]\n  161 |\n  162 | // Sort newest first so the most recent post is top-left and the\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx"}
-{"timestamp":"15:57:59.363","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\\n  163 | // earliest ends up farthest down and farthest to the right.\\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\\n      |           ^\\n  166 | )\\n  167 |\\n  168 | export function PostsSection() {\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx\" \"\""}
-{"timestamp":"15:57:59.409","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\n  163 | // earliest ends up farthest down and farthest to the right.\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\n      |           ^\n  166 | )\n  167 |\n  168 | export function PostsSection() {\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx \"\""}
-{"timestamp":"15:57:59.428","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\\n  158 |     ),\\n> 159 |   },\\n      |   ^\\n  160 | ]\\n  161 |\\n  162 | // Sort newest first so the most recent post is top-left and the\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx\" \"\""}
-{"timestamp":"15:57:59.432","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\n  158 |     ),\n> 159 |   },\n      |   ^\n  160 | ]\n  161 |\n  162 | // Sort newest first so the most recent post is top-left and the\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx \"\""}
-{"timestamp":"15:57:59.434","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\\n  163 | // earliest ends up farthest down and farthest to the right.\\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\\n      |           ^\\n  166 | )\\n  167 |\\n  168 | export function PostsSection() {\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx\" \"\""}
-{"timestamp":"15:57:59.448","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\n  163 | // earliest ends up farthest down and farthest to the right.\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\n      |           ^\n  166 | )\n  167 |\n  168 | export function PostsSection() {\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx \"\""}
-{"timestamp":"15:57:59.448","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\\n  158 |     ),\\n> 159 |   },\\n      |   ^\\n  160 | ]\\n  161 |\\n  162 | // Sort newest first so the most recent post is top-left and the\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx\" \"\""}
-{"timestamp":"15:57:59.448","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\n  158 |     ),\n> 159 |   },\n      |   ^\n  160 | ]\n  161 |\n  162 | // Sort newest first so the most recent post is top-left and the\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx \"\""}
-{"timestamp":"15:58:00.485","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\n  163 | // earliest ends up farthest down and farthest to the right.\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\n      |           ^\n  166 | )\n  167 |\n  168 | export function PostsSection() {\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx"}
-{"timestamp":"15:58:00.486","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\n  158 |     ),\n> 159 |   },\n      |   ^\n  160 | ]\n  161 |\n  162 | // Sort newest first so the most recent post is top-left and the\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx"}
-{"timestamp":"15:58:00.489","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\\n  163 | // earliest ends up farthest down and farthest to the right.\\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\\n      |           ^\\n  166 | )\\n  167 |\\n  168 | export function PostsSection() {\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx\" \"\""}
-{"timestamp":"15:58:00.490","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:165:11\nUnexpected token. Did you mean `{'>'}` or `&gt;`?\n  163 | // earliest ends up farthest down and farthest to the right.\n  164 | const sortedMediaMentions = [...mediaMentions].sort(\n> 165 |   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),\n      |           ^\n  166 | )\n  167 |\n  168 | export function PostsSection() {\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx \"\""}
-{"timestamp":"15:58:00.490","source":"Server","level":"ERROR","message":"[browser] \"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\\n  158 |     ),\\n> 159 |   },\\n      |   ^\\n  160 | ]\\n  161 |\\n  162 | // Sort newest first so the most recent post is top-left and the\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx\" \"\""}
-{"timestamp":"15:58:00.491","source":"Browser","level":"ERROR","message":"./ShyGuyGameDevWebsite/src/components/posts-section.tsx:159:3\nUnexpected token. Did you mean `{'}'}` or `&rbrace;`?\n  157 |         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy su...\n  158 |     ),\n> 159 |   },\n      |   ^\n  160 | ]\n  161 |\n  162 | // Sort newest first so the most recent post is top-left and the\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./ShyGuyGameDevWebsite/src/components/posts-section.tsx\n    ./ShyGuyGameDevWebsite/src/app/posts/page.tsx \"\""}
-{"timestamp":"15:58:11.136","source":"Server","level":"LOG","message":"✓ Compiled in 144ms"}
-{"timestamp":"15:58:45.328","source":"Server","level":"LOG","message":"✓ Compiled in 164ms"}
-{"timestamp":"15:58:54.312","source":"Server","level":"LOG","message":"✓ Compiled in 496ms"}
-{"timestamp":"15:58:55.845","source":"Server","level":"LOG","message":"✓ Compiled in 499ms"}
-{"timestamp":"15:58:57.714","source":"Server","level":"LOG","message":"✓ Compiled in 170ms"}
-{"timestamp":"15:59:05.373","source":"Server","level":"LOG","message":"✓ Compiled in 320ms"}
-{"timestamp":"16:00:03.535","source":"Server","level":"LOG","message":"✓ Compiled in 195ms"}
-{"timestamp":"16:00:09.102","source":"Server","level":"LOG","message":"✓ Compiled in 151ms"}
-{"timestamp":"16:00:20.614","source":"Server","level":"LOG","message":"✓ Compiled in 131ms"}
-{"timestamp":"16:00:23.671","source":"Server","level":"LOG","message":"✓ Compiled in 197ms"}
-{"timestamp":"16:00:25.604","source":"Server","level":"LOG","message":"✓ Compiled in 567ms"}
-{"timestamp":"16:01:49.915","source":"Server","level":"LOG","message":"✓ Compiled in 271ms"}
-{"timestamp":"16:01:50.136","source":"Server","level":"LOG","message":"✓ Compiled in 78ms"}
+{"timestamp":"00:00:03.033","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:08.210","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:08.349","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"00:00:08.349","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"00:00:08.349","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3001/\",\"r\":\"\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640285708} /_vercel/insights/view"}
+{"timestamp":"00:00:18.624","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:00:18.675","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"00:00:18.675","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/\",\"route\":\"/\"}"}
+{"timestamp":"00:00:18.675","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3001/\",\"r\":\"\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640296033} /_vercel/insights/view"}
+{"timestamp":"00:00:20.749","source":"Browser","level":"WARN","message":"Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior"}
+{"timestamp":"00:00:20.749","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640298084} /_vercel/insights/view"}
+{"timestamp":"00:00:20.778","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\\\"smooth\\\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\\u001b[39m\""}
+{"timestamp":"00:00:20.778","source":"Browser","level":"WARN","message":"\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\u001b[39m"}
+{"timestamp":"00:00:20.909","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640298240} /_vercel/insights/view"}
+{"timestamp":"00:00:35.745","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640313007} /_vercel/insights/view"}
+{"timestamp":"00:00:55.506","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640332840} /_vercel/insights/view"}
+{"timestamp":"00:00:57.488","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3001/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640334832} /_vercel/insights/view"}
+{"timestamp":"00:00:58.072","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640335425} /_vercel/insights/view"}
+{"timestamp":"00:00:59.130","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3001/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640336461} /_vercel/insights/view"}
+{"timestamp":"00:00:59.152","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3001/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"00:00:59.185","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3001/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"00:00:59.186","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3001/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"00:01:00.424","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640337763} /_vercel/insights/view"}
+{"timestamp":"00:01:01.924","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640339285} /_vercel/insights/view"}
+{"timestamp":"00:01:02.384","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3001/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640339743} /_vercel/insights/view"}
+{"timestamp":"00:01:03.358","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3001/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640340711} /_vercel/insights/view"}
+{"timestamp":"00:01:04.724","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640342060} /_vercel/insights/view"}
+{"timestamp":"00:01:07.198","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640344533} /_vercel/insights/view"}
+{"timestamp":"00:01:32.075","source":"Server","level":"LOG","message":"✓ Compiled in 499ms"}
+{"timestamp":"00:01:34.007","source":"Server","level":"LOG","message":"✓ Compiled in 864ms"}
+{"timestamp":"00:01:36.248","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640373559} /_vercel/insights/view"}
+{"timestamp":"00:01:37.041","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640374390} /_vercel/insights/view"}
+{"timestamp":"00:02:21.043","source":"Server","level":"LOG","message":"✓ Compiled in 278ms"}
+{"timestamp":"00:02:43.033","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:02:43.291","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit"}
+{"timestamp":"00:02:43.291","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {\"path\":\"/posts\",\"route\":\"/posts\"}"}
+{"timestamp":"00:02:43.291","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"r\":\"\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640440648} /_vercel/insights/view"}
+{"timestamp":"00:02:43.869","source":"Browser","level":"WARN","message":"Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior"}
+{"timestamp":"00:02:43.869","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640441222} /_vercel/insights/view"}
+{"timestamp":"00:02:43.879","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\\\"smooth\\\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\\u001b[39m\""}
+{"timestamp":"00:02:43.882","source":"Browser","level":"WARN","message":"\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\u001b[39m"}
+{"timestamp":"00:02:44.615","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640441976} /_vercel/insights/view"}
+{"timestamp":"00:02:49.369","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3001/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640446653} /_vercel/insights/view"}
+{"timestamp":"00:02:50.190","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640447544} /_vercel/insights/view"}
+{"timestamp":"00:02:59.634","source":"Server","level":"LOG","message":"✓ Compiled in 195ms"}
+{"timestamp":"00:03:06.995","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640464353} /_vercel/insights/view"}
+{"timestamp":"00:03:07.508","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640464858} /_vercel/insights/view"}
+{"timestamp":"00:03:07.895","source":"Browser","level":"WARN","message":"Image with src \"http://localhost:3001/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio."}
+{"timestamp":"00:03:07.895","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3001/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640465254} /_vercel/insights/view"}
+{"timestamp":"00:03:07.896","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mImage with src \\\"http://localhost:3001/BetterShyGuyGameDevLogo.png\\\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \\\"auto\\\"' or 'height: \\\"auto\\\"' to maintain the aspect ratio.\\u001b[39m\""}
+{"timestamp":"00:03:07.896","source":"Browser","level":"WARN","message":"\u001b[33mImage with src \"http://localhost:3001/BetterShyGuyGameDevLogo.png\" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: \"auto\"' or 'height: \"auto\"' to maintain the aspect ratio.\u001b[39m"}
+{"timestamp":"00:03:08.577","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640465936} /_vercel/insights/view"}
+{"timestamp":"00:03:09.288","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640466646} /_vercel/insights/view"}
+{"timestamp":"00:03:09.772","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/ color: rgb(120, 120, 120) color: inherit {\"dp\":\"/\",\"o\":\"http://localhost:3001/\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640467125} /_vercel/insights/view"}
+{"timestamp":"00:03:10.344","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640467704} /_vercel/insights/view"}
+{"timestamp":"00:03:11.232","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/team color: rgb(120, 120, 120) color: inherit {\"dp\":\"/team\",\"o\":\"http://localhost:3001/team\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640468595} /_vercel/insights/view"}
+{"timestamp":"00:03:11.682","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640469041} /_vercel/insights/view"}
+{"timestamp":"00:03:12.743","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/projects color: rgb(120, 120, 120) color: inherit {\"dp\":\"/projects\",\"o\":\"http://localhost:3001/projects\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640470079} /_vercel/insights/view"}
+{"timestamp":"00:03:13.516","source":"Browser","level":"LOG","message":"%c[Vercel Web Analytics]%c [view] http://localhost:3001/posts color: rgb(120, 120, 120) color: inherit {\"dp\":\"/posts\",\"o\":\"http://localhost:3001/posts\",\"sdkn\":\"@vercel/analytics/next\",\"sdkv\":\"1.6.1\",\"sv\":\"0.1.3\",\"ts\":1781640470878} /_vercel/insights/view"}

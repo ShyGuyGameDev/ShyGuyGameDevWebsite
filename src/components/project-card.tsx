@@ -3,189 +3,188 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import type React from "react"
-import { useState, useRef, useEffect } from "react"
+// import { useState, useRef, useEffect } from "react"
 
 interface ProjectCardProps {
   title: string
   description: string | React.ReactNode
   learnings: string[]
   image?: string
-  video?: string
+  // video?: string
   url?: string
   date?: string
   tag?: string
 }
 
-export function ProjectCard({ title, description, learnings, image, video, url, date, tag }: ProjectCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
-  const [isDesktop, setIsDesktop] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const cardRef = useRef<HTMLDivElement>(null)
-  const SKIP_START = 1.5 // seconds to skip at start
-  const SKIP_END = 1.5 // seconds to skip at end
-  const FADE_IN_DURATION = 0.25 // seconds for initial fade in (faster)
-  const CROSSFADE_DURATION = 0.6 // seconds for fade out transition (matches hero section)
-  const [videoOpacity, setVideoOpacity] = useState(0)
+export function ProjectCard({ title, description, learnings, image, /* video, */ url, date, tag }: ProjectCardProps) {
+  // const [isHovered, setIsHovered] = useState(false)
+  // const [isDesktop, setIsDesktop] = useState(false)
+  // const [isInView, setIsInView] = useState(false)
+  // const videoRef = useRef<HTMLVideoElement>(null)
+  // const cardRef = useRef<HTMLDivElement>(null)
+  // const SKIP_START = 1.5 // seconds to skip at start
+  // const SKIP_END = 1.5 // seconds to skip at end
+  // const FADE_IN_DURATION = 0.25 // seconds for initial fade in (faster)
+  // const CROSSFADE_DURATION = 0.6 // seconds for fade out transition (matches hero section)
+  // const [videoOpacity, setVideoOpacity] = useState(0)
 
-  // Detect if device is desktop (not touch device and has hover capability)
-  useEffect(() => {
-    const checkIsDesktop = () => {
-      const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
-      const hasHover = window.matchMedia('(hover: hover)').matches
-      const isLargeScreen = window.matchMedia('(min-width: 1024px)').matches
-      setIsDesktop(!hasTouch && hasHover && isLargeScreen)
-    }
+  // // Detect if device is desktop (not touch device and has hover capability)
+  // useEffect(() => {
+  //   const checkIsDesktop = () => {
+  //     const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+  //     const hasHover = window.matchMedia('(hover: hover)').matches
+  //     const isLargeScreen = window.matchMedia('(min-width: 1024px)').matches
+  //     setIsDesktop(!hasTouch && hasHover && isLargeScreen)
+  //   }
 
-    checkIsDesktop()
-    window.addEventListener('resize', checkIsDesktop)
-    return () => window.removeEventListener('resize', checkIsDesktop)
-  }, [])
+  //   checkIsDesktop()
+  //   window.addEventListener('resize', checkIsDesktop)
+  //   return () => window.removeEventListener('resize', checkIsDesktop)
+  // }, [])
 
-  // Intersection Observer for mobile autoplay
-  useEffect(() => {
-    if (isDesktop || !video) return
+  // // Intersection Observer for mobile autoplay
+  // useEffect(() => {
+  //   if (isDesktop || !video) return
 
-    const cardElement = cardRef.current
-    if (!cardElement) return
+  //   const cardElement = cardRef.current
+  //   if (!cardElement) return
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsInView(entry.isIntersecting)
-        })
-      },
-      { threshold: 0.5 } // Play when 50% of card is visible
-    )
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         setIsInView(entry.isIntersecting)
+  //       })
+  //     },
+  //     { threshold: 0.5 } // Play when 50% of card is visible
+  //   )
 
-    observer.observe(cardElement)
-    return () => observer.disconnect()
-  }, [isDesktop, video])
+  //   observer.observe(cardElement)
+  //   return () => observer.disconnect()
+  // }, [isDesktop, video])
 
-  // Determine if video should play (desktop hover OR mobile in view)
-  const shouldPlayVideo = (isDesktop && isHovered) || (!isDesktop && isInView)
+  // // Determine if video should play (desktop hover OR mobile in view)
+  // const shouldPlayVideo = (isDesktop && isHovered) || (!isDesktop && isInView)
 
-  useEffect(() => {
-    const videoElement = videoRef.current
-    if (!videoElement || !video || !shouldPlayVideo) return
-    setVideoOpacity(0)
+  // useEffect(() => {
+  //   const videoElement = videoRef.current
+  //   if (!videoElement || !video || !shouldPlayVideo) return
+  //   setVideoOpacity(0)
 
-    const updateVideoOpacity = () => {
-      if (!videoElement.duration) {
-        setVideoOpacity(0)
-        return
-      }
+  //   const updateVideoOpacity = () => {
+  //     if (!videoElement.duration) {
+  //       setVideoOpacity(0)
+  //       return
+  //     }
 
-      const playableStart = SKIP_START
-      const playableEnd = videoElement.duration - SKIP_END
+  //     const playableStart = SKIP_START
+  //     const playableEnd = videoElement.duration - SKIP_END
 
-      // If playable segment is too short, keep visible
-      if (playableEnd - playableStart <= FADE_IN_DURATION + CROSSFADE_DURATION) {
-        setVideoOpacity(1)
-        return
-      }
+  //     // If playable segment is too short, keep visible
+  //     if (playableEnd - playableStart <= FADE_IN_DURATION + CROSSFADE_DURATION) {
+  //       setVideoOpacity(1)
+  //       return
+  //     }
 
-      const fadeInEnd = playableStart + FADE_IN_DURATION
-      const fadeOutStart = playableEnd - CROSSFADE_DURATION
-      const current = videoElement.currentTime
+  //     const fadeInEnd = playableStart + FADE_IN_DURATION
+  //     const fadeOutStart = playableEnd - CROSSFADE_DURATION
+  //     const current = videoElement.currentTime
 
-      let nextOpacity = 1
+  //     let nextOpacity = 1
 
-      if (current < playableStart) {
-        nextOpacity = 0
-      } else if (current <= fadeInEnd) {
-        nextOpacity = Math.min(1, Math.max(0, (current - playableStart) / FADE_IN_DURATION))
-      } else if (current >= fadeOutStart) {
-        nextOpacity = Math.min(1, Math.max(0, (playableEnd - current) / CROSSFADE_DURATION))
-      } else {
-        nextOpacity = 1
-      }
+  //     if (current < playableStart) {
+  //       nextOpacity = 0
+  //     } else if (current <= fadeInEnd) {
+  //       nextOpacity = Math.min(1, Math.max(0, (current - playableStart) / FADE_IN_DURATION))
+  //     } else if (current >= fadeOutStart) {
+  //       nextOpacity = Math.min(1, Math.max(0, (playableEnd - current) / CROSSFADE_DURATION))
+  //     } else {
+  //       nextOpacity = 1
+  //     }
 
-      setVideoOpacity((prev) => (Math.abs(prev - nextOpacity) > 0.01 ? nextOpacity : prev))
-    }
+  //     setVideoOpacity((prev) => (Math.abs(prev - nextOpacity) > 0.01 ? nextOpacity : prev))
+  //   }
 
-    const handleTimeUpdate = () => {
-      if (videoElement.duration) {
-        const maxTime = videoElement.duration - SKIP_END
-        if (videoElement.currentTime >= maxTime) {
-          videoElement.currentTime = SKIP_START
-        }
-      }
-      updateVideoOpacity()
-    }
+  //   const handleTimeUpdate = () => {
+  //     if (videoElement.duration) {
+  //       const maxTime = videoElement.duration - SKIP_END
+  //       if (videoElement.currentTime >= maxTime) {
+  //         videoElement.currentTime = SKIP_START
+  //       }
+  //     }
+  //     updateVideoOpacity()
+  //   }
 
-    const handleLoadedMetadata = () => {
-      videoElement.currentTime = SKIP_START
-      updateVideoOpacity()
-      videoElement.play().catch(() => {
-        // Ignore autoplay errors
-      })
-    }
+  //   const handleLoadedMetadata = () => {
+  //     videoElement.currentTime = SKIP_START
+  //     updateVideoOpacity()
+  //     videoElement.play().catch(() => {
+  //       // Ignore autoplay errors
+  //     })
+  //   }
 
-    const handleCanPlay = () => {
-      if (videoElement.currentTime < SKIP_START && videoElement.duration > SKIP_START + SKIP_END) {
-        videoElement.currentTime = SKIP_START
-      }
-      updateVideoOpacity()
-    }
+  //   const handleCanPlay = () => {
+  //     if (videoElement.currentTime < SKIP_START && videoElement.duration > SKIP_START + SKIP_END) {
+  //       videoElement.currentTime = SKIP_START
+  //     }
+  //     updateVideoOpacity()
+  //   }
 
-    videoElement.addEventListener("timeupdate", handleTimeUpdate)
-    videoElement.addEventListener("loadedmetadata", handleLoadedMetadata)
-    videoElement.addEventListener("canplay", handleCanPlay)
+  //   videoElement.addEventListener("timeupdate", handleTimeUpdate)
+  //   videoElement.addEventListener("loadedmetadata", handleLoadedMetadata)
+  //   videoElement.addEventListener("canplay", handleCanPlay)
 
-    // Set initial time when video loads
-    if (videoElement.readyState >= 1) {
-      videoElement.currentTime = SKIP_START
-      updateVideoOpacity()
-      videoElement.play().catch(() => {
-        // Ignore autoplay errors
-      })
-    }
+  //   // Set initial time when video loads
+  //   if (videoElement.readyState >= 1) {
+  //     videoElement.currentTime = SKIP_START
+  //     updateVideoOpacity()
+  //     videoElement.play().catch(() => {
+  //       // Ignore autoplay errors
+  //     })
+  //   }
 
-    return () => {
-      videoElement.removeEventListener("timeupdate", handleTimeUpdate)
-      videoElement.removeEventListener("loadedmetadata", handleLoadedMetadata)
-      videoElement.removeEventListener("canplay", handleCanPlay)
-    }
-  }, [shouldPlayVideo, video])
+  //   return () => {
+  //     videoElement.removeEventListener("timeupdate", handleTimeUpdate)
+  //     videoElement.removeEventListener("loadedmetadata", handleLoadedMetadata)
+  //     videoElement.removeEventListener("canplay", handleCanPlay)
+  //   }
+  // }, [shouldPlayVideo, video])
 
-  const handleMouseEnter = () => {
-    if (video && isDesktop) {
-      setIsHovered(true)
-    }
-  }
+  // const handleMouseEnter = () => {
+  //   if (video && isDesktop) {
+  //     setIsHovered(true)
+  //   }
+  // }
 
-  const handleMouseLeave = () => {
-    if (video && isDesktop) {
-      setIsHovered(false)
-      if (videoRef.current) {
-        videoRef.current.pause()
-        videoRef.current.currentTime = 0
-      }
-      setVideoOpacity(0)
-    }
-  }
+  // const handleMouseLeave = () => {
+  //   if (video && isDesktop) {
+  //     setIsHovered(false)
+  //     if (videoRef.current) {
+  //       videoRef.current.pause()
+  //       videoRef.current.currentTime = 0
+  //     }
+  //     setVideoOpacity(0)
+  //   }
+  // }
 
-  // Handle video pause when scrolling out of view on mobile
-  useEffect(() => {
-    if (isDesktop || !video) return
-    
-    if (!isInView && videoRef.current) {
-      videoRef.current.pause()
-      videoRef.current.currentTime = 0
-      setVideoOpacity(0)
-    }
-  }, [isInView, isDesktop, video])
+  // // Handle video pause when scrolling out of view on mobile
+  // useEffect(() => {
+  //   if (isDesktop || !video) return
+
+  //   if (!isInView && videoRef.current) {
+  //     videoRef.current.pause()
+  //     videoRef.current.currentTime = 0
+  //     setVideoOpacity(0)
+  //   }
+  // }, [isInView, isDesktop, video])
 
   return (
     <Card 
-      ref={cardRef}
       className="group bg-card rounded-2xl shadow-[0_4px_8px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full pt-0"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
     >
       <div className="relative w-full aspect-video overflow-hidden rounded-t-2xl">
-        {video && shouldPlayVideo ? (
+        {/* {video && shouldPlayVideo ? (
           <video
             ref={videoRef}
             src={video}
@@ -198,6 +197,17 @@ export function ProjectCard({ title, description, learnings, image, video, url, 
             playsInline
             loop={false}
           />
+        ) : ( */}
+        {url ? (
+          <a href={url} target="_blank" rel="noopener noreferrer" className="block absolute inset-0">
+            <Image
+              src={image || "/coming-soon.svg"}
+              alt={image ? `Screenshot of ${title} project` : "Coming Soon"}
+              fill
+              className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+          </a>
         ) : (
           <Image
             src={image || "/coming-soon.svg"}
@@ -207,6 +217,7 @@ export function ProjectCard({ title, description, learnings, image, video, url, 
             loading="lazy"
           />
         )}
+        {/* )} */}
       </div>
       <CardContent className="pt-3 px-6 pb-6">
         {(date || tag) && (

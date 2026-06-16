@@ -19,13 +19,15 @@ export function PostCard({ title, date, url, description, tag, themes, image }: 
     <Card className="group bg-card rounded-2xl shadow-[0_4px_8px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full pt-0">
       {image && (
         <div className="relative w-full aspect-video overflow-hidden rounded-t-2xl">
-          <Image
-            src={image}
-            alt={`Preview of ${title}`}
-            fill
-            className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
-          />
+          <a href={url} target="_blank" rel="noopener noreferrer" className="block absolute inset-0">
+            <Image
+              src={image}
+              alt={`Preview of ${title}`}
+              fill
+              className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+          </a>
         </div>
       )}
       <CardContent className={`${image ? "pt-3" : "pt-6"} px-6 pb-6`}>

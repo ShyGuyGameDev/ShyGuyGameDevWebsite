@@ -52,7 +52,7 @@ const completedProjects = [
       "Managing deadlines and collaborating on art and music",
     ],
     image: "/malice_and_mercy-Picsart-AiImageEnhancer.png",
-    video: "/Clips/MaliceAndMercy.mp4",
+    // video: "/Clips/MaliceAndMercy.mp4",
   },
   {
     title: "Space Looper",
@@ -81,7 +81,7 @@ const completedProjects = [
       "Iterative design and precise gameplay mechanics",
     ],
     image: "/Untitled_presentation_1-Picsart-AiImageEnhancer.png",
-    video: "/Clips/SpaceLooper.mp4",
+    // video: "/Clips/SpaceLooper.mp4",
   },
   {
     title: "Bugged Out",
@@ -109,7 +109,7 @@ const completedProjects = [
       "Improving teamwork coordination",
     ],
     image: "/buggedout.png",
-    video: "/Clips/BuggedOut.mp4",
+    // video: "/Clips/BuggedOut.mp4",
   },
   {
     title: "Open Stage",
@@ -138,7 +138,7 @@ const completedProjects = [
       "Creating socially impactful technology",
     ],
     image: "/openstage.png",
-    video: "/Clips/OpenStage.mp4",
+    // video: "/Clips/OpenStage.mp4",
   },
 ]
 
@@ -193,12 +193,9 @@ export function ProjectsSection() {
       </div>
       <div className="relative z-10 max-w-[1100px] mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-4">
+          <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-8">
             Our Projects
           </h2>
-          <p className="animate-on-scroll opacity-0 animate-delay-100 text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Explore the innovative projects we&apos;ve built and are currently working on
-          </p>
           <div className="animate-on-scroll opacity-0 animate-delay-200">
             <SearchBar
               value={searchQuery}
