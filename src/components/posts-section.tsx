@@ -56,16 +56,7 @@ const mediaMentions: MediaMention[] = [
         >
           Malice and Mercy
         </a>
-        , an{" "}
-        <a
-          href="https://www.emptyconsole.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent hover:underline"
-        >
-          Empty Console
-        </a>{" "}
-        game, earned an &quot;honorable mention&quot; in the 2025{" "}
+        , an Empty Console game, earned an &quot;honorable mention&quot; in the 2025{" "}
         <a
           href="https://q5play.org/jam/"
           target="_blank"
@@ -172,16 +163,7 @@ const mediaMentions: MediaMention[] = [
         >
           p5play game jam
         </a>{" "}
-        with{" "}
-        <a
-          href="https://www.emptyconsole.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent hover:underline"
-        >
-          Empty Console
-        </a>
-        . Each of these strategies are broad enough to be applied to any game jam, but are specific enough to be actually useful in creating a better game and placing higher in the competition.
+        with Empty Console. Each of these strategies are broad enough to be applied to any game jam, but are specific enough to be actually useful in creating a better game and placing higher in the competition.
       </>
     ),
   },
