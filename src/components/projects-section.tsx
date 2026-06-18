@@ -194,7 +194,7 @@ export function ProjectsSection() {
       <div className="relative z-10 max-w-[1100px] mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-8">
-            Our Projects
+            Projects
           </h2>
           <div className="animate-on-scroll opacity-0 animate-delay-200">
             <SearchBar
