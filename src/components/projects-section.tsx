@@ -23,7 +23,7 @@ const completedProjects = [
         >
           p5.js
         </a>{" "}
-        platformer created for the{" "}
+        platformer by Empty Console created for the{" "}
         <a
           href="https://p5play.org/"
           target="_blank"
@@ -32,16 +32,7 @@ const completedProjects = [
         >
           p5Play
         </a>{" "}
-        game jam that earned Honorable Mention. The game explores ethical decision-making in fast-paced platforming. Players choose to save or kill characters while balancing points and time using three throwable abilities. Features a fully custom physics engine, tilemap system, collision detection, particles, and a level editor coded from scratch. You can read about it in an{" "}
-        <a
-          href="https://q5js.substack.com/p/p5play-game-jam-2025-results"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent hover:underline"
-        >
-          article
-        </a>{" "}
-        written by the creator of p5Play, Quinton Ashley.
+        game jam that earned Honorable Mention. The game explores ethical decision-making in fast-paced platforming. Players choose to save or kill characters while balancing points and time using three throwable abilities. Features a fully custom physics engine, tilemap system, collision detection, particles, and a level editor coded from scratch. 
       </>
     ),
     learnings: [
@@ -70,7 +61,7 @@ const completedProjects = [
         >
           GMTK Game Jam
         </a>{" "}
-        strategy game created in a 4-day jam with 9,574 submissions. Players circle meteors with limited rope and energy, managing resources across 20 research centers. The game challenges players with precise movement mechanics and strategic resource allocation.
+        strategy game created by Empty Console for the 4 day competition with 9,574 submissions. Players circle meteors with limited rope and energy, managing resources across 20 research centers. The game challenges players with precise movement mechanics and strategic resource allocation.
       </>
     ),
     learnings: [
@@ -90,7 +81,7 @@ const completedProjects = [
     tag: "Game Jam",
     description: (
       <>
-        Created for the{" "}
+        Created by Empty Console for the{" "}
         <a
           href="https://itch.io/jam/patch-notes-v-1-0"
           target="_blank"
