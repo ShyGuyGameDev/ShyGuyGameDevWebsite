@@ -36,7 +36,7 @@ type TypewriterElement = ElementType
 
 const HERO_HEADLINE = "Meet ShyGuy"
 const HERO_DESCRIPTION =
-  "Student developer building games, apps, and robotcs, speaking at debate tournaments, leading model United Nations conferences, teaching other students, and building his own startup."
+  "Student developer building games, apps, and robotics, speaking at debate tournaments, leading model United Nations conferences, teaching other students, and building his own startup."
 
 const HERO_BUTTON_TEXT = "LEARN MORE"
 
