@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 import { HeroSection } from "@/components/hero-section"
+import { AchievementsSection } from "@/components/achievements-section"
 import { TopicSwitcher } from "@/components/topic-switcher"
 import { SongQuoteSection } from "@/components/song-quote-section"
 
@@ -39,6 +40,8 @@ export default function Home() {
     <>
       <HeroSection />
       <hr id="hero-divider" className="max-w-[1100px] mx-auto border-t-2 border-border" />
+      <AchievementsSection />
+      <hr className="max-w-[1100px] mx-auto border-t-2 border-border" />
       <TopicSwitcher topicImages={topicImages} />
       <hr className="max-w-[1100px] mx-auto border-t-2 border-border" />
       <SongQuoteSection />

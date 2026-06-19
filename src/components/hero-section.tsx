@@ -34,9 +34,9 @@ function shuffleArray<T>(array: T[]): T[] {
 
 type TypewriterElement = ElementType
 
-const HERO_TITLE = "Who is ShyGuy?"
-const HERO_PARAGRAPH =
-  "Ever since he was old enough to hold an iPad, ShyGuy has always loved video games. Soon, this led to his fascination and passion for programming and other technologies, such as robotics and AI. As he grew older, he has also built valubable skills in leadership, teamwork, speaking, and impromptu debate, which he has been able to apply to his other skills in technology. Putting his many skills and experiences together, he has continued to expand the reach and impact of everything he does, whether it be building his startup, creating an app, or being a delegate in a model United Nations conference."
+const HERO_HEADLINE = "Meet ShyGuy"
+const HERO_DESCRIPTION =
+  "Student developer building games, apps, and robotcs, speaking at debate tournaments, leading model United Nations conferences, teaching other students, and building his own startup."
 
 const HERO_BUTTON_TEXT = "LEARN MORE"
 
@@ -463,18 +463,21 @@ export function HeroSection() {
         </div>
 
         <div className="max-w-[1100px] mx-auto px-6 text-center" style={{ position: 'relative', zIndex: 10 }}>
-          <Typewriter
-            as="h1"
-            className="animate-on-scroll text-5xl md:text-6xl lg:text-[48px] font-semibold mb-6 text-balance hero-text hero-text-h1"
+          <h1
+            className="animate-on-scroll max-w-3xl mx-auto mb-8 hero-text hero-text-h1"
             style={{ pointerEvents: 'none' }}
-            text={HERO_TITLE}
-            speed={HERO_TITLE_SPEED}
-            startDelay={HERO_TITLE_DELAY}
-          />
-
-          <p className="animate-on-scroll animate-delay-100 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed text-pretty hero-text hero-text-p" style={{ pointerEvents: 'none' }}>
-            {HERO_PARAGRAPH}
-          </p>
+          >
+            <Typewriter
+              as="span"
+              className="block text-5xl md:text-6xl lg:text-[48px] font-semibold mb-4 text-balance"
+              text={HERO_HEADLINE}
+              speed={HERO_TITLE_SPEED}
+              startDelay={HERO_TITLE_DELAY}
+            />
+            <span className="block text-lg md:text-xl leading-relaxed text-pretty hero-text-p">
+              {HERO_DESCRIPTION}
+            </span>
+          </h1>
 
           <div className="animate-on-scroll animate-delay-300">
             <Button
