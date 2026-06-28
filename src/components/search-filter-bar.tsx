@@ -1,31 +1,47 @@
 "use client"
 
+import { ChevronDown } from "lucide-react"
 import { SearchBar } from "@/components/search-bar"
+import { Button } from "@/components/ui/button"
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { cn } from "@/lib/utils"
 
 interface SearchFilterBarProps {
   searchQuery: string
   onSearchChange: (value: string) => void
   searchPlaceholder?: string
-  selectedTopic: string
-  onTopicChange: (value: string) => void
+  selectedTopics: string[]
+  onTopicsChange: (topics: string[]) => void
   topics: readonly string[]
+}
+
+function getTopicFilterLabel(selectedTopics: string[]) {
+  if (selectedTopics.length === 0) return "All topics"
+  if (selectedTopics.length === 1) return selectedTopics[0]
+  return `${selectedTopics.length} topics`
 }
 
 export function SearchFilterBar({
   searchQuery,
   onSearchChange,
   searchPlaceholder = "Search...",
-  selectedTopic,
-  onTopicChange,
+  selectedTopics,
+  onTopicsChange,
   topics,
 }: SearchFilterBarProps) {
+  const toggleTopic = (topic: string, checked: boolean) => {
+    onTopicsChange(
+      checked
+        ? [...selectedTopics, topic]
+        : selectedTopics.filter((value) => value !== topic),
+    )
+  }
+
   return (
     <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center">
       <SearchBar
@@ -35,22 +51,33 @@ export function SearchFilterBar({
         placeholder={searchPlaceholder}
         className="flex-1"
       />
-      <Select value={selectedTopic} onValueChange={onTopicChange}>
-        <SelectTrigger
-          className="h-9 w-full rounded-full sm:w-[170px]"
-          aria-label="Filter by topic"
-        >
-          <SelectValue placeholder="All topics" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="all">All topics</SelectItem>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button
+            variant="outline"
+            aria-label="Filter by topic"
+            className={cn(
+              "h-9 w-full justify-between rounded-full px-3 font-normal sm:w-[170px]",
+              "border-input bg-transparent shadow-xs dark:bg-input/30 dark:hover:bg-input/50",
+            )}
+          >
+            <span className="truncate">{getTopicFilterLabel(selectedTopics)}</span>
+            <ChevronDown className="size-4 opacity-50" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="w-48">
           {topics.map((topic) => (
-            <SelectItem key={topic} value={topic}>
+            <DropdownMenuCheckboxItem
+              key={topic}
+              checked={selectedTopics.includes(topic)}
+              onCheckedChange={(checked) => toggleTopic(topic, checked === true)}
+              onSelect={(event) => event.preventDefault()}
+            >
               {topic}
-            </SelectItem>
+            </DropdownMenuCheckboxItem>
           ))}
-        </SelectContent>
-      </Select>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   )
 }

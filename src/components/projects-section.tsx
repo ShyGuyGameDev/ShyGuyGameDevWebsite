@@ -488,11 +488,14 @@ const sortedProjects = [...completedProjects].sort(compareByProjectTagThenDateTh
 export function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedTopic, setSelectedTopic] = useState("all")
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([])
 
   const filteredProjects = useMemo(() => {
     return sortedProjects.filter((project) => {
-      if (selectedTopic !== "all" && project.tag !== selectedTopic) {
+      if (
+        selectedTopics.length > 0 &&
+        !selectedTopics.includes(project.tag ?? "")
+      ) {
         return false
       }
 
@@ -505,7 +508,7 @@ export function ProjectsSection() {
       ].join(" ")
       return matchesSearch(haystack, searchQuery)
     })
-  }, [searchQuery, selectedTopic])
+  }, [searchQuery, selectedTopics])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -543,8 +546,8 @@ export function ProjectsSection() {
               searchQuery={searchQuery}
               onSearchChange={setSearchQuery}
               searchPlaceholder="Search projects..."
-              selectedTopic={selectedTopic}
-              onTopicChange={setSelectedTopic}
+              selectedTopics={selectedTopics}
+              onTopicsChange={setSelectedTopics}
               topics={PROJECT_TAG_ORDER}
             />
           </div>

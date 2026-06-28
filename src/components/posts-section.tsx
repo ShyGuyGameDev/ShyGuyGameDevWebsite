@@ -174,11 +174,14 @@ const sortedMediaMentions = [...mediaMentions].sort(compareByPostTagThenDateThen
 export function PostsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedTopic, setSelectedTopic] = useState("all")
+  const [selectedTopics, setSelectedTopics] = useState<string[]>([])
 
   const filteredMediaMentions = useMemo(() => {
     return sortedMediaMentions.filter((mention) => {
-      if (selectedTopic !== "all" && mention.tag !== selectedTopic) {
+      if (
+        selectedTopics.length > 0 &&
+        !selectedTopics.includes(mention.tag ?? "")
+      ) {
         return false
       }
 
@@ -191,7 +194,7 @@ export function PostsSection() {
       ].join(" ")
       return matchesSearch(haystack, searchQuery)
     })
-  }, [searchQuery, selectedTopic])
+  }, [searchQuery, selectedTopics])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -241,8 +244,8 @@ export function PostsSection() {
               searchQuery={searchQuery}
               onSearchChange={setSearchQuery}
               searchPlaceholder="Search posts & media mentions..."
-              selectedTopic={selectedTopic}
-              onTopicChange={setSelectedTopic}
+              selectedTopics={selectedTopics}
+              onTopicsChange={setSelectedTopics}
               topics={POST_TAG_ORDER}
             />
           </div>
