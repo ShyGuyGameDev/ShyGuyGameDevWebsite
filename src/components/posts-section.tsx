@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { PostCard } from "@/components/post-card"
 import { SearchBar } from "@/components/search-bar"
-import { getNodeText, matchesSearch } from "@/lib/utils"
+import { compareByDateThenTitle, getNodeText, matchesSearch } from "@/lib/utils"
 
 interface MediaMention {
   title: string
@@ -171,9 +171,7 @@ const mediaMentions: MediaMention[] = [
 
 // Sort newest first so the most recent post is top-left and the
 // earliest ends up farthest down and farthest to the right.
-const sortedMediaMentions = [...mediaMentions].sort(
-  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-)
+const sortedMediaMentions = [...mediaMentions].sort(compareByDateThenTitle)
 
 export function PostsSection() {
   const sectionRef = useRef<HTMLElement>(null)

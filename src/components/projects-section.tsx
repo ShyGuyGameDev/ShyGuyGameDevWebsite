@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { ProjectCard } from "@/components/project-card"
 import { SearchBar } from "@/components/search-bar"
-import { getNodeText, matchesSearch } from "@/lib/utils"
+import { compareByDateThenTitle, getNodeText, matchesSearch } from "@/lib/utils"
 
 const completedProjects = [
   {
@@ -173,7 +173,16 @@ const completedProjects = [
     tag: "Robotics",
     description: (
       <>
-        The next frontier of AI is spatial intelligence, which ShyGuy chose to explore by attempting to implement it in his own robot. After 6 months, ShyGuy was able to implement YOLO11n, a computer vision program able to distinguish objects and recognize what they are, into his project to create a robotic “dog” capable of moving towards a specified object whenever it sees it.
+        The next frontier of AI is spatial intelligence, which ShyGuy chose to explore by attempting to implement it in his own robot. After 6 months, ShyGuy was able to implement{" "}
+        <a
+          href="https://docs.ultralytics.com/models/yolo11#overview"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          YOLO11n
+        </a>
+        , a computer vision program able to distinguish objects and recognize what they are, into his project to create a robotic “dog” capable of moving towards a specified object whenever it sees it.
       </>
     ),
     learnings: [
@@ -187,16 +196,26 @@ const completedProjects = [
   },
   {
     title: "Future City",
-    url: "",
+    url: "https://futurecity.org/",
     date: "February 2026",
     tag: "Miscellaneous",
     description: (
       <>
-        ShyGuy entered the Future City competition with 5 other students, and he came out learning so much more than he originally thought he would. Designing a city, writing an essay about it, and creating a model of it’s layout, taught ShyGuy how to put multiple proven concepts together to verify the possiblity of a futuristic technology, how to lead a team where everyone comes from a different background, and how to present complex topics simply.
+        {/* ShyGuy entered the Future City competition with 5 other students, and he came out learning so much more than he originally thought he would. Designing a city, writing an essay about it, and creating a model of it’s layout, taught ShyGuy how to put multiple proven concepts together to verify the possiblity of a futuristic technology, how to lead a team where everyone comes from a different background, and how to present complex topics simply. */}
+        ShyGuy entered the{" "}
+        <a
+          href="https://futurecity.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Future City
+        </a>{" "}
+        competition with 5 other students, and came out learning so much more than he originally thought he would. Designing a city, writing an essay about it, and creating a model of its layout, taught ShyGuy how to put multiple proven concepts together to verify the possibility of a futuristic technology, how to lead a team where everyone comes from a different background, and how to present complex topics simply.
       </>
     ),
     learnings: [
-      "Verifying the possiblity of future technologies",
+      "Verifying the possibility of future technologies",
       "Bringing different fields together",
       "Presenting complex topics simply",
       "Designing for the future",
@@ -205,12 +224,22 @@ const completedProjects = [
   },
   {
     title: "Cumberland Elementary",
-    url: "",
+    url: "https://cumberland.sesd.org/",
     date: "May 2026",
     tag: "Teaching",
     description: (
       <>
-        After meeting the lead of Cumberland Elementary’s after school robotics program and showing him his Computer Vision Dog, ShyGuy was invited to speak at one of the program’s weekly sessions. At this session, ShyGuy spoke about his robotics journey, how he built this robot, and answered questions from the students about their own projects. ShyGuy has always loved his mentors, and was incredibly thankful to Cumberland Elementary for the opportunity to help others like him.
+        {/* After meeting the lead of Cumberland Elementary’s after school robotics program and showing him his Computer Vision Dog, ShyGuy was invited to speak at one of the program’s weekly sessions. At this session, ShyGuy spoke about his robotics journey, how he built this robot, and answered questions from the students about their own projects. ShyGuy has always loved his mentors, and was incredibly thankful to Cumberland Elementary for the opportunity to help others like him. */}
+        After meeting the{" "}
+        <a
+          href="https://www.linkedin.com/in/ahmedmakkawy/?isSelfProfile=false"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          lead of Cumberland Elementary’s after school robotics program
+        </a>{" "}
+        and showing him his computer vision robot, ShyGuy was invited to speak at one of the program’s weekly sessions. At this session, ShyGuy spoke about his robotics journey, how he built this robot, and answered questions from the students about their own projects. ShyGuy has always loved his mentors, and was incredibly thankful for the opportunity to help others like him.
       </>
     ),
     learnings: [
@@ -222,12 +251,22 @@ const completedProjects = [
   },
   {
     title: "Berkeley Model United Nations",
-    url: "",
+    url: "https://www.bmun.org/",
     date: "November 2025",
     tag: "MUN",
     description: (
       <>
-        ShyGuy’s first MUN conference was BMUN, where ShyGuy was in a crisis commitee, meaning among other things, he represented a person, not a country. He was Nina Witkofsky, the communications director and acting deputy director of the CDC, in a commitee set in a future where a new virus is terorizing the world. ShyGuy won Outstanding at this conference, which is equivalent to 2nd place in the committee.
+        {/* ShyGuy’s first MUN conference was BMUN, where ShyGuy was in a crisis commitee, meaning among other things, he represented a person, not a country. He was Nina Witkofsky, the communications director and acting deputy director of the CDC, in a commitee set in a future where a new virus is terorizing the world. ShyGuy won Outstanding at this conference, which is equivalent to 2nd place in the committee. */}
+        ShyGuy’s first MUN conference was{" "}
+        <a
+          href="https://www.bmun.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          BMUN
+        </a>
+        , where ShyGuy was in a crisis committee, meaning among other things, he represented a person, not a country. He was Nina Witkofsky, the communications director and acting deputy director of the CDC, in a committee set in a future where a new virus is terrorizing the world. ShyGuy won Outstanding at this conference, which is equivalent to 2nd place in the committee.
       </>
     ),
     learnings: [
@@ -239,12 +278,39 @@ const completedProjects = [
   },
   {
     title: "Nueva Model United Nations Conference",
-    url: "",
+    url: "https://sites.google.com/nuevaschool.org/nuevamunconference/conference",
     date: "February 2026",
     tag: "MUN",
     description: (
       <>
-        In NMUNC, ShyGuy represented Poland in the EU committee. The topic for the EU was green energy and green technology. This was ShyGuy’s second conference with the format of general assembly, meaning he knew what to expect. Due to this, he decided to prepare a lot more than he had in the past, which turned out to be a good decision. During committee, he lead discussions, was a key writer of his resolution, and used his influence to make important allies in the committee.
+        In{" "}
+        <a
+          href="https://sites.google.com/nuevaschool.org/nuevamunconference/conference"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          NMUNC
+        </a>
+        , ShyGuy represented Poland in the{" "}
+        <a
+          href="https://european-union.europa.eu/index_en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          EU
+        </a>{" "}
+        committee. The topic for the{" "}
+        <a
+          href="https://european-union.europa.eu/index_en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          EU
+        </a>{" "}
+        was green energy and green technology. This was ShyGuy’s second conference with the format of general assembly, meaning he knew what to expect. Due to this, he decided to prepare a lot more than he had in the past, which turned out to be a good decision. During committee, he led discussions, was a key writer of his resolution, and used his influence to make important allies in the committee.
       </>
     ),
     learnings: [
@@ -255,6 +321,79 @@ const completedProjects = [
     ],
     image: "/HomeTopics/MUN/Screenshot 2026-06-11 at 7.57.46 PM.png",
   },
+  {
+    title: "San Francisco Model United Nations",
+    url: "https://www.sfmun.org/",
+    date: "February 2026",
+    tag: "MUN",
+    description: (
+      <>
+        In the 2026 SFMUN, ShyGuy represented the Philippines in the{" "}
+        <a
+          href="https://www.unodc.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          United Nations Office on Drugs and Crime
+        </a>
+        . This year, the topic was narcoterrorism, which is a topic ShyGuy had never known much about. During his prep, he learned much more on how narcoterrorism works and how to fight it, as well as how the{" "}
+        <a
+          href="https://www.un.org/en/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          UN
+        </a>{" "}
+        is actually able to make changes in the real world.
+      </>
+    ),
+    learnings: [
+      "Fighting narcoterrorism",
+      "Learning about new topics",
+      "Preparing for committee",
+    ],
+    image: "/HomeTopics/MUN/Screenshot 2026-06-11 at 7.58.47 PM.png",
+  },
+  {
+    title: "National High School Model United Nations",
+    url: "https://imuna.org/nhsmun/nyc/?gad_source=1&gad_campaignid=1884743221&gbraid=0AAAAAC7vSIv-W5Ef_Z7M_5h1Tj3iuyig3&gclid=CjwKCAjw6f3RBhApEiwAMaCqWTTIVF6du7ZmKNgc5Itk6n6oitFqayIrLID7gEXqgkGnvTotXa7kzxoCDLgQAvD_BwE",
+    date: "March 2026",
+    tag: "MUN",
+    description: (
+      <>
+        New York’s{" "}
+        <a
+          href="https://imuna.org/nhsmun/nyc/?gad_source=1&gad_campaignid=1884743221&gbraid=0AAAAAC7vSIv-W5Ef_Z7M_5h1Tj3iuyig3&gclid=CjwKCAjw6f3RBhApEiwAMaCqWTTIVF6du7ZmKNgc5Itk6n6oitFqayIrLID7gEXqgkGnvTotXa7kzxoCDLgQAvD_BwE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          NHSMUN
+        </a>{" "}
+        is the most prestigious pre-collegiate MUN conference in the world, and ShyGuy had the honor of attending as China in the{" "}
+        <a
+          href="https://www.un.org/digital-emerging-technologies/ai-advisory-body"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          High Level Advisory Body on Artificial Intelligence
+        </a>{" "}
+        committee. ShyGuy loved being in this conference, and found the topics of AI in education and a global AI fund very interesting to debate about with the other delegates. From this conference, he learned many critical MUN skills such as how to better engage audiences and how to easily propose plans in speeches.
+      </>
+    ),
+    learnings: [
+      "Speaking on AI",
+      "AI in education and a global AI fund",
+      "Engaging audiences",
+      "Proposing plans during speeches",
+    ],
+    image: "/HomeTopics/MUN/download (5).png",
+  },
+ 
+ 
  
  
  
@@ -266,9 +405,7 @@ const completedProjects = [
 
 // Sort newest first so the most recent project is top-left and the
 // earliest ends up farthest down and farthest to the right.
-const sortedProjects = [...completedProjects].sort(
-  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-)
+const sortedProjects = [...completedProjects].sort(compareByDateThenTitle)
 
 export function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null)

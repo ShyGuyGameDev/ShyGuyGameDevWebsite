@@ -42,21 +42,21 @@ Projects
             Bugged Out
             Congressional App Challenge
             Dimensional Rifter
-          Computer Vision Robot
-          Future City
-          Cumberland Elementary
-          BMUN
-        NMUNC
-        NHSMUN
-        NMUNC Chairing
+            Computer Vision Robot
+            Future City
+            Cumberland Elementary
+            BMUN
+            NMUNC
+            SFMUN
+            NHSMUN
         Karen Keefer Novice Invitational
         Tessellations Middle School Invitational
         Georginia Hays Invitational
         Evodyne Robotic Dog
-        SFMUN
 
 
         Current Projects:
+            NMUNC Chairing
             CAC 2: Student Atlas
 
 Colors

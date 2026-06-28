@@ -5,6 +5,8 @@ module.exports = [
 __turbopack_context__.s([
     "cn",
     ()=>cn,
+    "compareByDateThenTitle",
+    ()=>compareByDateThenTitle,
     "getNodeText",
     ()=>getNodeText,
     "matchesSearch",
@@ -25,6 +27,11 @@ function getNodeText(node) {
         return getNodeText(node.props?.children);
     }
     return '';
+}
+function compareByDateThenTitle(a, b) {
+    const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+    if (dateDiff !== 0) return dateDiff;
+    return a.title.localeCompare(b.title);
 }
 function matchesSearch(haystack, query) {
     const trimmed = query.trim().toLowerCase();
