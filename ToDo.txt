@@ -54,6 +54,8 @@ Projects
             Tessellations Middle School Invitational
             Georginia Hays Invitational
 
+    add design tag
+    sort by tag
 
         Current Projects:
             NMUNC Chairing
