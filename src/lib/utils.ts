@@ -38,3 +38,24 @@ export function matchesSearch(haystack: string, query: string): boolean {
   const text = haystack.toLowerCase()
   return trimmed.split(/\s+/).every((token) => text.includes(token))
 }
+
+const TAG_COLOR_CLASSES: Record<string, string> = {
+  Games: 'bg-purple-50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300',
+  Apps: 'bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300',
+  Robotics: 'bg-cyan-50 text-cyan-700 dark:bg-cyan-900/20 dark:text-cyan-300',
+  MUN: 'bg-fuchsia-50 text-fuchsia-700 dark:bg-fuchsia-900/20 dark:text-fuchsia-300',
+  Debate: 'bg-orange-50 text-orange-700 dark:bg-orange-900/20 dark:text-orange-300',
+  Teaching: 'bg-lime-50 text-lime-700 dark:bg-lime-900/20 dark:text-lime-300',
+  Miscellaneous: 'bg-slate-100 text-slate-600 dark:bg-slate-800/40 dark:text-slate-300',
+  Post: 'bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300',
+  Posts: 'bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300',
+  'Media Mention': 'bg-sky-50 text-sky-700 dark:bg-sky-900/20 dark:text-sky-300',
+  'Media Mentions': 'bg-sky-50 text-sky-700 dark:bg-sky-900/20 dark:text-sky-300',
+}
+
+const DEFAULT_TAG_COLOR_CLASSES =
+  'bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300'
+
+export function getTagColorClasses(tag: string): string {
+  return TAG_COLOR_CLASSES[tag] ?? DEFAULT_TAG_COLOR_CLASSES
+}

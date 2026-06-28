@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { cn, getTagColorClasses } from "@/lib/utils"
 import type React from "react"
 
 interface PostCardProps {
@@ -34,7 +35,12 @@ export function PostCard({ title, date, url, description, tag, themes, image }: 
         <div className="flex items-center justify-between gap-3 mb-2">
           <p className="text-sm text-muted-foreground">{date}</p>
           {tag && (
-            <span className="shrink-0 px-3 py-1 bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300 text-xs font-medium rounded-full">
+            <span
+              className={cn(
+                'shrink-0 px-3 py-1 text-xs font-medium rounded-full',
+                getTagColorClasses(tag),
+              )}
+            >
               {tag}
             </span>
           )}
