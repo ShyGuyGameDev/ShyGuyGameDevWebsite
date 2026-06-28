@@ -54,16 +54,6 @@ Projects
             Tessellations Middle School Invitational
             Georginia Hays Invitational
 
-    add design tag
-    sort by tag
-
         Current Projects:
             NMUNC Chairing
             CAC 2: Student Atlas
-
-Colors
-    Background
-    Header
-    Footer
-    Text
-    Hyperlinks
