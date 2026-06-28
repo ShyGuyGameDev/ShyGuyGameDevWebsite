@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 const IMAGE_SLOTS = 4
 
 // const TOPICS = ["Robotics", "Apps", "MUN", "Debate", "Games", "Teaching"]
-const TOPICS = ["Games", "Apps", "Robotics", "MUN", "Debate", "Teaching"]
+const TOPICS = ["Games", "Apps", "Robotics", "MUN", "Debate", "Teaching", "Design"]
 
 const TOPIC_CONTENT: Record<string, string[]> = {
   // Games: [
@@ -47,6 +47,11 @@ const TOPIC_CONTENT: Record<string, string[]> = {
   Teaching: [
     "Throughout ShyGuy's life, he has learned to appreciate the mentors he has, as they are the only way he has been able to become who he is. Wanting to fill that space for others like him, ShyGuy has started teaching whenever possible, always doing his best to support other curious students.",
     "ShyGuy's first experience teaching was in 2026, where he was asked to speak at a session of Cumberland Elementary's after-school robotics program. Here, he spoke about his experience experimenting with the idea of a robotic dog paired with computer vision during a recent project, the best way to tackle new problems, and how to communicate complex robotic ideas to non-technical audiences."
+  ],
+  Design: [
+    "Design is where ShyGuy's technical skills meet his creative instincts. Whether he is sketching a game level, laying out an app screen, or planning how a city might function a hundred years from now, he thinks about how form, function, and feeling work together.",
+    "For example, in the Future City competition, he worked with five teammates to design a sustainable city of the future, write an essay defending its feasibility, and build a physical scale model of its layout. The project pushed him to research real engineering concepts, coordinate across different strengths, and explain complex ideas in a way anyone could understand.",
+    "Design thinking now shows up across everything ShyGuy builds. He cares about how things look, how they flow, and whether the final result actually solves the problem it was meant to — not just whether the code compiles.",
   ],
 }
 

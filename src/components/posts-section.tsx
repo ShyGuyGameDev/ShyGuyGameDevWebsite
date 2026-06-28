@@ -3,8 +3,8 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { PostCard } from "@/components/post-card"
-import { SearchBar } from "@/components/search-bar"
-import { compareByDateThenTitle, getNodeText, getYearFromDate, matchesSearch } from "@/lib/utils"
+import { SearchFilterBar } from "@/components/search-filter-bar"
+import { compareByPostTagThenDateThenTitle, getNodeText, matchesSearch, POST_TAG_ORDER } from "@/lib/utils"
 
 interface MediaMention {
   title: string
@@ -169,16 +169,19 @@ const mediaMentions: MediaMention[] = [
   },
 ]
 
-// Sort newest first so the most recent post is top-left and the
-// earliest ends up farthest down and farthest to the right.
-const sortedMediaMentions = [...mediaMentions].sort(compareByDateThenTitle)
+const sortedMediaMentions = [...mediaMentions].sort(compareByPostTagThenDateThenTitle)
 
 export function PostsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [searchQuery, setSearchQuery] = useState("")
+  const [selectedTopic, setSelectedTopic] = useState("all")
 
   const filteredMediaMentions = useMemo(() => {
     return sortedMediaMentions.filter((mention) => {
+      if (selectedTopic !== "all" && mention.tag !== selectedTopic) {
+        return false
+      }
+
       const haystack = [
         mention.title,
         mention.date,
@@ -188,7 +191,7 @@ export function PostsSection() {
       ].join(" ")
       return matchesSearch(haystack, searchQuery)
     })
-  }, [searchQuery])
+  }, [searchQuery, selectedTopic])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -217,7 +220,7 @@ export function PostsSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/5 blur-3xl" />
       </div>
       <div className="relative z-10 max-w-[1100px] mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-4">
             Posts &amp; Media Mentions
           </h2>
@@ -234,10 +237,13 @@ export function PostsSection() {
             !
           </p>
           <div className="animate-on-scroll opacity-0 animate-delay-200">
-            <SearchBar
-              value={searchQuery}
-              onChange={setSearchQuery}
-              placeholder="Search posts & media mentions..."
+            <SearchFilterBar
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+              searchPlaceholder="Search posts & media mentions..."
+              selectedTopic={selectedTopic}
+              onTopicChange={setSelectedTopic}
+              topics={POST_TAG_ORDER}
             />
           </div>
         </div>
@@ -246,14 +252,23 @@ export function PostsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredMediaMentions.map((mention, index) => {
               const prevMention = filteredMediaMentions[index - 1]
-              const yearBreak =
-                prevMention &&
-                getYearFromDate(prevMention.date) !== getYearFromDate(mention.date)
+              const tagBreak =
+                index === 0 ||
+                (prevMention &&
+                  (prevMention.tag ?? "") !== (mention.tag ?? ""))
 
               return (
                 <Fragment key={mention.title}>
-                  {yearBreak ? (
-                    <hr className="col-span-full border-0 border-t-2 border-border my-4" />
+                  {tagBreak ? (
+                    <div
+                      className={`col-span-full flex items-center gap-4 mb-4 ${index === 0 ? "mt-0" : "mt-4"}`}
+                    >
+                      <hr className="flex-1 border-0 border-t-2 border-border" />
+                      <span className="shrink-0 text-sm font-semibold text-primary">
+                        {mention.tag ?? "Other"}
+                      </span>
+                      <hr className="flex-1 border-0 border-t-2 border-border" />
+                    </div>
                   ) : null}
                   {/* <div
                     className="animate-on-scroll opacity-0"

@@ -3,8 +3,8 @@
 import { Fragment, useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { ProjectCard } from "@/components/project-card"
-import { SearchBar } from "@/components/search-bar"
-import { compareByDateThenTitle, getNodeText, getYearFromDate, matchesSearch } from "@/lib/utils"
+import { SearchFilterBar } from "@/components/search-filter-bar"
+import { compareByProjectTagThenDateThenTitle, getNodeText, matchesSearch, PROJECT_TAG_ORDER } from "@/lib/utils"
 
 const completedProjects = [
   {
@@ -198,7 +198,7 @@ const completedProjects = [
     title: "Future City",
     url: "https://futurecity.org/",
     date: "February 2026",
-    tag: "Miscellaneous",
+    tag: "Design",
     description: (
       <>
         {/* ShyGuy entered the Future City competition with 5 other students, and he came out learning so much more than he originally thought he would. Designing a city, writing an essay about it, and creating a model of it’s layout, taught ShyGuy how to put multiple proven concepts together to verify the possiblity of a futuristic technology, how to lead a team where everyone comes from a different background, and how to present complex topics simply. */}
@@ -483,16 +483,19 @@ const completedProjects = [
   },
 ]
 
-// Sort newest first so the most recent project is top-left and the
-// earliest ends up farthest down and farthest to the right.
-const sortedProjects = [...completedProjects].sort(compareByDateThenTitle)
+const sortedProjects = [...completedProjects].sort(compareByProjectTagThenDateThenTitle)
 
 export function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [searchQuery, setSearchQuery] = useState("")
+  const [selectedTopic, setSelectedTopic] = useState("all")
 
   const filteredProjects = useMemo(() => {
     return sortedProjects.filter((project) => {
+      if (selectedTopic !== "all" && project.tag !== selectedTopic) {
+        return false
+      }
+
       const haystack = [
         project.title,
         project.date,
@@ -502,7 +505,7 @@ export function ProjectsSection() {
       ].join(" ")
       return matchesSearch(haystack, searchQuery)
     })
-  }, [searchQuery])
+  }, [searchQuery, selectedTopic])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -531,15 +534,18 @@ export function ProjectsSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-accent/5 blur-3xl" />
       </div>
       <div className="relative z-10 max-w-[1100px] mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="animate-on-scroll opacity-0 text-4xl md:text-[32px] font-semibold text-primary mb-8">
             Projects
           </h2>
           <div className="animate-on-scroll opacity-0 animate-delay-200">
-            <SearchBar
-              value={searchQuery}
-              onChange={setSearchQuery}
-              placeholder="Search projects..."
+            <SearchFilterBar
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+              searchPlaceholder="Search projects..."
+              selectedTopic={selectedTopic}
+              onTopicChange={setSelectedTopic}
+              topics={PROJECT_TAG_ORDER}
             />
           </div>
         </div>
@@ -554,14 +560,23 @@ export function ProjectsSection() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {filteredProjects.map((project, index) => {
                 const prevProject = filteredProjects[index - 1]
-                const yearBreak =
-                  prevProject &&
-                  getYearFromDate(prevProject.date) !== getYearFromDate(project.date)
+                const tagBreak =
+                  index === 0 ||
+                  (prevProject &&
+                    (prevProject.tag ?? "") !== (project.tag ?? ""))
 
                 return (
                   <Fragment key={project.title}>
-                    {yearBreak ? (
-                      <hr className="col-span-full border-0 border-t-2 border-border my-4" />
+                    {tagBreak ? (
+                      <div
+                        className={`col-span-full flex items-center gap-4 mb-4 ${index === 0 ? "mt-0" : "mt-4"}`}
+                      >
+                        <hr className="flex-1 border-0 border-t-2 border-border" />
+                        <span className="shrink-0 text-sm font-semibold text-primary">
+                          {project.tag ?? "Other"}
+                        </span>
+                        <hr className="flex-1 border-0 border-t-2 border-border" />
+                      </div>
                     ) : null}
                     {/* <div
                       className="animate-on-scroll opacity-0"

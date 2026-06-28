@@ -31,6 +31,56 @@ export function compareByDateThenTitle(
   return a.title.localeCompare(b.title)
 }
 
+export const PROJECT_TAG_ORDER = [
+  'Robotics',
+  'Apps',
+  'Design',
+  'MUN',
+  'Debate',
+  'Games',
+  'Teaching',
+] as const
+
+export const POST_TAG_ORDER = ['Media Mention', 'Post'] as const
+
+function compareTags(
+  aTag: string | undefined,
+  bTag: string | undefined,
+  tagOrder: readonly string[],
+): number {
+  const a = aTag ?? ''
+  const b = bTag ?? ''
+  const aIndex = tagOrder.indexOf(a)
+  const bIndex = tagOrder.indexOf(b)
+
+  if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex
+  if (aIndex !== -1) return -1
+  if (bIndex !== -1) return 1
+  if (!a && !b) return 0
+  if (!a) return 1
+  if (!b) return -1
+  return a.localeCompare(b)
+}
+
+export function createCompareByTagThenDateThenTitle(tagOrder: readonly string[]) {
+  return (
+    a: { date: string; title: string; tag?: string },
+    b: { date: string; title: string; tag?: string },
+  ): number => {
+    const tagDiff = compareTags(a.tag, b.tag, tagOrder)
+    if (tagDiff !== 0) return tagDiff
+    const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime()
+    if (dateDiff !== 0) return dateDiff
+    return a.title.localeCompare(b.title)
+  }
+}
+
+export const compareByProjectTagThenDateThenTitle =
+  createCompareByTagThenDateThenTitle(PROJECT_TAG_ORDER)
+
+export const compareByPostTagThenDateThenTitle =
+  createCompareByTagThenDateThenTitle(POST_TAG_ORDER)
+
 // Returns true when every whitespace-separated token in the query appears in the haystack.
 export function matchesSearch(haystack: string, query: string): boolean {
   const trimmed = query.trim().toLowerCase()
@@ -46,6 +96,7 @@ const TAG_COLOR_CLASSES: Record<string, string> = {
   MUN: 'bg-fuchsia-50 text-fuchsia-700 dark:bg-fuchsia-900/20 dark:text-fuchsia-300',
   Debate: 'bg-orange-50 text-orange-700 dark:bg-orange-900/20 dark:text-orange-300',
   Teaching: 'bg-lime-50 text-lime-700 dark:bg-lime-900/20 dark:text-lime-300',
+  Design: 'bg-pink-50 text-pink-700 dark:bg-pink-900/20 dark:text-pink-300',
   Miscellaneous: 'bg-slate-100 text-slate-600 dark:bg-slate-800/40 dark:text-slate-300',
   Post: 'bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300',
   Posts: 'bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300',
