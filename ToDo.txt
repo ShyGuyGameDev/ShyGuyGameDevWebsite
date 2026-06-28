@@ -45,14 +45,14 @@ Projects
             Computer Vision Robot
             Future City
             Cumberland Elementary
+            Evodyne Robotic Dog
             BMUN
             NMUNC
             SFMUN
             NHSMUN
-        Karen Keefer Novice Invitational
-        Tessellations Middle School Invitational
+            Karen Keefer Novice Invitational
+            Tessellations Middle School Invitational
         Georginia Hays Invitational
-        Evodyne Robotic Dog
 
 
         Current Projects:

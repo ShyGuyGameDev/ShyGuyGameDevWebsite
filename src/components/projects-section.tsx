@@ -168,7 +168,7 @@ const completedProjects = [
   },
   {
     title: "Computer Vision Robot",
-    //url: "https://shyguygamedev.github.io/Dimensional-Rifter/",
+    url: "https://www.youtube.com/watch?v=y8NtMZ7VGmU",
     date: "April 2026",
     tag: "Robotics",
     description: (
@@ -392,15 +392,95 @@ const completedProjects = [
     ],
     image: "/HomeTopics/MUN/download (5).png",
   },
- 
- 
- 
- 
- 
-  
-  
- 
- 
+  {
+    title: "Karen Keefer Novice Invitational",
+    url: "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=37170",
+    date: "November 2025",
+    tag: "Debate",
+    description: (
+      <>
+        Keefer was ShyGuy’s first parliamentary debate tournament, and it was also his only tournament without his current partner. In this tournament, ShyGuy learned how to use the debate organizing software called{" "}
+        <a
+          href="https://www.tabroom.com/index/index.mhtml"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          tabroom
+        </a>
+        , structure of parli debate, how to prepare for a debate in extremely limited time, and how to shape a speech towards a specific audience. His final record for this tournament was 2-2.
+      </>
+    ),
+    learnings: [
+        "Navigating new sites",
+ "Learning the structure of debate",
+      "Preparing in limited time",
+      "Knowing the audience",
+    ],
+    image: "/Screenshot 2026-06-28 at 12.47.02 AM.png",
+  },
+  {
+    title: "Evodyne Robotic Dog",
+    url: "https://evodynerobotics.com/courses/evodog-learn-and-build-a-programmable-robotic-dog/",
+    date: "June 2026",
+    tag: "Robotics",
+    description: (
+      <>
+        In April of 2026, ShyGuy built his first computer vision robotic “dog”, which was capable of seeing a specific object, identifying it, and moving towards it. Here, he wanted to build on that idea, this time with help. By learning through the{" "}
+        <a
+          href="https://evodynerobotics.com/courses/evodog-learn-and-build-a-programmable-robotic-dog/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Evodyne Robotics Genesis Course
+        </a>
+        , ShyGuy learned how to make his original robotic dog so much better, his favorite addition being realistic limbs instead of wheels.
+      </>
+    ),
+    learnings: [
+      "Spatial intelligence and computer vision",
+      "Building on old projects",
+      "Learning from courses",
+      "Building realistic limbs",
+    ],
+    image: "/Screenshot 2026-06-28 at 12.48.15 AM.png",
+  },
+  {
+    title: "Tessellations Middle School Invitational",
+    url: "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=39640",
+    date: "April 2026",
+    tag: "Debate",
+    description: (
+      <>
+        ShyGuy’s second debate tournament, but his first with his future partner, ended in a record of 3-1, making it the first time Shaayer broke. At this tournament, ShyGuy learned how to work with his partner, stay confident even with complex topics, how to explain his ideas to his partner, and more.
+      </>
+    ),
+    learnings: [
+      "Working with a new partner",
+      "Staying confident in hard times",
+      "Explaining ideas",
+    ],
+    image: "/Screenshot 2026-06-28 at 1.00.16 AM.png",
+  },
+  {
+    title: "Georgiana Hays Invitational",
+    url: "https://www.tabroom.com/index/tourn/index.mhtml?tourn_id=39687#:~:text=The%20Hays%20Invitational%20will%20be,DI%2C%20Impromptu%20and%20Original%20Oratory.",
+    date: "May 2026",
+    tag: "Debate",
+    description: (
+      <>
+        ShyGuy ended his second tournament with his debate partner with a 5-0 record, meaning they won 1st place in their division, novice parli debate. Post-debate, the judges said ShyGuy spoke confidently, was able to explain the logic behind his arguments, and was always able to address all of his opponent’s points. However, he was told that his arguments could benefit from more concrete evidence from studies, as most were rooted in logic instead of scientifically proven facts.
+      </>
+    ),
+    learnings: [
+      "Speaking confidently",
+      "Explaining logic in arguments",
+      "Addressing opponent points",
+      "Finding proven evidence",
+    ],
+    image: "/Screenshot 2026-06-28 at 1.11.45 AM.png",
+  },
 ]
 
 // Sort newest first so the most recent project is top-left and the
