@@ -31,12 +31,13 @@ function getSiteUrl() {
 
 const siteUrl = getSiteUrl()
 const ogImage = `${siteUrl}/BetterShyGuyGameDevLogo.png`
+const siteDescription =
+  "Student developer building games, apps, and robotics, speaking at debate tournaments, leading model United Nations conferences, teaching other students, and building his own startup."
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "ShyGuy",
-  description:
-    "Empty Console is a team of students who came together due to their love of programming. Explore our projects, meet the team, and see what we've built.",
+  description: siteDescription,
   icons: {
     icon: "/BetterShyGuyGameDevLogo.png",
     shortcut: "/BetterShyGuyGameDevLogo.png",
@@ -46,8 +47,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "ShyGuy",
     title: "ShyGuy",
-    description:
-      "Empty Console is a team of students who came together due to their love of programming. Explore our projects, meet the team, and see what we've built.",
+    description: siteDescription,
     images: [
       {
         url: ogImage,
@@ -60,8 +60,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ShyGuy",
-    description:
-      "Empty Console is a team of students who came together due to their love of programming. Explore our projects, meet the team, and see what we've built.",
+    description: siteDescription,
     images: [ogImage],
   },
 }
