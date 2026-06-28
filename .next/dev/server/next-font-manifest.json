@@ -1,12 +1,6 @@
 {
   "app": {
-    "[project]/ShyGuyGameDevWebsite/src/app/_not-found/page": [
-      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2"
-    ],
     "[project]/ShyGuyGameDevWebsite/src/app/page": [
-      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2"
-    ],
-    "[project]/ShyGuyGameDevWebsite/src/app/posts/page": [
       "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2"
     ],
     "[project]/ShyGuyGameDevWebsite/src/app/projects/page": [

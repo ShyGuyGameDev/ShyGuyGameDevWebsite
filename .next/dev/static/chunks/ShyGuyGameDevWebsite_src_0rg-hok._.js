@@ -9,6 +9,8 @@ __turbopack_context__.s([
     ()=>compareByDateThenTitle,
     "getNodeText",
     ()=>getNodeText,
+    "getYearFromDate",
+    ()=>getYearFromDate,
     "matchesSearch",
     ()=>matchesSearch
 ]);
@@ -27,6 +29,9 @@ function getNodeText(node) {
         return getNodeText(node.props?.children);
     }
     return '';
+}
+function getYearFromDate(date) {
+    return new Date(date).getFullYear();
 }
 function compareByDateThenTitle(a, b) {
     const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();

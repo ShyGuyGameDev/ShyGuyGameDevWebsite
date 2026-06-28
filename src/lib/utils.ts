@@ -17,6 +17,10 @@ export function getNodeText(node: ReactNode): string {
   return ''
 }
 
+export function getYearFromDate(date: string): number {
+  return new Date(date).getFullYear()
+}
+
 // Newest first; when month and year match, sort A–Z by title (top-left to bottom-right).
 export function compareByDateThenTitle(
   a: { date: string; title: string },

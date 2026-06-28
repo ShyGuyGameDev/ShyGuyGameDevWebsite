@@ -1,10 +1,10 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { Fragment, useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { ProjectCard } from "@/components/project-card"
 import { SearchBar } from "@/components/search-bar"
-import { compareByDateThenTitle, getNodeText, matchesSearch } from "@/lib/utils"
+import { compareByDateThenTitle, getNodeText, getYearFromDate, matchesSearch } from "@/lib/utils"
 
 const completedProjects = [
   {
@@ -552,15 +552,26 @@ export function ProjectsSection() {
           </h3> */}
           {filteredProjects.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredProjects.map((project, index) => (
-                <div
-                  key={project.title}
-                  className="animate-on-scroll opacity-0"
-                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                >
-                  <ProjectCard {...project} />
-                </div>
-              ))}
+              {filteredProjects.map((project, index) => {
+                const prevProject = filteredProjects[index - 1]
+                const yearBreak =
+                  prevProject &&
+                  getYearFromDate(prevProject.date) !== getYearFromDate(project.date)
+
+                return (
+                  <Fragment key={project.title}>
+                    {yearBreak ? (
+                      <hr className="col-span-full border-0 border-t-2 border-border my-4" />
+                    ) : null}
+                    <div
+                      className="animate-on-scroll opacity-0"
+                      style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                    >
+                      <ProjectCard {...project} />
+                    </div>
+                  </Fragment>
+                )
+              })}
             </div>
           ) : (
             <p className="text-center text-muted-foreground">

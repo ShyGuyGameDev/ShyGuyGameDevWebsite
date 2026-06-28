@@ -1,10 +1,10 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { Fragment, useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { PostCard } from "@/components/post-card"
 import { SearchBar } from "@/components/search-bar"
-import { compareByDateThenTitle, getNodeText, matchesSearch } from "@/lib/utils"
+import { compareByDateThenTitle, getNodeText, getYearFromDate, matchesSearch } from "@/lib/utils"
 
 interface MediaMention {
   title: string
@@ -244,15 +244,26 @@ export function PostsSection() {
 
         {filteredMediaMentions.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredMediaMentions.map((mention, index) => (
-              <div
-                key={mention.title}
-                className="animate-on-scroll opacity-0"
-                style={{ animationDelay: `${(index + 1) * 100}ms` }}
-              >
-                <PostCard {...mention} />
-              </div>
-            ))}
+            {filteredMediaMentions.map((mention, index) => {
+              const prevMention = filteredMediaMentions[index - 1]
+              const yearBreak =
+                prevMention &&
+                getYearFromDate(prevMention.date) !== getYearFromDate(mention.date)
+
+              return (
+                <Fragment key={mention.title}>
+                  {yearBreak ? (
+                    <hr className="col-span-full border-0 border-t-2 border-border my-4" />
+                  ) : null}
+                  <div
+                    className="animate-on-scroll opacity-0"
+                    style={{ animationDelay: `${(index + 1) * 100}ms` }}
+                  >
+                    <PostCard {...mention} />
+                  </div>
+                </Fragment>
+              )
+            })}
           </div>
         ) : (
           <p className="text-center text-muted-foreground">
