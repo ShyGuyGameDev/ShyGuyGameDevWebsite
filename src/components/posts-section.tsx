@@ -255,12 +255,12 @@ export function PostsSection() {
                   {yearBreak ? (
                     <hr className="col-span-full border-0 border-t-2 border-border my-4" />
                   ) : null}
-                  <div
+                  {/* <div
                     className="animate-on-scroll opacity-0"
                     style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                  >
+                  > */}
                     <PostCard {...mention} />
-                  </div>
+                  {/* </div> */}
                 </Fragment>
               )
             })}
