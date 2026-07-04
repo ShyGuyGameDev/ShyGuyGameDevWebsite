@@ -233,10 +233,11 @@ function getSiteUrl() {
 }
 const siteUrl = getSiteUrl();
 const ogImage = `${siteUrl}/BetterShyGuyGameDevLogo.png`;
+const siteDescription = "Student developer building games, apps, and robotics, speaking at debate tournaments, leading model United Nations conferences, teaching other students, and building his own startup.";
 const metadata = {
     metadataBase: new URL(siteUrl),
     title: "ShyGuy",
-    description: "Empty Console is a team of students who came together due to their love of programming. Explore our projects, meet the team, and see what we've built.",
+    description: siteDescription,
     icons: {
         icon: "/BetterShyGuyGameDevLogo.png",
         shortcut: "/BetterShyGuyGameDevLogo.png",
@@ -246,7 +247,7 @@ const metadata = {
         type: "website",
         siteName: "ShyGuy",
         title: "ShyGuy",
-        description: "Empty Console is a team of students who came together due to their love of programming. Explore our projects, meet the team, and see what we've built.",
+        description: siteDescription,
         images: [
             {
                 url: ogImage,
@@ -259,7 +260,7 @@ const metadata = {
     twitter: {
         card: "summary_large_image",
         title: "ShyGuy",
-        description: "Empty Console is a team of students who came together due to their love of programming. Explore our projects, meet the team, and see what we've built.",
+        description: siteDescription,
         images: [
             ogImage
         ]
@@ -275,7 +276,7 @@ function RootLayout({ children }) {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$navigation$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Navigation"], {}, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-                    lineNumber: 77,
+                    lineNumber: 76,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -283,28 +284,28 @@ function RootLayout({ children }) {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-                    lineNumber: 78,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Footer"], {}, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-                    lineNumber: 81,
+                    lineNumber: 80,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f40$vercel$2f$analytics$2f$dist$2f$next$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Analytics"], {}, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-                    lineNumber: 82,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-            lineNumber: 76,
+            lineNumber: 75,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-        lineNumber: 75,
+        lineNumber: 74,
         columnNumber: 5
     }, this);
 }

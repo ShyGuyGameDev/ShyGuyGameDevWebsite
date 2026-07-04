@@ -133,7 +133,6 @@
     --spacing: .25rem;
     --container-sm: 24rem;
     --container-lg: 32rem;
-    --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
     --container-4xl: 56rem;
@@ -817,10 +816,6 @@
     margin-block: calc(var(--spacing) * 1);
   }
 
-  .my-4 {
-    margin-block: calc(var(--spacing) * 4);
-  }
-
   .-mt-4 {
     margin-top: calc(var(--spacing) * -4);
   }
@@ -1360,10 +1355,6 @@
 
   .max-w-sm {
     max-width: var(--container-sm);
-  }
-
-  .max-w-xl {
-    max-width: var(--container-xl);
   }
 
   .min-w-\(--cell-size\) {
@@ -4801,12 +4792,6 @@
   @media (min-width: 40rem) {
     .sm\:w-\[170px\] {
       width: 170px;
-    }
-  }
-
-  @media (min-width: 40rem) {
-    .sm\:max-w-2xl {
-      max-width: var(--container-2xl);
     }
   }
 
