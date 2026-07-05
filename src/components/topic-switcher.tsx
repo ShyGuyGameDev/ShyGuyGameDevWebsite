@@ -51,7 +51,7 @@ const TOPIC_CONTENT: Record<string, string[]> = {
   Design: [
     "Design is where ShyGuy's technical skills meet his creative instincts. Whether he is sketching a game level, laying out an app screen, or planning how a city might function a hundred years from now, he thinks about how form, function, and feeling work together.",
     "For example, in the Future City competition, he worked with five teammates to design a sustainable city of the future, write an essay defending its feasibility, and build a physical scale model of its layout. The project pushed him to research real engineering concepts, coordinate across different strengths, and explain complex ideas in a way anyone could understand.",
-    "Design thinking now shows up across everything ShyGuy builds. He cares about how things look, how they flow, and whether the final result actually solves the problem it was meant to — not just whether the code compiles.",
+    // "Design thinking now shows up across everything ShyGuy builds. He cares about how things look, how they flow, and whether the final result actually solves the problem it was meant to — not just whether the code compiles.",
   ],
 }
 
