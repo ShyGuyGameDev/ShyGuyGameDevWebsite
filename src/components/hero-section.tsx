@@ -4,24 +4,6 @@ import { ElementType, useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 
-function ArrowDown({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden
-    >
-      <path d="M12 3v18" />
-      <path d="m19 14-7 7-7-7" />
-    </svg>
-  )
-}
-
 // Shuffle array function
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array]
@@ -38,7 +20,7 @@ const HERO_HEADLINE = "Meet ShyGuy"
 const HERO_DESCRIPTION =
   "Student developer building games, apps, and robotics, speaking at debate tournaments, leading model United Nations conferences, teaching other students, and building his own startup."
 
-const HERO_BUTTON_TEXT = "LEARN MORE"
+const HERO_BUTTON_TEXT = "See My Work"
 
 const HERO_TITLE_SPEED = 55
 const HERO_TITLE_DELAY = 250
@@ -203,24 +185,16 @@ export function HeroSection() {
     return () => observer.disconnect()
   }, [])
 
-  const handleScrollToProjects = () => {
-    const divider = document.getElementById("hero-divider")
-    if (!divider) return
-
-    const header = document.querySelector("header")
-    const headerHeight = header?.getBoundingClientRect().height ?? 0
-    const dividerTop = divider.getBoundingClientRect().top + window.scrollY
-    const target = dividerTop - headerHeight
-
-    window.scrollTo({ top: target, behavior: "smooth" })
-  }
-
   const handleVideoHover = (e: React.MouseEvent<HTMLDivElement>, isHovering: boolean) => {
     if (isHovering) {
       e.currentTarget.classList.add("hovered")
     } else {
       e.currentTarget.classList.remove("hovered")
     }
+  }
+
+  const handleSeeMyWork = () => {
+    router.push("/projects")
   }
 
   const handleVideoClick = () => {
@@ -481,12 +455,10 @@ export function HeroSection() {
 
           <div className="animate-on-scroll animate-delay-300">
             <Button
-              onClick={handleScrollToProjects}
-              className="bg-accent hover:bg-accent/95 active:bg-accent/92 text-accent-foreground font-medium uppercase tracking-wide px-10 py-7 text-base rounded-2xl shadow-lg hover:shadow-2xl active:shadow-md transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 transform inline-flex items-center gap-3"
+              onClick={handleSeeMyWork}
+              className="bg-accent hover:bg-accent/95 active:bg-accent/92 text-accent-foreground font-medium tracking-wide px-10 py-7 text-lg rounded-2xl shadow-lg hover:shadow-2xl active:shadow-md transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 transform inline-flex items-center"
             >
-              <ArrowDown className="size-5 shrink-0" />
               <span className="inline-block">{HERO_BUTTON_TEXT}</span>
-              <ArrowDown className="size-5 shrink-0" />
             </Button>
           </div>
         </div>
