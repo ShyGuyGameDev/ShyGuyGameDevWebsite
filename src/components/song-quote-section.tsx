@@ -675,7 +675,7 @@ export function SongQuoteSection() {
   return (
     <section className="flex flex-col items-center px-6 pt-4 pb-20">
       <div className="max-w-[1100px] w-full mx-auto flex flex-col md:flex-row items-start gap-10 md:gap-12">
-        <h2 className="hero-text md:basis-[20%] md:shrink-0 text-4xl md:text-5xl font-semibold uppercase tracking-tight leading-[1.05] text-left">
+        <h2 className="hero-text md:basis-[20%] md:shrink-0 text-3xl sm:text-4xl md:text-5xl font-semibold uppercase tracking-tight leading-[1.05] text-left">
           <span className="block whitespace-nowrap">Song Quote</span>
           <span className="block whitespace-nowrap">of the Day</span>
         </h2>

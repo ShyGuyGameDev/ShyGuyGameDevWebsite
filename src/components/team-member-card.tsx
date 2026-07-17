@@ -32,11 +32,11 @@ export function TeamMemberCard({ name, role, image, bio, discord, tilt }: TeamMe
       onClick={handleClick}
       aria-pressed={flipped}
       aria-label={`Show ${name}'s bio`}
-      className="group block w-full aspect-square [perspective:1200px] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-2xl transition-transform duration-700 ease-out"
+      className="group block w-full aspect-square [perspective:1200px] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-2xl transition-transform duration-700 ease-out lg:[transform:var(--tilt-transform)]"
       style={{
         transformOrigin: "bottom center",
-        transform: flipped ? "none" : restingTransform,
-      }}
+        "--tilt-transform": flipped ? "none" : restingTransform,
+      } as React.CSSProperties}
     >
       <div
         className="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d]"

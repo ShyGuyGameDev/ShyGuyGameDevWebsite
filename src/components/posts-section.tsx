@@ -215,7 +215,7 @@ export function PostsSection() {
   }, [filteredMediaMentions])
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden min-h-screen py-[100px] pt-[172px] bg-background">
+    <section ref={sectionRef} className="relative overflow-hidden min-h-screen py-[64px] md:py-[100px] pt-[132px] md:pt-[172px] bg-background">
       {/* Abstract gradient background overlay */}
       <div className="absolute inset-0" style={{ zIndex: 1 }}>
         <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-accent/10 blur-3xl" />

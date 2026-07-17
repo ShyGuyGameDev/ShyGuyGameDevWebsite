@@ -48,7 +48,7 @@ export function AchievementsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden py-[100px] bg-background">
+    <section ref={sectionRef} className="relative overflow-hidden py-[64px] md:py-[100px] bg-background">
       <div className="relative z-10 max-w-[1100px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {achievements.map((achievement, index) => (

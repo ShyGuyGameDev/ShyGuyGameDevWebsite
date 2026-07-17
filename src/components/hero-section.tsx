@@ -443,7 +443,7 @@ export function HeroSection() {
           >
             <Typewriter
               as="span"
-              className="block text-5xl md:text-6xl lg:text-[48px] font-semibold mb-4 text-balance"
+              className="block text-4xl sm:text-5xl md:text-6xl lg:text-[48px] font-semibold mb-4 text-balance"
               text={HERO_HEADLINE}
               speed={HERO_TITLE_SPEED}
               startDelay={HERO_TITLE_DELAY}

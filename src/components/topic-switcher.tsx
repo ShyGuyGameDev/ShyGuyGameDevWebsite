@@ -58,15 +58,15 @@ const TOPIC_CONTENT: Record<string, string[]> = {
 function ImageSlot({ src, alt }: { src?: string; alt: string }) {
   if (!src) {
     return (
-      <div className="aspect-[4/3] w-[230px] rounded-xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm">
+      <div className="aspect-[4/3] w-full lg:w-[230px] rounded-xl bg-muted border border-border flex items-center justify-center text-muted-foreground text-sm">
         Image
       </div>
     )
   }
 
   return (
-    <div className="relative aspect-[4/3] w-[230px] overflow-hidden rounded-xl border border-border">
-      <Image src={src} alt={alt} fill sizes="230px" className="object-cover" />
+    <div className="relative aspect-[4/3] w-full lg:w-[230px] overflow-hidden rounded-xl border border-border">
+      <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 230px, 50vw" className="object-cover" />
     </div>
   )
 }
@@ -92,18 +92,18 @@ export function TopicSwitcher({
 
   return (
     <section className="flex flex-col items-center px-6 pt-12 pb-14">
-      <div className="max-w-[1100px] mx-auto flex items-center justify-center gap-6 mb-8">
+      <div className="max-w-[1100px] mx-auto flex items-center justify-center gap-3 md:gap-6 mb-8">
         <Button
           variant="ghost"
           size="icon-lg"
           onClick={prev}
           aria-label="Previous topic"
-          className="group size-14 rounded-full text-accent hover:text-accent hover:bg-accent/10 cursor-pointer"
+          className="group size-12 md:size-14 rounded-full text-accent hover:text-accent hover:bg-accent/10 cursor-pointer"
         >
-          <ChevronLeft className="size-7 transition-transform duration-200 group-hover:scale-150" />
+          <ChevronLeft className="size-6 md:size-7 transition-transform duration-200 group-hover:scale-150" />
         </Button>
 
-        <h2 className="hero-text text-4xl md:text-5xl font-semibold text-center min-w-[10ch]">
+        <h2 className="hero-text text-3xl sm:text-4xl md:text-5xl font-semibold text-center min-w-0 sm:min-w-[10ch]">
           {topic}
         </h2>
 
@@ -112,19 +112,19 @@ export function TopicSwitcher({
           size="icon-lg"
           onClick={next}
           aria-label="Next topic"
-          className="group size-14 rounded-full text-accent hover:text-accent hover:bg-accent/10 cursor-pointer"
+          className="group size-12 md:size-14 rounded-full text-accent hover:text-accent hover:bg-accent/10 cursor-pointer"
         >
-          <ChevronRight className="size-7 transition-transform duration-200 group-hover:scale-150" />
+          <ChevronRight className="size-6 md:size-7 transition-transform duration-200 group-hover:scale-150" />
         </Button>
       </div>
 
-      <div className="flex items-stretch justify-center gap-10 max-w-[1200px] w-full">
-        <div className="flex flex-col gap-6">
+      <div className="flex flex-col lg:flex-row items-stretch justify-center gap-6 lg:gap-10 max-w-[1200px] w-full">
+        <div className="order-2 lg:order-1 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:gap-6">
           <ImageSlot src={slots[0]} alt={`${topic} image 1`} />
           <ImageSlot src={slots[1]} alt={`${topic} image 2`} />
         </div>
 
-        <div className="flex-1 max-w-[560px] text-center flex flex-col justify-start gap-3">
+        <div className="order-1 lg:order-2 flex-1 w-full max-w-[560px] mx-auto lg:mx-0 text-center flex flex-col justify-start gap-3">
           {paragraphs.map((paragraph, i) => (
             <p
               key={i}
@@ -135,7 +135,7 @@ export function TopicSwitcher({
           ))}
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="order-3 grid grid-cols-2 gap-4 lg:flex lg:flex-col lg:gap-6">
           <ImageSlot src={slots[2]} alt={`${topic} image 3`} />
           <ImageSlot src={slots[3]} alt={`${topic} image 4`} />
         </div>
