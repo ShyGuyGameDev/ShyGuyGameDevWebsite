@@ -4,7 +4,8 @@ import { Fragment, useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { PostCard } from "@/components/post-card"
 import { SearchFilterBar } from "@/components/search-filter-bar"
-import { compareByPostTagThenDateThenTitle, getNodeText, matchesSearch, POST_TAG_ORDER } from "@/lib/utils"
+import { useHashScroll } from "@/hooks/use-hash-scroll"
+import { compareByPostTagThenDateThenTitle, getNodeText, matchesSearch, POST_TAG_ORDER, tagToSlug } from "@/lib/utils"
 
 interface MediaMention {
   title: string
@@ -175,6 +176,7 @@ export function PostsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedTopics, setSelectedTopics] = useState<string[]>([])
+  useHashScroll()
 
   const filteredMediaMentions = useMemo(() => {
     return sortedMediaMentions.filter((mention) => {
@@ -264,7 +266,8 @@ export function PostsSection() {
                 <Fragment key={mention.title}>
                   {tagBreak ? (
                     <div
-                      className={`col-span-full flex items-center gap-4 mb-4 ${index === 0 ? "mt-0" : "mt-4"}`}
+                      id={tagToSlug(mention.tag ?? "Other")}
+                      className={`col-span-full scroll-mt-24 flex items-center gap-4 mb-4 ${index === 0 ? "mt-0" : "mt-4"}`}
                     >
                       <hr className="flex-1 border-0 border-t-2 border-border" />
                       <span className="shrink-0 text-sm font-semibold text-primary">

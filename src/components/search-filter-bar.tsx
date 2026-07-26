@@ -65,15 +65,23 @@ export function SearchFilterBar({
             <ChevronDown className="size-4 opacity-50" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-48">
+        <DropdownMenuContent
+          align="end"
+          className="w-[var(--radix-dropdown-menu-trigger-width)]"
+        >
           {topics.map((topic) => (
             <DropdownMenuCheckboxItem
               key={topic}
               checked={selectedTopics.includes(topic)}
               onCheckedChange={(checked) => toggleTopic(topic, checked === true)}
               onSelect={(event) => event.preventDefault()}
+              className={cn(
+                "cursor-pointer rounded-full py-2 pl-3 pr-9",
+                // Move the check indicator from the default left gutter to the right edge.
+                "[&>span:first-child]:left-auto [&>span:first-child]:right-3",
+              )}
             >
-              {topic}
+              <span className="truncate">{topic}</span>
             </DropdownMenuCheckboxItem>
           ))}
         </DropdownMenuContent>

@@ -4,7 +4,8 @@ import { Fragment, useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
 import { ProjectCard } from "@/components/project-card"
 import { SearchFilterBar } from "@/components/search-filter-bar"
-import { compareByProjectTagThenDateThenTitle, getNodeText, matchesSearch, PROJECT_TAG_ORDER } from "@/lib/utils"
+import { useHashScroll } from "@/hooks/use-hash-scroll"
+import { compareByProjectTagThenDateThenTitle, getNodeText, matchesSearch, PROJECT_TAG_ORDER, tagToSlug } from "@/lib/utils"
 
 const completedProjects = [
   {
@@ -489,6 +490,7 @@ export function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedTopics, setSelectedTopics] = useState<string[]>([])
+  useHashScroll()
 
   const filteredProjects = useMemo(() => {
     return sortedProjects.filter((project) => {
@@ -572,7 +574,8 @@ export function ProjectsSection() {
                   <Fragment key={project.title}>
                     {tagBreak ? (
                       <div
-                        className={`col-span-full flex items-center gap-4 mb-4 ${index === 0 ? "mt-0" : "mt-4"}`}
+                        id={tagToSlug(project.tag ?? "Other")}
+                        className={`col-span-full scroll-mt-24 flex items-center gap-4 mb-4 ${index === 0 ? "mt-0" : "mt-4"}`}
                       >
                         <hr className="flex-1 border-0 border-t-2 border-border" />
                         <span className="shrink-0 text-sm font-semibold text-primary">

@@ -24,7 +24,9 @@ __turbopack_context__.s([
     "getYearFromDate",
     ()=>getYearFromDate,
     "matchesSearch",
-    ()=>matchesSearch
+    ()=>matchesSearch,
+    "tagToSlug",
+    ()=>tagToSlug
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/clsx/dist/clsx.mjs [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/tailwind-merge/dist/bundle-mjs.mjs [app-rsc] (ecmascript)");
@@ -63,6 +65,9 @@ const POST_TAG_ORDER = [
     'Media Mention',
     'Post'
 ];
+function tagToSlug(tag) {
+    return tag.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
 function compareTags(aTag, bTag, tagOrder) {
     const a = aTag ?? '';
     const b = bTag ?? '';

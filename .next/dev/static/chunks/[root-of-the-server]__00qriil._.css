@@ -1350,10 +1350,6 @@
     width: calc(var(--spacing) * 32);
   }
 
-  .w-48 {
-    width: calc(var(--spacing) * 48);
-  }
-
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
@@ -1380,6 +1376,10 @@
 
   .w-\[1200px\] {
     width: 1200px;
+  }
+
+  .w-\[var\(--radix-dropdown-menu-trigger-width\)\] {
+    width: var(--radix-dropdown-menu-trigger-width);
   }
 
   .w-auto {
@@ -1464,6 +1464,10 @@
 
   .min-w-10 {
     min-width: calc(var(--spacing) * 10);
+  }
+
+  .min-w-56 {
+    min-width: calc(var(--spacing) * 56);
   }
 
   .min-w-\[8rem\] {
@@ -1582,6 +1586,10 @@
     rotate: 90deg;
   }
 
+  .rotate-180 {
+    rotate: 180deg;
+  }
+
   .\[transform\:rotateY\(180deg\)\] {
     transform: rotateY(180deg);
   }
@@ -1636,6 +1644,10 @@
 
   .scroll-mt-20 {
     scroll-margin-top: calc(var(--spacing) * 20);
+  }
+
+  .scroll-mt-24 {
+    scroll-margin-top: calc(var(--spacing) * 24);
   }
 
   .scroll-py-1 {
@@ -6021,6 +6033,14 @@
 
   .\[\&\>span\]\:opacity-70 > span {
     opacity: .7;
+  }
+
+  .\[\&\>span\:first-child\]\:right-3 > span:first-child {
+    right: calc(var(--spacing) * 3);
+  }
+
+  .\[\&\>span\:first-child\]\:left-auto > span:first-child {
+    left: auto;
   }
 
   .\[\&\>span\:last-child\]\:truncate > span:last-child {
