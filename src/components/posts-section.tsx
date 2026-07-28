@@ -168,6 +168,19 @@ const mediaMentions: MediaMention[] = [
       </>
     ),
   },
+  {
+    title: "Intro to Spatial Intelligence",
+    date: "July 2026",
+    url: "https://shyguygamedev.substack.com/p/intro-to-spatial-intelligence?r=6434dw&utm_campaign=post-expanded-share&utm_medium=web&triedRedirect=true",
+    tag: "Post",
+    themes: ["AI", "Future", "Introduction", "Spatial Intelligence"],
+    image: "/Screenshot 2026-07-28 at 7.00.03 PM.png",
+    description: (
+      <>
+        AI&apos;s next frontier isn&apos;t just seeing and talking, it&apos;s doing. In this post, ShyGuy introduces spatial intelligence, the field built around teaching AI to understand the 3D world and how the objects within it relate, behave, and change. He breaks the frontier into its two sides, interpretive and generative, covers the tech giants and startups racing to lead it, shares the lessons learned from early world models like Oasis, and explains why the challenge ahead is no longer possibility, but purpose.
+      </>
+    ),
+  },
 ]
 
 const sortedMediaMentions = [...mediaMentions].sort(compareByPostTagThenDateThenTitle)
