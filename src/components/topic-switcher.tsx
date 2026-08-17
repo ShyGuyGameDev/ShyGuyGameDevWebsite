@@ -45,8 +45,8 @@ const TOPIC_CONTENT: Record<string, string[]> = {
     "Even though he started this format in 2026, ShyGuy quickly improved, winning his first novice tournament, the Georginia Hays Tournament, after only a few months. Now that he has moved past novice, ShyGuy is competing in the open division, and will continue to improve his speaking and debating skills throughout high school.",
   ],
   Teaching: [
-    "Throughout ShyGuy's life, he has learned to appreciate the mentors he has, as they are the only way he has been able to become who he is. Wanting to fill that space for others like him, ShyGuy has started teaching whenever possible, always doing his best to support other curious students.",
-    "ShyGuy's first experience teaching was in 2026, where he was asked to speak at a session of Cumberland Elementary's after-school robotics program. Here, he spoke about his experience experimenting with the idea of a robotic dog paired with computer vision during a recent project, the best way to tackle new problems, and how to communicate complex robotic ideas to non-technical audiences."
+    "Throughout his life, ShyGuy has learned from many mentors, each being a valuable part of his journey. Wanting to fill that space for others like him, ShyGuy has started teaching whenever possible, always doing his best to support other curious students.",
+    "ShyGuy's first experience teaching was in 2026, where he was asked to speak at a session of Cumberland Elementary's after-school robotics program. Here, he spoke about experimenting with the idea of a robotic dog paired with computer vision during a recent project, the best way to tackle new problems, and how to communicate complex robotic ideas to non-technical audiences."
   ],
   Design: [
     "Design is where ShyGuy's technical skills meet his creative instincts. Whether he is sketching a game level, laying out an app screen, or planning how a city might function a hundred years from now, he thinks about how form, function, and feeling work together.",

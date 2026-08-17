@@ -132,13 +132,13 @@ const completedProjects = [
     // video: "/Clips/OpenStage.mp4",
   },
   {
-   title: "First Tech Challenge",
+   title: "FTC Competition",
    url: "https://www.firstinspires.org/programs/ftc/",
    date: "February 2025",
    tag: "Robotics",
    description: (
      <>
-	ShyGuy’s first time leading a large team was through his school’s competitive robotics program. On the team he joined, he quickly took a leadership role and learned many useful life skills like how to work on a team with varying engagement levels, how to deal with unexpected failures, and how to efficiently use limited resources.
+	ShyGuy’s first time leading a large team was through his school’s competitive robotics program called the First Tech Challenge. On the team he joined, he quickly took a leadership role and learned many useful life skills like how to work on a team with varying engagement levels, how to deal with unexpected failures, and how to efficiently use limited resources.
      </>
    ),
    learnings: [
@@ -183,7 +183,7 @@ const completedProjects = [
         >
           YOLO11n
         </a>
-        , a computer vision program able to distinguish objects and recognize what they are, into his project to create a robotic “dog” capable of moving towards a specified object whenever it sees it.
+        , a computer vision program able to distinguish objects and recognize what they are, into his project to create a robotic “dog” capable of moving towards a specified object.
       </>
     ),
     learnings: [
@@ -427,7 +427,7 @@ const completedProjects = [
     tag: "Robotics",
     description: (
       <>
-        In April of 2026, ShyGuy built his first computer vision robotic “dog”, which was capable of seeing a specific object, identifying it, and moving towards it. Here, he wanted to build on that idea, this time with help. By learning through the{" "}
+        In April of 2026, ShyGuy built his first computer vision robotic “dog,” which was capable of seeing a specific object, identifying it, and moving towards it. Here, he wanted to build on that idea, this time with help. By learning through the{" "}
         <a
           href="https://evodynerobotics.com/courses/evodog-learn-and-build-a-programmable-robotic-dog/"
           target="_blank"

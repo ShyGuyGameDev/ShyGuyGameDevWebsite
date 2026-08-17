@@ -3,7 +3,7 @@ import path from "path"
 import { HeroSection } from "@/components/hero-section"
 import { AchievementsSection } from "@/components/achievements-section"
 import { TopicSwitcher } from "@/components/topic-switcher"
-import { SongQuoteSection } from "@/components/song-quote-section"
+// import { SongQuoteSection } from "@/components/song-quote-section"
 
 const IMAGE_EXTENSIONS = /\.(png|jpe?g|gif|webp|avif|svg)$/i
 
@@ -43,8 +43,8 @@ export default function Home() {
       <AchievementsSection />
       <hr className="max-w-[1100px] mx-auto border-t-2 border-border" />
       <TopicSwitcher topicImages={topicImages} />
-      <hr className="max-w-[1100px] mx-auto border-t-2 border-border" />
-      <SongQuoteSection />
+      {/* <hr className="max-w-[1100px] mx-auto border-t-2 border-border" />
+      <SongQuoteSection /> */}
     </>
   )
 }
