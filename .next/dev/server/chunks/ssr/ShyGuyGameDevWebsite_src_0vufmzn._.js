@@ -193,8 +193,37 @@ __turbopack_context__.s([
     ()=>NotFound
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
+/**
+ * src/app/not-found.tsx  —  the 404 PAGE
+ *
+ * WHAT THIS FILE IS
+ * `not-found.tsx` is another reserved App Router filename. Unlike `page.tsx` it is not tied to a URL you
+ * can type; Next.js renders it automatically as the fallback UI when no route matches, and also when
+ * server code explicitly calls the `notFound()` function from `next/navigation`. Placed here in
+ * `src/app`, it is the catch-all 404 for the whole site.
+ *
+ * WHEN NEXT.JS RENDERS IT
+ * Any time a visitor lands on a URL that does not exist, such as `/projcts` (a typo) or an old link that
+ * has been removed. Next.js also sends the correct HTTP 404 status code alongside it, which matters so
+ * search engines do not index the mistyped URL as a real page.
+ *
+ * CONCEPTS TO NOTICE
+ * 1. Still a **Server Component** (no `"use client"` directive), so it renders to static HTML. Nothing
+ *    on this page needs browser state — it is just text and one link.
+ * 2. `next/link` versus a plain `<a>`: `<Link>` performs a *client-side* navigation, swapping the page
+ *    content in React without a full browser reload, and prefetches the destination when the link
+ *    scrolls into view. That is why internal links on the site should always use `<Link>`.
+ * 3. The `asChild` prop on `<Button>` (see below) is a composition trick worth understanding.
+ * 4. WORTH KNOWING: this file renders `<Navigation />`, `<main>`, and `<Footer />` itself, but the root
+ *    layout in `src/app/layout.tsx` already wraps everything in those. That means the 404 page ends up
+ *    with two navigation bars, two footers, and nested `<main>` elements. It is left as-is here, but it
+ *    is the kind of duplication worth looking at.
+ */ // The Next.js link component for internal navigation (see concept 2 above).
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/dist/client/app-dir/link.react-server.js [app-rsc] (ecmascript)");
+// A reusable styled button from the local UI kit (this project uses shadcn/ui-style components that
+// live in the repo rather than in `node_modules`, so you can read and edit them).
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/src/components/ui/button.tsx [app-rsc] (ecmascript)");
+// The shared navigation bar and footer components.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$navigation$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/src/components/footer.tsx [app-rsc] (ecmascript)");
 ;
@@ -203,12 +232,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$
 ;
 ;
 function NotFound() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+    return(// `min-h-screen` makes this fill at least the full viewport height so the footer sits at the bottom
+    // even though there is very little content; `bg-background` is the theme background color variable.
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "min-h-screen bg-background",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$navigation$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Navigation"], {}, void 0, false, {
                 fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                lineNumber: 9,
+                lineNumber: 43,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -221,7 +252,7 @@ function NotFound() {
                             children: "404"
                         }, void 0, false, {
                             fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                            lineNumber: 12,
+                            lineNumber: 55,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -229,7 +260,7 @@ function NotFound() {
                             children: "Page Not Found"
                         }, void 0, false, {
                             fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                            lineNumber: 13,
+                            lineNumber: 57,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -237,7 +268,7 @@ function NotFound() {
                             children: "The page you're looking for doesn't exist or has been moved."
                         }, void 0, false, {
                             fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                            lineNumber: 14,
+                            lineNumber: 60,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
@@ -248,36 +279,36 @@ function NotFound() {
                                 children: "Return Home"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                                lineNumber: 18,
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                            lineNumber: 17,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                    lineNumber: 11,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                lineNumber: 10,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Footer"], {}, void 0, false, {
                 fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-                lineNumber: 22,
+                lineNumber: 76,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx",
-        lineNumber: 8,
+        lineNumber: 42,
         columnNumber: 5
-    }, this);
+    }, this));
 }
 }),
 "[project]/ShyGuyGameDevWebsite/src/app/not-found.tsx [app-rsc] (ecmascript, Next.js Server Component)", ((__turbopack_context__) => {

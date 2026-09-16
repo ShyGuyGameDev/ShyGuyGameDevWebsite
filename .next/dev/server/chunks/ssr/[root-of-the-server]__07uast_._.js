@@ -71,13 +71,43 @@ __turbopack_context__.s([
     ()=>Footer
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
+/**
+ * footer.tsx
+ *
+ * The dark bar at the very bottom of every page. It shows the Empty Console logo next to
+ * the "ShyGuy" handle on the left, and two contact details on the right: the email address
+ * shyguygamedev@gmail.com (a real clickable mail link) and the Discord handle shyguygamedev
+ * (plain text, since Discord usernames are not links).
+ *
+ * This component is rendered once per page, usually as the last child of the page layout.
+ *
+ * Concepts to notice:
+ *  - There is no `"use client"` at the top. Nothing here uses state, effects, or event
+ *    handlers, so it stays a Server Component: Next.js renders it to HTML on the server
+ *    and ships zero JavaScript for it. Keeping components server-side when possible is
+ *    what makes a Next.js site fast.
+ *  - `next/image` and its `unoptimized` prop.
+ *  - JSX comments, which must be wrapped in braces and slash-star when they sit among JSX
+ *    children, because bare double-slash comments would be rendered as literal text.
+ *  - Accessibility: `aria-hidden="true"` on purely decorative icons, and `focus-visible`
+ *    styles so keyboard users can see where they are.
+ *  - Tailwind's responsive prefixes (`md:`, `sm:`) which apply a style only at or above a
+ *    given screen width, which is how this footer restacks itself on phones.
+ */ // `lucide-react` is an icon library. Each icon is just a React component that renders an
+// <svg>, so it inherits text colour and can be sized with Tailwind height/width classes.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/lucide-react/dist/esm/icons/mail.js [app-rsc] (ecmascript) <export default as Mail>");
+// Next.js's own image component. It renders an <img> but adds automatic sizing, lazy
+// loading, and (normally) on-the-fly resizing/format conversion of the source file.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/image.js [app-rsc] (ecmascript)");
 ;
 ;
 ;
 function Footer() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
+    return(// The semantic <footer> element tells screen readers and search engines this is
+    // page-footer content. `py-12` is vertical padding; `bg-primary`/`text-primary-foreground`
+    // are theme colour tokens defined in the project's Tailwind/CSS variables, so the footer
+    // automatically flips colours in dark mode instead of hard-coding black and white.
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
         className: "py-12 bg-primary text-primary-foreground",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-[1100px] mx-auto px-6",
@@ -96,7 +126,7 @@ function Footer() {
                                 unoptimized: true
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                lineNumber: 11,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -104,13 +134,13 @@ function Footer() {
                                 children: "ShyGuy"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                lineNumber: 19,
+                                lineNumber: 70,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                        lineNumber: 10,
+                        lineNumber: 53,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -125,20 +155,20 @@ function Footer() {
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                        lineNumber: 27,
+                                        lineNumber: 89,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "shyguygamedev@gmail.com"
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                        lineNumber: 28,
+                                        lineNumber: 90,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                lineNumber: 23,
+                                lineNumber: 82,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -153,54 +183,80 @@ function Footer() {
                                             d: "M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"
                                         }, void 0, false, {
                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                            lineNumber: 33,
+                                            lineNumber: 104,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                        lineNumber: 32,
+                                        lineNumber: 103,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "shyguygamedev"
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                        lineNumber: 35,
+                                        lineNumber: 107,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                                lineNumber: 31,
+                                lineNumber: 95,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                        lineNumber: 22,
+                        lineNumber: 75,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-                lineNumber: 8,
+                lineNumber: 47,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-            lineNumber: 7,
+            lineNumber: 43,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/ShyGuyGameDevWebsite/src/components/footer.tsx",
-        lineNumber: 6,
+        lineNumber: 40,
         columnNumber: 5
-    }, this);
+    }, this));
 }
 }),
 "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+/**
+ * src/app/layout.tsx  —  the ROOT LAYOUT
+ *
+ * WHAT THIS FILE IS
+ * `layout.tsx` is a reserved filename in the Next.js App Router. A layout wraps every page beneath it in
+ * the folder tree. Because this one sits directly in `src/app`, it wraps *every* page on the site, and as
+ * the root layout it is the one place allowed (and required) to render the `<html>` and `<body>` tags.
+ *
+ * WHEN NEXT.JS RENDERS IT
+ * On every request/render for every route. Next.js renders this component and passes the matching page
+ * (for example `src/app/projects/page.tsx`) in as the `children` prop. A key benefit: when you navigate
+ * from `/` to `/projects`, React swaps only the `children` — the layout itself does not re-mount, so the
+ * navigation bar keeps its state and does not flicker.
+ *
+ * CONCEPTS TO NOTICE
+ * 1. Server Component by default. There is no `"use client"` directive at the top of this file, so this
+ *    code runs on the server. That is what lets it read `process.env` values (see `getSiteUrl` below)
+ *    without leaking server secrets into the browser bundle. A file that *does* start with `"use client"`
+ *    is instead sent to the browser so it can use `useState`, event handlers, and other browser APIs.
+ * 2. The `metadata` export. Instead of hand-writing `<title>` and `<meta>` tags, you export a plain
+ *    object and Next.js turns it into the correct `<head>` tags for you.
+ * 3. `next/font` (`Inter` below) self-hosts the Google font at build time — no runtime request to Google,
+ *    which is faster and better for privacy.
+ * 4. Composition: `<Navigation />`, `{children}`, `<Footer />` is the shared page skeleton for the site.
+ */ // `import type` tells TypeScript "I only need this for type checking". The compiler erases these imports
+// entirely, so they add nothing to the shipped JavaScript. `React.ReactNode` is used in the props type.
 __turbopack_context__.s([
     "default",
     ()=>RootLayout,
@@ -209,7 +265,10 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$inter_5901b7c6$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[next]/internal/font/google/inter_5901b7c6.js [app-rsc] (ecmascript)");
+// Vercel Analytics: a tiny script that records anonymous page-view counts when the site is deployed
+// on Vercel. The `/next` entry point is the version built specifically for Next.js.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f40$vercel$2f$analytics$2f$dist$2f$next$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/@vercel/analytics/dist/next/index.mjs [app-rsc] (ecmascript)");
+// The site-wide navigation bar and footer. `@/` is a path alias for `src/`, configured in `tsconfig.json`.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$navigation$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/src/components/footer.tsx [app-rsc] (ecmascript)");
 ;
@@ -218,56 +277,108 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$
 ;
 ;
 ;
+// The deployed URL of the site, used as the last-resort fallback when no environment variable is set.
 const PRODUCTION_SITE_URL = "https://shy-guy-game-dev-website.vercel.app";
+// Work out the absolute base URL of the site. This matters because social-sharing previews need
+// *absolute* URLs — Discord, Twitter/X, and iMessage cannot resolve a relative path like `/logo.png`.
+// The checks are ordered most-specific-first, so an explicit setting always wins.
 function getSiteUrl() {
+    // Environment variables are values supplied from outside the code (a `.env.local` file locally, or the
+    // project settings on Vercel). Any variable whose name starts with `NEXT_PUBLIC_` is intentionally
+    // exposed to the browser too; all others are server-only. So this is the manual override you can set.
     if (process.env.NEXT_PUBLIC_SITE_URL) {
+        // Strip a trailing slash so later string concatenation cannot produce a double slash (`site.com//x`).
+        // In the regex `/\/$/`, the `\/` is an escaped forward slash and `$` anchors it to the end of string.
         return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
     }
+    // Vercel automatically injects this one: the stable production domain of the project. Preferring it
+    // means preview deployments still advertise the real production URL in their metadata.
     if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+        // These values arrive without a protocol (just `example.com`), so prefix `https://` by hand.
+        // Backticks make a template literal, where `${...}` splices a value into the string.
         return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
     }
+    // Also injected by Vercel: the URL of *this specific deployment*, including preview deployments.
     if (process.env.VERCEL_URL) {
         return `https://${process.env.VERCEL_URL}`;
     }
+    // Nothing was configured (for example when running `npm run dev` with no `.env.local`), so fall back
+    // to the hard-coded production URL declared above.
     return PRODUCTION_SITE_URL;
 }
+// Run the lookup once when the module first loads, rather than on every request.
 const siteUrl = getSiteUrl();
+// The absolute URL of the image used in link previews. It lives at `public/shyguy-gamedev-logo.png`;
+// anything inside `public/` is served from the site root, so the file path maps to this URL path.
 const ogImage = `${siteUrl}/shyguy-gamedev-logo.png`;
+// One shared description string, reused for the plain `<meta name="description">`, the Open Graph
+// description, and the Twitter description below. Defining it once keeps the three copies in sync.
 const siteDescription = "Student developer building games, apps, and robotics, speaking at debate tournaments, leading model United Nations conferences, teaching other students, and building his own startup.";
 const metadata = {
+    // `metadataBase` is the base URL Next.js uses to turn any *relative* metadata path into an absolute
+    // one. Without it, Next.js warns during the build and social crawlers may fail to load the preview
+    // image. `new URL(...)` is the built-in browser/Node class for parsing a URL string.
     metadataBase: new URL(siteUrl),
+    // The browser tab title, and the default title for search results.
     title: "ShyGuy",
+    // The one- or two-sentence summary search engines show under the title.
     description: siteDescription,
+    // Favicons. All three point at the same logo file: `icon` is the browser tab icon, `shortcut` is the
+    // legacy `.ico`-style hint for older browsers, and `apple` is the icon iOS uses when someone adds the
+    // site to their home screen. These paths are relative to `public/`.
     icons: {
         icon: "/shyguy-gamedev-logo.png",
         shortcut: "/shyguy-gamedev-logo.png",
         apple: "/shyguy-gamedev-logo.png"
     },
+    // OPEN GRAPH: the shared standard (originally from Facebook) that decides what a link to this site
+    // looks like when pasted into Discord, Slack, iMessage, LinkedIn, and so on — the little card with a
+    // title, blurb, and thumbnail. Each key here becomes an `<meta property="og:...">` tag.
     openGraph: {
+        // `og:type` describes the kind of content. "website" is right for a portfolio; a blog post would
+        // use "article" instead.
         type: "website",
+        // The name of the overall site, which chat apps often show above or beside the card title.
         siteName: "ShyGuy",
+        // The headline and blurb shown on the preview card.
         title: "ShyGuy",
         description: siteDescription,
+        // The preview thumbnail(s). This is an array because you are allowed to offer several images and
+        // let the crawler pick; here there is just one.
         images: [
             {
+                // Must be an absolute URL, which is exactly why `ogImage` was built from `siteUrl` above.
                 url: ogImage,
+                // Telling crawlers the exact pixel dimensions up front lets them lay out the card without
+                // downloading the image first. 576x576 is square, so most apps render a small square thumbnail.
                 width: 576,
                 height: 576,
+                // Alt text, used by screen readers and shown if the image fails to load.
                 alt: "ShyGuy Game Dev logo"
             }
         ]
     },
+    // TWITTER CARDS: Twitter/X's own variant of the same idea. It falls back to the Open Graph tags when
+    // these are missing, but specifying them lets you control the card layout explicitly.
     twitter: {
+        // "summary_large_image" requests the big banner-style card instead of the small thumbnail one.
+        // Worth knowing: a large-image card is designed for a wide (roughly 2:1) picture, while the logo
+        // referenced below is square, so X may crop or letterbox it.
         card: "summary_large_image",
         title: "ShyGuy",
         description: siteDescription,
+        // The Twitter variant takes a simple array of URL strings rather than objects.
         images: [
             ogImage
         ]
     }
 };
 function RootLayout({ children }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
+    return(// The root layout is the only file that renders `<html>` and `<body>`. `lang="en"` tells browsers,
+    // screen readers, and translation tools the page is in English. Tailwind's `scroll-smooth` sets
+    // `scroll-behavior: smooth`, so jumping to an anchor such as `#hero-divider` animates instead of
+    // snapping instantly.
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
         lang: "en",
         className: "scroll-smooth",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -276,7 +387,7 @@ function RootLayout({ children }) {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$navigation$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Navigation"], {}, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-                    lineNumber: 76,
+                    lineNumber: 191,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -284,30 +395,30 @@ function RootLayout({ children }) {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-                    lineNumber: 77,
+                    lineNumber: 195,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Footer"], {}, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-                    lineNumber: 80,
+                    lineNumber: 200,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f40$vercel$2f$analytics$2f$dist$2f$next$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Analytics"], {}, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-                    lineNumber: 81,
+                    lineNumber: 202,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-            lineNumber: 75,
+            lineNumber: 189,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx",
-        lineNumber: 74,
+        lineNumber: 178,
         columnNumber: 5
-    }, this);
+    }, this));
 }
 }),
 "[project]/ShyGuyGameDevWebsite/src/app/layout.tsx [app-rsc] (ecmascript, Next.js Server Component)", ((__turbopack_context__) => {

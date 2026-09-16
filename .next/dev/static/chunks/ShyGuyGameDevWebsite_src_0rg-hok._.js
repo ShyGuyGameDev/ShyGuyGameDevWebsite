@@ -202,17 +202,49 @@ __turbopack_context__.s([
     ()=>Navigation
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+// `type MouseEvent` imports only a type. React's MouseEvent is its own synthetic-event type, distinct
+// from the browser's global MouseEvent, and the `type` keyword makes clear nothing is imported at
+// runtime — it disappears when TypeScript compiles.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+// usePathname returns the current URL path, e.g. "/projects".
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/navigation.js [app-client] (ecmascript)");
+// next/link renders an <a> but intercepts the click to do a fast client-side navigation, keeping React
+// state alive and prefetching the target page. A plain <a href> would reload the whole document.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+// lucide-react provides icons as React components: the dropdown chevron, and the hamburger/close icons.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/lucide-react/dist/esm/icons/chevron-down.js [app-client] (ecmascript) <export default as ChevronDown>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/lucide-react/dist/esm/icons/menu.js [app-client] (ecmascript) <export default as Menu>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/src/components/ui/button.tsx [app-client] (ecmascript)");
+// next/image optimises images (sizing, modern formats, lazy loading) instead of a raw <img>.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/next/image.js [app-client] (ecmascript)");
+// The single source of truth for section names, shared with the Projects and Posts pages. Because both
+// the pages and this menu read the same lists, the anchors can never drift out of sync.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/src/lib/utils.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+/**
+ * Navigation — the site-wide header bar, fixed to the top of every page (it is rendered once in the
+ * root layout, so it appears above the content on the home page, /projects, /posts and /team).
+ *
+ * What it renders:
+ *  - the "ShyGuy" logo on the left, which always links back to the home page,
+ *  - on desktop, a row of top-level links; Projects and Posts each open a hover dropdown listing the
+ *    sections on that page, built from the shared tag lists in src/lib/utils.ts,
+ *  - on mobile, a hamburger button that toggles a stacked version of the same links, with each page's
+ *    sections indented underneath it.
+ *
+ * Concepts a learner should notice in this file:
+ *  - useState for the three independent pieces of UI state (mobile menu, scrolled flag, open dropdown),
+ *  - useEffect with cleanup for the scroll and keyboard listeners, plus one effect that watches
+ *    `pathname` so the menus close automatically after navigating,
+ *  - useRef used here NOT for a DOM node but to remember a timeout id across renders,
+ *  - usePathname to know which page is currently showing, so the active link can be highlighted,
+ *  - next/link, which navigates without a full page reload,
+ *  - deriving the nav from data (the navLinks array) instead of hard-coding each <li>,
+ *  - accessibility attributes: aria-haspopup, aria-expanded, aria-hidden, aria-label, role="menu"
+ *    and role="menuitem", which tell screen readers this is a menu and whether it is open.
+ */ // Required because this component uses state, effects and browser APIs, so it must run in the browser.
 "use client";
 ;
 ;
@@ -221,6 +253,8 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+// The nav is described as data and rendered with .map below, so adding a page means adding one line
+// here. Only entries with `sections` get a dropdown.
 const navLinks = [
     {
         href: "/",
@@ -241,29 +275,52 @@ const navLinks = [
         label: "Empty Console"
     }
 ];
+// A helper that builds the class string for a top-level link. Sharing it means every link stays
+// visually consistent, and the active one is highlighted in the accent colour.
+// focus-visible:ring-* draws a focus ring only for keyboard users (not on mouse clicks), which is why
+// removing the browser default with focus:outline-none is acceptable here.
+// The negative margins (-mx-1, -my-4) paired with padding enlarge the clickable/hover area without
+// pushing the neighbouring links apart.
 const linkClassName = (isActive)=>`text-sm font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-md px-3 -mx-1 -my-4 py-4 h-full block ${isActive ? "text-accent" : "text-secondary hover:bg-gray-200 dark:hover:bg-gray-800"}`;
 function Navigation() {
     _s();
+    // Is the mobile hamburger menu expanded?
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    // Has the user scrolled down at all? Used only to swap the header's shadow.
     const [isScrolled, setIsScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    // Which dropdown is open, stored as the href of its top-level link, or null for "none". Storing the
+    // href rather than a boolean per menu means one piece of state can never show two menus at once.
+    // The <string | null> type argument is needed because React cannot infer it from the initial null.
     const [openMenu, setOpenMenu] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    // A ref used as a plain instance variable, not for a DOM node: it remembers the pending "close the
+    // dropdown" timeout so a later mouse-enter can cancel it. State would be wrong here, because storing
+    // a timer id should never trigger a re-render.
     const closeTimer = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    // The current path, so the matching link can be highlighted and same-page clicks handled specially.
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
+    // Effect: keep isScrolled in sync with the scroll position.
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navigation.useEffect": ()=>{
             const handleScroll = {
                 "Navigation.useEffect.handleScroll": ()=>{
+                    // window.scrollY is the pixels scrolled from the top; > 10 avoids flickering on tiny scrolls.
+                    // Passing the same boolean again is cheap: React skips the re-render if the value is unchanged.
                     setIsScrolled(window.scrollY > 10);
                 }
             }["Navigation.useEffect.handleScroll"];
             window.addEventListener("scroll", handleScroll);
+            // Cleanup: without removing the listener, every remount would add another one.
             return ({
                 "Navigation.useEffect": ()=>{
                     window.removeEventListener("scroll", handleScroll);
                 }
             })["Navigation.useEffect"];
+        // Runs once on mount, because the dependency array is empty.
         }
     }["Navigation.useEffect"], []);
+    // Effect: close both menus whenever the URL path changes. Listing `pathname` as the dependency is
+    // what makes this happen — the effect re-runs after each navigation. Without it, the mobile menu
+    // would stay open covering the new page.
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navigation.useEffect": ()=>{
             setIsOpen(false);
@@ -272,10 +329,12 @@ function Navigation() {
     }["Navigation.useEffect"], [
         pathname
     ]);
+    // Effect: let the Escape key close an open dropdown, which keyboard users expect.
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navigation.useEffect": ()=>{
             const handleKeyDown = {
                 "Navigation.useEffect.handleKeyDown": (event)=>{
+                    // event.key is the name of the key pressed, e.g. "Escape", "Enter", "a".
                     if (event.key === "Escape") {
                         setOpenMenu(null);
                     }
@@ -287,6 +346,8 @@ function Navigation() {
             })["Navigation.useEffect"];
         }
     }["Navigation.useEffect"], []);
+    // Effect: this one exists *only* for its cleanup. It sets nothing up on mount; on unmount it cancels
+    // any pending close timer, so a timeout cannot fire and call setOpenMenu on a component that is gone.
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "Navigation.useEffect": ()=>{
             return ({
@@ -296,42 +357,67 @@ function Navigation() {
             })["Navigation.useEffect"];
         }
     }["Navigation.useEffect"], []);
+    // Cancel a scheduled close and forget the id. Resetting to null keeps the ref honest, so later checks
+    // of closeTimer.current are not looking at a stale, already-fired timer.
     const clearCloseTimer = ()=>{
         if (closeTimer.current) {
             clearTimeout(closeTimer.current);
             closeTimer.current = null;
         }
     };
+    // Mouse entered a menu area: cancel any pending close first (the pointer may have re-entered during
+    // the grace period), then open this menu.
     const handleMenuEnter = (href)=>{
         clearCloseTimer();
         setOpenMenu(href);
     };
+    // Mouse left the menu area: do NOT close immediately. The dropdown sits slightly below the link, so
+    // an instant close would make it vanish while the pointer travels across the gap. A 150 ms delay
+    // gives the pointer time to arrive, and handleMenuEnter cancels the timer when it does.
     const handleMenuLeave = ()=>{
         clearCloseTimer();
         closeTimer.current = setTimeout(()=>{
             setOpenMenu(null);
         }, 150);
     };
+    // Click on a top-level link (Home, Projects, ...).
     const handleTopLinkClick = (event, href)=>{
         setOpenMenu(null);
+        // If this link points at the page already showing, navigating would be pointless.
         if (pathname === href) {
+            // preventDefault stops the browser (and next/link) from handling the click at all...
             event.preventDefault();
+            // ...and instead we just jump to the top of the current page.
             window.scrollTo({
                 top: 0
             });
+            // replaceState rewrites the address bar without navigating and without adding a history entry,
+            // so the back button does not fill up with clicks that never actually changed the page.
             window.history.replaceState(null, "", href);
         }
     };
+    // Click on a section link inside a dropdown, e.g. "Robotics" under Projects.
+    // The parameters are split across lines purely for readability; `slug` is the id of the target
+    // heading on that page, produced by tagToSlug (so "Media Mention" becomes "media-mention").
     const handleSectionClick = (event, href, slug)=>{
+        // Close the desktop dropdown and the mobile menu, since this handler serves both.
         setOpenMenu(null);
         setIsOpen(false);
+        // Already on the right page, so scroll to the section instead of re-navigating to it.
         if (pathname === href) {
             event.preventDefault();
+            // getElementById finds the section by its id; `?.` means nothing happens if no such id exists,
+            // rather than crashing on null.
             document.getElementById(slug)?.scrollIntoView();
+            // Keep the URL in step (e.g. /projects#robotics) so it can be copied and shared.
             window.history.replaceState(null, "", `${href}#${slug}`);
         }
     };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+    return(// <header> and <nav> are semantic landmark elements: screen readers can jump straight to the
+    // site navigation because of them. `fixed` with top/left/right 0 pins the bar to the top of the
+    // window as the page scrolls, and z-50 keeps it above the page content.
+    // The template literal adds a subtle shadow once scrolled, so the bar visually lifts off the page.
+    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
         className: `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-card shadow-sm" : "bg-card"}`,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
             className: "max-w-[1100px] mx-auto px-6 py-4",
@@ -352,24 +438,32 @@ function Navigation() {
                                     unoptimized: true
                                 }, void 0, false, {
                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 220,
                                     columnNumber: 13
                                 }, this),
                                 "ShyGuy"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                            lineNumber: 119,
+                            lineNumber: 212,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                             className: "hidden md:flex items-center gap-8",
                             children: navLinks.map((link)=>{
+                                // Is this the page currently being viewed?
                                 const isActive = pathname === link.href;
+                                // Boolean(...) turns a possibly-undefined length into a real true/false. `?.length` is
+                                // undefined when there are no sections, and 0 is falsy, so an empty array counts as none.
                                 const hasSections = Boolean(link.sections?.length);
+                                // Compare the stored href against this link's href to see if its dropdown is the open one.
                                 const isMenuOpen = openMenu === link.href;
+                                // Simple case: a link with no dropdown, so render just the link and stop here.
                                 if (!hasSections) {
-                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                    return(// key is required on list items; the href is unique, so it makes a good key.
+                                    // The arrow wrapper is needed because the handler takes extra arguments: passing
+                                    // onClick={handleTopLinkClick} could not supply the href.
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: link.href,
                                             className: linkClassName(isActive),
@@ -377,16 +471,20 @@ function Navigation() {
                                             children: link.label
                                         }, void 0, false, {
                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                            lineNumber: 144,
+                                            lineNumber: 253,
                                             columnNumber: 21
                                         }, this)
                                     }, link.href, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 252,
                                         columnNumber: 19
-                                    }, this);
+                                    }, this));
                                 }
-                                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                return(// `relative` makes this <li> the positioning context, so the absolutely positioned
+                                // dropdown below is placed relative to this link rather than the whole page.
+                                // The hover handlers live on the <li> — which contains both the link and the dropdown —
+                                // so moving the pointer down into the menu never counts as leaving.
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                     className: "relative",
                                     onMouseEnter: ()=>handleMenuEnter(link.href),
                                     onMouseLeave: handleMenuLeave,
@@ -404,13 +502,13 @@ function Navigation() {
                                                     "aria-hidden": "true"
                                                 }, void 0, false, {
                                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                    lineNumber: 170,
+                                                    lineNumber: 287,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                            lineNumber: 162,
+                                            lineNumber: 279,
                                             columnNumber: 19
                                         }, this),
                                         isMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -430,35 +528,35 @@ function Navigation() {
                                                             children: section
                                                         }, void 0, false, {
                                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                            lineNumber: 188,
+                                                            lineNumber: 305,
                                                             columnNumber: 31
                                                         }, this)
                                                     }, section, false, {
                                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                        lineNumber: 187,
+                                                        lineNumber: 304,
                                                         columnNumber: 29
                                                     }, this);
                                                 })
                                             }, void 0, false, {
                                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                lineNumber: 180,
+                                                lineNumber: 297,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                            lineNumber: 179,
+                                            lineNumber: 296,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, link.href, true, {
                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                    lineNumber: 156,
+                                    lineNumber: 269,
                                     columnNumber: 17
-                                }, this);
+                                }, this));
                             })
                         }, void 0, false, {
                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                            lineNumber: 135,
+                            lineNumber: 234,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -472,24 +570,24 @@ function Navigation() {
                                 className: "h-5 w-5"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                lineNumber: 218,
+                                lineNumber: 335,
                                 columnNumber: 23
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                 className: "h-5 w-5"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                lineNumber: 218,
+                                lineNumber: 335,
                                 columnNumber: 51
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                            lineNumber: 210,
+                            lineNumber: 327,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                    lineNumber: 118,
+                    lineNumber: 210,
                     columnNumber: 9
                 }, this),
                 isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -505,7 +603,7 @@ function Navigation() {
                                         children: link.label
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                        lineNumber: 228,
+                                        lineNumber: 345,
                                         columnNumber: 19
                                     }, this),
                                     link.sections && link.sections.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -520,47 +618,47 @@ function Navigation() {
                                                     children: section
                                                 }, void 0, false, {
                                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                    lineNumber: 245,
+                                                    lineNumber: 362,
                                                     columnNumber: 29
                                                 }, this)
                                             }, section, false, {
                                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                lineNumber: 244,
+                                                lineNumber: 361,
                                                 columnNumber: 27
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                        lineNumber: 240,
+                                        lineNumber: 357,
                                         columnNumber: 21
                                     }, this)
                                 ]
                             }, link.href, true, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                lineNumber: 227,
+                                lineNumber: 344,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                        lineNumber: 225,
+                        lineNumber: 342,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                    lineNumber: 224,
+                    lineNumber: 341,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-            lineNumber: 117,
+            lineNumber: 208,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-        lineNumber: 112,
+        lineNumber: 202,
         columnNumber: 5
-    }, this);
+    }, this));
 }
 _s(Navigation, "3pfg2bbD3sh8UFCm6DwlZ01NYds=", false, function() {
     return [
