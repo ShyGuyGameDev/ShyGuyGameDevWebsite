@@ -7,7 +7,7 @@ import { TeamMemberCard } from "@/components/team-member-card"
 const teamMembers = [
   {
     name: "Emey",
-    role: "Chief Creative Officer & Co-Founder",
+    role: "Cofounder",
     image: "/pixilart-1766028338678.png",
     bio: "Emey is the team's composer and lead artist, bringing a unique creative perspective to every project. He picked up coding after meeting ShyGuy and HF_ang and quickly mastered key software skills.",
     discord: "qorachniuphorbia",
@@ -15,7 +15,7 @@ const teamMembers = [
   },
   {
     name: "ShyGuy",
-    role: "CEO & Co-Founder",
+    role: "Cofounder",
     image: "/images (1).jpeg",
     bio: "ShyGuy leads marketing, communications, and product positioning while contributing to development. With a knack for leadership and strategy, he shapes product vision and keeps the team aligned.",
     discord: "shyguygamedev",
@@ -23,7 +23,7 @@ const teamMembers = [
   },
   {
     name: "HF_ang",
-    role: "CTO & Co-Founder",
+    role: "Cofounder",
     // Hidden logo image before HF_ang's picture
     image: "/HF_ang PFP.png",
     // image: "/BetterEmptyConsoleLogo.png",
