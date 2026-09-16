@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
+import { ExpandableCardRows } from "@/components/expandable-card-rows"
 import { ProjectCard } from "@/components/project-card"
 import { SearchFilterBar } from "@/components/search-filter-bar"
 import { useHashScroll } from "@/hooks/use-hash-scroll"
@@ -547,9 +548,6 @@ function projectMatchesSearch(
   return matchesSearch(haystack, searchQuery)
 }
 
-const useIsomorphicLayoutEffect =
-  typeof window === "undefined" ? useEffect : useLayoutEffect
-
 function SectionHeading({
   id,
   label,
@@ -573,37 +571,6 @@ function SectionHeading({
   )
 }
 
-const CARDS_PER_ROW = 3
-
-type PlacedProject = {
-  project: (typeof completedProjects)[number]
-  row: number
-  column: number
-  /** A trailing pair is nudged right by half a column so the row reads centered. */
-  centered: boolean
-}
-
-function placeProjects(projects: typeof completedProjects): PlacedProject[][] {
-  const fullRows = Math.floor(projects.length / CARDS_PER_ROW)
-  const leftover = projects.length % CARDS_PER_ROW
-  const columns: PlacedProject[][] = Array.from({ length: CARDS_PER_ROW }, () => [])
-
-  projects.forEach((project, index) => {
-    const row = Math.floor(index / CARDS_PER_ROW)
-    const positionInRow = index % CARDS_PER_ROW
-    const isLeftoverRow = row === fullRows
-    const column = isLeftoverRow && leftover === 1 ? 1 : positionInRow
-    columns[column].push({
-      project,
-      row,
-      column,
-      centered: isLeftoverRow && leftover === 2,
-    })
-  })
-
-  return columns
-}
-
 function ProjectRows({
   projects,
   keyPrefix = "",
@@ -611,117 +578,19 @@ function ProjectRows({
   projects: typeof completedProjects
   keyPrefix?: string
 }) {
-  const gridRef = useRef<HTMLDivElement>(null)
-  const [expandedTitles, setExpandedTitles] = useState<string[]>([])
-  const [rowHeights, setRowHeights] = useState<number[]>([])
-  const projectKey = projects.map((project) => project.title).join("|")
-  const rowCount = Math.ceil(projects.length / CARDS_PER_ROW)
-
-  const columns = useMemo(() => placeProjects(projects), [projects])
-
-  useIsomorphicLayoutEffect(() => {
-    const grid = gridRef.current
-    if (!grid) return
-
-    const measure = () => {
-      const slots = Array.from(
-        grid.querySelectorAll<HTMLElement>("[data-project-slot]"),
-      )
-      const expandedRows = new Set(
-        slots
-          .filter((slot) => slot.dataset.expanded === "true")
-          .map((slot) => Number(slot.dataset.row)),
-      )
-      const collapsed = slots.filter(
-        (slot) =>
-          slot.dataset.expanded !== "true" &&
-          !expandedRows.has(Number(slot.dataset.row)),
-      )
-
-      // Drop the shared height before reading so a row can shrink again.
-      const applied = collapsed.map((slot) => slot.style.height)
-      collapsed.forEach((slot) => {
-        slot.style.height = ""
-      })
-      const measured = new Map<number, number>()
-      collapsed.forEach((slot) => {
-        const row = Number(slot.dataset.row)
-        const height = slot.getBoundingClientRect().height
-        measured.set(row, Math.max(measured.get(row) ?? 0, height))
-      })
-      collapsed.forEach((slot, index) => {
-        slot.style.height = applied[index]
-      })
-
-      setRowHeights((current) => {
-        const next = current.slice(0, rowCount)
-        measured.forEach((height, row) => {
-          next[row] = height
-        })
-        const unchanged =
-          next.length === current.length &&
-          next.every((height, index) => height === current[index])
-        return unchanged ? current : next
-      })
-    }
-
-    measure()
-
-    const observer = new ResizeObserver(measure)
-    observer.observe(grid)
-    window.addEventListener("resize", measure)
-    // Late-loading fonts change how much room the text needs.
-    document.fonts?.ready.then(measure)
-
-    return () => {
-      observer.disconnect()
-      window.removeEventListener("resize", measure)
-    }
-  }, [projectKey, rowCount, expandedTitles])
-
   return (
-    <div ref={gridRef} className="flex items-start justify-center gap-4">
-      {columns.map((column, columnIndex) => (
-        <div
-          key={`${keyPrefix}column-${columnIndex}`}
-          className="flex w-[calc((100%-2rem)/3)] min-w-0 flex-col gap-4"
-        >
-          {column.map(({ project, row, centered }) => {
-            const expanded = expandedTitles.includes(project.title)
-            const collapsedHeight = rowHeights[row]
-            return (
-              <div
-                key={`${keyPrefix}${project.title}`}
-                data-project-slot
-                data-row={row}
-                data-expanded={expanded ? "true" : "false"}
-                className="flex w-full"
-                style={{
-                  ...(centered
-                    ? { transform: "translateX(calc(50% + 0.5rem))" }
-                    : null),
-                  ...(!expanded && collapsedHeight
-                    ? { height: collapsedHeight }
-                    : null),
-                }}
-              >
-                <ProjectCard
-                  {...project}
-                  expanded={expanded}
-                  onToggleExpanded={() => {
-                    setExpandedTitles((current) =>
-                      current.includes(project.title)
-                        ? current.filter((title) => title !== project.title)
-                        : [...current, project.title],
-                    )
-                  }}
-                />
-              </div>
-            )
-          })}
-        </div>
-      ))}
-    </div>
+    <ExpandableCardRows
+      items={projects}
+      getItemKey={(project) => project.title}
+      keyPrefix={keyPrefix}
+      renderCard={(project, expanded, onToggleExpanded) => (
+        <ProjectCard
+          {...project}
+          expanded={expanded}
+          onToggleExpanded={onToggleExpanded}
+        />
+      )}
+    />
   )
 }
 

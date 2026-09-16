@@ -1,59 +1,9 @@
-Header and Footer
-    Icon
-    Contacts
-Empty Console
-    Bios relating to shyguy
-    make shyguy bigger
-    get rid of other contacts?
-    Projects?
-Home
-    Name
-    Intro
-    Song Quote of the Day
-    short intros to each topic
-        games
-        apps
-        robotics
-        debate
-        mun
-        sports/teaching?
-    6 symbols around text, each representing a topic?
+Add to projects:
+    NMUNC Chairing
+    Student Atlas
+    Spatial Intelligence Research Projects
 
+Add to posts/media mentions:
 
-
-
-
-Posts & Media Mentions
-    Own section
-    Others section
-    Hyperlinks
-Achievements on home
-    Patch Notes
-    CAC
-    BMUN
-    Georginia Hays Invitational
-Projects
-    Empty Console section, Non-Empty Console section, Current section / different section for each subject
-    Hyperlinks
-    Projects
-            FTC
-            Malice and Mercy
-            Space Looper
-            Bugged Out
-            Congressional App Challenge
-            Dimensional Rifter
-            Computer Vision Robot
-            Future City
-            Cumberland Elementary
-            Evodyne Robotic Dog
-            BMUN
-            NMUNC
-            SFMUN
-            NHSMUN
-            Karen Keefer Novice Invitational
-            Tessellations Middle School Invitational
-            Georginia Hays Invitational
-
-        Current Projects:
-            NMUNC Chairing
-            CAC 2: Student Atlas
+UI/UX:
+    Flip cards?

@@ -1,7 +1,8 @@
 "use client"
 
-import { Fragment, useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import type React from "react"
+import { ExpandableCardRows } from "@/components/expandable-card-rows"
 import { PostCard } from "@/components/post-card"
 import { SearchFilterBar } from "@/components/search-filter-bar"
 import { useHashScroll } from "@/hooks/use-hash-scroll"
@@ -185,6 +186,50 @@ const mediaMentions: MediaMention[] = [
 
 const sortedMediaMentions = [...mediaMentions].sort(compareByPostTagThenDateThenTitle)
 
+function SectionHeading({
+  id,
+  label,
+  className,
+}: {
+  id: string
+  label: string
+  className?: string
+}) {
+  return (
+    <div
+      id={id}
+      className={`scroll-mt-24 flex items-center gap-4 mb-4 ${className ?? ""}`}
+    >
+      <hr className="flex-1 border-0 border-t-2 border-border" />
+      <span className="shrink-0 text-sm font-semibold text-primary">
+        {label}
+      </span>
+      <hr className="flex-1 border-0 border-t-2 border-border" />
+    </div>
+  )
+}
+
+function MentionRows({
+  mentions,
+}: {
+  mentions: typeof mediaMentions
+}) {
+  return (
+    <ExpandableCardRows
+      items={mentions}
+      getItemKey={(mention) => mention.title}
+      cardsPerRow={2}
+      renderCard={(mention, expanded, onToggleExpanded) => (
+        <PostCard
+          {...mention}
+          expanded={expanded}
+          onToggleExpanded={onToggleExpanded}
+        />
+      )}
+    />
+  )
+}
+
 export function PostsSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const [searchQuery, setSearchQuery] = useState("")
@@ -210,6 +255,20 @@ export function PostsSection() {
       return matchesSearch(haystack, searchQuery)
     })
   }, [searchQuery, selectedTopics])
+
+  const groupedMentions = useMemo(() => {
+    const groups: { tag: string; mentions: typeof filteredMediaMentions }[] = []
+    for (const mention of filteredMediaMentions) {
+      const tag = mention.tag ?? "Other"
+      const last = groups[groups.length - 1]
+      if (!last || last.tag !== tag) {
+        groups.push({ tag, mentions: [mention] })
+      } else {
+        last.mentions.push(mention)
+      }
+    }
+    return groups
+  }, [filteredMediaMentions])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -266,44 +325,24 @@ export function PostsSection() {
           </div>
         </div>
 
-        {filteredMediaMentions.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredMediaMentions.map((mention, index) => {
-              const prevMention = filteredMediaMentions[index - 1]
-              const tagBreak =
-                index === 0 ||
-                (prevMention &&
-                  (prevMention.tag ?? "") !== (mention.tag ?? ""))
-
-              return (
-                <Fragment key={mention.title}>
-                  {tagBreak ? (
-                    <div
-                      id={tagToSlug(mention.tag ?? "Other")}
-                      className={`col-span-full scroll-mt-24 flex items-center gap-4 mb-4 ${index === 0 ? "mt-0" : "mt-4"}`}
-                    >
-                      <hr className="flex-1 border-0 border-t-2 border-border" />
-                      <span className="shrink-0 text-sm font-semibold text-primary">
-                        {mention.tag ?? "Other"}
-                      </span>
-                      <hr className="flex-1 border-0 border-t-2 border-border" />
-                    </div>
-                  ) : null}
-                  {/* <div
-                    className="animate-on-scroll opacity-0"
-                    style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                  > */}
-                    <PostCard {...mention} />
-                  {/* </div> */}
-                </Fragment>
-              )
-            })}
-          </div>
+        {groupedMentions.length > 0 ? (
+          groupedMentions.map((group, groupIndex) => (
+            <div key={group.tag} className="mb-4">
+              <SectionHeading
+                id={tagToSlug(group.tag)}
+                label={group.tag}
+                className={groupIndex === 0 ? "mt-0" : "mt-4"}
+              />
+              <MentionRows mentions={group.mentions} />
+            </div>
+          ))
         ) : (
           <p className="text-center text-muted-foreground">
             {searchQuery.trim()
               ? `No posts or media mentions match "${searchQuery.trim()}".`
-              : "No media mentions yet. Check back soon!"}
+              : selectedTopics.length > 0
+                ? "No posts or media mentions match the selected topics."
+                : "No media mentions yet. Check back soon!"}
           </p>
         )}
       </div>
