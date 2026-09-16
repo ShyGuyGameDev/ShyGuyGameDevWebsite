@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "Emey",
     role: "Cofounder",
-    image: "/pixilart-1766028338678.png",
+    image: "/team-emey.png",
     bio: "Emey is the team's composer and lead artist, bringing a unique creative perspective to every project. He picked up coding after meeting ShyGuy and HF_ang and quickly mastered key software skills.",
     discord: "qorachniuphorbia",
     tilt: "left" as const,
@@ -16,7 +16,7 @@ const teamMembers = [
   {
     name: "ShyGuy",
     role: "Cofounder",
-    image: "/images (1).jpeg",
+    image: "/team-shyguy.jpeg",
     bio: "ShyGuy leads marketing, communications, and product positioning while contributing to development. With a knack for leadership and strategy, he shapes product vision and keeps the team aligned.",
     discord: "shyguygamedev",
     featured: true,
@@ -25,8 +25,8 @@ const teamMembers = [
     name: "HF_ang",
     role: "Cofounder",
     // Hidden logo image before HF_ang's picture
-    image: "/HF_ang PFP.png",
-    // image: "/BetterEmptyConsoleLogo.png",
+    image: "/team-hfang.png",
+    // image: "/empty-console-logo.png",
     // bio: "HF_ang discovered coding through video games and has since developed a passion for problem-solving, creating digital art, and experimenting with physics in code. Adding his video game skills of code and art, he brings easy to read UI and user engagement to the team’s creations. He also constantly experiments with new concepts in his work.",
     bio: "HF_ang found his passion for programming through video games. Since teaming up with ShyGuy and Emey in 2024, he's focused on UI/UX design and user engagement.",
     discord: "hfanggamedev",
@@ -37,10 +37,10 @@ const teamMembers = [
 export function TeamSection() {
   const sectionRef = useRef<HTMLElement>(null)
 
-  // Preload BetterShyGuyGameDevLogo.png before HF_ang's picture
+  // Preload shyguy-gamedev-logo.png before HF_ang's picture
   useEffect(() => {
     const img = new window.Image()
-    img.src = "/BetterShyGuyGameDevLogo.png"
+    img.src = "/shyguy-gamedev-logo.png"
   }, [])
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export function TeamSection() {
       {/* Hidden logo image before HF_ang's picture - with proper dimensions for crawlers */}
       <div className="absolute left-[-9999px] w-[1200px] h-[630px] opacity-0 pointer-events-none">
         <Image
-          src="/BetterShyGuyGameDevLogo.png"
+          src="/shyguy-gamedev-logo.png"
           alt="Empty Console Logo"
           width={1200}
           height={630}
@@ -84,7 +84,7 @@ export function TeamSection() {
         <div className="text-center mb-16">
           <h2 className="animate-on-scroll opacity-0 flex items-center justify-center gap-3 text-4xl md:text-[32px] font-semibold text-primary mb-4">
             <Image
-              src="/BetterEmptyConsoleLogo.png"
+              src="/empty-console-logo.png"
               alt="Empty Console Logo"
               width={64}
               height={64}

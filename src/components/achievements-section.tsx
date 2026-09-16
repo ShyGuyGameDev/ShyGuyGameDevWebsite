@@ -7,22 +7,22 @@ const achievements = [
   {
     competition: "Patch Notes Game Jam 2025",
     placing: "17th Out Of 474 Entries",
-    image: "/images.png",
+    image: "/achievement-patch-notes-jam.png",
   },
   {
     competition: "Congressional App Challenge 2025",
     placing: "3rd Place In California District 15",
-    image: "/images (1).png",
+    image: "/achievement-congressional-app-challenge.png",
   },
   {
     competition: "Berkeley Model United Nations 2025",
     placing: "Outstanding Award",
-    image: "/images (2).png",
+    image: "/achievement-berkeley-mun.png",
   },
   {
     competition: "Georgiana Hays Invitational 2026",
     placing: "1st Place In Novice Parliamentary Debate",
-    image: "/HomeTopics/Debate/l.png",
+    image: "/HomeTopics/Debate/georgiana-hays-trophy.png",
   },
 ]
 

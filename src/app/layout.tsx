@@ -30,7 +30,7 @@ function getSiteUrl() {
 }
 
 const siteUrl = getSiteUrl()
-const ogImage = `${siteUrl}/BetterShyGuyGameDevLogo.png`
+const ogImage = `${siteUrl}/shyguy-gamedev-logo.png`
 const siteDescription =
   "Student developer building games, apps, and robotics, speaking at debate tournaments, leading model United Nations conferences, teaching other students, and building his own startup."
 
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   title: "ShyGuy",
   description: siteDescription,
   icons: {
-    icon: "/BetterShyGuyGameDevLogo.png",
-    shortcut: "/BetterShyGuyGameDevLogo.png",
-    apple: "/BetterShyGuyGameDevLogo.png",
+    icon: "/shyguy-gamedev-logo.png",
+    shortcut: "/shyguy-gamedev-logo.png",
+    apple: "/shyguy-gamedev-logo.png",
   },
   openGraph: {
     type: "website",

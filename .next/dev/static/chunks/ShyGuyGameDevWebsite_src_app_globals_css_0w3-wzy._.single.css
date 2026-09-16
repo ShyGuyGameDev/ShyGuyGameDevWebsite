@@ -93,7 +93,6 @@
     --color-lime-300: #bbf451;
     --color-lime-700: #4b7d00;
     --color-lime-900: #35530e;
-    --color-green-500: #00c758;
     --color-cyan-50: #ecfeff;
     --color-cyan-300: #53eafd;
     --color-cyan-700: #007492;
@@ -202,7 +201,6 @@
       --color-lime-300: lab(89.9218% -35.6546 68.5254);
       --color-lime-700: lab(47.246% -32.2589 55.8249);
       --color-lime-900: lab(31.9931% -20.7654 33.7379);
-      --color-green-500: lab(70.5521% -66.5147 45.8073);
       --color-cyan-50: lab(98.3304% -5.97432 -2.62108);
       --color-cyan-300: lab(85.3886% -36.7636 -21.5716);
       --color-cyan-700: lab(44.7267% -21.5987 -26.118);
@@ -1065,10 +1063,6 @@
 
   .h-2\.5 {
     height: calc(var(--spacing) * 2.5);
-  }
-
-  .h-3 {
-    height: calc(var(--spacing) * 3);
   }
 
   .h-3\.5 {
@@ -2028,10 +2022,6 @@
 
   .bg-fuchsia-50 {
     background-color: var(--color-fuchsia-50);
-  }
-
-  .bg-green-500 {
-    background-color: var(--color-green-500);
   }
 
   .bg-input {

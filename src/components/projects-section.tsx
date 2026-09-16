@@ -42,7 +42,7 @@ const completedProjects = [
       "Teamwork under time pressure",
       "Managing deadlines while collaborating on art and music",
     ],
-    image: "/malice_and_mercy-Picsart-AiImageEnhancer.png",
+    image: "/malice-and-mercy.png",
     // video: "/Clips/MaliceAndMercy.mp4",
   },
   {
@@ -70,7 +70,7 @@ const completedProjects = [
       "Collaboration under tight deadlines",
       "Iterative design and precise gameplay mechanics",
     ],
-    image: "/Untitled_presentation_1-Picsart-AiImageEnhancer.png",
+    image: "/space-looper.png",
     // video: "/Clips/SpaceLooper.mp4",
   },
   {
@@ -98,7 +98,7 @@ const completedProjects = [
       "Playtesting and incorporating user feedback",
       "Improving teamwork coordination",
     ],
-    image: "/buggedout.png",
+    image: "/bugged-out.png",
     // video: "/Clips/BuggedOut.mp4",
   },
   {
@@ -127,7 +127,7 @@ const completedProjects = [
       "Presenting solutions to judges",
       "Creating socially impactful technology",
     ],
-    image: "/openstage.png",
+    image: "/open-stage.png",
     // video: "/Clips/OpenStage.mp4",
   },
   {
@@ -154,7 +154,7 @@ const completedProjects = [
       "Email send",
       "Hackathon finder"
     ],
-    image: "/hackathons.png",
+    image: "/hackathon-digest.png",
     // video: "/Clips/OpenStage.mp4",
   },
   {
@@ -172,7 +172,7 @@ const completedProjects = [
       "Email send",
       "News finder"
     ],
-    image: "/breakingnews.jpeg",
+    image: "/news-digest.jpeg",
     featured: true,
     // video: "/Clips/OpenStage.mp4",
   },
@@ -192,7 +192,7 @@ const completedProjects = [
      "Efficiently use limited resources",
      "Competitive robotics",
    ],
-   image: "/FTCPosts.jpg",
+   image: "/ftc-competition.jpg",
   },
   {
     title: "Dimensional Rifter",
@@ -210,7 +210,7 @@ const completedProjects = [
       "Designing a product",
       "Incorporating user feedback",
     ],
-    image: "/Dimensional Rifter.png",
+    image: "/dimensional-rifter.png",
   },
   {
     title: "Computer Vision Robot",
@@ -237,8 +237,8 @@ const completedProjects = [
       "Experimenting with new programs",
       "Combining premade tools with custom creations",
     ],
-    image: "/Screenshot 2026-06-26 at 4.19.34 PM.png",
-    // image: "/futurecity.png",
+    image: "/computer-vision-robot.png",
+    // image: "/HomeTopics/Design/future-city-model.png",
   },
   {
     title: "Future City",
@@ -266,7 +266,7 @@ const completedProjects = [
       "Presenting complex topics simply",
       "Designing for the future",
     ],
-    image: "/futurecity.png",
+    image: "/HomeTopics/Design/future-city-model.png",
   },
   {
     title: "Cumberland Elementary",
@@ -293,7 +293,7 @@ const completedProjects = [
       "Answering questions from students",
       "Helping others learn",
     ],
-    image: "/HomeTopics/Teaching/A.png",
+    image: "/HomeTopics/Teaching/cumberland-elementary-logo.png",
   },
   {
     title: "Berkeley Model United Nations",
@@ -320,7 +320,7 @@ const completedProjects = [
       "Trying new experiences",
       "Representing an individual",
     ],
-    image: "/images (4).png",
+    image: "/berkeley-mun.png",
   },
   {
     title: "Nueva Model United Nations Conference",
@@ -365,7 +365,7 @@ const completedProjects = [
       "Leading committee",
       "Making allies",
     ],
-    image: "/HomeTopics/MUN/Screenshot 2026-06-11 at 7.57.46 PM.png",
+    image: "/HomeTopics/MUN/nmunc-logo.png",
   },
   {
     title: "San Francisco Model United Nations",
@@ -400,7 +400,7 @@ const completedProjects = [
       "Learning about new topics",
       "Preparing for committee",
     ],
-    image: "/HomeTopics/MUN/Screenshot 2026-06-11 at 7.58.47 PM.png",
+    image: "/HomeTopics/MUN/sfmun-logo.png",
   },
   {
     title: "National High School Model United Nations",
@@ -436,7 +436,7 @@ const completedProjects = [
       "Engaging audiences",
       "Proposing plans during speeches",
     ],
-    image: "/HomeTopics/MUN/download (5).png",
+    image: "/HomeTopics/MUN/nhsmun-logo.png",
   },
   {
     title: "Karen Keefer Novice Invitational",
@@ -463,7 +463,7 @@ const completedProjects = [
       "Preparing in limited time",
       "Knowing the audience",
     ],
-    image: "/Screenshot 2026-06-28 at 12.47.02 AM.png",
+    image: "/karen-keefer-invitational.png",
   },
   {
     title: "Evodyne Robotic Dog",
@@ -490,7 +490,7 @@ const completedProjects = [
       "Learning from courses",
       "Building realistic limbs",
     ],
-    image: "/Screenshot 2026-06-28 at 12.48.15 AM.png",
+    image: "/evodyne-robotic-dog.png",
     featured: true,
   },
   {
@@ -508,7 +508,7 @@ const completedProjects = [
       "Staying confident in hard times",
       "Explaining ideas",
     ],
-    image: "/Screenshot 2026-06-28 at 1.00.16 AM.png",
+    image: "/tessellations-invitational.png",
   },
   {
     title: "Georgiana Hays Invitational",
@@ -526,7 +526,7 @@ const completedProjects = [
       "Addressing opponent points",
       "Finding proven evidence",
     ],
-    image: "/Screenshot 2026-06-28 at 1.11.45 AM.png",
+    image: "/georgiana-hays-invitational.png",
     featured: true,
   },
 ]

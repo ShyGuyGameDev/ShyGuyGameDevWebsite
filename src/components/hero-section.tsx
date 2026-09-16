@@ -408,11 +408,11 @@ export function HeroSection() {
         {/* Image placeholders framing the hero content (arc pattern, 3 per side) */}
         <div className="hero-placeholders hidden lg:block" style={{ zIndex: 5 }}>
           {[
-            { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(-6deg)", label: "Image 1", src: "/HomeIcons/Gaming.png" },
-            { transform: "translate(calc(-50% - min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(-6deg)", label: "Image 2", src: "/HomeIcons/Robot-removebg-preview.png" },
+            { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(-6deg)", label: "Image 1", src: "/HomeIcons/games.png" },
+            { transform: "translate(calc(-50% - min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(-6deg)", label: "Image 2", src: "/HomeIcons/robotics.png" },
             { transform: "translate(calc(-50% - min(12.5vw + 295px, 50vw - 85px)), calc(-50% + 250px)) rotate(-6deg)", label: "Image 3", src: "/HomeIcons/debate.png" },
-            { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(6deg)", label: "Image 4", src: "/HomeIcons/Apps-removebg-preview.png", size: 160 },
-            { transform: "translate(calc(-50% + min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(6deg)", label: "Image 5", src: "/HomeIcons/UnitedNations.png", size: 207 },
+            { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% - 250px)) rotate(6deg)", label: "Image 4", src: "/HomeIcons/apps.png", size: 160 },
+            { transform: "translate(calc(-50% + min(12.5vw + 415px, 50vw - 70px)), -50%) rotate(6deg)", label: "Image 5", src: "/HomeIcons/mun.png", size: 207 },
             { transform: "translate(calc(-50% + min(12.5vw + 295px, 50vw - 85px)), calc(-50% + 250px)) rotate(6deg)", label: "Image 6", src: "/HomeIcons/teaching.png" },
           ].map((item) => (
             <div

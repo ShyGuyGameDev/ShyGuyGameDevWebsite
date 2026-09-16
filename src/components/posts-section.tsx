@@ -24,7 +24,7 @@ const mediaMentions: MediaMention[] = [
     url: "https://shyguygamedev.substack.com/p/strategies-for-competitive-robotics",
     tag: "Post",
     themes: ["Robotics", "Stategies", "Teamwork"],
-    image: "/FTCPosts.jpg",
+    image: "/ftc-competition.jpg",
     description: (
       <>
         Working as a team throughout a competitive robotics season is hard, but there a few strategies to make it much easier. In this post, ShyGuy draws on his experience from working in his school&apos;s{" "}
@@ -46,7 +46,7 @@ const mediaMentions: MediaMention[] = [
     url: "https://q5js.substack.com/p/p5play-game-jam-2025-results",
     tag: "Media Mention",
     themes: ["Game design", "Puzzle", "Game Review"],
-    image: "/malice_and_mercy-Picsart-AiImageEnhancer.png",
+    image: "/malice-and-mercy.png",
     description: (
       <>
         <a
@@ -130,7 +130,7 @@ const mediaMentions: MediaMention[] = [
     url: "https://shyguygamedev.substack.com/p/game-design-for-beginners",
     tag: "Post",
     themes: ["Game Design", "Strategies", "Engagement", "Beginner", "User Psychology"],
-    image: "/EngagementPost2.png",
+    image: "/post-game-engagement.png",
     description: (
       <>
         Every good game has one goal: Keep the player engaged. However, that&apos;s a lot easier said than done. In this post, ShyGuy shares his top 7 strategies for beginner game designers to use, all of which use the player&apos;s own psychology to their advantage. ShyGuy explains each of these strategies through providing details from one of his own first games,{" "}
@@ -152,7 +152,7 @@ const mediaMentions: MediaMention[] = [
     url: "https://shyguygamedev.substack.com/p/five-strategies-to-win-a-game-jam",
     tag: "Post",
     themes: ["Game Design", "Game Jam", "Strategies"],
-    image: "/JamPost.png",
+    image: "/post-game-jam-tips.png",
     description: (
       <>
         Creating a game for a game jam is entirely different than creating a game for yourself to play. In this post, ShyGuy summarizes the top 5 lessons he learned from his experience competing in the 2025{" "}
@@ -174,7 +174,7 @@ const mediaMentions: MediaMention[] = [
     url: "https://shyguygamedev.substack.com/p/intro-to-spatial-intelligence?r=6434dw&utm_campaign=post-expanded-share&utm_medium=web&triedRedirect=true",
     tag: "Post",
     themes: ["AI", "Future", "Introduction", "Spatial Intelligence"],
-    image: "/Screenshot 2026-07-28 at 7.00.03 PM.png",
+    image: "/post-spatial-intelligence.png",
     description: (
       <>
         AI&apos;s next frontier isn&apos;t just seeing and talking, it&apos;s doing. In this post, ShyGuy introduces spatial intelligence, the field built around teaching AI to understand the 3D world and how the objects within it relate, behave, and change. He breaks the frontier into its two sides, interpretive and generative, covers the tech giants and startups racing to lead it, shares the lessons learned from early world models like Oasis, and explains why the challenge ahead is no longer possibility, but purpose.
