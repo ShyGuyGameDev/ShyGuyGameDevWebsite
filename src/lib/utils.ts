@@ -32,13 +32,20 @@ export function compareByDateThenTitle(
 }
 
 export const PROJECT_TAG_ORDER = [
-  'Robotics',
   'Apps',
+  'Robotics',
   'Design',
   'MUN',
   'Debate',
   'Games',
   'Teaching',
+] as const
+
+export const FEATURED_SECTION_LABEL = 'Featured Currently'
+
+export const PROJECT_NAV_SECTIONS = [
+  FEATURED_SECTION_LABEL,
+  ...PROJECT_TAG_ORDER,
 ] as const
 
 export const POST_TAG_ORDER = ['Media Mention', 'Post'] as const

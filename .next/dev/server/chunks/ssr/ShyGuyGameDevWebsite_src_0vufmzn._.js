@@ -3,8 +3,12 @@ module.exports = [
 "use strict";
 
 __turbopack_context__.s([
+    "FEATURED_SECTION_LABEL",
+    ()=>FEATURED_SECTION_LABEL,
     "POST_TAG_ORDER",
     ()=>POST_TAG_ORDER,
+    "PROJECT_NAV_SECTIONS",
+    ()=>PROJECT_NAV_SECTIONS,
     "PROJECT_TAG_ORDER",
     ()=>PROJECT_TAG_ORDER,
     "cn",
@@ -53,13 +57,18 @@ function compareByDateThenTitle(a, b) {
     return a.title.localeCompare(b.title);
 }
 const PROJECT_TAG_ORDER = [
-    'Robotics',
     'Apps',
+    'Robotics',
     'Design',
     'MUN',
     'Debate',
     'Games',
     'Teaching'
+];
+const FEATURED_SECTION_LABEL = 'Featured Currently';
+const PROJECT_NAV_SECTIONS = [
+    FEATURED_SECTION_LABEL,
+    ...PROJECT_TAG_ORDER
 ];
 const POST_TAG_ORDER = [
     'Media Mention',

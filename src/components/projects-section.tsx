@@ -1,11 +1,10 @@
 "use client"
 
-import { Fragment, useEffect, useMemo, useRef, useState } from "react"
-import type React from "react"
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
 import { ProjectCard } from "@/components/project-card"
 import { SearchFilterBar } from "@/components/search-filter-bar"
 import { useHashScroll } from "@/hooks/use-hash-scroll"
-import { compareByProjectTagThenDateThenTitle, getNodeText, matchesSearch, PROJECT_TAG_ORDER, tagToSlug } from "@/lib/utils"
+import { compareByDateThenTitle, compareByProjectTagThenDateThenTitle, FEATURED_SECTION_LABEL, getNodeText, matchesSearch, PROJECT_TAG_ORDER, tagToSlug } from "@/lib/utils"
 
 const completedProjects = [
   {
@@ -129,6 +128,52 @@ const completedProjects = [
       "Creating socially impactful technology",
     ],
     image: "/openstage.png",
+    // video: "/Clips/OpenStage.mp4",
+  },
+  {
+    title: "Hackathon Digest",
+    url: "https://github.com/ShyGuyGameDev/hackathon-digest",
+    date: "August 2026",
+    tag: "Apps",
+    description: (
+      <>
+        Built using{" "}
+        <a
+          href="https://claude.com/product/claude-code?utm_source=google_brand&utm_campaign={campaign}&utm_medium=cpc&utm_content=823276214395&utm_term=anthropic%20code&targetid=kwd-2477510644317&gad_source=1&gad_campaignid=23948930353&gbraid=0AAAAAqwcL8m57bf3GmSHVfdt_9z5WVn93&gclid=CjwKCAjw2aPVBhBkEiwA0Cptt4LUDp0vtZE8uEClEOOQyLv5YSCh94XhSK_wKkbSZRxQxQOYKA1g3xoCRvQQAvD_BwE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:underline"
+        >
+          Claude Routines
+        </a>
+        , Hackathon Digest is a fully automated tool that sends an email to ShyGuy's team every Wednesday. It finds an interesting high-school friendly hackathon, finds all of the data it can on it, then sends the email exactly at 7 AM. This was ShyGuy's first project that only consisted of a README, because it's all natural language AI automated.
+      </>
+    ),
+    learnings: [
+      "Fully automated",
+      "Email send",
+      "Hackathon finder"
+    ],
+    image: "/hackathons.png",
+    // video: "/Clips/OpenStage.mp4",
+  },
+  {
+    title: "News Digest",
+    url: "https://github.com/ShyGuyGameDev/NewsDigest",
+    date: "September 2026",
+    tag: "Apps",
+    description: (
+      <>
+        Originally, News Digest started off as a tool for ShyGuy to stay on top of current events, though it quickly scaled up to more users when he opened it up to his school's debate team as well. It is a fully automated tool that sends an email to ShyGuy every Monday, Wednesday, and Friday at 6:45 AM, covering the most recent news in politics, technology, science, business, and more. All the other recipients are also BCCed on the same email. If you are interested in receiving the email, just ping ShyGuy on Discord and he'll add you to the list. Your email will never be displayed anywhere besides the supabase, where it is encrypted.
+      </>
+    ),
+    learnings: [
+      "Fully automated",
+      "Email send",
+      "News finder"
+    ],
+    image: "/breakingnews.jpeg",
+    featured: true,
     // video: "/Clips/OpenStage.mp4",
   },
   {
@@ -275,7 +320,7 @@ const completedProjects = [
       "Trying new experiences",
       "Representing an individual",
     ],
-    image: "/HomeTopics/MUN/download (6).png",
+    image: "/images (4).png",
   },
   {
     title: "Nueva Model United Nations Conference",
@@ -446,6 +491,7 @@ const completedProjects = [
       "Building realistic limbs",
     ],
     image: "/Screenshot 2026-06-28 at 12.48.15 AM.png",
+    featured: true,
   },
   {
     title: "Tessellations Middle School Invitational",
@@ -481,10 +527,203 @@ const completedProjects = [
       "Finding proven evidence",
     ],
     image: "/Screenshot 2026-06-28 at 1.11.45 AM.png",
+    featured: true,
   },
 ]
 
 const sortedProjects = [...completedProjects].sort(compareByProjectTagThenDateThenTitle)
+
+function projectMatchesSearch(
+  project: (typeof completedProjects)[number],
+  searchQuery: string,
+) {
+  const haystack = [
+    project.title,
+    project.date,
+    project.tag ?? "",
+    ...project.learnings,
+    getNodeText(project.description),
+  ].join(" ")
+  return matchesSearch(haystack, searchQuery)
+}
+
+const useIsomorphicLayoutEffect =
+  typeof window === "undefined" ? useEffect : useLayoutEffect
+
+function SectionHeading({
+  id,
+  label,
+  className,
+}: {
+  id: string
+  label: string
+  className?: string
+}) {
+  return (
+    <div
+      id={id}
+      className={`scroll-mt-24 flex items-center gap-4 mb-4 ${className ?? ""}`}
+    >
+      <hr className="flex-1 border-0 border-t-2 border-border" />
+      <span className="shrink-0 text-sm font-semibold text-primary">
+        {label}
+      </span>
+      <hr className="flex-1 border-0 border-t-2 border-border" />
+    </div>
+  )
+}
+
+const CARDS_PER_ROW = 3
+
+type PlacedProject = {
+  project: (typeof completedProjects)[number]
+  row: number
+  column: number
+  /** A trailing pair is nudged right by half a column so the row reads centered. */
+  centered: boolean
+}
+
+function placeProjects(projects: typeof completedProjects): PlacedProject[][] {
+  const fullRows = Math.floor(projects.length / CARDS_PER_ROW)
+  const leftover = projects.length % CARDS_PER_ROW
+  const columns: PlacedProject[][] = Array.from({ length: CARDS_PER_ROW }, () => [])
+
+  projects.forEach((project, index) => {
+    const row = Math.floor(index / CARDS_PER_ROW)
+    const positionInRow = index % CARDS_PER_ROW
+    const isLeftoverRow = row === fullRows
+    const column = isLeftoverRow && leftover === 1 ? 1 : positionInRow
+    columns[column].push({
+      project,
+      row,
+      column,
+      centered: isLeftoverRow && leftover === 2,
+    })
+  })
+
+  return columns
+}
+
+function ProjectRows({
+  projects,
+  keyPrefix = "",
+}: {
+  projects: typeof completedProjects
+  keyPrefix?: string
+}) {
+  const gridRef = useRef<HTMLDivElement>(null)
+  const [expandedTitles, setExpandedTitles] = useState<string[]>([])
+  const [rowHeights, setRowHeights] = useState<number[]>([])
+  const projectKey = projects.map((project) => project.title).join("|")
+  const rowCount = Math.ceil(projects.length / CARDS_PER_ROW)
+
+  const columns = useMemo(() => placeProjects(projects), [projects])
+
+  useIsomorphicLayoutEffect(() => {
+    const grid = gridRef.current
+    if (!grid) return
+
+    const measure = () => {
+      const slots = Array.from(
+        grid.querySelectorAll<HTMLElement>("[data-project-slot]"),
+      )
+      const expandedRows = new Set(
+        slots
+          .filter((slot) => slot.dataset.expanded === "true")
+          .map((slot) => Number(slot.dataset.row)),
+      )
+      const collapsed = slots.filter(
+        (slot) =>
+          slot.dataset.expanded !== "true" &&
+          !expandedRows.has(Number(slot.dataset.row)),
+      )
+
+      // Drop the shared height before reading so a row can shrink again.
+      const applied = collapsed.map((slot) => slot.style.height)
+      collapsed.forEach((slot) => {
+        slot.style.height = ""
+      })
+      const measured = new Map<number, number>()
+      collapsed.forEach((slot) => {
+        const row = Number(slot.dataset.row)
+        const height = slot.getBoundingClientRect().height
+        measured.set(row, Math.max(measured.get(row) ?? 0, height))
+      })
+      collapsed.forEach((slot, index) => {
+        slot.style.height = applied[index]
+      })
+
+      setRowHeights((current) => {
+        const next = current.slice(0, rowCount)
+        measured.forEach((height, row) => {
+          next[row] = height
+        })
+        const unchanged =
+          next.length === current.length &&
+          next.every((height, index) => height === current[index])
+        return unchanged ? current : next
+      })
+    }
+
+    measure()
+
+    const observer = new ResizeObserver(measure)
+    observer.observe(grid)
+    window.addEventListener("resize", measure)
+    // Late-loading fonts change how much room the text needs.
+    document.fonts?.ready.then(measure)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener("resize", measure)
+    }
+  }, [projectKey, rowCount, expandedTitles])
+
+  return (
+    <div ref={gridRef} className="flex items-start justify-center gap-4">
+      {columns.map((column, columnIndex) => (
+        <div
+          key={`${keyPrefix}column-${columnIndex}`}
+          className="flex w-[calc((100%-2rem)/3)] min-w-0 flex-col gap-4"
+        >
+          {column.map(({ project, row, centered }) => {
+            const expanded = expandedTitles.includes(project.title)
+            const collapsedHeight = rowHeights[row]
+            return (
+              <div
+                key={`${keyPrefix}${project.title}`}
+                data-project-slot
+                data-row={row}
+                data-expanded={expanded ? "true" : "false"}
+                className="flex w-full"
+                style={{
+                  ...(centered
+                    ? { transform: "translateX(calc(50% + 0.5rem))" }
+                    : null),
+                  ...(!expanded && collapsedHeight
+                    ? { height: collapsedHeight }
+                    : null),
+                }}
+              >
+                <ProjectCard
+                  {...project}
+                  expanded={expanded}
+                  onToggleExpanded={() => {
+                    setExpandedTitles((current) =>
+                      current.includes(project.title)
+                        ? current.filter((title) => title !== project.title)
+                        : [...current, project.title],
+                    )
+                  }}
+                />
+              </div>
+            )
+          })}
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export function ProjectsSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -501,16 +740,29 @@ export function ProjectsSection() {
         return false
       }
 
-      const haystack = [
-        project.title,
-        project.date,
-        project.tag ?? "",
-        ...project.learnings,
-        getNodeText(project.description),
-      ].join(" ")
-      return matchesSearch(haystack, searchQuery)
+      return projectMatchesSearch(project, searchQuery)
     })
   }, [searchQuery, selectedTopics])
+
+  const featuredProjects = useMemo(() => {
+    return completedProjects
+      .filter((project) => "featured" in project && project.featured)
+      .sort(compareByDateThenTitle)
+  }, [])
+
+  const groupedProjects = useMemo(() => {
+    const groups: { tag: string; projects: typeof filteredProjects }[] = []
+    for (const project of filteredProjects) {
+      const tag = project.tag ?? "Other"
+      const last = groups[groups.length - 1]
+      if (!last || last.tag !== tag) {
+        groups.push({ tag, projects: [project] })
+      } else {
+        last.projects.push(project)
+      }
+    }
+    return groups
+  }, [filteredProjects])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -555,50 +807,35 @@ export function ProjectsSection() {
           </div>
         </div>
 
-        {/* Completed Projects */}
         <div id="completed-projects" className="scroll-mt-20">
-          {/* <h3 className="animate-on-scroll opacity-0 text-2xl font-semibold text-primary mb-8 flex items-center gap-3">
-            <span className="w-3 h-3 rounded-full bg-green-500" aria-hidden="true" />
-            Completed Projects
-          </h3> */}
-          {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredProjects.map((project, index) => {
-                const prevProject = filteredProjects[index - 1]
-                const tagBreak =
-                  index === 0 ||
-                  (prevProject &&
-                    (prevProject.tag ?? "") !== (project.tag ?? ""))
-
-                return (
-                  <Fragment key={project.title}>
-                    {tagBreak ? (
-                      <div
-                        id={tagToSlug(project.tag ?? "Other")}
-                        className={`col-span-full scroll-mt-24 flex items-center gap-4 mb-4 ${index === 0 ? "mt-0" : "mt-4"}`}
-                      >
-                        <hr className="flex-1 border-0 border-t-2 border-border" />
-                        <span className="shrink-0 text-sm font-semibold text-primary">
-                          {project.tag ?? "Other"}
-                        </span>
-                        <hr className="flex-1 border-0 border-t-2 border-border" />
-                      </div>
-                    ) : null}
-                    {/* <div
-                      className="animate-on-scroll opacity-0"
-                      style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                    > */}
-                      <ProjectCard {...project} />
-                    {/* </div> */}
-                  </Fragment>
-                )
-              })}
+          {featuredProjects.length > 0 ? (
+            <div className="mb-4">
+              <SectionHeading
+                id={tagToSlug(FEATURED_SECTION_LABEL)}
+                label={FEATURED_SECTION_LABEL}
+              />
+              <ProjectRows projects={featuredProjects} keyPrefix="featured-" />
             </div>
+          ) : null}
+
+          {groupedProjects.length > 0 ? (
+            groupedProjects.map((group, groupIndex) => (
+              <div key={group.tag} className="mb-4">
+                <SectionHeading
+                  id={tagToSlug(group.tag)}
+                  label={group.tag}
+                  className={groupIndex === 0 && featuredProjects.length === 0 ? "mt-0" : "mt-4"}
+                />
+                <ProjectRows projects={group.projects} />
+              </div>
+            ))
           ) : (
             <p className="text-center text-muted-foreground">
               {searchQuery.trim()
                 ? `No projects match "${searchQuery.trim()}".`
-                : "No projects yet. Check back soon!"}
+                : selectedTopics.length > 0
+                  ? "No projects match the selected topics."
+                  : "No projects yet. Check back soon!"}
             </p>
           )}
         </div>

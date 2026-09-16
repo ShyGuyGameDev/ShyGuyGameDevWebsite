@@ -6,7 +6,7 @@ import Link from "next/link"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { PROJECT_TAG_ORDER, POST_TAG_ORDER, tagToSlug } from "@/lib/utils"
+import { PROJECT_NAV_SECTIONS, POST_TAG_ORDER, tagToSlug } from "@/lib/utils"
 
 type NavLink = {
   href: string
@@ -16,7 +16,7 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects", sections: PROJECT_TAG_ORDER },
+  { href: "/projects", label: "Projects", sections: PROJECT_NAV_SECTIONS },
   { href: "/posts", label: "Posts & Media Mentions", sections: POST_TAG_ORDER },
   { href: "/team", label: "Empty Console" },
 ]
