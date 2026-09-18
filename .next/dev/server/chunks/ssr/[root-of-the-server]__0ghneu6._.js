@@ -56,28 +56,79 @@ __turbopack_context__.s([
     "tagToSlug",
     ()=>tagToSlug
 ]);
+/**
+ * lib/utils.ts
+ *
+ * The site's shared helper functions and shared constants. Almost every component imports
+ * something from here: `cn()` for class names, the comparator functions for ordering the
+ * project and post grids, `matchesSearch` and `getNodeText` for the search boxes, and the
+ * tag constants and colour lookup for the coloured tag pills.
+ *
+ * There is no `"use client"` here on purpose. This file is plain TypeScript with no hooks
+ * and no browser APIs, so it can be imported by Server Components and Client Components
+ * alike.
+ *
+ * Concepts to notice:
+ *  - `cn()`, and why simply concatenating Tailwind classes is not enough.
+ *  - Recursion: `getNodeText` walks a tree by calling itself.
+ *  - Comparator functions, the little `(a, b) => number` functions that `Array.sort` uses,
+ *    and the convention that a negative result means "a comes first".
+ *  - A factory function: `createCompareByTagThenDateThenTitle` returns a *function*, so one
+ *    implementation can be reused with different tag orders.
+ *  - `as const` and the readonly tuple types it produces.
+ *  - The `??` nullish-coalescing operator as a default-value fallback.
+ */ // `clsx` joins class names together and knows how to handle conditionals, arrays, and
+// objects. `ClassValue` is its type for anything it accepts.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/clsx/dist/clsx.mjs [app-ssr] (ecmascript)");
+// `tailwind-merge` understands Tailwind's class groups and resolves conflicts between them.
 var __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/ShyGuyGameDevWebsite/node_modules/tailwind-merge/dist/bundle-mjs.mjs [app-ssr] (ecmascript)");
 ;
 ;
 function cn(...inputs) {
+    // Note the order: clsx runs first to build the string, then twMerge de-duplicates it.
     return (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$tailwind$2d$merge$2f$dist$2f$bundle$2d$mjs$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["twMerge"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["clsx"])(inputs));
 }
 function getNodeText(node) {
+    // Base case 1: nothing to read. `node == null` with two equals signs matches both `null`
+    // and `undefined`. Booleans are skipped because `{isActive && <span/>}` leaves a literal
+    // `false` in the tree when the condition fails, and "false" is not text a user searched for.
     if (node == null || typeof node === 'boolean') return '';
+    // Base case 2: an actual leaf of text. Numbers are valid React children too, so they are
+    // converted to strings rather than ignored.
     if (typeof node === 'string' || typeof node === 'number') return String(node);
+    // Recursive case 1: a list of children (which is what JSX siblings and `.map()` produce).
+    // Each entry is flattened by calling this same function, then joined with spaces so words
+    // from adjacent elements do not run together into one unsearchable blob.
     if (Array.isArray(node)) return node.map(getNodeText).join(' ');
+    // Recursive case 2: a single React element. Every element object has a `props` field, and
+    // its text lives in `props.children`, so recurse one level down.
     if (typeof node === 'object' && 'props' in node) {
+        // The inline cast tells TypeScript the shape being read. `ReactNode` is a broad union and
+        // TypeScript cannot prove `props.children` exists on it, so this asserts it. Both `?.`
+        // guards handle elements that have no props or no children, in which case `undefined` is
+        // passed back in and caught by the first base case above.
         return getNodeText(node.props?.children);
     }
+    // Anything else (a Fragment symbol, a Promise, an iterator) has no readable text.
     return '';
 }
 function getYearFromDate(date) {
+    // `new Date(...)` parses the string, and `getFullYear()` returns a four-digit number.
     return new Date(date).getFullYear();
 }
-function compareByDateThenTitle(a, b) {
+function compareByDateThenTitle(// Only the fields actually compared are required in the parameter types, so this works on
+// any object that happens to have a `date` and a `title`. TypeScript calls this structural
+// typing: the shape matters, not the class or interface name.
+a, b) {
+    // `getTime()` turns each date into a millisecond number so they can be subtracted.
+    // Note `b` minus `a`, not `a` minus `b`: that reversal is what makes newer dates sort
+    // first, because a later `b` produces a positive result and pushes `b` ahead.
     const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+    // If the dates differ at all, the date decides and we are done.
     if (dateDiff !== 0) return dateDiff;
+    // Tie-break: `localeCompare` compares two strings alphabetically and already returns the
+    // negative/zero/positive numbers a comparator needs, so it can be returned directly. It
+    // also handles accents and non-English characters more correctly than `<` would.
     return a.title.localeCompare(b.title);
 }
 const PROJECT_TAG_ORDER = [
@@ -99,39 +150,82 @@ const POST_TAG_ORDER = [
     'Post'
 ];
 function tagToSlug(tag) {
-    return tag.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return tag// Fragments are case-insensitive in practice and lowercase looks tidier in a URL.
+    .toLowerCase()// Drop surrounding whitespace before it can be turned into stray dashes.
+    .trim()// Replace every run of characters that is *not* a letter or digit with a single dash.
+    // The `+` matters: it collapses "Media  Mention" into one dash, not two. `/g` means
+    // replace every match, not just the first.
+    .replace(/[^a-z0-9]+/g, '-')// Tidy up: strip a dash at the very start (`^-`) or the very end (`-$`), which would
+    // otherwise appear for a tag like "(Games)".
+    .replace(/^-|-$/g, '');
 }
-function compareTags(aTag, bTag, tagOrder) {
+// Compares two tags by their position in a given order list. Not exported: it is a private
+// helper used only by the factory below.
+function compareTags(// Both may be `undefined`, because an item is allowed to have no tag at all.
+aTag, bTag, // `readonly string[]` accepts the `as const` tuples above without complaining that they
+// cannot be mutated, and documents that this function will not modify the list.
+tagOrder) {
+    // `??` is nullish coalescing: use the left value unless it is null or undefined, in which
+    // case fall back to the right. So a missing tag is treated as an empty string from here on.
     const a = aTag ?? '';
     const b = bTag ?? '';
+    // `indexOf` gives each tag's rank in the canonical order, or -1 if the tag is not listed.
+    // Turning a name into a number is the trick that lets an arbitrary custom order be sorted.
     const aIndex = tagOrder.indexOf(a);
     const bIndex = tagOrder.indexOf(b);
+    // The happy path: both tags are known, so subtract their ranks. An earlier tag has a
+    // smaller index, so the result is negative and it sorts first, exactly as intended.
     if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+    // Only `a` is a known tag, so it wins. Negative means "a comes first".
     if (aIndex !== -1) return -1;
+    // Mirror image: only `b` is known, so the positive 1 means "b comes first".
     if (bIndex !== -1) return 1;
+    // From here neither tag is in the order list. Both empty means genuinely equal.
     if (!a && !b) return 0;
+    // One side has no tag at all: untagged items sink to the bottom. `!a` returns 1 to push
+    // `a` down, and `!b` returns -1 to push `b` down.
     if (!a) return 1;
     if (!b) return -1;
+    // Last resort: two unlisted-but-present tags are sorted alphabetically, so the ordering
+    // stays stable and predictable even for a tag someone forgot to add to the list above.
     return a.localeCompare(b);
 }
 function createCompareByTagThenDateThenTitle(tagOrder) {
-    return (a, b)=>{
+    return (// `tag?` is optional here, matching `compareTags`, so untagged items can still be sorted.
+    a, b)=>{
+        // Priority 1: the tag group. Items are grouped into sections before anything else.
         const tagDiff = compareTags(a.tag, b.tag, tagOrder);
         if (tagDiff !== 0) return tagDiff;
+        // Priority 2: within a tag group, newest first (again note the reversed b-minus-a).
         const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
         if (dateDiff !== 0) return dateDiff;
+        // Priority 3: identical dates fall back to alphabetical title order, which keeps the grid
+        // layout stable between builds instead of shuffling on every deploy.
         return a.title.localeCompare(b.title);
     };
 }
 const compareByProjectTagThenDateThenTitle = createCompareByTagThenDateThenTitle(PROJECT_TAG_ORDER);
 const compareByPostTagThenDateThenTitle = createCompareByTagThenDateThenTitle(POST_TAG_ORDER);
 function matchesSearch(haystack, query) {
+    // Normalise the query once: trimmed and lowercased so the comparison is case-insensitive.
     const trimmed = query.trim().toLowerCase();
+    // An empty search box should show everything, not nothing, so return true immediately.
     if (!trimmed) return true;
+    // Lowercase the target too, so both sides of the comparison are in the same case.
     const text = haystack.toLowerCase();
+    // Split on any run of whitespace (`\s+`) to get the individual words, then `.every(...)`
+    // returns true only if *all* of them are found. `.some(...)` would give an OR search.
     return trimmed.split(/\s+/).every((token)=>text.includes(token));
 }
+// The tag-to-colour lookup used by the tag pills. `Record<string, string>` is TypeScript's
+// type for "an object used as a dictionary with string keys and string values".
 const TAG_COLOR_CLASSES = {
+    // One row per tag. Each value is a set of Tailwind classes giving a pale background with
+    // matching darker text, plus `dark:` variants that swap to a translucent dark background
+    // (the `/20` is an opacity modifier) with light text so the pills stay readable in dark
+    // mode. Note several tags are listed in both singular and plural forms ("Post"/"Posts",
+    // "Media Mention"/"Media Mentions") so either spelling used in the data still finds a
+    // colour. Tags with the same colour, like those pairs, are intentional duplicates.
     Games: 'bg-purple-50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300',
     Apps: 'bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300',
     Robotics: 'bg-cyan-50 text-cyan-700 dark:bg-cyan-900/20 dark:text-cyan-300',
@@ -142,11 +236,17 @@ const TAG_COLOR_CLASSES = {
     Miscellaneous: 'bg-slate-100 text-slate-600 dark:bg-slate-800/40 dark:text-slate-300',
     Post: 'bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300',
     Posts: 'bg-rose-50 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300',
+    // Keys containing a space must be written in quotes, since they are not valid identifiers.
     'Media Mention': 'bg-sky-50 text-sky-700 dark:bg-sky-900/20 dark:text-sky-300',
     'Media Mentions': 'bg-sky-50 text-sky-700 dark:bg-sky-900/20 dark:text-sky-300'
 };
+// The fallback styling for any tag not listed above, in the site's accent yellow. Having a
+// default means a brand-new tag renders as a sensible pill instead of an unstyled one.
 const DEFAULT_TAG_COLOR_CLASSES = 'bg-yellow-50 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300';
 function getTagColorClasses(tag) {
+    // `??` supplies the default when the lookup misses. Using `??` rather than `||` is the
+    // right choice for a lookup like this, because `||` would also replace a legitimately
+    // empty-string value.
     return TAG_COLOR_CLASSES[tag] ?? DEFAULT_TAG_COLOR_CLASSES;
 }
 }),
@@ -497,7 +597,7 @@ function Navigation() {
                                                     "aria-hidden": "true"
                                                 }, void 0, false, {
                                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                    lineNumber: 287,
+                                                    lineNumber: 290,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
@@ -506,14 +606,20 @@ function Navigation() {
                                             lineNumber: 279,
                                             columnNumber: 19
                                         }, this),
-                                        isMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        isMenuOpen && // top-full places this immediately below the link, left-0 aligns their left edges.
+                                        // The pt-4 padding is deliberate: it creates an *invisible but hoverable* bridge
+                                        // between the link and the visible panel, so the pointer never leaves the <li>.
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "absolute left-0 top-full pt-4",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                                 role: "menu",
                                                 className: "min-w-56 rounded-md border border-border bg-card shadow-lg py-2",
                                                 children: link.sections.map((section)=>{
+                                                    // Turn the display name into the matching element id on the target page.
                                                     const slug = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["tagToSlug"])(section);
-                                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    return(// role="none" strips the <li>'s default list semantics, because in a menu the
+                                                    // announced item should be the link inside, not the list row around it.
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         role: "none",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                             href: `${link.href}#${slug}`,
@@ -523,23 +629,23 @@ function Navigation() {
                                                             children: section
                                                         }, void 0, false, {
                                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                            lineNumber: 305,
+                                                            lineNumber: 327,
                                                             columnNumber: 31
                                                         }, this)
                                                     }, section, false, {
                                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                        lineNumber: 304,
+                                                        lineNumber: 321,
                                                         columnNumber: 29
-                                                    }, this);
+                                                    }, this));
                                                 })
                                             }, void 0, false, {
                                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                lineNumber: 297,
+                                                lineNumber: 307,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                            lineNumber: 296,
+                                            lineNumber: 304,
                                             columnNumber: 21
                                         }, this)
                                     ]
@@ -565,18 +671,18 @@ function Navigation() {
                                 className: "h-5 w-5"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                lineNumber: 335,
+                                lineNumber: 362,
                                 columnNumber: 23
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                 className: "h-5 w-5"
                             }, void 0, false, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                lineNumber: 335,
+                                lineNumber: 362,
                                 columnNumber: 51
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                            lineNumber: 327,
+                            lineNumber: 353,
                             columnNumber: 11
                         }, this)
                     ]
@@ -598,12 +704,16 @@ function Navigation() {
                                         children: link.label
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                        lineNumber: 345,
+                                        lineNumber: 379,
                                         columnNumber: 19
                                     }, this),
-                                    link.sections && link.sections.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                    link.sections && link.sections.length > 0 && // The left border plus padding draws the vertical line that visually nests these
+                                    // items under their parent link.
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                         className: "mt-2 ml-4 flex flex-col gap-2 border-l border-border pl-3",
                                         children: link.sections.map((section)=>{
+                                            // Identical slug/href/handler logic to the desktop dropdown above. If you ever
+                                            // change how section links behave, remember to change it in both places.
                                             const slug = (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["tagToSlug"])(section);
                                             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$ShyGuyGameDevWebsite$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -613,34 +723,34 @@ function Navigation() {
                                                     children: section
                                                 }, void 0, false, {
                                                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                    lineNumber: 362,
+                                                    lineNumber: 404,
                                                     columnNumber: 29
                                                 }, this)
                                             }, section, false, {
                                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                                lineNumber: 361,
+                                                lineNumber: 403,
                                                 columnNumber: 27
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                        lineNumber: 357,
+                                        lineNumber: 397,
                                         columnNumber: 21
                                     }, this)
                                 ]
                             }, link.href, true, {
                                 fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                                lineNumber: 344,
+                                lineNumber: 376,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                        lineNumber: 342,
+                        lineNumber: 372,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/ShyGuyGameDevWebsite/src/components/navigation.tsx",
-                    lineNumber: 341,
+                    lineNumber: 370,
                     columnNumber: 11
                 }, this)
             ]
