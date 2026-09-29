@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "f4ff50c60e254f55b2edf955561c9b90",
-    "previewModeSigningKey": "8a3db5c7d95638dba449a7469b2acf7ad95248cfc057ac2bdfd24108b9f0a3f9",
-    "previewModeEncryptionKey": "f1592722cf9a964ee31e4eb9099f13797125dd5fde97ed4f9e52f55c31352dc4"
-  }
-}
+{"version":4,"routes":{"/test/work/news-digest":{},"/test/work/robotic-dog":{},"/test/work/open-stage":{}},"dynamicRoutes":{"/test/work/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/test/work/[slug]","routeRegex":"^\\/test\\/work\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"8092f2abc83ecf103a0017f7d9d54437","previewModeSigningKey":"6cc86275164b35891f3df9f36c414f47f7b4ba58e84c560d6a6125b437497c86","previewModeEncryptionKey":"032f4b259e11eeeb2fd5ce3324d87caddf169a6c3e60a655836ad3721fa39c6e"}}

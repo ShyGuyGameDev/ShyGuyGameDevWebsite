@@ -39,6 +39,8 @@ import { Analytics } from "@vercel/analytics/next"
 // The site-wide navigation bar and footer. `@/` is a path alias for `src/`, configured in `tsconfig.json`.
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+// Hides the old navigation and footer under `/test`, where the v2 portfolio brings its own.
+import { HideOnTest } from "@/components/hide-on-test"
 // Importing a CSS file for its side effects. This global stylesheet (Tailwind's base layers plus custom
 // CSS variables such as `--background` and `--border`) must be imported in the root layout so the styles
 // apply everywhere. Global CSS can only be imported from a layout, not from an arbitrary component.
@@ -188,7 +190,9 @@ export default function RootLayout({
       */}
       <body suppressHydrationWarning className={`${inter.variable} font-sans antialiased`}>
         {/* Shared header/nav, rendered above every page because it lives in the layout. */}
-        <Navigation />
+        <HideOnTest>
+          <Navigation />
+        </HideOnTest>
         {/* `<main>` is the semantic landmark for a page's primary content, which helps screen readers.
             `min-h-screen` keeps it at least as tall as the viewport so the footer never floats up on
             short pages; `bg-background` uses the theme color variable from `globals.css`. */}
@@ -197,7 +201,9 @@ export default function RootLayout({
           {children}
         </main>
         {/* Shared footer, likewise present on every route. */}
-        <Footer />
+        <HideOnTest>
+          <Footer />
+        </HideOnTest>
         {/* Mounts the Vercel Analytics tracking script. It renders no visible markup. */}
         <Analytics />
       </body>
