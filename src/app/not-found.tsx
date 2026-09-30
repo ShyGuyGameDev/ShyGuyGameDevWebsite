@@ -19,10 +19,6 @@
  *    content in React without a full browser reload, and prefetches the destination when the link
  *    scrolls into view. That is why internal links on the site should always use `<Link>`.
  * 3. The `asChild` prop on `<Button>` (see below) is a composition trick worth understanding.
- * 4. WORTH KNOWING: this file renders `<Navigation />`, `<main>`, and `<Footer />` itself, but the root
- *    layout in `src/app/layout.tsx` already wraps everything in those. That means the 404 page ends up
- *    with two navigation bars, two footers, and nested `<main>` elements. It is left as-is here, but it
- *    is the kind of duplication worth looking at.
  */
 
 // The Next.js link component for internal navigation (see concept 2 above).
@@ -30,9 +26,6 @@ import Link from "next/link"
 // A reusable styled button from the local UI kit (this project uses shadcn/ui-style components that
 // live in the repo rather than in `node_modules`, so you can read and edit them).
 import { Button } from "@/components/ui/button"
-// The shared navigation bar and footer components.
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 
 // The default export is the component Next.js renders for the not-found case.
 export default function NotFound() {
@@ -40,7 +33,6 @@ export default function NotFound() {
     // `min-h-screen` makes this fill at least the full viewport height so the footer sits at the bottom
     // even though there is very little content; `bg-background` is the theme background color variable.
     <main className="min-h-screen bg-background">
-      <Navigation />
       {/* The centering wrapper. `flex flex-col` stacks children vertically, then `items-center` centers
           them horizontally and `justify-center` centers them vertically within the available height.
           `min-h-[calc(100vh-200px)]` is Tailwind arbitrary-value syntax: full viewport height minus
@@ -68,12 +60,11 @@ export default function NotFound() {
               keyboard-accessible link rather than a button faking navigation. `size="lg"` picks the
               large size variant. */}
           <Button asChild size="lg">
-            {/* `href="/"` sends the visitor back to the home page. */}
+            {/* `href="/"` sends the visitor back to the portfolio home page. */}
             <Link href="/">Return Home</Link>
           </Button>
         </div>
       </div>
-      <Footer />
     </main>
   )
 }

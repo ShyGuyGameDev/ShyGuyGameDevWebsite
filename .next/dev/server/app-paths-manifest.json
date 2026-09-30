@@ -1,11 +1,10 @@
 {
-  "/page": "app/page.js",
-  "/posts/page": "app/posts/page.js",
-  "/projects/page": "app/projects/page.js",
-  "/team/page": "app/team/page.js",
-  "/test/[...missing]/page": "app/test/[...missing]/page.js",
-  "/test/about/page": "app/test/about/page.js",
-  "/test/page": "app/test/page.js",
-  "/test/work/[slug]/page": "app/test/work/[slug]/page.js",
-  "/test/work/page": "app/test/work/page.js"
+  "/(portfolio)/about/page": "app/(portfolio)/about/page.js",
+  "/(portfolio)/page": "app/(portfolio)/page.js",
+  "/(portfolio)/work/[slug]/page": "app/(portfolio)/work/[slug]/page.js",
+  "/(portfolio)/work/page": "app/(portfolio)/work/page.js",
+  "/old-view/page": "app/old-view/page.js",
+  "/old-view/posts/page": "app/old-view/posts/page.js",
+  "/old-view/projects/page": "app/old-view/projects/page.js",
+  "/old-view/team/page": "app/old-view/team/page.js"
 }

@@ -8,7 +8,7 @@
  *  - six topic icons from /HomeIcons/*.png (games, robotics, debate, apps, mun, teaching)
  *    positioned in an arc, three on each side of the text,
  *  - the headline "Meet ShyGuy" typed out one character at a time, a paragraph about the
- *    site owner, and a "See My Work" button that routes to /projects.
+ *    site owner, and a "See My Work" button that routes to /old-view/projects.
  *
  * Concepts a learner should notice in this file:
  *  - the "use client" directive, which opts this component out of server-only rendering,
@@ -331,15 +331,15 @@ export function HeroSection() {
     }
   }
 
-  // Click handler for the "See My Work" button. router.push navigates client-side to /projects:
+  // Click handler for the "See My Work" button. router.push navigates client-side to /old-view/projects:
   // no full page reload, and the URL updates so the back button still works.
   const handleSeeMyWork = () => {
-    router.push("/projects")
+    router.push("/old-view/projects")
   }
 
   // Same destination for a click on one of the (disabled) video boxes.
   const handleVideoClick = () => {
-    router.push("/projects")
+    router.push("/old-view/projects")
   }
 
   return (

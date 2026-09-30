@@ -39,7 +39,7 @@ import { Analytics } from "@vercel/analytics/next"
 // The site-wide navigation bar and footer. `@/` is a path alias for `src/`, configured in `tsconfig.json`.
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-// Hides the old navigation and footer under `/test`, where the v2 portfolio brings its own.
+// Shows the previous site's navigation and footer only under `/old-view`.
 import { HideOnTest } from "@/components/hide-on-test"
 // Importing a CSS file for its side effects. This global stylesheet (Tailwind's base layers plus custom
 // CSS variables such as `--background` and `--border`) must be imported in the root layout so the styles

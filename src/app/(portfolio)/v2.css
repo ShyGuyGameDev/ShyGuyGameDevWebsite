@@ -1,0 +1,47 @@
+/*
+ * v2.css
+ *
+ * Palette and a few base styles for the portfolio. Every variable is scoped to
+ * `.v2`, so none of it reaches the current site's light theme in globals.css. Components read
+ * these through Tailwind's custom-property shorthand, e.g. `bg-(--v2-surface)`.
+ */
+
+.v2 {
+  --v2-bg: #0b0d10;
+  --v2-surface: #12151a;
+  --v2-border: #1f242b;
+  --v2-text: #e7e9ec;
+  --v2-muted: #8a93a0;
+  --v2-accent: #14b8a6;
+
+  background-color: var(--v2-bg);
+  color: var(--v2-text);
+  color-scheme: dark;
+}
+
+/* Keeps the old light background from showing when the page is overscrolled. */
+html:has(.v2),
+html:has(.v2) body,
+html:has(.v2) main {
+  background-color: #0b0d10;
+}
+
+.v2 ::selection {
+  background-color: color-mix(in srgb, var(--v2-accent) 35%, transparent);
+  color: var(--v2-text);
+}
+
+/* globals.css tints every outline with the old site's blue ring; retint it for v2. */
+.v2 * {
+  outline-color: var(--v2-accent);
+}
+
+.v2 :focus-visible {
+  outline: 2px solid var(--v2-accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.v2 .mono {
+  font-family: var(--font-v2-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}

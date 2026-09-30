@@ -1,9 +1,8 @@
 /**
  * hide-on-test.tsx
  *
- * Renders its children everywhere except under `/test`, where the v2 portfolio draws its own
- * header and footer. The root layout wraps the old `<Navigation />` and `<Footer />` in this so
- * they do not stack on top of the new design.
+ * Renders the previous site's navigation and footer only under `/old-view`. The portfolio
+ * at the site root draws its own header and footer, so these stay out of the way there.
  */
 
 "use client"
@@ -13,6 +12,7 @@ import { usePathname } from "next/navigation"
 
 export function HideOnTest({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
-  if (pathname === "/test" || pathname?.startsWith("/test/")) return null
+  const onOldSite = pathname === "/old-view" || pathname?.startsWith("/old-view/")
+  if (!onOldSite) return null
   return <>{children}</>
 }

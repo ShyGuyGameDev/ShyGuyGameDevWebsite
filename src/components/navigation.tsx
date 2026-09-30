@@ -53,10 +53,10 @@ type NavLink = {
 // The nav is described as data and rendered with .map below, so adding a page means adding one line
 // here. Only entries with `sections` get a dropdown.
 const navLinks: NavLink[] = [
-  { href: "/", label: "Home" },
-  { href: "/projects", label: "Projects", sections: PROJECT_NAV_SECTIONS },
-  { href: "/posts", label: "Posts & Media Mentions", sections: POST_TAG_ORDER },
-  { href: "/team", label: "Empty Console" },
+  { href: "/old-view", label: "Home" },
+  { href: "/old-view/projects", label: "Projects", sections: PROJECT_NAV_SECTIONS },
+  { href: "/old-view/posts", label: "Posts & Media Mentions", sections: POST_TAG_ORDER },
+  { href: "/old-view/team", label: "Empty Console" },
 ]
 
 // A helper that builds the class string for a top-level link. Sharing it means every link stays
@@ -210,7 +210,7 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           {/* The logo, which is both the picture and the word "ShyGuy" inside one link back home. */}
           <Link
-            href="/"
+            href="/old-view"
             className="flex items-center gap-2 text-xl font-semibold text-primary hover:bg-gray-200 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-md px-3 -mx-3 -my-4 py-4 h-full"
           >
             {/* next/image requires explicit width and height so the browser can reserve space and the
