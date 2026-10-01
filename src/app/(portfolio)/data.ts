@@ -112,7 +112,7 @@ export const projects: Project[] = [
     withEmptyConsole: true,
     featured: true,
     caseStudy: {
-      team: "Empty Console",
+      team: "Empty Console: ShyGuy, HF_ang, Emey",
       problem:
         "ShyGuy's school has a lot of incredible electives for students to choose from, but the system to read and pick them has been incredibly disorganized in the past. It has always been difficult to switch between reading and choosing while also having it be difficult to understand which details in a course are important.",
       built:
