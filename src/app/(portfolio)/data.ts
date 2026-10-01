@@ -17,20 +17,24 @@ export const contact = {
   emptyConsole: "https://www.emptyconsole.com/",
 }
 
-export type Category = "Apps" | "Robotics" | "Games"
+export type Category = "Apps" | "Robotics" | "Games" | "Teaching"
 
-export const categories: Category[] = ["Apps", "Robotics", "Games"]
+export const categories: Category[] = ["Apps", "Robotics", "Games", "Teaching"]
 
 export type ProjectImage = {
   src: string
   alt: string
   width: number
   height: number
+  /** "contain" keeps a wide logo fully visible. Defaults to filling the frame. */
+  fit?: "cover" | "contain"
 }
 
 export type ExternalLink = {
   label: string
   href: string
+  /** Filled green button. When omitted, the first link is filled and the rest are outlined. */
+  filled?: boolean
 }
 
 export type CaseStudy = {
@@ -39,6 +43,8 @@ export type CaseStudy = {
   built: string
   result: string
   learned: string
+  /** Replaces the default "What he built" heading when the work was not something he built. */
+  builtHeading?: string
   links: ExternalLink[]
   extraVideo?: { src: string; caption: string }
 }
@@ -60,6 +66,69 @@ export type Project = {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "streetcode",
+    title: "StreetCode Academy",
+    category: "Teaching",
+    date: "Nov 2026",
+    year: 2026,
+    summary: "Volunteered as a class mentor in StreetCode Academy's weekly Unboxing AI class.",
+    image: {
+      src: "/images.png",
+      alt: "StreetCode Academy logo",
+      width: 512,
+      height: 512,
+    },
+    withEmptyConsole: false,
+    featured: true,
+    caseStudy: {
+      team: "Solo",
+      problem:
+        "In a world where AI is the undeniable future, many still are not getting the education they need in order to use the tools available to them.",
+      built:
+        "ShyGuy volunteered at StreetCode Academy, which runs weekly technology-based classes where anyone can sign up.",
+      builtHeading: "What he did",
+      result:
+        'By becoming a "class mentor" in the Unboxing AI class, ShyGuy was able to use his skill in using AI to help others.',
+      learned:
+        "How to simply explain complex concepts and how to constantly be changing explanations for people with different experience levels.",
+      links: [{ label: "StreetCode Academy", href: "https://streetcode.org/", filled: false }],
+    },
+  },
+  {
+    slug: "student-atlas",
+    title: "Student Atlas",
+    category: "Apps",
+    date: "Oct 2026",
+    year: 2026,
+    summary: "A simpler system for reading and ranking his school's electives, built with Empty Console.",
+    image: {
+      src: "/student-atlas.png",
+      alt: "Student Atlas logo",
+      width: 290,
+      height: 124,
+      fit: "contain",
+    },
+    withEmptyConsole: true,
+    featured: true,
+    caseStudy: {
+      team: "Empty Console",
+      problem:
+        "ShyGuy's school has a lot of incredible electives for students to choose from, but the system to read and pick them has been incredibly disorganized in the past. It has always been difficult to switch between reading and choosing while also having it be difficult to understand which details in a course are important.",
+      built:
+        "With his team called Empty Console, ShyGuy designed and built a replacement system. The system is capable of using the exact same info about courses, while also making the student UI and UX significantly simpler. All of Student Atlas's data is safely held by an extremely secure Supabase, along with other security measures implemented throughout the code.",
+      builtHeading: "What they built",
+      result:
+        "They are currently trying to get Student Atlas implemented in their school as the system to read and rank elective choices.",
+      learned:
+        "How to redesign a system, how to keep UI and UX simple and clean, and how to keep sensitive information safe.",
+      links: [
+        { label: "Source on GitHub", href: "https://github.com/EmptyConsole/Student-Atlas", filled: true },
+        { label: "Student Version", href: "https://student-atlas-xi.vercel.app/", filled: true },
+        { label: "Teacher Version", href: "https://student-atlas-xi.vercel.app/teacher", filled: true },
+      ],
+    },
+  },
   {
     slug: "news-digest",
     title: "News Digest",
@@ -86,7 +155,7 @@ export const projects: Project[] = [
       result:
         "What started as a personal tool now goes out to other students at his school. Anyone can join by pinging ShyGuy on Discord.",
       learned:
-        "How to build something that runs on its own, and how fast a tool made for one person turns into a product once other people rely on it.",
+        "How to build something that runs on its own, and how fast a tool made for one person turns into a service once other people rely on it.",
       links: [{ label: "Source on GitHub", href: "https://github.com/ShyGuyGameDev/NewsDigest" }],
     },
   },
@@ -190,10 +259,32 @@ export const projects: Project[] = [
     date: "Sep 2025",
     year: 2025,
     summary: "A platformer made in 3 days where glitches are the core mechanic.",
+    image: {
+      src: "/bugged-out.png",
+      alt: "A level from Bugged Out",
+      width: 960,
+      height: 540,
+    },
     href: "https://emptyconsole.itch.io/bugged-out",
     result: "17th of 474",
     withEmptyConsole: true,
-    featured: false,
+    featured: true,
+    caseStudy: {
+      team: "Empty Console: ShyGuy, HF_ang, Emey",
+      problem:
+        "The Patch Notes Game Jam handed out the theme 'The Error is the Feature' and three days to build something with it. Most games treat a glitch as the thing to patch out, so the team had to make one fun on purpose.",
+      built:
+        "A platformer where the glitches are the level design. Broken collision, vanishing platforms, and misbehaving controls are the obstacles, so clearing a room takes logic, memory, and reflexes rather than a clean jump arc.",
+      result:
+        "17th out of 474 entries. Three days, start to finish, with the whole team working on it at once.",
+      learned:
+        "How to build a game around a theme instead of bolting the theme on at the end, how much platformer feel improves with a few rounds of iteration, and how to split work across three people when the deadline is measured in hours.",
+      links: [
+        { label: "Source on GitHub", href: "https://github.com/EmptyConsole/Bugged-Out" },
+        { label: "Play on itch.io", href: "https://emptyconsole.itch.io/bugged-out" },
+        { label: "Patch Notes Game Jam", href: "https://itch.io/jam/patch-notes-v-1-0" },
+      ],
+    },
   },
   {
     slug: "space-looper",
@@ -236,7 +327,14 @@ export const projects: Project[] = [
   },
 ]
 
-const featuredOrder = ["news-digest", "robotic-dog", "open-stage"]
+const featuredOrder = [
+  "streetcode",
+  "student-atlas",
+  "news-digest",
+  "robotic-dog",
+  "open-stage",
+  "bugged-out",
+]
 
 export const featuredProjects = featuredOrder
   .map((slug) => projects.find((p) => p.slug === slug))

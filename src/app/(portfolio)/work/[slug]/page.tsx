@@ -46,7 +46,7 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
 
   const sections = [
     { title: "The problem", body: study.problem },
-    { title: "What he built", body: study.built },
+    { title: study.builtHeading ?? "What he built", body: study.built },
     { title: "Result", body: study.result },
     { title: "What he learned", body: study.learned },
   ]
@@ -84,7 +84,7 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
             fill
             priority
             sizes="(min-width: 768px) 672px, 100vw"
-            className="object-cover"
+            className={project.image.fit === "contain" ? "object-contain" : "object-cover"}
           />
         </div>
       )}
@@ -112,25 +112,30 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
         </figure>
       )}
 
-      <ul className="mt-12 flex flex-wrap gap-3">
-        {study.links.map((link, i) => (
-          <li key={link.href}>
-            <a
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={
-                i === 0 || project.slug === "robotic-dog"
-                  ? "inline-flex items-center gap-1.5 rounded-full bg-(--v2-accent) px-4 py-2 text-sm font-medium text-(--v2-bg) transition-opacity hover:opacity-90"
-                  : "inline-flex items-center gap-1.5 rounded-full border border-(--v2-border) px-4 py-2 text-sm transition-colors hover:border-(--v2-accent) hover:text-(--v2-accent)"
-              }
-            >
-              {link.label}
-              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-            </a>
-          </li>
-        ))}
-      </ul>
+      {study.links.length > 0 && (
+        <ul className="mt-12 flex flex-wrap gap-3">
+          {study.links.map((link, i) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={
+                  (link.filled ??
+                    (i === 0 ||
+                      project.slug === "robotic-dog" ||
+                      (project.slug === "bugged-out" && i === 1)))
+                    ? "inline-flex items-center gap-1.5 rounded-full bg-(--v2-accent) px-4 py-2 text-sm font-medium text-(--v2-bg) transition-opacity hover:opacity-90"
+                    : "inline-flex items-center gap-1.5 rounded-full border border-(--v2-border) px-4 py-2 text-sm transition-colors hover:border-(--v2-accent) hover:text-(--v2-accent)"
+                }
+              >
+                {link.label}
+                <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
 
       {next && next.slug !== project.slug && (
         <Link

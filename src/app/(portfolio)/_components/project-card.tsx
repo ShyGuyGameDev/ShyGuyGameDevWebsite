@@ -18,7 +18,11 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
             fill
             priority={priority}
             sizes="(min-width: 768px) 330px, 100vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className={
+              project.image.fit === "contain"
+                ? "object-contain"
+                : "object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            }
           />
         </div>
       )}
