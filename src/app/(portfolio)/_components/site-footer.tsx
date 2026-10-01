@@ -10,9 +10,6 @@ export function SiteFooter() {
         </div>
         <ContactLinks />
       </div>
-      <div className="mx-auto max-w-[1040px] px-6 pb-10">
-        <p className="mono text-xs text-(--v2-muted)">© {new Date().getFullYear()} ShyGuy</p>
-      </div>
     </footer>
   )
 }
