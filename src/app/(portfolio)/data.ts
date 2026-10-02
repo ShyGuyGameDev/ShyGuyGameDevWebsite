@@ -86,12 +86,12 @@ export const projects: Project[] = [
       problem:
         "In a world where AI is the undeniable future, many still are not getting the education they need in order to use the tools available to them.",
       built:
-        "ShyGuy volunteered at StreetCode Academy, which runs weekly technology-based classes where anyone can sign up.",
-      builtHeading: "What he did",
+        "ShyGuy volunteers at StreetCode Academy, which runs weekly technology-based classes where anyone can sign up. His students range from 13-70 yrs old.",
+      builtHeading: "What he does",
       result:
-        'By becoming a "class mentor" in the Unboxing AI class, ShyGuy was able to use his skill in using AI to help others.',
+        'By becoming a "class mentor" in the Unboxing AI class, ShyGuy is able to use his skills in AI to help others.',
       learned:
-        "How to simply explain complex concepts and how to constantly be changing explanations for people with different experience levels.",
+        "How to simply explain complex concepts and how to customize explanations for people with different experience levels.",
       links: [{ label: "StreetCode Academy", href: "https://streetcode.org/", filled: false }],
     },
   },

@@ -19,7 +19,7 @@ export default function V2About() {
 
       <div className="mt-8 space-y-5 text-lg leading-relaxed text-(--v2-text)/80">
         <p>
-          ShyGuy is a high-school student developer. Video games started it all: he got hooked on playing them,
+          ShyGuy is a high school student developer. Video games started it all: he got hooked on playing them,
           then taught himself to build them in Scratch, Pygame, p5.js, Unity, and Godot. The name is a nod to the
           Mario character.
         </p>
@@ -36,7 +36,11 @@ export default function V2About() {
           <Link href={`${BASE}/work/robotic-dog`} className={inlineLink}>
             computer vision robot
           </Link>
-          .
+          , and now teaches at{" "}
+          <a href="https://streetcode.org/" target="_blank" rel="noopener noreferrer" className={inlineLink}>
+            StreetCode
+          </a>{" "}
+          where he mentors students aged 13-70 yrs old on AI projects.
         </p>
       </div>
 
@@ -49,8 +53,7 @@ export default function V2About() {
         </h2>
         <p className="mt-2 leading-relaxed text-(--v2-muted)">
           ShyGuy cofounded Empty Console with HF_ang and Emey. They started by making games together and now
-          compete in hackathons and ship apps. He leads marketing, communications, and product positioning, and
-          contributes to development.
+          compete in hackathons and ship apps. He leads product, strategy, marketing, and communications.
         </p>
         <a
           href={contact.emptyConsole}
@@ -63,11 +66,8 @@ export default function V2About() {
         </a>
       </section>
 
-      <section aria-labelledby="about-contact-title" className="mt-14">
-        <h2 id="about-contact-title" className="text-lg font-semibold tracking-tight">
-          Say hi
-        </h2>
-        <p className="mt-2 text-(--v2-muted)">Questions, collaborations, or just want to talk games and robots.</p>
+      <section aria-label="Contact" className="mt-14">
+        <p className="text-(--v2-muted)">Questions, collaborations, or just want to talk games and robots?</p>
         <div className="mt-5">
           <ContactLinks />
         </div>
