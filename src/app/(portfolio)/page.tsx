@@ -1,5 +1,4 @@
 import { BASE, contact, featuredProjects, posts } from "./data"
-import { ContactLinks } from "./_components/contact-links"
 import { PostRow } from "./_components/post-row"
 import { ProjectCard } from "./_components/project-card"
 import { SectionHeader } from "./_components/section-header"
@@ -18,16 +17,15 @@ export default function V2Home() {
           <span className="h-2 w-2 shrink-0 rounded-full bg-(--v2-accent)" aria-hidden="true" />
           Currently exploring spatial intelligence and computer vision
         </p>
-        <div className="mt-8">
-          <ContactLinks />
-        </div>
       </section>
 
       <section aria-labelledby="work-title" className="pb-20">
         <SectionHeader id="work-title" title="Selected work" action={{ label: "All work", href: `${BASE}/work` }} />
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-5">
           {featuredProjects.map((project, i) => (
-            <ProjectCard key={project.slug} project={project} priority={i === 0} />
+            <div key={project.slug} className="flex w-full md:w-[calc((100%-2.5rem)/3)]">
+              <ProjectCard project={project} priority={i === 0} />
+            </div>
           ))}
         </div>
       </section>

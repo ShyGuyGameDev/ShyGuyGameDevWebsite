@@ -8,7 +8,7 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
   return (
     <Link
       href={projectHref(project) ?? "#"}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-(--v2-border) bg-(--v2-surface) transition-colors hover:border-(--v2-accent)/50"
+      className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-(--v2-border) bg-(--v2-surface) transition-colors hover:border-(--v2-accent)/50"
     >
       {project.image && (
         <div className="relative aspect-[16/10] overflow-hidden border-b border-(--v2-border) bg-(--v2-bg)">

@@ -72,7 +72,7 @@ export const projects: Project[] = [
     category: "Teaching",
     date: "Nov 2026",
     year: 2026,
-    summary: "Volunteered as a class mentor in StreetCode Academy's weekly Unboxing AI class.",
+    summary: "Volunteers as a class mentor in StreetCode Academy's weekly Unboxing AI class.",
     image: {
       src: "/images.png",
       alt: "StreetCode Academy logo",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     caseStudy: {
       team: "Solo",
       problem:
-        "In a world where AI is the undeniable future, many still are not getting the education they need in order to use the tools available to them.",
+        "In a world where AI is the undeniable future, many are still not getting the education they need in order to use the tools available to them.",
       built:
         "ShyGuy volunteers at StreetCode Academy, which runs weekly technology-based classes where anyone can sign up. His students range from 13-70 yrs old.",
       builtHeading: "What he does",
@@ -130,48 +130,6 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "news-digest",
-    title: "News Digest",
-    category: "Apps",
-    date: "Sep 2026",
-    year: 2026,
-    summary: "An automated news briefing emailed every Monday, Wednesday, and Friday at 6:45 AM.",
-    image: {
-      src: "/news-digest.jpeg",
-      alt: "News Digest email preview",
-      width: 738,
-      height: 414,
-    },
-    href: "https://github.com/ShyGuyGameDev/NewsDigest",
-    result: "Runs 3× a week",
-    withEmptyConsole: false,
-    featured: true,
-    caseStudy: {
-      team: "Solo",
-      problem:
-        "ShyGuy wanted a dependable way to stay on top of current events without digging through a dozen sites every morning.",
-      built:
-        "A fully automated briefing covering the latest in politics, technology, science, business, and more. It lands at 6:45 AM every Monday, Wednesday, and Friday. Everyone on the list is BCC'd on the same email, and addresses are stored encrypted in Supabase and never shown anywhere else.",
-      result:
-        "What started as a personal tool now goes out to other students at his school. Anyone can join by pinging ShyGuy on Discord.",
-      learned:
-        "How to build something that runs on its own, and how fast a tool made for one person turns into a service once other people rely on it.",
-      links: [{ label: "Source on GitHub", href: "https://github.com/ShyGuyGameDev/NewsDigest" }],
-    },
-  },
-  {
-    slug: "hackathon-digest",
-    title: "Hackathon Digest",
-    category: "Apps",
-    date: "Aug 2026",
-    year: 2026,
-    summary:
-      "A weekly email, built with Claude Routines, that finds a high-school-friendly hackathon and sends his team the details every Wednesday at 7 AM.",
-    href: "https://github.com/ShyGuyGameDev/hackathon-digest",
-    withEmptyConsole: false,
-    featured: false,
-  },
-  {
     slug: "open-stage",
     title: "Open Stage",
     category: "Apps",
@@ -203,6 +161,50 @@ export const projects: Project[] = [
         { label: "Congressional App Challenge", href: "https://www.congressionalappchallenge.us/" },
       ],
     },
+  },
+  {
+    slug: "news-digest",
+    title: "News Digest",
+    category: "Apps",
+    date: "Sep 2026",
+    year: 2026,
+    summary: "An automated news briefing emailed every Monday, Wednesday, and Friday at 6:45 AM.",
+    image: {
+      src: "/news-digest.jpeg",
+      alt: "News Digest email preview",
+      width: 738,
+      height: 414,
+    },
+    href: "https://github.com/ShyGuyGameDev/NewsDigest",
+    result: "Runs 3× a week",
+    withEmptyConsole: false,
+    featured: true,
+    /*
+    caseStudy: {
+      team: "Solo",
+      problem:
+        "ShyGuy wanted a dependable way to stay on top of current events without digging through a dozen sites every morning.",
+      built:
+        "A fully automated briefing covering the latest in politics, technology, science, business, and more. It lands at 6:45 AM every Monday, Wednesday, and Friday. Everyone on the list is BCC'd on the same email, and addresses are stored encrypted in Supabase and never shown anywhere else.",
+      result:
+        "What started as a personal tool now goes out to other students at his school. Anyone can join by pinging ShyGuy on Discord.",
+      learned:
+        "How to build something that runs on its own, and how fast a tool made for one person turns into a service once other people rely on it.",
+      links: [{ label: "Source on GitHub", href: "https://github.com/ShyGuyGameDev/NewsDigest" }],
+    },
+    */
+  },
+  {
+    slug: "hackathon-digest",
+    title: "Hackathon Digest",
+    category: "Apps",
+    date: "Aug 2026",
+    year: 2026,
+    summary:
+      "A weekly email, built with Claude Routines, that finds a high-school-friendly hackathon and sends his team the details every Wednesday at 7 AM.",
+    href: "https://github.com/ShyGuyGameDev/hackathon-digest",
+    withEmptyConsole: false,
+    featured: false,
   },
   {
     slug: "robotic-dog",
@@ -330,10 +332,10 @@ export const projects: Project[] = [
 const featuredOrder = [
   "streetcode",
   "student-atlas",
-  "news-digest",
   "robotic-dog",
   "open-stage",
   "bugged-out",
+  // "news-digest",
 ]
 
 export const featuredProjects = featuredOrder
