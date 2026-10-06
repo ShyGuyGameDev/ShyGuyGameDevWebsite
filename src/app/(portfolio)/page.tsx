@@ -20,7 +20,7 @@ export default function V2Home() {
       </section>
 
       <section aria-labelledby="work-title" className="pb-20">
-        <SectionHeader id="work-title" title="Selected work" action={{ label: "All work", href: `${BASE}/work` }} />
+        <SectionHeader id="work-title" title="Select Work" action={{ label: "All work", href: `${BASE}/work` }} />
         <div className="flex flex-wrap justify-center gap-5">
           {featuredProjects.map((project, i) => (
             <div key={project.slug} className="flex w-full md:w-[calc((100%-2.5rem)/3)]">
@@ -33,7 +33,7 @@ export default function V2Home() {
       <section aria-labelledby="writing-title" className="pb-24">
         <SectionHeader
           id="writing-title"
-          title="Posts"
+          title="Blog Posts"
           action={{ label: "More on Substack", href: contact.substack, external: true }}
         />
         <ul>

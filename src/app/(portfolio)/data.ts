@@ -70,7 +70,7 @@ export const projects: Project[] = [
     slug: "streetcode",
     title: "StreetCode Academy",
     category: "Teaching",
-    date: "Nov 2026",
+    date: "Oct 2026",
     year: 2026,
     summary: "Volunteers as a class mentor in StreetCode Academy's weekly Unboxing AI class.",
     image: {
@@ -89,7 +89,7 @@ export const projects: Project[] = [
         "ShyGuy volunteers at StreetCode Academy, which runs weekly technology-based classes where anyone can sign up. His students range from 13-70 yrs old.",
       builtHeading: "What he does",
       result:
-        'By becoming a "class mentor" in the Unboxing AI class, ShyGuy is able to use his skills in AI to help others.',
+        "By becoming a class mentor in the Unboxing AI class, ShyGuy is able to use his skills in AI to help others.",
       learned:
         "How to simply explain complex concepts and how to customize explanations for people with different experience levels.",
       links: [{ label: "StreetCode Academy", href: "https://streetcode.org/", filled: false }],
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     category: "Apps",
     date: "Oct 2026",
     year: 2026,
-    summary: "A simpler system for reading and ranking his school's electives, built with Empty Console.",
+    summary: "A simpler system for ranking and choosing high school electives.",
     image: {
       src: "/student-atlas.png",
       alt: "Student Atlas logo",
@@ -114,14 +114,14 @@ export const projects: Project[] = [
     caseStudy: {
       team: "Empty Console: ShyGuy, HF_ang, Emey",
       problem:
-        "ShyGuy's school has a lot of incredible electives for students to choose from, but the system to read and pick them has been incredibly disorganized in the past. It has always been difficult to switch between reading and choosing while also having it be difficult to understand which details in a course are important.",
+        "ShyGuy's school has incredible electives for students to choose from, but the system to read, rank, and select them has been cumbersome, non-intuitive, and time-consuming. It has been difficult to switch between reading and selection, and it has also been challenging to understand which aspects of a course are important.",
       built:
-        "With his team called Empty Console, ShyGuy designed and built a replacement system. The system is capable of using the exact same info about courses, while also making the student UI and UX significantly simpler. All of Student Atlas's data is safely held by an extremely secure Supabase, along with other security measures implemented throughout the code.",
+        "With his team Empty Console, ShyGuy designed and built a replacement system. The system is capable of using the exact same info on courses, while also making the student UX significantly simpler. Student Atlas uses a secure Supabase database to protect all data, two-factor authentication to safeguard access, and other security measures implemented throughout the code.",
       builtHeading: "What they built",
       result:
-        "They are currently trying to get Student Atlas implemented in their school as the system to read and rank elective choices.",
+        "Empty Console is currently working with their high school administration to get Student Atlas implemented as the system to read, rank, and select elective choices.",
       learned:
-        "How to redesign a system, how to keep UI and UX simple and clean, and how to keep sensitive information safe.",
+        "How to redesign a system, how to keep UX simple and clean, and how to keep sensitive information safe.",
       links: [
         { label: "Source on GitHub", href: "https://github.com/EmptyConsole/Student-Atlas", filled: true },
         { label: "Student Version", href: "https://student-atlas-xi.vercel.app/", filled: true },
@@ -135,29 +135,30 @@ export const projects: Project[] = [
     category: "Apps",
     date: "Oct 2025",
     year: 2025,
-    summary: "An app that helps local musicians earn more through lower upfront costs and real-time tipping.",
+    summary:
+      "An app that helps local musicians increase earnings through real-time tipping at concerts. Won 3rd place in California's 15th district for the Congressional App Challenge.",
     image: {
       src: "/open-stage.png",
       alt: "Open Stage app screens",
       width: 2874,
       height: 1370,
     },
-    href: "https://open-stage.vercel.app/signin",
+    href: "https://github.com/EmptyConsole/open-stage",
     result: "3rd, Congressional App Challenge CA-15",
     withEmptyConsole: true,
     featured: true,
     caseStudy: {
       team: "Empty Console: ShyGuy, HF_ang, Emey",
       problem:
-        "ShyGuy's school music teacher runs a local band, and keeping it going is hard. Upfront costs are high and income is unpredictable.",
+        "ShyGuy's school music teacher runs a local band, and keeping it going is hard. Upfront costs for concert-goers are high and income is unpredictable.",
       built:
-        "With Empty Console, he built Open Stage for the Congressional App Challenge. The team worked with local Bay Area bands to shape the experience and a revenue model built around lower upfront costs and real-time tipping.",
+        "With Empty Console, he built Open Stage. The team worked with local Bay Area bands to shape the experience and a revenue model built around lower upfront costs and real-time tipping.",
       result:
-        "Third place in California's 15th district, one of the most competitive districts in the country. Open Stage was a competition entry and won't be launched as a product.",
+        "Third place in California's 15th district, the most competitive district in the country. Open Stage was a competition entry and will not be launched as a product.",
       learned:
-        "Start from a real person's problem, test with the people who will actually use it, and be able to explain the solution clearly to judges.",
+        "Start with a real-world problem, test with the people who will actually use it, and be able to explain the solution clearly to judges.",
       links: [
-        { label: "Try the app", href: "https://open-stage.vercel.app/signin" },
+        { label: "Source on GitHub", href: "https://github.com/EmptyConsole/open-stage" },
         { label: "Congressional App Challenge", href: "https://www.congressionalappchallenge.us/" },
       ],
     },
@@ -220,26 +221,25 @@ export const projects: Project[] = [
       height: 396,
     },
     href: "https://www.youtube.com/watch?v=y8NtMZ7VGmU",
-    result: "Led to a teaching invite",
     withEmptyConsole: false,
     featured: true,
     caseStudy: {
       team: "Solo",
       problem:
-        "The next frontier of AI is spatial intelligence: machines that understand the physical world around them. ShyGuy wanted to try it on his own hardware instead of only reading about it.",
+        "The next frontier of AI is spatial intelligence: machines that understand the physical world around them. ShyGuy wanted to test a real-life deployment of robotic hardware and spatial intelligence programming.",
       built:
         "Version one (April 2026) took six months. He wired YOLO11n, a computer vision model that detects and recognizes objects, into a wheeled robot so it could find a chosen object and drive to it. For version two (June 2026) he rebuilt it through the Evodyne Robotics Genesis course. His favorite upgrade was trading the wheels for realistic legs.",
       result:
-        "A working robotic dog that sees, identifies, and moves toward a target. Showing it to the teacher of Cumberland Elementary's after-school robotics program led to an invitation to speak to the students.",
+        "A working robotic dog that sees, identifies, and moves toward a target.",
       learned:
-        "Combining ready-made tools like YOLO11n with custom work, building on an old project instead of starting over, and learning faster with a structured course.",
+        "Combining ready-made tools like YOLO11n with custom work; building on an old project instead of starting over; and learning faster with a structured course.",
       links: [
         { label: "1st Version Source on GitHub", href: "https://github.com/ShyGuyGameDev/OriginalRobot" },
         { label: "2nd Version Source on GitHub", href: "https://github.com/ShyGuyGameDev/NewVersionDog" },
       ],
       extraVideo: {
         src: "/robotic-dog-v1.mp4",
-        caption: "Version one: wheels and YOLO11n.",
+        caption: "Version one",
       },
     },
   },

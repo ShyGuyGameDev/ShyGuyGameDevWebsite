@@ -89,17 +89,8 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
         </div>
       )}
 
-      <div className="mt-12 space-y-10">
-        {sections.map((section) => (
-          <section key={section.title}>
-            <h2 className="text-lg font-semibold tracking-tight">{section.title}</h2>
-            <p className="mt-2 leading-relaxed text-(--v2-text)/80">{section.body}</p>
-          </section>
-        ))}
-      </div>
-
       {study.extraVideo && (
-        <figure className="mt-12">
+        <figure className="mt-10">
           <video
             src={study.extraVideo.src}
             controls
@@ -111,6 +102,15 @@ export default async function CaseStudyPage({ params }: { params: Params }) {
           <figcaption className="mono mt-3 text-xs text-(--v2-muted)">{study.extraVideo.caption}</figcaption>
         </figure>
       )}
+
+      <div className="mt-12 space-y-10">
+        {sections.map((section) => (
+          <section key={section.title}>
+            <h2 className="text-lg font-semibold tracking-tight">{section.title}</h2>
+            <p className="mt-2 leading-relaxed text-(--v2-text)/80">{section.body}</p>
+          </section>
+        ))}
+      </div>
 
       {study.links.length > 0 && (
         <ul className="mt-12 flex flex-wrap gap-3">
