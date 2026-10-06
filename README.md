@@ -11,8 +11,8 @@ The handle is a reference to the Mario character, and it stuck: it's the name on
 A few things worth knowing about him:
 
 - He cofounded **Empty Console**, a startup team, with HF_ang and Emey. They began by making games together and now compete in hackathons and ship real products.
-- Within Empty Console, ShyGuy leads marketing, communications, and product positioning, and contributes to development.
-- His interests cluster into seven areas, which is how this site is organized: **Games, Apps, Robotics, MUN, Debate, Teaching, and Design.**
+- Within Empty Console, ShyGuy leads product, strategy, marketing, and communications, and contributes to development.
+- The site groups his work into four areas: **Apps, Robotics, Games, and Teaching.** The previous version of the site, which also covers MUN, Debate, and Design, is still available at `/old-view`.
 - He writes about what he learns at [shyguygamedev.substack.com](https://shyguygamedev.substack.com).
 
 ### Awards
@@ -24,17 +24,17 @@ A few things worth knowing about him:
 | Berkeley Model United Nations 2025 | Outstanding Award |
 | Georgiana Hays Invitational 2026 | 1st place in novice parliamentary debate |
 
-### Selected work
+### Select Work
 
-**Games** — [Malice and Mercy](https://emptyconsole.github.io/Malice-and-Mercy/), a p5.js platformer about ethical decision-making that earned Honorable Mention in the p5Play game jam, with a physics engine, tilemap system, and level editor written from scratch. [Space Looper](https://emptyconsole.itch.io/space-looper), built in four days for the GMTK 2025 jam against 9,574 other submissions. [Bugged Out](https://emptyconsole.itch.io/bugged-out), a platformer that turns glitches into mechanics, 17th of 474 entries. [Dimensional Rifter](https://shyguygamedev.github.io/Dimensional-Rifter/), his first game.
+**Apps** — [Student Atlas](https://github.com/EmptyConsole/Student-Atlas), a simpler system for ranking and choosing high school electives, built with Empty Console, which is working with his school's administration to adopt it. [Open Stage](https://github.com/EmptyConsole/open-stage), an app that helps local musicians increase earnings through real-time tipping at concerts, which won 3rd place in California's 15th district for the Congressional App Challenge. [Hackathon Digest](https://github.com/ShyGuyGameDev/hackathon-digest), a fully automated weekly email that finds high-school-friendly hackathons. [News Digest](https://github.com/ShyGuyGameDev/NewsDigest), an automated politics/tech/science briefing that now goes out to other students at his school as well.
 
-**Apps** — [Open Stage](https://open-stage.vercel.app/signin), a Congressional App Challenge project built with local Bay Area bands to help musicians earn more through real-time tipping. [Hackathon Digest](https://github.com/ShyGuyGameDev/hackathon-digest), a fully automated weekly email that finds high-school-friendly hackathons. [News Digest](https://github.com/ShyGuyGameDev/NewsDigest), an automated politics/tech/science briefing that now goes out to his school's debate team as well.
+**Robotics** — A [robotic dog](https://www.youtube.com/watch?v=y8NtMZ7VGmU) that spots an object, identifies it with computer vision, and walks toward it. Version one (April 2026) used YOLO11n on a wheeled robot; version two (June 2026) was rebuilt with realistic legs through the [Evodyne](https://evodynerobotics.com/courses/evodog-learn-and-build-a-programmable-robotic-dog/) Genesis course. Before that, he led a 15-student [FIRST Tech Challenge](https://www.firstinspires.org/programs/ftc/) team.
 
-**Robotics** — Leading a 15-student [FIRST Tech Challenge](https://www.firstinspires.org/programs/ftc/) team, then building a [computer vision robot](https://www.youtube.com/watch?v=y8NtMZ7VGmU) using YOLO11n that identifies an object and walks toward it, and rebuilding it with real limbs through the [Evodyne](https://evodynerobotics.com/courses/evodog-learn-and-build-a-programmable-robotic-dog/) course.
+**Games** — [Bugged Out](https://emptyconsole.itch.io/bugged-out), a platformer made in three days where glitches are the core mechanic, 17th of 474 entries. [Malice and Mercy](https://emptyconsole.github.io/Malice-and-Mercy/), a p5.js platformer about ethical decision-making that earned Honorable Mention in the p5Play game jam, with a physics engine, tilemap system, and level editor written from scratch. [Space Looper](https://emptyconsole.itch.io/space-looper), built in four days for the GMTK 2025 jam against 9,574 other submissions. [Dimensional Rifter](https://shyguygamedev.github.io/Dimensional-Rifter/), his first game.
 
-**MUN and Debate** — Conferences including [BMUN](https://www.bmun.org/), [NMUNC](https://sites.google.com/nuevaschool.org/nuevamunconference/conference), [SFMUN](https://www.sfmun.org/), and [NHSMUN](https://imuna.org/nhsmun/nyc/) in New York, plus parliamentary debate tournaments where he went from a 2–2 novice record to winning his division 5–0.
+**Teaching** — Volunteering as a class mentor in [StreetCode Academy's](https://streetcode.org/) weekly Unboxing AI class, where his students range from 13 to 70 years old. Earlier, he spoke at [Cumberland Elementary's](https://cumberland.sesd.org/) after-school robotics program about his robot and how to approach new problems.
 
-**Teaching and Design** — Speaking at [Cumberland Elementary's](https://cumberland.sesd.org/) after-school robotics program about his robot and how to approach new problems, and designing a sustainable city with five teammates for [Future City](https://futurecity.org/).
+**MUN, Debate, and Design** — Conferences including [BMUN](https://www.bmun.org/), [NMUNC](https://sites.google.com/nuevaschool.org/nuevamunconference/conference), [SFMUN](https://www.sfmun.org/), and [NHSMUN](https://imuna.org/nhsmun/nyc/) in New York, parliamentary debate tournaments where he went from a 2–2 novice record to winning his division 5–0, and designing a sustainable city with five teammates for [Future City](https://futurecity.org/).
 
 ## Contact
 
@@ -67,12 +67,19 @@ There is also a `npm run lint` script, but ESLint isn't installed in this projec
 
 | Path | What's in it |
 | --- | --- |
-| `src/app/` | Routes: home, `/projects`, `/posts`, `/team`, plus the shared layout and site metadata |
-| `src/components/` | The page sections and cards, including the project, post, and team-member cards |
-| `src/components/ui/` | shadcn/ui primitives (buttons, dialogs, and so on) |
+| `src/app/(portfolio)/` | The live site: home, `/work`, `/work/[slug]` case studies, and `/about`, plus its layout and `v2.css` theme |
+| `src/app/(portfolio)/data.ts` | All copy for the live site: projects, case studies, posts, and contact details |
+| `src/app/(portfolio)/_components/` | The live site's cards, rows, top bar, footer, and contact links |
+| `src/app/layout.tsx` | Root layout and site-wide metadata |
+| `src/app/old-view/` | The previous version of the site, served at `/old-view` |
+| `src/components/` | Sections and cards used by `/old-view`, plus shadcn/ui primitives in `ui/` |
 | `src/hooks/`, `src/lib/` | Shared hooks, plus sorting, searching, and tag helpers in `lib/utils.ts` |
-| `public/` | Images, named after what they're used for |
+| `public/` | Images and videos, named after what they're used for |
 
-Site content is not in a CMS — each section component holds its own data array near the top of the file. To add a project, add an entry to `completedProjects` in `src/components/projects-section.tsx`; posts live in `posts-section.tsx` and awards in `achievements-section.tsx`.
+Site content is not in a CMS. Everything on the live site comes from `src/app/(portfolio)/data.ts`, so the homepage cards, the Work page, and the case studies always stay in sync.
 
-The home page topic switcher is the one exception: it reads whatever images sit in `public/HomeTopics/<Topic>/` at request time and shows the first four alphabetically, so you change those collages by adding or removing files rather than by editing code.
+- **Add a project:** add an entry to `projects`. It shows up on the Work page under its `category`.
+- **Give it a case study:** add a `caseStudy` (problem, what he built, result, what he learned, and links), set `featured: true`, and add its slug to `featuredOrder`. It then appears on the homepage and gets a page at `/work/<slug>`. An optional `extraVideo` appears under the main image.
+- **Add a post:** add an entry to `posts`.
+
+The `/old-view` pages keep their own data arrays inside `src/components/` (for example `projects-section.tsx` and `achievements-section.tsx`). Its home page topic switcher reads whatever images sit in `public/HomeTopics/<Topic>/` at request time and shows the first four alphabetically.
