@@ -21,7 +21,8 @@ export const metadata: Metadata = {
     default: "ShyGuy",
     template: "%s · ShyGuy",
   },
-  description: "ShyGuy is a student developer building games, apps, and robots.",
+  description:
+    "Student developer building games, apps, and robots. Currently exploring spatial intelligence and computer vision.",
 }
 
 export default function V2Layout({ children }: Readonly<{ children: React.ReactNode }>) {
