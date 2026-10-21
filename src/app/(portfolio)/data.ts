@@ -112,7 +112,7 @@ export const projects: Project[] = [
     withEmptyConsole: true,
     featured: true,
     caseStudy: {
-      team: "Empty Console: ShyGuy, HF_ang, Emey",
+      team: "Empty Console: HF_ang, Emey, automagicle",
       problem:
         "ShyGuy's school has incredible electives for students to choose from, but the system to read, rank, and select them has been cumbersome, non-intuitive, and time-consuming. It has been difficult to switch between reading and selection, and it has also been challenging to understand which aspects of a course are important.",
       built:
@@ -148,7 +148,7 @@ export const projects: Project[] = [
     withEmptyConsole: true,
     featured: true,
     caseStudy: {
-      team: "Empty Console: ShyGuy, HF_ang, Emey",
+      team: "Empty Console: HF_ang, Emey",
       problem:
         "ShyGuy's school music teacher runs a local band, and keeping it going is hard. Upfront costs for concert-goers are high and income is unpredictable.",
       built:
@@ -272,7 +272,7 @@ export const projects: Project[] = [
     withEmptyConsole: true,
     featured: true,
     caseStudy: {
-      team: "Empty Console: ShyGuy, HF_ang, Emey",
+      team: "Empty Console: HF_ang, Emey",
       problem:
         "The Patch Notes Game Jam handed out the theme 'The Error is the Feature' and three days to build something with it. Most games treat a glitch as the thing to patch out, so the team had to make one fun on purpose.",
       built:

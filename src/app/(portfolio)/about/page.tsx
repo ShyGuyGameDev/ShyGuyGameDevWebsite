@@ -52,8 +52,9 @@ export default function V2About() {
           Empty Console
         </h2>
         <p className="mt-2 leading-relaxed text-(--v2-muted)">
-          ShyGuy cofounded Empty Console with HF_ang and Emey. They started by making games together and now
-          compete in hackathons and ship apps. He leads product, strategy, marketing, and communications.
+          ShyGuy cofounded Empty Console with HF_ang and Emey. Later, automagicle also joined the team. They
+          started by making games together and now compete in hackathons and develop apps. He leads product,
+          strategy, marketing, and communications.
         </p>
         <a
           href={contact.emptyConsole}
