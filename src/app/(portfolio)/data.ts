@@ -72,7 +72,7 @@ export const projects: Project[] = [
     category: "Teaching",
     date: "Oct 2026",
     year: 2026,
-    summary: "Volunteers as a class mentor in StreetCode Academy's weekly Unboxing AI class.",
+    summary: "Volunteered as a class mentor in StreetCode Academy's weekly Unboxing AI class.",
     image: {
       src: "/images.png",
       alt: "StreetCode Academy logo",
@@ -86,10 +86,10 @@ export const projects: Project[] = [
       problem:
         "In a world where AI is the undeniable future, many are still not getting the education they need in order to use the tools available to them.",
       built:
-        "ShyGuy volunteers at StreetCode Academy, which runs weekly technology-based classes where anyone can sign up. His students range from 13-70 yrs old.",
-      builtHeading: "What he does",
+        "ShyGuy spent a semester volunteering at StreetCode Academy, which runs weekly technology-based classes where anyone can sign up. His students range from 13-70 yrs old.",
+      builtHeading: "What he did",
       result:
-        "By becoming a class mentor in the Unboxing AI class, ShyGuy is able to use his skills in AI to help others.",
+        "By becoming a class mentor in the Unboxing AI class, ShyGuy was able to use his skills in AI to help others.",
       learned:
         "How to simply explain complex concepts and how to customize explanations for people with different experience levels.",
       links: [{ label: "StreetCode Academy", href: "https://streetcode.org/", filled: false }],

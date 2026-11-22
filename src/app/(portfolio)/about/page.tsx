@@ -36,11 +36,11 @@ export default function V2About() {
           <Link href={`${BASE}/work/robotic-dog`} className={inlineLink}>
             computer vision robot
           </Link>
-          , and now teaches at{" "}
+          , and spent a semester volunteering at{" "}
           <a href="https://streetcode.org/" target="_blank" rel="noopener noreferrer" className={inlineLink}>
             StreetCode
           </a>{" "}
-          where he mentors students aged 13-70 yrs old on AI projects.
+          where he mentored students aged 13-70 yrs old in the Unboxing AI class.
         </p>
       </div>
 
