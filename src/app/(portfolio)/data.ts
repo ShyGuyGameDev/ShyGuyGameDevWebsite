@@ -19,7 +19,7 @@ export const contact = {
 
 export type Category = "Apps" | "Robotics" | "Games" | "Teaching"
 
-export const categories: Category[] = ["Apps", "Robotics", "Games", "Teaching"]
+export const categories: Category[] = ["Apps", "Robotics", "Teaching", "Games"]
 
 export type ProjectImage = {
   src: string
@@ -225,7 +225,7 @@ export const projects: Project[] = [
     slug: "robotic-dog",
     title: "Robotic Dog",
     category: "Robotics",
-    date: "Apr – Jun 2026",
+    date: "Apr 2026, Jun 2026",
     year: 2026,
     summary: "A robot that spots an object, identifies it with computer vision, and walks toward it.",
     image: {
@@ -257,6 +257,7 @@ export const projects: Project[] = [
       },
     },
   },
+  /*
   {
     slug: "ftc-robotics",
     title: "FTC Robotics",
@@ -268,6 +269,7 @@ export const projects: Project[] = [
     withEmptyConsole: false,
     featured: false,
   },
+  */
   {
     slug: "bugged-out",
     title: "Bugged Out",
