@@ -40,9 +40,10 @@ export function ProjectRow({ project }: { project: Project }) {
           )}
         </h3>
         <p className="mt-1 text-sm leading-relaxed text-(--v2-muted)">{project.summary}</p>
-        {(project.withEmptyConsole || project.mention) && (
+        {(project.withEmptyConsole || project.collaborator || project.mention) && (
           <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
             {project.withEmptyConsole && <TeamLabel />}
+            {project.collaborator && <TeamLabel name={project.collaborator} />}
             {project.mention && (
               <a
                 href={project.mention.href}

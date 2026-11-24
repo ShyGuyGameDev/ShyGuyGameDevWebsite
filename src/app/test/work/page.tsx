@@ -28,7 +28,12 @@ export default function TestWork() {
             title: p.title,
             href: projectHref(p),
             summary: p.summary,
-            meta: [p.date, p.caseStudy && "Case study", p.withEmptyConsole && "with Empty Console"]
+            meta: [
+              p.date,
+              p.caseStudy && "Case study",
+              p.withEmptyConsole && "with Empty Console",
+              p.collaborator && `with ${p.collaborator}`,
+            ]
               .filter(Boolean)
               .join(" · "),
             still: stillFor(p),

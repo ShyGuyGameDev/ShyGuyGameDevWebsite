@@ -8,6 +8,6 @@ export function Badge({ children }: { children: React.ReactNode }) {
   )
 }
 
-export function TeamLabel() {
-  return <span className="mono text-[11px] text-(--v2-muted)">with Empty Console</span>
+export function TeamLabel({ name = "Empty Console" }: { name?: string }) {
+  return <span className="mono text-[11px] text-(--v2-muted)">with {name}</span>
 }

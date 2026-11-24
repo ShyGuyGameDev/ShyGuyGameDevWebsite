@@ -60,6 +60,8 @@ export type Project = {
   href?: string
   result?: string
   withEmptyConsole: boolean
+  /** Shown as "with <name>" for work done alongside someone outside Empty Console. */
+  collaborator?: string
   featured: boolean
   mention?: ExternalLink
   caseStudy?: CaseStudy
@@ -97,13 +99,14 @@ export const projects: Project[] = [
   },
   {
     slug: "savespace",
-    title: "Savespace",
+    title: "Savespace MacOS",
     category: "Apps",
     date: "Nov 2026",
     year: 2026,
     summary: "A tool to switch between projects and their workspaces instantly. Made for the IceHacks hackathon.",
     href: "https://devpost.com/software/savespace-macos",
     withEmptyConsole: false,
+    collaborator: "Emey",
     featured: false,
   },
   {

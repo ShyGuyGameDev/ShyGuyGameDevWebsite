@@ -34,9 +34,10 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
           <h3 className="text-lg font-semibold tracking-tight">{project.title}</h3>
           <p className="mt-1.5 text-sm leading-relaxed text-(--v2-muted)">{project.summary}</p>
         </div>
-        {project.withEmptyConsole && (
+        {(project.withEmptyConsole || project.collaborator) && (
           <div className="flex flex-wrap items-center gap-2">
-            <TeamLabel />
+            {project.withEmptyConsole && <TeamLabel />}
+            {project.collaborator && <TeamLabel name={project.collaborator} />}
           </div>
         )}
         <span className="mt-auto inline-flex items-center gap-1.5 pt-2 text-sm font-medium text-(--v2-accent)">
