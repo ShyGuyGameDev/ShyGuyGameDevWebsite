@@ -96,6 +96,17 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "savespace",
+    title: "Savespace",
+    category: "Apps",
+    date: "Nov 2026",
+    year: 2026,
+    summary: "A tool to switch between projects and their workspaces instantly. Made for the IceHacks hackathon.",
+    href: "https://devpost.com/software/savespace-macos",
+    withEmptyConsole: false,
+    featured: false,
+  },
+  {
     slug: "student-atlas",
     title: "Student Atlas",
     category: "Apps",
